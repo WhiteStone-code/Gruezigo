@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-swiss-red hover:bg-swiss-red-dark text-white font-display font-semibold
+           px-5 py-3 rounded-xl2 shadow-card transition-colors duration-150
+           active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-alp-50 text-alp-800 font-display font-semibold
+           px-5 py-3 rounded-xl2 border border-alp-200 shadow-sm transition-colors duration-150
+           active:scale-[0.98];
+  }
+  .card {
+    @apply bg-white rounded-xl2 shadow-card p-5;
+  }
+}

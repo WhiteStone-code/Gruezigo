@@ -1,0 +1,194 @@
+{
+  "id": "a1-01",
+  "level": "A1.1",
+  "canton": "zurich",
+  "order": 1,
+  "title": {
+    "es": "Saludos",
+    "en": "Greetings",
+    "pt": "Cumprimentos",
+    "fr": "Salutations",
+    "it": "Saluti",
+    "sq": "Përshëndetjet",
+    "tr": "Selamlaşma"
+  },
+  "grammarConcept": {
+    "es": "Cómo saludar, despedirte y preguntar '¿cómo estás?' en Züritüütsch.",
+    "en": "How to greet, say goodbye and ask 'how are you?' in Züritüütsch.",
+    "pt": "Como cumprimentar, despedir-se e perguntar 'como estás?' em Züritüütsch.",
+    "fr": "Comment saluer, dire au revoir et demander « comment ça va ? » en Züritüütsch.",
+    "it": "Come salutare, congedarsi e chiedere 'come stai?' in Züritüütsch.",
+    "sq": "Si të përshëndesësh, të lamtumirosh dhe të pyesësh 'si je?' në Züritüütsch.",
+    "tr": "Züritüütsch'te nasıl selam verilir, vedalaşılır ve 'nasılsın?' diye sorulur."
+  },
+  "comparisonTable": [
+    {
+      "base": { "es": "Hola (formal)", "en": "Hello (formal)", "pt": "Olá (formal)", "fr": "Bonjour (formel)", "it": "Buongiorno (formale)", "sq": "Përshëndetje (formale)", "tr": "Merhaba (resmi)" },
+      "hochdeutsch": "Guten Tag",
+      "schwiizerduetsch": "Grüezi"
+    },
+    {
+      "base": { "es": "Hola (informal)", "en": "Hi (informal)", "pt": "Olá (informal)", "fr": "Salut (informel)", "it": "Ciao (informale)", "sq": "Përshëndetje (joformale)", "tr": "Selam (samimi)" },
+      "hochdeutsch": "Hallo",
+      "schwiizerduetsch": "Hoi"
+    },
+    {
+      "base": { "es": "Adiós", "en": "Goodbye", "pt": "Adeus", "fr": "Au revoir", "it": "Arrivederci", "sq": "Mirupafshim", "tr": "Hoşça kal" },
+      "hochdeutsch": "Auf Wiedersehen",
+      "schwiizerduetsch": "Ade / Adieu"
+    },
+    {
+      "base": { "es": "¿Cómo estás?", "en": "How are you?", "pt": "Como estás?", "fr": "Comment ça va ?", "it": "Come stai?", "sq": "Si je?", "tr": "Nasılsın?" },
+      "hochdeutsch": "Wie geht es dir?",
+      "schwiizerduetsch": "Wie gaht's dir?"
+    },
+    {
+      "base": { "es": "Bien, gracias", "en": "Good, thanks", "pt": "Bem, obrigado", "fr": "Bien, merci", "it": "Bene, grazie", "sq": "Mirë, faleminderit", "tr": "İyiyim, teşekkürler" },
+      "hochdeutsch": "Gut, danke",
+      "schwiizerduetsch": "Guet, danke"
+    },
+    {
+      "base": { "es": "Por favor", "en": "Please", "pt": "Por favor", "fr": "S'il vous plaît", "it": "Per favore", "sq": "Ju lutem", "tr": "Lütfen" },
+      "hochdeutsch": "Bitte",
+      "schwiizerduetsch": "Bitte"
+    },
+    {
+      "base": { "es": "Muchas gracias", "en": "Thank you very much", "pt": "Muito obrigado", "fr": "Merci beaucoup", "it": "Grazie mille", "sq": "Shumë faleminderit", "tr": "Çok teşekkürler" },
+      "hochdeutsch": "Vielen Dank",
+      "schwiizerduetsch": "Merci vilmal"
+    },
+    {
+      "base": { "es": "Me llamo...", "en": "My name is...", "pt": "Chamo-me...", "fr": "Je m'appelle...", "it": "Mi chiamo...", "sq": "Quhem...", "tr": "Benim adım..." },
+      "hochdeutsch": "Ich heisse...",
+      "schwiizerduetsch": "Ich heisse... / Ich bi de/d'..."
+    }
+  ],
+  "vocabulary": [
+    { "id": "v1", "hochdeutsch": "Guten Tag", "schwiizerduetsch": "Grüezi", "audioText": "Grüezi", "base": { "es": "Hola (formal)", "en": "Hello (formal)", "pt": "Olá (formal)", "fr": "Bonjour (formel)", "it": "Buongiorno (formale)", "sq": "Përshëndetje (formale)", "tr": "Merhaba (resmi)" } },
+    { "id": "v2", "hochdeutsch": "Hallo", "schwiizerduetsch": "Hoi", "audioText": "Hoi", "base": { "es": "Hola (informal)", "en": "Hi (informal)", "pt": "Olá (informal)", "fr": "Salut (informel)", "it": "Ciao (informale)", "sq": "Përshëndetje (joformale)", "tr": "Selam (samimi)" } },
+    { "id": "v3", "hochdeutsch": "Auf Wiedersehen", "schwiizerduetsch": "Ade", "audioText": "Ade", "base": { "es": "Adiós", "en": "Goodbye", "pt": "Adeus", "fr": "Au revoir", "it": "Arrivederci", "sq": "Mirupafshim", "tr": "Hoşça kal" } },
+    { "id": "v4", "hochdeutsch": "Wie geht es dir?", "schwiizerduetsch": "Wie gaht's dir?", "audioText": "Wie gaht's dir?", "base": { "es": "¿Cómo estás?", "en": "How are you?", "pt": "Como estás?", "fr": "Comment ça va ?", "it": "Come stai?", "sq": "Si je?", "tr": "Nasılsın?" } },
+    { "id": "v5", "hochdeutsch": "Gut, danke", "schwiizerduetsch": "Guet, danke", "audioText": "Guet, danke", "base": { "es": "Bien, gracias", "en": "Good, thanks", "pt": "Bem, obrigado", "fr": "Bien, merci", "it": "Bene, grazie", "sq": "Mirë, faleminderit", "tr": "İyiyim, teşekkürler" } },
+    { "id": "v6", "hochdeutsch": "Vielen Dank", "schwiizerduetsch": "Merci vilmal", "audioText": "Merci vilmal", "base": { "es": "Muchas gracias", "en": "Thank you very much", "pt": "Muito obrigado", "fr": "Merci beaucoup", "it": "Grazie mille", "sq": "Shumë faleminderit", "tr": "Çok teşekkürler" } }
+  ],
+  "exercises": {
+    "multipleChoice": [
+      {
+        "id": "mc1",
+        "question": {
+          "es": "¿Cómo se dice 'Hola' de forma formal en Schwiizerdütsch?",
+          "en": "How do you say 'Hello' formally in Schwiizerdütsch?",
+          "pt": "Como se diz 'Olá' de forma formal em Schwiizerdütsch?",
+          "fr": "Comment dit-on « Bonjour » de façon formelle en Schwiizerdütsch ?",
+          "it": "Come si dice 'Buongiorno' in modo formale in Schwiizerdütsch?",
+          "sq": "Si thuhet 'Përshëndetje' në mënyrë formale në Schwiizerdütsch?",
+          "tr": "Schwiizerdütsch'te resmi olarak 'Merhaba' nasıl denir?"
+        },
+        "options": [
+          { "text": "Grüezi", "correct": true },
+          { "text": "Hoi", "correct": false },
+          { "text": "Ade", "correct": false },
+          { "text": "Merci", "correct": false }
+        ]
+      },
+      {
+        "id": "mc2",
+        "question": {
+          "es": "'Hoi' se usa para saludar a...",
+          "en": "'Hoi' is used to greet...",
+          "pt": "'Hoi' é usado para cumprimentar...",
+          "fr": "« Hoi » sert à saluer...",
+          "it": "'Hoi' si usa per salutare...",
+          "sq": "'Hoi' përdoret për të përshëndetur...",
+          "tr": "'Hoi' şunu selamlamak için kullanılır..."
+        },
+        "options": [
+          { "text": { "es": "Amigos y gente conocida", "en": "Friends and people you know", "pt": "Amigos e conhecidos", "fr": "Des amis et des connaissances", "it": "Amici e conoscenti", "sq": "Miqtë dhe njerëzit e njohur", "tr": "Arkadaşlar ve tanıdıklar" }, "correct": true },
+          { "text": { "es": "Tu jefe en una reunión formal", "en": "Your boss in a formal meeting", "pt": "O teu chefe numa reunião formal", "fr": "Votre patron lors d'une réunion formelle", "it": "Il tuo capo in una riunione formale", "sq": "Shefin tënd në një takim formal", "tr": "Resmi bir toplantıda patronunuzu" }, "correct": false }
+        ]
+      },
+      {
+        "id": "mc3",
+        "question": {
+          "es": "¿Cuál es el equivalente en Hochdeutsch de 'Merci vilmal'?",
+          "en": "What is the Hochdeutsch equivalent of 'Merci vilmal'?",
+          "pt": "Qual é o equivalente em Hochdeutsch de 'Merci vilmal'?",
+          "fr": "Quel est l'équivalent en Hochdeutsch de « Merci vilmal » ?",
+          "it": "Qual è l'equivalente in Hochdeutsch di 'Merci vilmal'?",
+          "sq": "Cili është ekuivalenti në Hochdeutsch i 'Merci vilmal'?",
+          "tr": "'Merci vilmal' ifadesinin Hochdeutsch karşılığı nedir?"
+        },
+        "options": [
+          { "text": "Vielen Dank", "correct": true },
+          { "text": "Bitte schön", "correct": false },
+          { "text": "Guten Tag", "correct": false },
+          { "text": "Auf Wiedersehen", "correct": false }
+        ]
+      },
+      {
+        "id": "mc4",
+        "question": {
+          "es": "Completa: 'Wie gaht's dir?' — 'Guet, ___.'",
+          "en": "Complete: 'Wie gaht's dir?' — 'Guet, ___.'",
+          "pt": "Completa: 'Wie gaht's dir?' — 'Guet, ___.'",
+          "fr": "Complétez : « Wie gaht's dir? » — « Guet, ___. »",
+          "it": "Completa: 'Wie gaht's dir?' — 'Guet, ___.'",
+          "sq": "Plotëso: 'Wie gaht's dir?' — 'Guet, ___.'",
+          "tr": "Tamamla: 'Wie gaht's dir?' — 'Guet, ___.'"
+        },
+        "options": [
+          { "text": "danke", "correct": true },
+          { "text": "bitte", "correct": false },
+          { "text": "hoi", "correct": false },
+          { "text": "ade", "correct": false }
+        ]
+      }
+    ],
+    "sentenceBuilder": [
+      {
+        "id": "sb1",
+        "prompt": {
+          "es": "Construye: 'Hola, ¿cómo estás?' (informal)",
+          "en": "Build: 'Hi, how are you?' (informal)",
+          "pt": "Constrói: 'Olá, como estás?' (informal)",
+          "fr": "Construisez : « Salut, comment ça va ? » (informel)",
+          "it": "Costruisci: 'Ciao, come stai?' (informale)",
+          "sq": "Ndërto: 'Përshëndetje, si je?' (joformale)",
+          "tr": "Kur: 'Selam, nasılsın?' (samimi)"
+        },
+        "words": ["Hoi", ",", "wie", "gaht's", "dir", "?"],
+        "correctOrder": [0, 1, 2, 3, 4, 5]
+      },
+      {
+        "id": "sb2",
+        "prompt": {
+          "es": "Construye: 'Muchas gracias y adiós'",
+          "en": "Build: 'Thank you very much and goodbye'",
+          "pt": "Constrói: 'Muito obrigado e adeus'",
+          "fr": "Construisez : « Merci beaucoup et au revoir »",
+          "it": "Costruisci: 'Grazie mille e arrivederci'",
+          "sq": "Ndërto: 'Shumë faleminderit dhe mirupafshim'",
+          "tr": "Kur: 'Çok teşekkürler ve hoşça kal'"
+        },
+        "words": ["Merci", "vilmal", "und", "ade"],
+        "correctOrder": [0, 1, 2, 3]
+      }
+    ],
+    "pronunciation": [
+      { "id": "p1", "expectedText": "Grüezi mitenand", "lang": "de-DE", "hint": { "es": "Saludo formal a un grupo de personas", "en": "Formal greeting to a group of people", "pt": "Cumprimento formal a um grupo de pessoas", "fr": "Salutation formelle à un groupe de personnes", "it": "Saluto formale a un gruppo di persone", "sq": "Përshëndetje formale për një grup njerëzish", "tr": "Bir gruba resmi selam" } },
+      { "id": "p2", "expectedText": "Wie gaht's dir?", "lang": "de-DE", "hint": { "es": "Pregunta cómo está alguien de forma informal", "en": "Ask how someone is doing, informally", "pt": "Pergunta como alguém está, informalmente", "fr": "Demandez comment va quelqu'un, familièrement", "it": "Chiedi come sta qualcuno, in modo informale", "sq": "Pyet si është dikush, në mënyrë joformale", "tr": "Birine samimi şekilde nasıl olduğunu sor" } }
+    ]
+  },
+  "finalExam": [
+    { "id": "e1", "question": { "es": "'Grüezi' se usa para saludar de forma...", "en": "'Grüezi' is used to greet...", "pt": "'Grüezi' usa-se para cumprimentar de forma...", "fr": "« Grüezi » sert à saluer de façon...", "it": "'Grüezi' si usa per salutare in modo...", "sq": "'Grüezi' përdoret për të përshëndetur në mënyrë...", "tr": "'Grüezi' şu şekilde selamlamak için kullanılır..." }, "options": [ { "text": { "es": "Formal", "en": "Formal", "pt": "Formal", "fr": "Formelle", "it": "Formale", "sq": "Formale", "tr": "Resmi" }, "correct": true }, { "text": { "es": "Informal", "en": "Informal", "pt": "Informal", "fr": "Informelle", "it": "Informale", "sq": "Joformale", "tr": "Samimi" }, "correct": false } ] },
+    { "id": "e2", "question": { "es": "Traduce al Schwiizerdütsch: 'Hola' (informal)", "en": "Translate to Schwiizerdütsch: 'Hi' (informal)", "pt": "Traduz para Schwiizerdütsch: 'Olá' (informal)", "fr": "Traduisez en Schwiizerdütsch : « Salut » (informel)", "it": "Traduci in Schwiizerdütsch: 'Ciao' (informale)", "sq": "Përkthe në Schwiizerdütsch: 'Përshëndetje' (joformale)", "tr": "Schwiizerdütsch'e çevir: 'Selam' (samimi)" }, "options": [ { "text": "Hoi", "correct": true }, { "text": "Grüezi", "correct": false } ] },
+    { "id": "e3", "question": { "es": "'Ade' significa...", "en": "'Ade' means...", "pt": "'Ade' significa...", "fr": "« Ade » signifie...", "it": "'Ade' significa...", "sq": "'Ade' do të thotë...", "tr": "'Ade' anlamı..." }, "options": [ { "text": { "es": "Adiós", "en": "Goodbye", "pt": "Adeus", "fr": "Au revoir", "it": "Arrivederci", "sq": "Mirupafshim", "tr": "Hoşça kal" }, "correct": true }, { "text": { "es": "Gracias", "en": "Thanks", "pt": "Obrigado", "fr": "Merci", "it": "Grazie", "sq": "Faleminderit", "tr": "Teşekkürler" }, "correct": false } ] },
+    { "id": "e4", "question": { "es": "¿Cómo preguntas '¿cómo estás?' de forma informal?", "en": "How do you ask 'how are you?' informally?", "pt": "Como perguntas 'como estás?' de forma informal?", "fr": "Comment demande-t-on « comment ça va ? » familièrement ?", "it": "Come chiedi 'come stai?' in modo informale?", "sq": "Si pyet 'si je?' në mënyrë joformale?", "tr": "'Nasılsın?' samimi şekilde nasıl sorulur?" }, "options": [ { "text": "Wie gaht's dir?", "correct": true }, { "text": "Wie heissed Sie?", "correct": false } ] },
+    { "id": "e5", "question": { "es": "'Guet, danke' significa...", "en": "'Guet, danke' means...", "pt": "'Guet, danke' significa...", "fr": "« Guet, danke » signifie...", "it": "'Guet, danke' significa...", "sq": "'Guet, danke' do të thotë...", "tr": "'Guet, danke' anlamı..." }, "options": [ { "text": { "es": "Bien, gracias", "en": "Good, thanks", "pt": "Bem, obrigado", "fr": "Bien, merci", "it": "Bene, grazie", "sq": "Mirë, faleminderit", "tr": "İyiyim, teşekkürler" }, "correct": true }, { "text": { "es": "Mal, gracias", "en": "Bad, thanks", "pt": "Mal, obrigado", "fr": "Mal, merci", "it": "Male, grazie", "sq": "Keq, faleminderit", "tr": "Kötüyüm, teşekkürler" }, "correct": false } ] },
+    { "id": "e6", "question": { "es": "'Bitte' puede significar tanto 'por favor' como...", "en": "'Bitte' can mean both 'please' and...", "pt": "'Bitte' pode significar tanto 'por favor' como...", "fr": "« Bitte » peut signifier à la fois « s'il te plaît » et...", "it": "'Bitte' può significare sia 'per favore' che...", "sq": "'Bitte' mund të thotë si 'ju lutem' ashtu edhe...", "tr": "'Bitte' hem 'lütfen' hem de şu anlama gelebilir..." }, "options": [ { "text": { "es": "De nada", "en": "You're welcome", "pt": "De nada", "fr": "De rien", "it": "Prego", "sq": "S'ka përse", "tr": "Rica ederim" }, "correct": true }, { "text": { "es": "Adiós", "en": "Goodbye", "pt": "Adeus", "fr": "Au revoir", "it": "Arrivederci", "sq": "Mirupafshim", "tr": "Hoşça kal" }, "correct": false } ] },
+    { "id": "e7", "question": { "es": "El equivalente Hochdeutsch de 'Hoi' es...", "en": "The Hochdeutsch equivalent of 'Hoi' is...", "pt": "O equivalente em Hochdeutsch de 'Hoi' é...", "fr": "L'équivalent en Hochdeutsch de « Hoi » est...", "it": "L'equivalente in Hochdeutsch di 'Hoi' è...", "sq": "Ekuivalenti në Hochdeutsch i 'Hoi' është...", "tr": "'Hoi' kelimesinin Hochdeutsch karşılığı..." }, "options": [ { "text": "Hallo", "correct": true }, { "text": "Guten Tag", "correct": false } ] },
+    { "id": "e8", "question": { "es": "'Merci vilmal' se traduce como...", "en": "'Merci vilmal' translates as...", "pt": "'Merci vilmal' traduz-se como...", "fr": "« Merci vilmal » se traduit par...", "it": "'Merci vilmal' si traduce come...", "sq": "'Merci vilmal' përkthehet si...", "tr": "'Merci vilmal' şu anlama gelir..." }, "options": [ { "text": { "es": "Muchas gracias", "en": "Thank you very much", "pt": "Muito obrigado", "fr": "Merci beaucoup", "it": "Grazie mille", "sq": "Shumë faleminderit", "tr": "Çok teşekkürler" }, "correct": true }, { "text": { "es": "Buenos días", "en": "Good morning", "pt": "Bom dia", "fr": "Bonjour", "it": "Buongiorno", "sq": "Mirëmëngjes", "tr": "Günaydın" }, "correct": false } ] },
+    { "id": "e9", "question": { "es": "En Zúrich, saludarías a un/a desconocido/a en la calle con...", "en": "In Zurich, you'd greet a stranger on the street with...", "pt": "Em Zurique, cumprimentarias um desconhecido na rua com...", "fr": "À Zurich, on salue un inconnu dans la rue avec...", "it": "A Zurigo, saluteresti uno sconosciuto per strada con...", "sq": "Në Cyrih, do të përshëndesje një të panjohur në rrugë me...", "tr": "Zürih'te sokakta bir yabancıyı şununla selamlarsınız..." }, "options": [ { "text": "Grüezi", "correct": true }, { "text": "Hoi zäme", "correct": false } ] },
+    { "id": "e10", "question": { "es": "'Wie heissed Sie?' es la forma formal de preguntar...", "en": "'Wie heissed Sie?' is the formal way to ask...", "pt": "'Wie heissed Sie?' é a forma formal de perguntar...", "fr": "« Wie heissed Sie? » est la façon formelle de demander...", "it": "'Wie heissed Sie?' è il modo formale di chiedere...", "sq": "'Wie heissed Sie?' është mënyra formale për të pyetur...", "tr": "'Wie heissed Sie?' resmi olarak şunu sormanın yoludur..." }, "options": [ { "text": { "es": "¿Cómo te llamas?", "en": "What is your name?", "pt": "Como te chamas?", "fr": "Comment vous appelez-vous ?", "it": "Come ti chiami?", "sq": "Si quhesh?", "tr": "Adın ne?" }, "correct": true }, { "text": { "es": "¿Dónde vives?", "en": "Where do you live?", "pt": "Onde vives?", "fr": "Où habitez-vous ?", "it": "Dove vivi?", "sq": "Ku jeton?", "tr": "Nerede yaşıyorsun?" }, "correct": false } ] }
+  ]
+}
