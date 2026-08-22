@@ -1,88 +1,36 @@
 # GrüeziGo 🇨🇭
 
-App multiplataforma (Web/PWA) para integrar a extranjeros en la Suiza alemana a través del Schwiizerdütsch — el dialecto suizo-alemán real, cantón por cantón.
+**Grüezi** es como se dice "hola" en Zúrich — y también el saludo con el que arranca esta app.
 
-## Stack
+GrüeziGo nace para resolver un problema muy concreto: si te mudas a la Suiza alemana, el alemán que estudiaste (o el "Hochdeutsch" de los libros) no es el que se habla en la calle, en el súper o en el bar de tu barrio. Ahí se habla **Schwiizerdütsch**, el dialecto suizo-alemán, y cambia incluso de un cantón a otro. GrüeziGo te enseña justo eso: el idioma real, adaptado a dónde vives, para que dejes de sentirte extranjero en tu día a día.
 
-- **React 18** + **Vite** — SPA rápida, sin backend.
-- **TailwindCSS** — paleta "GrüeziGo" (rojo suizo, blanco alpino, madera, queso) en `tailwind.config.js`.
-- **Framer Motion** — transiciones entre pasos de lección, calendario y modales.
-- **Lucide Icons** — iconografía consistente.
-- **localStorage** (`useLocalStorage`) para progreso/config; **IndexedDB** (`src/utils/storage.js`) reservado para blobs pesados (audio grabado, certificados exportados) en fases futuras.
-- Sin servidor: todo el estado vive en el navegador del usuario.
+## ¿De qué va?
 
-## Cómo correrlo
+No es un curso de gramática tradicional. Es una app pensada para aprender en sesiones cortas (5-10 minutos) y aplicar lo aprendido casi de inmediato:
+
+- **Eliges tu cantón** (Zúrich, Berna, Lucerna, Basilea o San Galo) y la app se adapta: vocabulario, festivos y eventos culturales relevantes para donde realmente vives.
+- **Cada lección compara tres cosas a la vez**: tu idioma, el alemán "de libro" y el suizo-alemán real — así entiendes de dónde viene la diferencia, no solo que existe.
+- **Practicas de varias formas dentro de la misma lección**: emparejar vocabulario, escuchar audio, construir frases y — la parte más importante — hablar en voz alta y que la app te diga si se te entendería en una tienda de verdad.
+- **Mantienes una racha diaria**, como en cualquier app de hábitos, para que practicar 5 minutos se vuelva costumbre.
+- **Ves un calendario de tu cantón** con festivos y fiestas tradicionales (Sechseläuten, Fasnacht, Zibelemärit...) para que sepas qué se celebra y cómo hablar de ello.
+- **Hay un módulo de cultura** con historia básica del país, un especial de invierno y una guía de supervivencia con cosas que nadie te explica al llegar (cómo funciona el reciclaje, los horarios de silencio, el papeleo del ayuntamiento...).
+- **Al completar un nivel** (A1, A2... hasta C2) generas un certificado descargable como recuerdo o para tu currículum.
+
+Todo tu progreso —racha, cantón, lecciones hechas, nivel— se guarda en tu propio navegador. No hay cuentas ni servidores: cierras la pestaña y al volver todo sigue donde lo dejaste.
+
+## Cómo probarlo
 
 ```bash
 npm install
 npm run dev
 ```
 
-Build de producción:
+Y abre la URL que te muestre la terminal en el navegador (Chrome o Edge recomendados, porque son los que mejor soportan el reconocimiento de voz del ejercicio de hablar).
 
-```bash
-npm run build && npm run preview
-```
+## Estado actual
 
-## Estructura de carpetas
+Ya funciona de punta a punta el flujo de una lección completa (A1.1: Saludos, Supermercado y Restaurante), el calendario cantonal, el módulo cultural y el certificado. Quedan pendientes más niveles, voces nativas de suizo-alemán (hoy usa alemán estándar como aproximación) y convertirla en una app instalable (PWA).
 
-```
-src/
-├── App.jsx                    # Router simple basado en estado (dashboard/lessons/calendar/culture)
-├── main.jsx
-├── index.css
-│
-├── context/
-│   ├── LanguageContext.jsx     # Idioma de interfaz (7 idiomas) persistido en localStorage
-│   └── UserProgressContext.jsx # Racha, XP, cantón, lecciones completadas, medallas
-│
-├── hooks/
-│   ├── useLocalStorage.js
-│   └── useSpeech.js            # Web Speech API: síntesis (escuchar) + reconocimiento (hablar)
-│
-├── utils/
-│   └── storage.js              # IndexedDB para assets pesados (fase 2)
-│
-├── data/
-│   ├── i18n/strings.js         # Cadenas de interfaz ES/EN/PT/FR/IT/SQ/TR
-│   ├── cantons/holidays.js     # Festivos y eventos de ZH, BE, LU, BS, SG
-│   └── lessons/
-│       ├── a1/a1-01-greetings.json
-│       ├── a1/a1-02-supermarket.json
-│       ├── a1/a1-03-restaurant.json
-│       └── index.js            # Registro central — añadir aquí cada lección nueva
-│
-└── components/
-    ├── layout/       # Header, NavBar (sidebar en desktop / bottom nav en móvil)
-    ├── dashboard/     # Dashboard, StreakCounter
-    ├── calendar/      # CantonalCalendar, CantonSelector
-    ├── lesson/        # LessonView (orquestador) + cada módulo interactivo
-    ├── culture/       # CultureModule, WinterSpecial, SurvivalGuide
-    ├── certificate/   # CertificateModal (exporta PNG vía <canvas>)
-    └── ui/            # Button, Card, ProgressRing
-```
+---
 
-## El flujo de una lección (`LessonView.jsx`)
-
-1. **Comparación** Hochdeutsch vs. Schwiizerdütsch (momento de aprendizaje).
-2. **Emparejar vocabulario** — dos columnas, clic para emparejar.
-3. **Escuchar audio** — síntesis de voz (de-DE como mejor sustituto disponible del dialecto) + opción múltiple.
-4. **Construcción de oraciones** — banco de palabras desordenado.
-5. **Pronunciación** — SpeechRecognition compara tu voz con el texto esperado (comparación tolerante).
-6. **Opción múltiple** — refuerzo rápido.
-7. **Examen final** — 10 preguntas del JSON `finalExam`, sin límite de tiempo.
-8. **Pantalla de finalización** — XP, racha y acceso al certificado.
-
-Cada paso es un objeto `{ type }` generado dinámicamente a partir del JSON de la lección, así que añadir/quitar módulos por lección no requiere tocar el orquestador.
-
-## Añadir una lección nueva
-
-1. Crea `src/data/lessons/<nivel>/<id>.json` siguiendo el esquema de las 3 lecciones A1 existentes (`title`, `grammarConcept`, `comparisonTable`, `vocabulary`, `exercises`, `finalExam`, todos con las 7 traducciones).
-2. Impórtala y añádela al array correspondiente en `src/data/lessons/index.js`.
-
-## Pendiente para producción
-
-- Manifest + service worker (PWA instalable offline).
-- Voces TTS dedicadas de Schwiizerdütsch (hoy se usa `de-DE` como aproximación).
-- Verificar/recalcular las fechas movibles del calendario cantonal cada año (`src/data/cantons/holidays.js`).
-- Niveles A1.2 en adelante y export real de certificado en PDF.
+*Construida con React, Vite y Tailwind — sin backend, todo corre en tu navegador.*
