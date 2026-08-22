@@ -24,7 +24,7 @@ export function LevelMap({ onOpenLesson }) {
   const { progress } = useUserProgress()
   const [expanded, setExpanded] = useState(null)
 
-  const levels = computeLevelStates(progress.completedLessons, getLessonsByLevel)
+  const levels = computeLevelStates(progress.completedLessons, getLessonsByLevel, progress.settings.testModeUnlockAll)
 
   return (
     <div className="space-y-3">
@@ -42,22 +42,22 @@ export function LevelMap({ onOpenLesson }) {
               <LevelCoverArt level={level} state={level.state} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wide text-alp-400">{level.group}</span>
+                  <span className="text-xs font-bold uppercase tracking-wide text-alp-400 dark:text-alp-400">{level.group}</span>
                   <span
                     className={`text-[11px] font-semibold px-2 py-0.5 rounded-full
-                      ${level.state === 'done' ? 'bg-green-100 text-green-700' : ''}
-                      ${level.state === 'current' ? 'bg-swiss-red/10 text-swiss-red' : ''}
-                      ${level.state === 'locked' ? 'bg-alp-100 text-alp-400' : ''}
-                      ${level.state === 'soon' ? 'bg-cheese-100 text-cheese-700' : ''}`}
+                      ${level.state === 'done' ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' : ''}
+                      ${level.state === 'current' ? 'bg-swiss-red/10 text-swiss-red dark:bg-swiss-red/20 dark:text-white' : ''}
+                      ${level.state === 'locked' ? 'bg-alp-100 text-alp-400 dark:bg-alp-700 dark:text-alp-400' : ''}
+                      ${level.state === 'soon' ? 'bg-cheese-100 text-cheese-700 dark:bg-cheese-900/40 dark:text-cheese-300' : ''}`}
                   >
                     {label}
                   </span>
                 </div>
-                <p className="font-display font-bold text-alp-900 truncate">
+                <p className="font-display font-bold text-alp-900 dark:text-alp-50 truncate">
                   {level.title[interfaceLang] ?? level.title.es}
                 </p>
                 {level.hasContent && (
-                  <p className="text-xs text-alp-500">
+                  <p className="text-sm text-alp-500 dark:text-alp-300">
                     {level.doneCount}/{level.totalCount} lecciones
                   </p>
                 )}
@@ -77,35 +77,37 @@ export function LevelMap({ onOpenLesson }) {
                   className="overflow-hidden"
                 >
                   {level.hasContent ? (
-                    <div className="pt-3 mt-3 border-t border-alp-100 space-y-1.5">
+                    <div className="pt-3 mt-3 border-t border-alp-100 dark:border-alp-700 space-y-1.5">
                       {lessons.map((lesson) => {
                         const done = progress.completedLessons.includes(lesson.id)
                         return (
                           <button
                             key={lesson.id}
                             onClick={() => onOpenLesson(lesson.id)}
-                            className={`w-full flex items-center gap-2 p-2.5 rounded-lg text-left text-sm transition-colors
-                              ${done ? 'bg-green-50 hover:bg-green-100' : 'bg-alp-50 hover:bg-alp-100'}`}
+                            className={`nav-item w-full flex items-center gap-2 p-2.5 rounded-lg text-left text-sm transition-colors min-h-[44px]
+                              ${done
+                                ? 'bg-green-50 hover:bg-green-100 dark:bg-green-900/20 dark:hover:bg-green-900/30'
+                                : 'bg-alp-50 hover:bg-alp-100 dark:bg-alp-900 dark:hover:bg-alp-700'}`}
                           >
                             <span
                               className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0
-                              ${done ? 'bg-green-500 text-white' : 'bg-swiss-red/10 text-swiss-red'}`}
+                              ${done ? 'bg-green-500 text-white' : 'bg-swiss-red/10 text-swiss-red dark:bg-swiss-red/25 dark:text-white'}`}
                             >
                               {done ? '✓' : lesson.order}
                             </span>
-                            <span className="font-medium text-alp-800">{lesson.title[interfaceLang] ?? lesson.title.es}</span>
+                            <span className="font-medium text-alp-800 dark:text-alp-100">{lesson.title[interfaceLang] ?? lesson.title.es}</span>
                           </button>
                         )
                       })}
                     </div>
                   ) : (
-                    <div className="pt-3 mt-3 border-t border-alp-100">
-                      <p className="text-xs font-semibold text-cheese-700 flex items-center gap-1 mb-2">
+                    <div className="pt-3 mt-3 border-t border-alp-100 dark:border-alp-700">
+                      <p className="text-xs font-semibold text-cheese-700 dark:text-cheese-300 flex items-center gap-1 mb-2">
                         <Sparkles size={14} /> {label} — se aprenderá:
                       </p>
                       <ul className="space-y-1">
                         {(level.topics?.[interfaceLang] ?? level.topics?.es ?? []).map((topic) => (
-                          <li key={topic} className="text-sm text-alp-600 flex items-start gap-2">
+                          <li key={topic} className="text-sm text-alp-600 dark:text-alp-300 flex items-start gap-2">
                             <span className="text-cheese-500 mt-0.5">•</span>
                             {topic}
                           </li>

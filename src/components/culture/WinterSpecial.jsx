@@ -31,16 +31,16 @@ export function WinterSpecial() {
         </p>
       </div>
 
-      <Card>
-        <h4 className="font-semibold text-alp-800 mb-3">Frases de temporada</h4>
+      <Card className="card-accent-sky">
+        <h4 className="font-semibold text-alp-800 dark:text-alp-100 mb-3">Frases de temporada</h4>
         <div className="space-y-2">
           {WINTER_PHRASES.map((p) => (
-            <div key={p.schwiizerduetsch} className="flex items-center justify-between text-sm border-b border-alp-100 last:border-0 pb-2 last:pb-0">
+            <div key={p.schwiizerduetsch} className="flex items-center justify-between text-sm border-b border-alp-100 dark:border-alp-700 last:border-0 pb-2 last:pb-0">
               <div>
                 <p className="font-semibold text-swiss-red">{p.schwiizerduetsch}</p>
                 <p className="text-alp-400 text-xs">{p.hochdeutsch}</p>
               </div>
-              <p className="text-alp-600">{p.es}</p>
+              <p className="text-alp-600 dark:text-alp-300">{p.es}</p>
             </div>
           ))}
         </div>

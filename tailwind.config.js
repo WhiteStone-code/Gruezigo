@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
@@ -21,6 +22,35 @@ export default {
           700: '#254c68',
           800: '#213f57',
           900: '#1e364a',
+          950: '#131f2c',
+        },
+        // Verde "prado alpino" — usado para vocabulario de naturaleza/animales,
+        // estados de éxito y para dar más variedad de color a la app.
+        meadow: {
+          50: '#f2f9f0',
+          100: '#e0f0db',
+          200: '#c1e0b8',
+          300: '#9ecb8f',
+          400: '#7ab568',
+          500: '#5b9c48',
+          600: '#457a37',
+          700: '#375f2c',
+          800: '#2d4c26',
+          900: '#254020',
+        },
+        // Azul "cielo alpino" — acento fresco alterno a `alp`, para variar
+        // tarjetas/insignias sin salirse de la paleta suiza.
+        sky: {
+          50: '#eff8ff',
+          100: '#dcefff',
+          200: '#b9e0ff',
+          300: '#8ccdff',
+          400: '#57b3ff',
+          500: '#2f96f5',
+          600: '#1c78d6',
+          700: '#1861ad',
+          800: '#18508c',
+          900: '#1a4573',
         },
         wood: {
           50: '#fbf6ee',
@@ -56,6 +86,7 @@ export default {
       },
       boxShadow: {
         card: '0 8px 24px -8px rgba(30, 54, 74, 0.25)',
+        'card-lg': '0 16px 40px -12px rgba(30, 54, 74, 0.35)',
       },
       keyframes: {
         'pop-in': {

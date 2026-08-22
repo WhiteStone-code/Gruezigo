@@ -69,11 +69,11 @@ export function ExerciseSentenceBuilder({ exercises, onComplete }) {
 
   return (
     <div>
-      <h3 className="font-display font-bold text-lg text-alp-900 mb-1">Construye la oración</h3>
-      <p className="text-sm text-alp-600 mb-4">{current.prompt[interfaceLang] ?? current.prompt.es}</p>
+      <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50 mb-1">Construye la oración</h3>
+      <p className="text-sm text-alp-600 dark:text-alp-300 mb-4">{current.prompt[interfaceLang] ?? current.prompt.es}</p>
 
-      <div className="min-h-[3.5rem] border-b-2 border-alp-200 flex flex-wrap gap-2 items-center p-2 mb-4">
-        {picked.length === 0 && <span className="text-alp-300 text-sm">Toca las palabras en orden...</span>}
+      <div className="min-h-[3.5rem] border-b-2 border-alp-200 dark:border-alp-700 flex flex-wrap gap-2 items-center p-2 mb-4">
+        {picked.length === 0 && <span className="text-alp-300 dark:text-alp-500 text-sm">Toca las palabras en orden...</span>}
         {picked.map((wordIdx, pos) => (
           <motion.button
             layout
@@ -81,7 +81,7 @@ export function ExerciseSentenceBuilder({ exercises, onComplete }) {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             onClick={() => unpick(pos)}
-            className="px-3 py-1.5 rounded-lg bg-swiss-red/10 text-swiss-red font-semibold text-sm"
+            className="px-3 py-1.5 rounded-lg bg-swiss-red/10 dark:bg-swiss-red/25 text-swiss-red dark:text-white font-semibold text-sm"
           >
             {current.words[wordIdx]}
           </motion.button>
@@ -95,7 +95,7 @@ export function ExerciseSentenceBuilder({ exercises, onComplete }) {
             key={wordIdx}
             whileTap={{ scale: 0.95 }}
             onClick={() => pick(wordIdx)}
-            className="px-3 py-1.5 rounded-lg bg-alp-100 hover:bg-alp-200 text-alp-800 font-semibold text-sm"
+            className="px-3 py-1.5 rounded-lg bg-alp-100 hover:bg-alp-200 dark:bg-alp-700 dark:hover:bg-alp-600 text-alp-800 dark:text-alp-100 font-semibold text-sm"
           >
             {current.words[wordIdx]}
           </motion.button>
@@ -112,8 +112,8 @@ export function ExerciseSentenceBuilder({ exercises, onComplete }) {
             {isCorrect ? t('correct') : t('incorrect')}
           </p>
           {!isCorrect && (
-            <p className="text-sm text-alp-500 mb-3">
-              Respuesta correcta: <span className="font-semibold text-alp-700">{joinSentence(current.correctOrder.map((i) => current.words[i]))}</span>
+            <p className="text-sm text-alp-500 dark:text-alp-300 mb-3">
+              Respuesta correcta: <span className="font-semibold text-alp-700 dark:text-alp-100">{joinSentence(current.correctOrder.map((i) => current.words[i]))}</span>
             </p>
           )}
           <Button onClick={next} className="w-full">

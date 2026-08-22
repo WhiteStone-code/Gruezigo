@@ -25,6 +25,8 @@ export const UI_STRINGS = {
   lessons: { es: 'Lecciones', en: 'Lessons', pt: 'Lições', fr: 'Leçons', it: 'Lezioni', sq: 'Mësimet', tr: 'Dersler' },
   culture: { es: 'Cultura', en: 'Culture', pt: 'Cultura', fr: 'Culture', it: 'Cultura', sq: 'Kultura', tr: 'Kültür' },
   calendar: { es: 'Calendario', en: 'Calendar', pt: 'Calendário', fr: 'Calendrier', it: 'Calendario', sq: 'Kalendari', tr: 'Takvim' },
+  review: { es: 'Repaso', en: 'Review', pt: 'Revisão', fr: 'Révision', it: 'Ripasso', sq: 'Rishikim', tr: 'Tekrar' },
+  settings: { es: 'Ajustes', en: 'Settings', pt: 'Definições', fr: 'Paramètres', it: 'Impostazioni', sq: 'Cilësimet', tr: 'Ayarlar' },
   streak: { es: 'Racha', en: 'Streak', pt: 'Sequência', fr: 'Série', it: 'Serie', sq: 'Vazhdimësia', tr: 'Seri' },
   continue: { es: 'Continuar', en: 'Continue', pt: 'Continuar', fr: 'Continuer', it: 'Continua', sq: 'Vazhdo', tr: 'Devam et' },
   checkAnswer: { es: 'Comprobar', en: 'Check', pt: 'Verificar', fr: 'Vérifier', it: 'Verifica', sq: 'Kontrollo', tr: 'Kontrol et' },

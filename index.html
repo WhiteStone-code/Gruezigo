@@ -2,13 +2,26 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇨🇭</text></svg>" />
+    <!-- Favicon: insignia con degradado rojo suizo + tres picos alpinos + edelweiss, igual que <GrueziGoLogo /> -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='18' fill='%23D52B1E'/><path d='M8 44 L22 20 L30 33 L38 17 L56 44 Z' fill='white'/><path d='M22 20 L30 33 L25 33 L18 34 Z' fill='%23c3d9e8' opacity='0.7'/><circle cx='38' cy='13' r='3.2' fill='%23FFBE24'/></svg>"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#D52B1E" />
     <title>GrüeziGo — Aprende Schwiizerdütsch</title>
     <meta name="description" content="Integra tu vida en la Suiza alemana aprendiendo el dialecto suizo-alemán, cantón por cantón." />
+
+    <!-- Tipografías: Poppins (títulos/botones) + Inter (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="font-body bg-alp-50 text-alp-900">
+  <body class="font-body bg-alp-50 text-alp-900 dark:bg-alp-950 dark:text-alp-50 transition-colors">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

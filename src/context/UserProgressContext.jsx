@@ -15,6 +15,12 @@ const DEFAULT_PROGRESS = {
   completedLessons: [], // ['a1-01', ...]
   badges: [], // ['racha-7', 'a1-completo', ...]
   exerciseStats: {}, // { [lessonId]: { correct, total } }
+  settings: {
+    ageGroup: 'adult', // 'teen' | 'young-adult' | 'adult' | 'senior'
+    textSize: 'normal', // 'normal' | 'grande' | 'muy-grande'
+    testModeUnlockAll: false, // desbloquea todos los niveles para poder probarlos
+    reviewRemindersEnabled: true,
+  },
 }
 
 function todayISO() {
@@ -28,7 +34,19 @@ function daysBetween(a, b) {
 }
 
 export function UserProgressProvider({ children }) {
-  const [progress, setProgress] = useLocalStorage('gruezigo:progress', DEFAULT_PROGRESS)
+  const [raw, setProgress] = useLocalStorage('gruezigo:progress', DEFAULT_PROGRESS)
+
+  // Fusiona con los valores por defecto para que el progreso guardado antes
+  // de añadir un campo nuevo (p. ej. `settings`) no rompa la app.
+  const progress = useMemo(
+    () => ({
+      ...DEFAULT_PROGRESS,
+      ...raw,
+      streak: { ...DEFAULT_PROGRESS.streak, ...raw.streak },
+      settings: { ...DEFAULT_PROGRESS.settings, ...raw.settings },
+    }),
+    [raw]
+  )
 
   const actions = useMemo(
     () => ({
@@ -46,7 +64,7 @@ export function UserProgressProvider({ children }) {
             ...p,
             streak: {
               current,
-              longest: Math.max(current, p.streak.longest),
+              longest: Math.max(current, p.streak.longest ?? 0),
               lastActiveDate: today,
             },
           }
@@ -66,6 +84,9 @@ export function UserProgressProvider({ children }) {
 
       unlockBadge: (badgeId) =>
         setProgress((p) => (p.badges.includes(badgeId) ? p : { ...p, badges: [...p.badges, badgeId] })),
+
+      updateSettings: (patch) =>
+        setProgress((p) => ({ ...p, settings: { ...DEFAULT_PROGRESS.settings, ...p.settings, ...patch } })),
 
       resetProgress: () => setProgress(DEFAULT_PROGRESS),
     }),

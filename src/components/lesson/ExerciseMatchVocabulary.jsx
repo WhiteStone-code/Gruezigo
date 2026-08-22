@@ -69,16 +69,16 @@ export function ExerciseMatchVocabulary({ vocabulary, onComplete }) {
     const isMatched = matched.has(id)
     const isSelected = side === 'left' ? selectedLeft === id : selectedRight === id
     const isWrong = wrongPair && ((side === 'left' && wrongPair[0] === id) || (side === 'right' && wrongPair[1] === id))
-    if (isMatched) return 'bg-green-100 border-green-400 text-green-700 pointer-events-none opacity-70'
-    if (isWrong) return 'bg-red-100 border-red-400 text-red-700 animate-pulse'
+    if (isMatched) return 'bg-green-100 border-green-400 text-green-700 dark:bg-green-900/30 dark:border-green-600 dark:text-green-300 pointer-events-none opacity-70'
+    if (isWrong) return 'bg-red-100 border-red-400 text-red-700 dark:bg-red-900/30 dark:border-red-600 dark:text-red-300 animate-pulse'
     if (isSelected) return 'bg-swiss-red/10 border-swiss-red text-swiss-red'
-    return 'bg-white border-alp-200 hover:border-swiss-red/40'
+    return 'bg-white dark:bg-alp-900 border-alp-300 dark:border-alp-600 text-alp-800 dark:text-alp-100 hover:border-swiss-red/40'
   }
 
   return (
     <div>
-      <h3 className="font-display font-bold text-lg text-alp-900 mb-1">Empareja el vocabulario</h3>
-      <p className="text-sm text-alp-500 mb-4">Toca una palabra en Schwiizerdütsch y su traducción correspondiente.</p>
+      <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50 mb-1">Empareja el vocabulario</h3>
+      <p className="text-sm text-alp-500 dark:text-alp-300 mb-4">Toca una palabra en Schwiizerdütsch y su traducción correspondiente.</p>
       <div className="grid grid-cols-2 gap-3">
         <div className="space-y-2">
           {left.map((card) => (

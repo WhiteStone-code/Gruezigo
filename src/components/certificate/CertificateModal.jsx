@@ -98,14 +98,14 @@ export function CertificateModal({ open, level = 'A1', userName = 'GrüeziGo Lea
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onAnimationStart={drawCertificate}
-            className="bg-white rounded-xl2 shadow-card p-6 max-w-lg w-full"
+            className="bg-white dark:bg-alp-800 rounded-xl2 shadow-card p-6 max-w-lg w-full"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="font-display font-bold text-xl text-alp-900 flex items-center gap-2">
+              <h3 className="font-display font-bold text-xl text-alp-900 dark:text-alp-50 flex items-center gap-2">
                 <Award className="text-cheese-500" /> Tu certificado
               </h3>
-              <button onClick={onClose} className="text-alp-400 hover:text-alp-700">
+              <button onClick={onClose} className="nav-item text-alp-400 hover:text-alp-700 dark:hover:text-alp-200 min-h-[44px] min-w-[44px]">
                 <X size={22} />
               </button>
             </div>
@@ -123,7 +123,7 @@ export function CertificateModal({ open, level = 'A1', userName = 'GrüeziGo Lea
                   <span
                     key={lvl}
                     className={`text-xs text-center py-1 rounded ${
-                      lvl === level ? 'bg-swiss-red text-white font-bold' : 'bg-alp-100 text-alp-400'
+                      lvl === level ? 'bg-swiss-red text-white font-bold' : 'bg-alp-100 dark:bg-alp-700 text-alp-400'
                     }`}
                   >
                     {lvl}

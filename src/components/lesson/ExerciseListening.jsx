@@ -55,8 +55,8 @@ export function ExerciseListening({ vocabulary, onComplete }) {
 
   return (
     <div>
-      <h3 className="font-display font-bold text-lg text-alp-900 mb-1">{t('listen')}</h3>
-      <p className="text-sm text-alp-500 mb-4">
+      <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50 mb-1">{t('listen')}</h3>
+      <p className="text-sm text-alp-500 dark:text-alp-300 mb-4">
         Ronda {roundIndex + 1} de {rounds.length}
       </p>
 
@@ -80,9 +80,9 @@ export function ExerciseListening({ vocabulary, onComplete }) {
         {round.options.map((opt) => {
           const label = opt.base[interfaceLang] ?? opt.base.es
           const isThisSelected = selected === opt.id
-          let style = 'bg-white border-alp-200 hover:border-swiss-red/40'
-          if (answered && opt.id === round.item.id) style = 'bg-green-100 border-green-400 text-green-700'
-          else if (answered && isThisSelected) style = 'bg-red-100 border-red-400 text-red-700'
+          let style = 'bg-white dark:bg-alp-900 border-alp-300 dark:border-alp-600 text-alp-800 dark:text-alp-100 hover:border-swiss-red/40'
+          if (answered && opt.id === round.item.id) style = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-900/30 dark:border-green-600 dark:text-green-300'
+          else if (answered && isThisSelected) style = 'bg-red-100 border-red-400 text-red-700 dark:bg-red-900/30 dark:border-red-600 dark:text-red-300'
 
           return (
             <button

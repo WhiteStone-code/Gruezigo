@@ -174,23 +174,23 @@ function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, onFinish,
         <PartyPopper size={44} className="text-cheese-600" />
       </motion.div>
 
-      <h2 className="font-display font-bold text-2xl text-alp-900 mb-1">¡Lección completada!</h2>
-      <p className="text-alp-500 mb-6">{lesson.title[interfaceLang] ?? lesson.title.es}</p>
+      <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50 mb-1">¡Lección completada!</h2>
+      <p className="text-alp-500 dark:text-alp-300 mb-6">{lesson.title[interfaceLang] ?? lesson.title.es}</p>
 
       <div className="grid grid-cols-3 gap-3 mb-6">
         <Card className="!p-3">
           <p className="text-2xl font-display font-bold text-swiss-red">+{xpEarned}</p>
-          <p className="text-xs text-alp-500">XP</p>
+          <p className="text-xs text-alp-500 dark:text-alp-300">XP</p>
         </Card>
         <Card className="!p-3">
-          <p className="text-2xl font-display font-bold text-alp-800">{accuracy}%</p>
-          <p className="text-xs text-alp-500">Precisión</p>
+          <p className="text-2xl font-display font-bold text-alp-800 dark:text-alp-100">{accuracy}%</p>
+          <p className="text-xs text-alp-500 dark:text-alp-300">Precisión</p>
         </Card>
         <Card className="!p-3 flex flex-col items-center">
-          <p className="text-2xl font-display font-bold text-cheese-600 flex items-center gap-1">
+          <p className="text-2xl font-display font-bold text-cheese-600 dark:text-cheese-300 flex items-center gap-1">
             <Flame size={20} /> {streak}
           </p>
-          <p className="text-xs text-alp-500">Racha</p>
+          <p className="text-xs text-alp-500 dark:text-alp-300">Racha</p>
         </Card>
       </div>
 

@@ -46,19 +46,19 @@ export function ExerciseMultipleChoice({ questions, title, onComplete }) {
   return (
     <div>
       <div className="flex items-center justify-between mb-1">
-        <h3 className="font-display font-bold text-lg text-alp-900">{title}</h3>
+        <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50">{title}</h3>
         <span className="text-xs font-semibold text-alp-400">
           {index + 1} / {questions.length}
         </span>
       </div>
-      <p className="text-alp-700 mb-4">{resolveText(current.question, interfaceLang)}</p>
+      <p className="text-alp-700 dark:text-alp-200 mb-4">{resolveText(current.question, interfaceLang)}</p>
 
       <div className="grid gap-2 mb-4">
         {current.options.map((opt, i) => {
           const label = resolveText(opt.text, interfaceLang)
-          let style = 'bg-white border-alp-200 hover:border-swiss-red/40'
-          if (answered && opt.correct) style = 'bg-green-100 border-green-400 text-green-700'
-          else if (answered && i === selected) style = 'bg-red-100 border-red-400 text-red-700'
+          let style = 'bg-white dark:bg-alp-900 border-alp-300 dark:border-alp-600 text-alp-800 dark:text-alp-100 hover:border-swiss-red/40'
+          if (answered && opt.correct) style = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-900/30 dark:border-green-600 dark:text-green-300'
+          else if (answered && i === selected) style = 'bg-red-100 border-red-400 text-red-700 dark:bg-red-900/30 dark:border-red-600 dark:text-red-300'
 
           return (
             <button

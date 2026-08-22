@@ -203,7 +203,9 @@ export function getNextLevelCode(code) {
 // Calcula, para cada nivel del mapa, si está completado, en curso, bloqueado
 // (aún no le toca) o "próximamente" (sin contenido todavía). Se apoya en
 // getLessonsByLevel para no duplicar la lista de lecciones por nivel.
-export function computeLevelStates(completedLessons, getLessonsByLevel) {
+// `unlockAll` (Ajustes → Modo prueba) salta el bloqueo secuencial para poder
+// probar cualquier nivel con contenido de inmediato.
+export function computeLevelStates(completedLessons, getLessonsByLevel, unlockAll = false) {
   let previousContentDone = true
   return LEVELS.map((level) => {
     if (!level.hasContent) {
@@ -212,7 +214,7 @@ export function computeLevelStates(completedLessons, getLessonsByLevel) {
     const lessons = getLessonsByLevel(level.code)
     const doneCount = lessons.filter((l) => completedLessons.includes(l.id)).length
     const isDone = lessons.length > 0 && doneCount === lessons.length
-    const state = !previousContentDone ? 'locked' : isDone ? 'done' : 'current'
+    const state = !previousContentDone && !unlockAll ? 'locked' : isDone ? 'done' : 'current'
     previousContentDone = previousContentDone && isDone
     return { ...level, state, doneCount, totalCount: lessons.length }
   })

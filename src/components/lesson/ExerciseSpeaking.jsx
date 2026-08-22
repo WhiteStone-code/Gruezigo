@@ -44,15 +44,15 @@ export function ExerciseSpeaking({ exercises, onComplete }) {
 
   return (
     <div>
-      <h3 className="font-display font-bold text-lg text-alp-900 mb-1">{t('speakNow')}</h3>
-      <p className="text-sm text-alp-500 mb-4">{current.hint[interfaceLang] ?? current.hint.es}</p>
+      <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50 mb-1">{t('speakNow')}</h3>
+      <p className="text-sm text-alp-500 dark:text-alp-300 mb-4">{current.hint[interfaceLang] ?? current.hint.es}</p>
 
-      <div className="card bg-alp-50 flex items-center justify-between mb-6">
-        <p className="font-display font-bold text-xl text-alp-900">{current.expectedText}</p>
+      <div className="card bg-alp-50 dark:bg-alp-900 flex items-center justify-between mb-6">
+        <p className="font-display font-bold text-xl text-alp-900 dark:text-alp-50">{current.expectedText}</p>
         {supportsSynthesis && (
           <button
             onClick={() => speak(current.expectedText, { lang: current.lang ?? 'de-DE' })}
-            className="text-alp-500 hover:text-swiss-red shrink-0 ml-3"
+            className="nav-item text-alp-500 dark:text-alp-300 hover:text-swiss-red shrink-0 ml-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Escuchar pronunciación"
           >
             <Volume2 size={22} />
@@ -72,12 +72,12 @@ export function ExerciseSpeaking({ exercises, onComplete }) {
             animate={isListening ? { scale: [1, 1.1, 1] } : {}}
             transition={{ repeat: isListening ? Infinity : 0, duration: 0.7 }}
             className={`w-20 h-20 rounded-full flex items-center justify-center shadow-card text-white
-              ${isListening ? 'bg-swiss-red' : 'bg-alp-800 hover:bg-alp-700'}`}
+              ${isListening ? 'bg-swiss-red' : 'bg-alp-800 hover:bg-alp-700 dark:bg-alp-700 dark:hover:bg-alp-600'}`}
           >
             <Mic size={32} />
           </motion.button>
           <p className="text-xs text-alp-400">{isListening ? 'Escuchando...' : 'Toca y habla'}</p>
-          {transcript && <p className="text-sm text-alp-600 italic">"{transcript}"</p>}
+          {transcript && <p className="text-sm text-alp-600 dark:text-alp-300 italic">"{transcript}"</p>}
         </div>
       )}
 

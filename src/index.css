@@ -7,7 +7,15 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply antialiased;
+    @apply antialiased text-base leading-relaxed;
+  }
+  /* Control de tamaño de texto (Ajustes → Tamaño de texto). Escala rem de
+     toda la app sin tocar cada clase individualmente. */
+  html[data-text-size='grande'] {
+    font-size: 112%;
+  }
+  html[data-text-size='muy-grande'] {
+    font-size: 124%;
   }
 }
 
@@ -15,14 +23,57 @@
   .btn-primary {
     @apply bg-swiss-red hover:bg-swiss-red-dark text-white font-display font-semibold
            px-5 py-3 rounded-xl2 shadow-card transition-colors duration-150
-           active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+           active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-red/50 focus-visible:ring-offset-2
+           dark:focus-visible:ring-offset-alp-900;
   }
   .btn-secondary {
     @apply bg-white hover:bg-alp-50 text-alp-800 font-display font-semibold
-           px-5 py-3 rounded-xl2 border border-alp-200 shadow-sm transition-colors duration-150
-           active:scale-[0.98];
+           px-5 py-3 rounded-xl2 border border-alp-300 shadow-sm transition-colors duration-150
+           active:scale-[0.98]
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-red/50 focus-visible:ring-offset-2
+           dark:bg-alp-800 dark:hover:bg-alp-700 dark:text-alp-50 dark:border-alp-600 dark:focus-visible:ring-offset-alp-900;
   }
   .card {
-    @apply bg-white rounded-xl2 shadow-card p-5;
+    @apply bg-white rounded-xl2 shadow-card p-5 dark:bg-alp-800 dark:shadow-none dark:border dark:border-alp-700/60;
+  }
+  .card-lg {
+    @apply bg-white rounded-3xl shadow-card-lg p-5 dark:bg-alp-800 dark:border dark:border-alp-700/60;
+  }
+  /* Franjas de color a la izquierda para dar variedad temática a las tarjetas
+     sin tocar la estructura base de `.card`. */
+  .card-accent-wood {
+    @apply border-l-4 border-l-wood-400;
+  }
+  .card-accent-cheese {
+    @apply border-l-4 border-l-cheese-400;
+  }
+  .card-accent-alp {
+    @apply border-l-4 border-l-alp-400;
+  }
+  .card-accent-meadow {
+    @apply border-l-4 border-l-meadow-400;
+  }
+  .card-accent-sky {
+    @apply border-l-4 border-l-sky-400;
+  }
+  .input {
+    @apply bg-white border border-alp-300 rounded-xl px-3 py-2.5 text-alp-800 focus:outline-none
+           focus:ring-2 focus:ring-swiss-red/40 focus:border-swiss-red
+           dark:bg-alp-800 dark:border-alp-600 dark:text-alp-50 dark:placeholder:text-alp-400
+           dark:focus:border-swiss-red dark:focus:ring-swiss-red/40;
+  }
+  .nav-item {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-red/50;
+  }
+}
+
+@layer utilities {
+  /* Textura topográfica muy sutil de fondo — evoca un mapa alpino sin
+     distraer del contenido. */
+  .bg-topo {
+    background-image: radial-gradient(circle at 20% 20%, rgba(92, 150, 184, 0.06) 0, transparent 45%),
+      radial-gradient(circle at 80% 0%, rgba(191, 125, 61, 0.05) 0, transparent 40%),
+      radial-gradient(circle at 60% 80%, rgba(213, 43, 30, 0.04) 0, transparent 45%);
   }
 }

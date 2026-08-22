@@ -17,16 +17,16 @@ export function ComparisonTable({ lesson, onContinue }) {
     <div className="space-y-4">
       <div>
         <p className="text-sm font-semibold text-swiss-red uppercase tracking-wide">{lesson.level}</p>
-        <h2 className="font-display font-bold text-2xl text-alp-900">
+        <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50">
           {lesson.title[interfaceLang] ?? lesson.title.es}
         </h2>
-        <p className="text-alp-600 mt-1">{lesson.grammarConcept[interfaceLang] ?? lesson.grammarConcept.es}</p>
+        <p className="text-alp-600 dark:text-alp-300 mt-1 leading-relaxed">{lesson.grammarConcept[interfaceLang] ?? lesson.grammarConcept.es}</p>
       </div>
 
-      <div className="overflow-x-auto rounded-xl2 border border-alp-100">
+      <div className="overflow-x-auto rounded-xl2 border border-alp-100 dark:border-alp-700">
         <table className="w-full text-sm">
           <thead>
-            <tr className="bg-alp-50 text-alp-500 text-left">
+            <tr className="bg-alp-50 dark:bg-alp-900 text-alp-500 dark:text-alp-300 text-left">
               <th className="p-3 font-semibold">{t('appName') && 'Base'}</th>
               <th className="p-3 font-semibold">Hochdeutsch</th>
               <th className="p-3 font-semibold text-swiss-red">Schwiizerdütsch</th>
@@ -40,16 +40,16 @@ export function ComparisonTable({ lesson, onContinue }) {
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.05 }}
-                className="border-t border-alp-100 hover:bg-cheese-50/50"
+                className="border-t border-alp-100 dark:border-alp-700 hover:bg-cheese-50/50 dark:hover:bg-cheese-900/20"
               >
-                <td className="p-3 text-alp-700">{row.base[interfaceLang] ?? row.base.es}</td>
-                <td className="p-3 text-alp-500">{row.hochdeutsch}</td>
+                <td className="p-3 text-alp-700 dark:text-alp-200">{row.base[interfaceLang] ?? row.base.es}</td>
+                <td className="p-3 text-alp-500 dark:text-alp-400">{row.hochdeutsch}</td>
                 <td className="p-3 font-semibold text-swiss-red">{row.schwiizerduetsch}</td>
                 <td className="p-3">
                   {supportsSynthesis && (
                     <button
                       onClick={() => speak(row.schwiizerduetsch, { lang: 'de-DE' })}
-                      className="text-alp-400 hover:text-swiss-red"
+                      className="nav-item text-alp-400 hover:text-swiss-red min-h-[44px] min-w-[44px] flex items-center justify-center"
                       aria-label="Escuchar"
                     >
                       <Volume2 size={16} />

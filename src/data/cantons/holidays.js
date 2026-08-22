@@ -1,9 +1,9 @@
-// Festivos y eventos culturales de los 5 cantones germanófonos soportados
-// en el lanzamiento. Las fechas fijas son exactas; las fechas "movibles"
-// (Pascua, Fasnacht, Sechseläuten, etc.) están calculadas para 2026 como
-// mejor aproximación de demo — antes de producción, verificar contra la
-// fuente oficial de cada cantón (p. ej. feiertagskalender.ch) y recalcular
-// cada año o implementar el cálculo real de Pascua computus.
+// Festivos y eventos culturales de los cantones (mayoritariamente)
+// germanófonos de Suiza. Las fechas fijas son exactas; las fechas
+// "movibles" (Pascua, Fasnacht, Sechseläuten, etc.) están calculadas para
+// 2026 como mejor aproximación de demo — antes de producción, verificar
+// contra la fuente oficial de cada cantón (p. ej. feiertagskalender.ch) y
+// recalcular cada año o implementar el cálculo real de Pascua computus.
 //
 // type: 'national'   -> festivo en toda Suiza
 //       'cantonal'    -> festivo oficial solo en ese cantón
@@ -13,7 +13,21 @@ export const CANTONS = [
   { id: 'bern', name: 'Bern', shortName: 'BE', color: '#D52B1E' },
   { id: 'luzern', name: 'Luzern', shortName: 'LU', color: '#0F5FA6' },
   { id: 'basel', name: 'Basel-Stadt', shortName: 'BS', color: '#000000' },
+  { id: 'baselland', name: 'Basel-Landschaft', shortName: 'BL', color: '#C1272D' },
   { id: 'stgallen', name: 'St. Gallen', shortName: 'SG', color: '#00843D' },
+  { id: 'aargau', name: 'Aargau', shortName: 'AG', color: '#1B75BB' },
+  { id: 'thurgau', name: 'Thurgau', shortName: 'TG', color: '#00A651' },
+  { id: 'schaffhausen', name: 'Schaffhausen', shortName: 'SH', color: '#F7941D' },
+  { id: 'zug', name: 'Zug', shortName: 'ZG', color: '#1857A4' },
+  { id: 'solothurn', name: 'Solothurn', shortName: 'SO', color: '#C1272D' },
+  { id: 'schwyz', name: 'Schwyz', shortName: 'SZ', color: '#D52B1E' },
+  { id: 'glarus', name: 'Glarus', shortName: 'GL', color: '#C1272D' },
+  { id: 'uri', name: 'Uri', shortName: 'UR', color: '#F7B500' },
+  { id: 'obwalden', name: 'Obwalden', shortName: 'OW', color: '#C1272D' },
+  { id: 'nidwalden', name: 'Nidwalden', shortName: 'NW', color: '#C1272D' },
+  { id: 'appenzellAR', name: 'Appenzell Ausserrhoden', shortName: 'AR', color: '#000000' },
+  { id: 'appenzellAI', name: 'Appenzell Innerrhoden', shortName: 'AI', color: '#000000' },
+  { id: 'graubuenden', name: 'Graubünden', shortName: 'GR', color: '#3A789E' },
 ]
 
 const NATIONAL_2026 = [
@@ -47,9 +61,57 @@ const CANTONAL_EVENTS_2026 = {
     { date: '2026-01-19', name: 'Vogel-Gryff-Fäscht', icon: '🦅', type: 'cultural', description: 'Fiesta gremial de "Kleinbasel": el Grifo, el León Salvaje y el Leu bailan en el Rin en una balsa, sin dirigirse la palabra a los gremios de "Grossbasel".' },
     { date: '2026-02-23', name: 'Basler Fasnacht — Morgestraich', icon: '🏮', type: 'cultural', description: 'A las 4:00 en punto se apagan las luces de la ciudad y miles de faroles pintados a mano inundan las calles: arranca el mayor carnaval protestante de Europa (3 días).' },
   ],
+  baselland: [
+    { date: '2026-02-23', name: 'Basler Fasnacht (regional)', icon: '🏮', type: 'cultural', description: 'Muchos pueblos del Baselbiet participan de la misma Fasnacht que la ciudad de Basilea, con sus propias "cliqueras" locales.' },
+    { date: '2026-04-06', name: 'Temporada de floración de cerezos', icon: '🌸', type: 'cultural', description: 'El Baselbiet es tierra de huertos y cerezos ("Chriesi") — primavera es la mejor época para rutas por sus pueblos agrícolas.' },
+  ],
   stgallen: [
     { date: '2026-10-08', name: 'OLMA', icon: '🐄', type: 'cultural', description: 'Feria suiza de otoño (agricultura y estilo de vida): degustaciones, ganado premiado y la icónica bratwurst de St. Gallen.' },
     { date: '2026-06-15', name: 'Kinderfest (referencia)', icon: '🎈', type: 'cultural', description: 'Fiesta infantil centenaria que se celebra cada 3 años con desfile de disfraces por el centro histórico (próxima edición a confirmar).' },
+  ],
+  aargau: [
+    { date: '2026-11-04', name: 'Rüeblimärt', icon: '🥕', type: 'cultural', description: 'El "Mercado de la Zanahoria" de Aarau: puestos, trenzas y esculturas hechas enteramente de zanahorias, todo un día.' },
+  ],
+  thurgau: [
+    { date: '2026-07-09', name: 'Frauenfelder Openair', icon: '🎸', type: 'cultural', description: 'Uno de los festivales de música al aire libre más grandes de Suiza, en Frauenfeld.' },
+    { date: '2026-10-01', name: 'Cosecha de manzanas', icon: '🍎', type: 'cultural', description: 'Thurgau es "Mostindien" — la tierra suiza de la sidra: en otoño los huertos y lagares abren sus puertas.' },
+  ],
+  schaffhausen: [
+    { date: '2026-02-16', name: 'Schaffhauser Fasnacht', icon: '🎭', type: 'cultural', description: 'Carnaval local con desfiles y música por el casco antiguo medieval.' },
+    { date: '2026-05-01', name: 'Rheinfall', icon: '💦', type: 'cultural', description: 'No es una fecha fija, sino la gran postal del cantón: la catarata más grande de Europa, espectacular todo el año.' },
+  ],
+  zug: [
+    { date: '2026-08-28', name: 'Zuger Chilbi', icon: '🎡', type: 'cultural', description: 'La gran feria popular de la ciudad de Zug, con atracciones junto al lago.' },
+    { date: '2026-09-01', name: 'Temporada de Zuger Kirsch', icon: '🍒', type: 'cultural', description: 'Zug es famoso por sus cerezas y el aguardiente "Kirsch" que se destila con ellas.' },
+  ],
+  solothurn: [
+    { date: '2026-01-15', name: 'Solothurner Filmtage', icon: '🎬', type: 'cultural', description: 'El festival de cine suizo más importante del país, referente del cine hecho en Suiza.' },
+  ],
+  schwyz: [
+    { date: '2026-12-04', name: 'Chlausjagen (Küssnacht am Rigi)', icon: '🔔', type: 'cultural', description: 'Procesión nocturna con enormes mitras de papel iluminadas ("Iffele") y el estruendo de cencerros y cuernos de vaca.' },
+    { date: '2026-08-01', name: 'Rütlischwur (referencia histórica)', icon: '📜', type: 'cultural', description: 'Schwyz es uno de los tres cantones fundadores de Suiza (1291) — su museo guarda el "Bundesbrief", el pacto federal original.' },
+  ],
+  glarus: [
+    { date: '2026-04-02', name: 'Näfelser Fahrt', icon: '🕯️', type: 'cultural', description: 'Procesión conmemorativa centenaria de la batalla de Näfels (1388) — toda la población participa, incluidas las escuelas.' },
+  ],
+  uri: [
+    { date: '2026-07-04', name: 'Tellspiele Altdorf (temporada)', icon: '🎯', type: 'cultural', description: 'Representaciones al aire libre de la leyenda de Wilhelm Tell, en la ciudad natal del mito, Altdorf — temporada de verano.' },
+  ],
+  obwalden: [
+    { date: '2026-09-01', name: 'Alpabzug', icon: '🐮', type: 'cultural', description: 'Bajada del ganado de los alpes tras el verano, con las vacas engalanadas con coronas de flores — tradición típica de los cantones alpinos centrales.' },
+  ],
+  nidwalden: [
+    { date: '2026-09-01', name: 'Alpabzug', icon: '🐮', type: 'cultural', description: 'Igual que en los cantones vecinos, el fin del verano se celebra con el descenso festivo del ganado desde los alpes.' },
+  ],
+  appenzellAR: [
+    { date: '2026-01-13', name: 'Silvesterchlausen', icon: '🔔', type: 'cultural', description: 'Los "Chlaus", con máscaras y tocados enormes, recorren los pueblos cantando el "Zäuerli" para celebrar el fin de año según el calendario juliano.' },
+  ],
+  appenzellAI: [
+    { date: '2026-04-26', name: 'Landsgemeinde', icon: '🙌', type: 'cultural', description: 'Asamblea popular al aire libre única en el mundo: los ciudadanos votan a mano alzada en la plaza del pueblo de Appenzell.' },
+  ],
+  graubuenden: [
+    { date: '2026-03-01', name: 'Chalandamarz', icon: '🐄', type: 'cultural', description: 'Fiesta romanche de la llegada de la primavera: los niños recorren los pueblos de la Engadina haciendo sonar grandes cencerros.' },
+    { date: '2026-01-19', name: 'World Economic Forum (Davos)', icon: '🏔️', type: 'cultural', description: 'Cada enero, Davos se convierte en el centro de atención mundial durante el Foro Económico Mundial.' },
   ],
 }
 

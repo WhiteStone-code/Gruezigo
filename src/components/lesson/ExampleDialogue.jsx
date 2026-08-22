@@ -16,11 +16,11 @@ export function ExampleDialogue({ lesson, onContinue }) {
   return (
     <div>
       <p className="text-sm font-semibold text-swiss-red uppercase tracking-wide mb-1">Escucha primero</p>
-      <h2 className="font-display font-bold text-2xl text-alp-900 mb-4">
+      <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50 mb-4">
         {lesson.title[interfaceLang] ?? lesson.title.es}
       </h2>
 
-      <div className="rounded-xl2 bg-alp-50 border border-alp-100 p-4 space-y-3 mb-6">
+      <div className="rounded-xl2 bg-alp-50 dark:bg-alp-900 border border-alp-100 dark:border-alp-700 p-4 space-y-3 mb-6">
         {lesson.dialogueExample.map((line, idx) => {
           const isLeft = idx % 2 === 0
           return (
@@ -34,21 +34,21 @@ export function ExampleDialogue({ lesson, onContinue }) {
               <span className="text-2xl shrink-0">{line.speaker}</span>
               <div
                 className={`max-w-[80%] rounded-2xl px-4 py-2.5 shadow-sm
-                  ${isLeft ? 'bg-white rounded-bl-sm' : 'bg-swiss-red/10 rounded-br-sm'}`}
+                  ${isLeft ? 'bg-white dark:bg-alp-800 rounded-bl-sm' : 'bg-swiss-red/10 dark:bg-swiss-red/20 rounded-br-sm'}`}
               >
                 <div className="flex items-center gap-2">
-                  <p className="font-semibold text-alp-900">{line.schwiizerduetsch}</p>
+                  <p className="font-semibold text-alp-900 dark:text-alp-50">{line.schwiizerduetsch}</p>
                   {supportsSynthesis && (
                     <button
                       onClick={() => speak(line.schwiizerduetsch, { lang: 'de-DE' })}
-                      className="text-alp-400 hover:text-swiss-red shrink-0"
+                      className="nav-item text-alp-400 hover:text-swiss-red shrink-0"
                       aria-label="Escuchar"
                     >
                       <Volume2 size={14} />
                     </button>
                   )}
                 </div>
-                <p className="text-xs text-alp-500 mt-0.5">{line.base[interfaceLang] ?? line.base.es}</p>
+                <p className="text-xs text-alp-500 dark:text-alp-400 mt-0.5">{line.base[interfaceLang] ?? line.base.es}</p>
               </div>
             </motion.div>
           )

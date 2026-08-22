@@ -76,27 +76,27 @@ export function CantonalCalendar() {
         <div className="flex items-center justify-between mb-4">
           <button
             onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() - 1, 1))}
-            className="p-2 rounded-full hover:bg-alp-50 text-alp-600"
+            className="nav-item p-2 rounded-full hover:bg-alp-50 dark:hover:bg-alp-700 text-alp-600 dark:text-alp-300 min-h-[44px] min-w-[44px]"
             aria-label="Mes anterior"
           >
             <ChevronLeft size={20} />
           </button>
           <div className="text-center">
-            <h3 className="font-display font-bold text-lg capitalize text-alp-900">{monthLabel}</h3>
-            <p className="text-xs text-alp-500">
+            <h3 className="font-display font-bold text-lg capitalize text-alp-900 dark:text-alp-50">{monthLabel}</h3>
+            <p className="text-sm text-alp-500 dark:text-alp-300">
               {t('calendar')} · {cantonMeta?.name}
             </p>
           </div>
           <button
             onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() + 1, 1))}
-            className="p-2 rounded-full hover:bg-alp-50 text-alp-600"
+            className="nav-item p-2 rounded-full hover:bg-alp-50 dark:hover:bg-alp-700 text-alp-600 dark:text-alp-300 min-h-[44px] min-w-[44px]"
             aria-label="Mes siguiente"
           >
             <ChevronRight size={20} />
           </button>
         </div>
 
-        <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-alp-400 mb-1">
+        <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-alp-400 dark:text-alp-400 mb-1">
           {WEEKDAY_LABELS.map((d) => (
             <div key={d}>{d}</div>
           ))}
@@ -114,12 +114,14 @@ export function CantonalCalendar() {
               <button
                 key={idx}
                 onClick={() => event && setSelectedEvent(event)}
-                className={`aspect-square rounded-lg flex flex-col items-center justify-center relative text-sm
+                className={`nav-item aspect-square rounded-lg flex flex-col items-center justify-center relative text-sm
                   transition-colors
                   ${isToday ? 'ring-2 ring-swiss-red' : ''}
-                  ${event ? 'bg-cheese-50 hover:bg-cheese-100 cursor-pointer' : 'hover:bg-alp-50'}`}
+                  ${event
+                    ? 'bg-cheese-50 hover:bg-cheese-100 dark:bg-cheese-900/30 dark:hover:bg-cheese-900/50 cursor-pointer'
+                    : 'hover:bg-alp-50 dark:hover:bg-alp-700'}`}
               >
-                <span className={isToday ? 'font-bold text-swiss-red' : 'text-alp-700'}>{cell.date.getDate()}</span>
+                <span className={isToday ? 'font-bold text-swiss-red' : 'text-alp-700 dark:text-alp-200'}>{cell.date.getDate()}</span>
                 {event && (
                   <span className="absolute bottom-0.5 text-[10px] leading-none" title={event.name}>
                     {event.icon}
@@ -131,8 +133,8 @@ export function CantonalCalendar() {
         </div>
       </Card>
 
-      <Card>
-        <h4 className="font-display font-bold text-alp-900 mb-3 flex items-center gap-2">
+      <Card className="card-accent-cheese">
+        <h4 className="font-display font-bold text-alp-900 dark:text-alp-50 mb-3 flex items-center gap-2">
           <Sparkles size={18} className="text-cheese-500" />
           Próximos festivos y eventos
         </h4>
@@ -144,12 +146,12 @@ export function CantonalCalendar() {
                 key={event.date + event.name}
                 onClick={() => setSelectedEvent(event)}
                 whileHover={{ x: 4 }}
-                className="w-full flex items-center gap-3 p-3 rounded-xl bg-alp-50 hover:bg-alp-100 text-left transition-colors"
+                className="nav-item w-full flex items-center gap-3 p-3 rounded-xl bg-alp-50 hover:bg-alp-100 dark:bg-alp-900 dark:hover:bg-alp-700 text-left transition-colors min-h-[44px]"
               >
                 <span className="text-2xl">{event.icon}</span>
                 <div className="flex-1">
-                  <p className="font-semibold text-alp-900 text-sm">{event.name}</p>
-                  <p className="text-xs text-alp-500">
+                  <p className="font-semibold text-alp-900 dark:text-alp-50 text-sm">{event.name}</p>
+                  <p className="text-sm text-alp-500 dark:text-alp-300">
                     {new Date(event.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long' })}
                   </p>
                 </div>
@@ -158,7 +160,7 @@ export function CantonalCalendar() {
             )
           })}
           {upcoming.length === 0 && (
-            <p className="text-sm text-alp-500">No hay más eventos registrados este año para este cantón.</p>
+            <p className="text-sm text-alp-500 dark:text-alp-300">No hay más eventos registrados este año para este cantón.</p>
           )}
         </div>
       </Card>
@@ -173,20 +175,20 @@ export function CantonalCalendar() {
             onClick={() => setSelectedEvent(null)}
           >
             <motion.div
-              className="bg-white rounded-xl2 shadow-card p-6 max-w-sm w-full animate-pop-in"
+              className="bg-white dark:bg-alp-800 rounded-xl2 shadow-card p-6 max-w-sm w-full animate-pop-in"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="text-4xl mb-2">{selectedEvent.icon}</div>
-              <h3 className="font-display font-bold text-xl text-alp-900">{selectedEvent.name}</h3>
-              <p className="text-xs text-alp-500 mb-3">
+              <h3 className="font-display font-bold text-xl text-alp-900 dark:text-alp-50">{selectedEvent.name}</h3>
+              <p className="text-sm text-alp-500 dark:text-alp-300 mb-3">
                 {new Date(selectedEvent.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
                 {' · '}
                 {cantonMeta?.name}
               </p>
-              <p className="text-sm text-alp-700 leading-relaxed">{selectedEvent.description}</p>
+              <p className="text-sm text-alp-700 dark:text-alp-200 leading-relaxed">{selectedEvent.description}</p>
               <button onClick={() => setSelectedEvent(null)} className="btn-secondary mt-4 w-full">
                 Cerrar
               </button>
