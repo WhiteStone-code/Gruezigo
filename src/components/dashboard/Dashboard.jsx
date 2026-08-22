@@ -1,18 +1,17 @@
 import { motion } from 'framer-motion'
-import { BookOpenCheck, MapPin } from 'lucide-react'
+import { BookOpenCheck, MapPin, Map } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
-import { getLessonsByLevel } from '../../data/lessons/index.js'
+import { getNextLesson } from '../../data/lessons/index.js'
 import { CANTONS, getUpcomingEvent } from '../../data/cantons/holidays.js'
 import { StreakCounter } from './StreakCounter.jsx'
 import { Card } from '../ui/Card.jsx'
 import { Button } from '../ui/Button.jsx'
 
-export function Dashboard({ onOpenLesson, onOpenCalendar }) {
+export function Dashboard({ onOpenLesson, onOpenCalendar, onOpenRoadmap }) {
   const { interfaceLang, t } = useLanguage()
   const { progress } = useUserProgress()
-  const lessons = getLessonsByLevel(progress.level)
-  const nextLesson = lessons.find((l) => !progress.completedLessons.includes(l.id)) ?? lessons[0]
+  const nextLesson = getNextLesson(progress.completedLessons)
   const upcomingEvent = getUpcomingEvent(progress.canton)
   const cantonMeta = CANTONS.find((c) => c.id === progress.canton)
 
@@ -65,30 +64,18 @@ export function Dashboard({ onOpenLesson, onOpenCalendar }) {
         )}
       </Card>
 
-      <Card>
-        <h3 className="font-display font-bold text-alp-900 mb-3">Tu ruta {progress.level}</h3>
-        <div className="space-y-2">
-          {lessons.map((lesson) => {
-            const done = progress.completedLessons.includes(lesson.id)
-            return (
-              <button
-                key={lesson.id}
-                onClick={() => onOpenLesson(lesson.id)}
-                className={`w-full flex items-center gap-3 p-3 rounded-xl text-left transition-colors
-                  ${done ? 'bg-green-50 hover:bg-green-100' : 'bg-alp-50 hover:bg-alp-100'}`}
-              >
-                <span
-                  className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0
-                  ${done ? 'bg-green-500 text-white' : 'bg-alp-200 text-alp-600'}`}
-                >
-                  {done ? '✓' : lesson.order}
-                </span>
-                <span className="font-medium text-alp-800 text-sm">{lesson.title[interfaceLang] ?? lesson.title.es}</span>
-              </button>
-            )
-          })}
-        </div>
-      </Card>
+      <button onClick={onOpenRoadmap} className="w-full">
+        <Card className="flex items-center gap-3 hover:bg-alp-50 transition-colors">
+          <div className="w-11 h-11 rounded-full bg-cheese-100 flex items-center justify-center shrink-0">
+            <Map size={20} className="text-cheese-600" />
+          </div>
+          <div className="text-left flex-1">
+            <p className="font-display font-bold text-alp-900">Ver el mapa completo A1 → C2</p>
+            <p className="text-xs text-alp-500">Tu ruta entera, nivel a nivel</p>
+          </div>
+          <span className="text-alp-300">→</span>
+        </Card>
+      </button>
     </div>
   )
 }

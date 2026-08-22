@@ -21,6 +21,12 @@
     "sq": "Të porositësh ushqim e pije, dhe të kërkosh faturën.",
     "tr": "Yiyecek içecek sipariş etmek ve hesap istemek."
   },
+  "dialogueExample": [
+    { "speaker": "🧑", "schwiizerduetsch": "Grüezi, es Tisch für zwöi, bitte.", "base": { "es": "Hola, una mesa para dos, por favor.", "en": "Hi, a table for two, please.", "pt": "Olá, uma mesa para dois, por favor.", "fr": "Bonjour, une table pour deux, s'il vous plaît.", "it": "Buongiorno, un tavolo per due, per favore.", "sq": "Përshëndetje, një tavolinë për dy, ju lutem.", "tr": "Merhaba, iki kişilik bir masa lütfen." } },
+    { "speaker": "🧑‍🍳", "schwiizerduetsch": "Gerne, chömed mit mir.", "base": { "es": "Con gusto, vengan conmigo.", "en": "Sure, come with me.", "pt": "Com certeza, venham comigo.", "fr": "Avec plaisir, suivez-moi.", "it": "Volentieri, venite con me.", "sq": "Me dëshirë, ejani me mua.", "tr": "Tabii, benimle gelin." } },
+    { "speaker": "🧑", "schwiizerduetsch": "Ich möcht en Kafi bstelle, bitte.", "base": { "es": "Quisiera pedir un café, por favor.", "en": "I'd like to order a coffee, please.", "pt": "Gostaria de pedir um café, por favor.", "fr": "Je voudrais commander un café, s'il vous plaît.", "it": "Vorrei ordinare un caffè, per favore.", "sq": "Do të doja të porosisja një kafe, ju lutem.", "tr": "Bir kahve sipariş etmek istiyorum, lütfen." } },
+    { "speaker": "🧑‍🍳", "schwiizerduetsch": "En Guete!", "base": { "es": "¡Que aproveche!", "en": "Enjoy your meal!", "pt": "Bom apetite!", "fr": "Bon appétit !", "it": "Buon appetito!", "sq": "Të bëftë mirë!", "tr": "Afiyet olsun!" } }
+  ],
   "comparisonTable": [
     { "base": { "es": "Una mesa para dos, por favor", "en": "A table for two, please", "pt": "Uma mesa para dois, por favor", "fr": "Une table pour deux, s'il vous plaît", "it": "Un tavolo per due, per favore", "sq": "Një tavolinë për dy, ju lutem", "tr": "İki kişilik bir masa, lütfen" }, "hochdeutsch": "Ein Tisch für zwei, bitte", "schwiizerduetsch": "Es Tisch für zwöi, bitte" },
     { "base": { "es": "La carta, por favor", "en": "The menu, please", "pt": "O menu, por favor", "fr": "Le menu, s'il vous plaît", "it": "Il menù, per favore", "sq": "Menynë, ju lutem", "tr": "Menü, lütfen" }, "hochdeutsch": "Die Speisekarte, bitte", "schwiizerduetsch": "D'Charte, bitte" },

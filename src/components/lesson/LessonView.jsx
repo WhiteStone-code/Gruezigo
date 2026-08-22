@@ -4,6 +4,7 @@ import { PartyPopper, Award, Flame } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
 import { LessonProgressBar } from './LessonProgressBar.jsx'
+import { ExampleDialogue } from './ExampleDialogue.jsx'
 import { ComparisonTable } from './ComparisonTable.jsx'
 import { ExerciseMatchVocabulary } from './ExerciseMatchVocabulary.jsx'
 import { ExerciseListening } from './ExerciseListening.jsx'
@@ -39,7 +40,9 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
   // Cada paso es {type, key, render}. Esto hace trivial añadir/quitar
   // módulos por lección sin tocar el resto del componente.
   const steps = useMemo(() => {
-    const list = [{ type: 'comparison' }, { type: 'match' }, { type: 'listening' }]
+    const list = []
+    lesson.dialogueExample?.length && list.push({ type: 'example' })
+    list.push({ type: 'comparison' }, { type: 'match' }, { type: 'listening' })
     lesson.exercises.sentenceBuilder?.length && list.push({ type: 'sentence' })
     lesson.exercises.pronunciation?.length && list.push({ type: 'speaking' })
     lesson.exercises.multipleChoice?.length && list.push({ type: 'multipleChoice' })
@@ -91,6 +94,8 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
           exit={{ opacity: 0, x: -24 }}
           transition={{ duration: 0.25 }}
         >
+          {step.type === 'example' && <ExampleDialogue lesson={lesson} onContinue={() => advance()} />}
+
           {step.type === 'comparison' && <ComparisonTable lesson={lesson} onContinue={() => advance()} />}
 
           {step.type === 'match' && (

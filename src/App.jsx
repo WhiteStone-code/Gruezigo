@@ -2,47 +2,13 @@ import { useState } from 'react'
 import { Header } from './components/layout/Header.jsx'
 import { NavBar } from './components/layout/NavBar.jsx'
 import { Dashboard } from './components/dashboard/Dashboard.jsx'
+import { LevelMap } from './components/dashboard/LevelMap.jsx'
 import { CantonalCalendar } from './components/calendar/CantonalCalendar.jsx'
 import { CultureModule } from './components/culture/CultureModule.jsx'
 import { LessonView } from './components/lesson/LessonView.jsx'
 import { CertificateModal } from './components/certificate/CertificateModal.jsx'
-import { getLessonById, getLessonsByLevel } from './data/lessons/index.js'
+import { getLessonById } from './data/lessons/index.js'
 import { useUserProgress } from './context/UserProgressContext.jsx'
-import { useLanguage } from './context/LanguageContext.jsx'
-
-function LessonsMap({ onOpenLesson }) {
-  const { interfaceLang } = useLanguage()
-  const { progress } = useUserProgress()
-  const lessons = getLessonsByLevel(progress.level)
-
-  return (
-    <div className="max-w-xl mx-auto px-4 py-6 space-y-3">
-      <h2 className="font-display font-bold text-2xl text-alp-900 mb-2">Lecciones · {progress.level}</h2>
-      {lessons.map((lesson) => {
-        const done = progress.completedLessons.includes(lesson.id)
-        return (
-          <button
-            key={lesson.id}
-            onClick={() => onOpenLesson(lesson.id)}
-            className={`w-full flex items-center gap-3 p-4 rounded-xl2 text-left shadow-card transition-transform hover:-translate-y-0.5
-              ${done ? 'bg-green-50' : 'bg-white'}`}
-          >
-            <span
-              className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shrink-0
-              ${done ? 'bg-green-500 text-white' : 'bg-swiss-red/10 text-swiss-red'}`}
-            >
-              {done ? '✓' : lesson.order}
-            </span>
-            <div>
-              <p className="font-semibold text-alp-900">{lesson.title[interfaceLang] ?? lesson.title.es}</p>
-              <p className="text-xs text-alp-500">{lesson.grammarConcept[interfaceLang] ?? lesson.grammarConcept.es}</p>
-            </div>
-          </button>
-        )
-      })}
-    </div>
-  )
-}
 
 export default function App() {
   const [view, setView] = useState('dashboard') // dashboard | lessons | calendar | culture
@@ -85,8 +51,20 @@ export default function App() {
       <NavBar active={view} onNavigate={setView} />
       <div className="flex-1 pb-16 md:pb-0">
         <Header />
-        {view === 'dashboard' && <Dashboard onOpenLesson={openLesson} onOpenCalendar={() => setView('calendar')} />}
-        {view === 'lessons' && <LessonsMap onOpenLesson={openLesson} />}
+        {view === 'dashboard' && (
+          <Dashboard
+            onOpenLesson={openLesson}
+            onOpenCalendar={() => setView('calendar')}
+            onOpenRoadmap={() => setView('lessons')}
+          />
+        )}
+        {view === 'lessons' && (
+          <div className="max-w-xl mx-auto px-4 py-6">
+            <h2 className="font-display font-bold text-2xl text-alp-900 mb-1">Tu ruta A1 → C2</h2>
+            <p className="text-sm text-alp-500 mb-4">Toca un nivel para ver sus lecciones o su temario.</p>
+            <LevelMap onOpenLesson={openLesson} />
+          </div>
+        )}
         {view === 'calendar' && (
           <div className="max-w-xl mx-auto px-4 py-6">
             <CantonalCalendar />

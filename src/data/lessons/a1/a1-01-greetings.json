@@ -21,6 +21,12 @@
     "sq": "Si të përshëndesësh, të lamtumirosh dhe të pyesësh 'si je?' në Züritüütsch.",
     "tr": "Züritüütsch'te nasıl selam verilir, vedalaşılır ve 'nasılsın?' diye sorulur."
   },
+  "dialogueExample": [
+    { "speaker": "🧑", "schwiizerduetsch": "Grüezi! Wie gaht's dir?", "base": { "es": "¡Hola! ¿Cómo estás?", "en": "Hi! How are you?", "pt": "Olá! Como estás?", "fr": "Salut ! Comment ça va ?", "it": "Ciao! Come stai?", "sq": "Përshëndetje! Si je?", "tr": "Merhaba! Nasılsın?" } },
+    { "speaker": "👩", "schwiizerduetsch": "Guet, danke! Und dir?", "base": { "es": "Bien, ¡gracias! ¿Y tú?", "en": "Good, thanks! And you?", "pt": "Bem, obrigado! E tu?", "fr": "Bien, merci ! Et toi ?", "it": "Bene, grazie! E tu?", "sq": "Mirë, faleminderit! Po ti?", "tr": "İyiyim, teşekkürler! Ya sen?" } },
+    { "speaker": "🧑", "schwiizerduetsch": "Au guet, merci vilmal.", "base": { "es": "También bien, muchas gracias.", "en": "Also good, thank you very much.", "pt": "Também bem, muito obrigado.", "fr": "Bien aussi, merci beaucoup.", "it": "Anche bene, grazie mille.", "sq": "Edhe unë mirë, shumë faleminderit.", "tr": "Ben de iyiyim, çok teşekkürler." } },
+    { "speaker": "👩", "schwiizerduetsch": "Ade, bis geng!", "base": { "es": "¡Adiós, hasta luego!", "en": "Bye, see you later!", "pt": "Adeus, até logo!", "fr": "Au revoir, à bientôt !", "it": "Ciao, a presto!", "sq": "Mirupafshim, shihemi!", "tr": "Hoşça kal, görüşürüz!" } }
+  ],
   "comparisonTable": [
     {
       "base": { "es": "Hola (formal)", "en": "Hello (formal)", "pt": "Olá (formal)", "fr": "Bonjour (formel)", "it": "Buongiorno (formale)", "sq": "Përshëndetje (formale)", "tr": "Merhaba (resmi)" },

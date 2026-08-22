@@ -21,6 +21,12 @@
     "sq": "Fjalor bazë blerjesh, sasi dhe si të pyesësh çmimin.",
     "tr": "Temel alışveriş kelimeleri, miktarlar ve fiyat sorma."
   },
+  "dialogueExample": [
+    { "speaker": "🧑", "schwiizerduetsch": "Grüezi, hend Sie frischi Öpfel?", "base": { "es": "Hola, ¿tiene manzanas frescas?", "en": "Hi, do you have fresh apples?", "pt": "Olá, tem maçãs frescas?", "fr": "Bonjour, avez-vous des pommes fraîches ?", "it": "Buongiorno, avete mele fresche?", "sq": "Përshëndetje, a keni mollë të freskëta?", "tr": "Merhaba, taze elmanız var mı?" } },
+    { "speaker": "🧀", "schwiizerduetsch": "Ja klar, det hinde links.", "base": { "es": "Sí, claro, ahí atrás a la izquierda.", "en": "Yes, of course, back there on the left.", "pt": "Sim, claro, ali atrás à esquerda.", "fr": "Oui bien sûr, là-bas à gauche.", "it": "Sì certo, là dietro a sinistra.", "sq": "Po, sigurisht, atje pas majtas.", "tr": "Evet tabii, arkada solda." } },
+    { "speaker": "🧑", "schwiizerduetsch": "Merci. Und was choschtet das Brot?", "base": { "es": "Gracias. ¿Y cuánto cuesta el pan?", "en": "Thanks. And how much is the bread?", "pt": "Obrigado. E quanto custa o pão?", "fr": "Merci. Et combien coûte le pain ?", "it": "Grazie. E quanto costa il pane?", "sq": "Faleminderit. Dhe sa kushton buka?", "tr": "Teşekkürler. Peki ekmek ne kadar?" } },
+    { "speaker": "🧀", "schwiizerduetsch": "Das choschtet zwöi Franke fünfzg.", "base": { "es": "Cuesta dos francos con cincuenta.", "en": "It costs two francs fifty.", "pt": "Custa dois francos e cinquenta.", "fr": "Ça coûte deux francs cinquante.", "it": "Costa due franchi e cinquanta.", "sq": "Kushton dy franga e pesëdhjetë.", "tr": "İki frank elli sent." } }
+  ],
   "comparisonTable": [
     { "base": { "es": "¿Cuánto cuesta?", "en": "How much does it cost?", "pt": "Quanto custa?", "fr": "Combien ça coûte ?", "it": "Quanto costa?", "sq": "Sa kushton?", "tr": "Ne kadar tutuyor?" }, "hochdeutsch": "Was kostet das?", "schwiizerduetsch": "Was choschtet das?" },
     { "base": { "es": "Quisiera...", "en": "I would like...", "pt": "Eu gostaria de...", "fr": "Je voudrais...", "it": "Vorrei...", "sq": "Do të doja...", "tr": "İsterim ki..." }, "hochdeutsch": "Ich hätte gern...", "schwiizerduetsch": "Ich hätt gern..." },
