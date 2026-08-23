@@ -241,6 +241,26 @@ export function getLevelByCode(code) {
   return LEVELS.find((l) => l.code === code) ?? null
 }
 
+// Orden de los NIVELES CEFR reales (A1 → C2), derivado de LEVELS para no
+// duplicar la lista. Un "grupo" es el nivel tal y como lo ve el alumno
+// (p. ej. "A1"); cada grupo puede internamente estar dividido en varios
+// "capítulos" jugables (A1.1, A1.2, A1.3...) que ya no se muestran como
+// nodos independientes en el mapa — el alumno entra a "A1" y ahí encuentra
+// todos sus capítulos y lecciones juntos.
+export const GROUP_ORDER = [...new Set(LEVELS.map((l) => l.group))]
+
+// Nombre descriptivo de cada nivel CEFR (terminología estándar del Marco
+// Común Europeo de Referencia — no son nombres propios de ningún curso o
+// producto).
+export const GROUP_TITLES = {
+  A1: { es: 'Principiante', en: 'Beginner', pt: 'Iniciante', fr: 'Débutant', it: 'Principiante', sq: 'Fillestar', tr: 'Başlangıç' },
+  A2: { es: 'Elemental', en: 'Elementary', pt: 'Elementar', fr: 'Élémentaire', it: 'Elementare', sq: 'Elementar', tr: 'Temel' },
+  B1: { es: 'Intermedio', en: 'Intermediate', pt: 'Intermédio', fr: 'Intermédiaire', it: 'Intermedio', sq: 'Mesatar', tr: 'Orta' },
+  B2: { es: 'Intermedio alto', en: 'Upper intermediate', pt: 'Intermédio alto', fr: 'Intermédiaire avancé', it: 'Intermedio superiore', sq: 'Mesatar i lartë', tr: 'Orta üstü' },
+  C1: { es: 'Avanzado', en: 'Advanced', pt: 'Avançado', fr: 'Avancé', it: 'Avanzato', sq: 'I avancuar', tr: 'İleri' },
+  C2: { es: 'Maestría', en: 'Mastery', pt: 'Mestria', fr: 'Maîtrise', it: 'Padronanza', sq: 'Zotërim', tr: 'Ustalık' },
+}
+
 export function getNextLevelCode(code) {
   const idx = LEVELS.findIndex((l) => l.code === code)
   return idx >= 0 && idx + 1 < LEVELS.length ? LEVELS[idx + 1].code : null
@@ -263,5 +283,34 @@ export function computeLevelStates(completedLessons, getLessonsByLevel, unlockAl
     const state = !previousContentDone && !unlockAll ? 'locked' : isDone ? 'done' : 'current'
     previousContentDone = previousContentDone && isDone
     return { ...level, state, doneCount, totalCount: lessons.length }
+  })
+}
+
+// Igual que computeLevelStates, pero agregado por NIVEL CEFR (grupo) en vez
+// de por capítulo — es lo que ahora dibuja el mapa principal. Cada grupo
+// lleva su lista de capítulos (con su propio estado individual, calculado
+// por computeLevelStates) para que la hoja de detalle pueda mostrarlos
+// todos juntos bajo el mismo nivel.
+export function computeGroupStates(completedLessons, getLessonsByLevel, unlockAll = false) {
+  const chapters = computeLevelStates(completedLessons, getLessonsByLevel, unlockAll)
+  let previousGroupDone = true
+
+  return GROUP_ORDER.map((code) => {
+    const groupChapters = chapters.filter((c) => c.group === code)
+    const hasContent = groupChapters.some((c) => c.hasContent)
+    const gradient = groupChapters[0]?.gradient
+    const emoji = groupChapters[0]?.emoji
+
+    if (!hasContent) {
+      return { code, chapters: groupChapters, gradient, emoji, hasContent, state: 'soon', doneCount: 0, totalCount: 0 }
+    }
+
+    const totalCount = groupChapters.reduce((sum, c) => sum + c.totalCount, 0)
+    const doneCount = groupChapters.reduce((sum, c) => sum + c.doneCount, 0)
+    const isDone = totalCount > 0 && doneCount === totalCount
+    const state = !previousGroupDone && !unlockAll ? 'locked' : isDone ? 'done' : 'current'
+    previousGroupDone = previousGroupDone && isDone
+
+    return { code, chapters: groupChapters, gradient, emoji, hasContent, state, doneCount, totalCount }
   })
 }

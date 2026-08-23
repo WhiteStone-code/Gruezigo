@@ -2,11 +2,16 @@ import { Flame } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
 import { useLanguage } from '../../context/LanguageContext.jsx'
+import { getNextLesson } from '../../data/lessons/index.js'
 import { Card } from '../ui/Card.jsx'
 
 export function StreakCounter() {
   const { progress } = useUserProgress()
   const { t } = useLanguage()
+  // Nivel real derivado del progreso (no del campo `progress.level`, que
+  // nunca se actualiza) — y mostramos solo el grupo CEFR (p. ej. "A1"), no
+  // el código de capítulo interno (p. ej. "A1.3").
+  const currentGroup = (getNextLesson(progress.completedLessons)?.level ?? progress.level).split('.')[0]
 
   return (
     <Card className="card-lg flex items-center gap-4">
@@ -25,7 +30,7 @@ export function StreakCounter() {
       </div>
       <div className="ml-auto text-right">
         <p className="text-lg font-display font-bold text-cheese-600 dark:text-cheese-300">{progress.xp} XP</p>
-        <p className="text-sm text-alp-400 dark:text-alp-400">Nivel {progress.level}</p>
+        <p className="text-sm text-alp-400 dark:text-alp-400">Nivel {currentGroup}</p>
       </div>
     </Card>
   )

@@ -35,7 +35,7 @@ export function Dashboard({ onOpenLesson, onOpenCalendar, onOpenRoadmap }) {
       {nextLesson && (
         <motion.div whileHover={{ y: -2 }}>
           <div className="card-lg bg-gradient-to-br from-swiss-red to-swiss-red-dark text-white dark:ring-1 dark:ring-swiss-red-dark/60 dark:shadow-lg dark:shadow-black/30">
-            <p className="text-xs uppercase tracking-wide opacity-80 mb-1">{nextLesson.level}</p>
+            <p className="text-xs uppercase tracking-wide opacity-80 mb-1">{nextLesson.level.split('.')[0]}</p>
             <h3 className="font-display font-bold text-xl mb-3">{nextLesson.title[interfaceLang] ?? nextLesson.title.es}</h3>
             <Button
               variant="secondary"

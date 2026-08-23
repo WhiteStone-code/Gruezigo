@@ -25,7 +25,7 @@ export function GrammarReview() {
               className="nav-item w-full flex items-center justify-between p-4 text-left"
             >
               <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-alp-400">{lesson.level}</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-alp-400">{lesson.level.split('.')[0]}</p>
                 <p className="font-display font-bold text-alp-900 dark:text-alp-50">
                   {lesson.title[interfaceLang] ?? lesson.title.es}
                 </p>
