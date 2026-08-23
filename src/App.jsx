@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Header } from './components/layout/Header.jsx'
 import { NavBar } from './components/layout/NavBar.jsx'
 import { Dashboard } from './components/dashboard/Dashboard.jsx'
-import { LevelMap } from './components/dashboard/LevelMap.jsx'
+import { MountainPathMap } from './components/dashboard/MountainPathMap.jsx'
 import { CantonalCalendar } from './components/calendar/CantonalCalendar.jsx'
 import { CultureModule } from './components/culture/CultureModule.jsx'
 import { ReviewHub } from './components/review/ReviewHub.jsx'
@@ -73,8 +73,8 @@ export default function App() {
           {view === 'lessons' && (
             <div className="max-w-xl mx-auto px-4 py-6 pb-24">
               <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50 mb-1">Tu ruta A1 → C2</h2>
-              <p className="text-sm text-alp-500 dark:text-alp-300 mb-4">Toca un nivel para ver sus lecciones o su temario.</p>
-              <LevelMap onOpenLesson={openLesson} />
+              <p className="text-sm text-alp-500 dark:text-alp-300 mb-4">Toca un nodo del camino para ver sus lecciones o su temario.</p>
+              <MountainPathMap onOpenLesson={openLesson} />
             </div>
           )}
           {view === 'review' && <ReviewHub onOpenLesson={openLesson} />}

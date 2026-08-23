@@ -21,6 +21,63 @@
     "sq": "Si të përshëndesësh, të lamtumirosh dhe të pyesësh 'si je?' në Züritüütsch.",
     "tr": "Züritüütsch'te nasıl selam verilir, vedalaşılır ve 'nasılsın?' diye sorulur."
   },
+  "theory": [
+    {
+      "id": "th-pronombres",
+      "title": { "es": "Pronombres personales", "en": "Personal pronouns", "pt": "Pronomes pessoais", "fr": "Pronoms personnels", "it": "Pronomi personali", "sq": "Përemrat vetorë", "tr": "Kişi zamirleri" },
+      "explanation": {
+        "es": "Los pronombres personales del suizo-alemán son casi idénticos a los del Hochdeutsch — la gran diferencia está en cómo se conjugan los verbos después de ellos, no en el pronombre en sí.",
+        "en": "Swiss German personal pronouns are almost identical to Hochdeutsch — the big difference is in how verbs conjugate after them, not the pronoun itself.",
+        "pt": "Os pronomes pessoais do suíço-alemão são quase idênticos aos do Hochdeutsch — a grande diferença está em como os verbos se conjugam a seguir, não no pronome em si.",
+        "fr": "Les pronoms personnels du suisse-allemand sont presque identiques à ceux du Hochdeutsch — la grande différence est dans la conjugaison des verbes qui suit, pas dans le pronom lui-même.",
+        "it": "I pronomi personali dello svizzero-tedesco sono quasi identici a quelli del Hochdeutsch — la vera differenza sta in come si coniugano i verbi dopo di essi, non nel pronome stesso.",
+        "sq": "Përemrat vetorë të gjermanishtes zvicerane janë pothuajse identikë me ata të Hochdeutsch — ndryshimi i madh është se si zgjedhohen foljet pas tyre, jo vetë përemri.",
+        "tr": "İsviçre Almancasındaki kişi zamirleri Hochdeutsch'tekilerle neredeyse aynıdır — asıl fark zamirin kendisinde değil, ondan sonra fiillerin nasıl çekimlendiğindedir."
+      },
+      "table": {
+        "headers": ["Pronombre", "Hochdeutsch", "Schwiizerdütsch"],
+        "rows": [
+          ["yo", "ich", "ich"],
+          ["tú", "du", "du"],
+          ["él/ella", "er / sie", "er / si"],
+          ["nosotros", "wir", "mir"],
+          ["vosotros", "ihr", "ihr"],
+          ["ellos", "sie", "si"]
+        ]
+      }
+    },
+    {
+      "id": "th-sein-haben",
+      "title": { "es": "Los verbos 'sii' (ser/estar) y 'ha' (tener)", "en": "The verbs 'sii' (to be) and 'ha' (to have)", "pt": "Os verbos 'sii' (ser/estar) e 'ha' (ter)", "fr": "Les verbes « sii » (être) et « ha » (avoir)", "it": "I verbi 'sii' (essere) e 'ha' (avere)", "sq": "Foljet 'sii' (me qenë) dhe 'ha' (me pasur)", "tr": "'Sii' (olmak) ve 'ha' (sahip olmak) fiilleri" },
+      "explanation": {
+        "es": "'Sein' (ser/estar) y 'haben' (tener) son los dos verbos más usados de cualquier idioma alemán — y los primeros que hay que dominar, porque además sirven para formar el pasado (ver la nota cultural).",
+        "en": "'Sein' (to be) and 'haben' (to have) are the two most-used verbs in any German language — and the first ones to master, since they're also used to form the past tense (see the cultural note).",
+        "pt": "'Sein' (ser/estar) e 'haben' (ter) são os dois verbos mais usados em qualquer alemão — e os primeiros a dominar, pois também servem para formar o passado (ver nota cultural).",
+        "fr": "« Sein » (être) et « haben » (avoir) sont les deux verbes les plus utilisés en allemand — et les premiers à maîtriser, car ils servent aussi à former le passé (voir la note culturelle).",
+        "it": "'Sein' (essere) e 'haben' (avere) sono i due verbi più usati in tedesco — e i primi da padroneggiare, perché servono anche a formare il passato (vedi la nota culturale).",
+        "sq": "'Sein' (me qenë) dhe 'haben' (me pasur) janë dy foljet më të përdorura në gjermanisht — dhe të parat për t'u zotëruar, sepse përdoren edhe për të formuar kohën e shkuar (shih shënimin kulturor).",
+        "tr": "'Sein' (olmak) ve 'haben' (sahip olmak) Almancadaki en çok kullanılan iki fiildir — ve ilk öğrenilmesi gerekenlerdir, çünkü geçmiş zamanı oluşturmak için de kullanılırlar (kültürel nota bakın)."
+      },
+      "table": {
+        "headers": ["Pronombre", "sein (Hochdeutsch)", "sii (Schwiizerdütsch)"],
+        "rows": [
+          ["ich", "bin", "bi"],
+          ["du", "bist", "bisch"],
+          ["er/si", "ist", "isch"],
+          ["mir/ihr/si", "sind/seid/sind", "sind"]
+        ]
+      },
+      "culturalNote": {
+        "es": "Dato clave: el suizo-alemán hablado casi no usa el pretérito — para contar algo pasado usas siempre el Perfekt: \"ha\"/\"sii\" + participio. Por ejemplo, en vez de \"ich war\" (yo estaba), se dice \"ich bi gsi\" (literalmente \"yo he sido\").",
+        "en": "Key fact: spoken Swiss German barely uses the simple past — to talk about the past you always use the Perfekt: \"ha\"/\"sii\" + past participle. E.g. instead of \"ich war\" (I was), you say \"ich bi gsi\" (literally \"I have been\").",
+        "pt": "Facto-chave: o suíço-alemão falado quase não usa o pretérito — para falar do passado usa-se sempre o Perfekt: \"ha\"/\"sii\" + particípio. Ex.: em vez de \"ich war\" (eu estava), diz-se \"ich bi gsi\" (literalmente \"eu tenho sido\").",
+        "fr": "Point clé : le suisse-allemand parlé n'utilise presque jamais le prétérit — pour parler du passé on utilise toujours le parfait : « ha »/« sii » + participe passé. Ex. : au lieu de « ich war » (j'étais), on dit « ich bi gsi » (littéralement « j'ai été »).",
+        "it": "Punto chiave: lo svizzero-tedesco parlato usa quasi mai il preterito — per parlare del passato si usa sempre il perfetto: \"ha\"/\"sii\" + participio passato. Es.: invece di \"ich war\" (io ero), si dice \"ich bi gsi\" (letteralmente \"io sono stato\").",
+        "sq": "Fakt kyç: gjermanishtja zvicerane e folur pothuajse nuk e përdor të kryerën e thjeshtë — për të folur për të shkuarën përdoret gjithmonë e kryera: \"ha\"/\"sii\" + pjesorja. P.sh. në vend të \"ich war\" (unë isha), thuhet \"ich bi gsi\" (fjalë për fjalë \"unë kam qenë\").",
+        "tr": "Önemli bilgi: konuşulan İsviçre Almancası di'li geçmiş zamanı neredeyse hiç kullanmaz — geçmişten bahsetmek için her zaman şimdiki zamanlı geçmiş kullanılır: \"ha\"/\"sii\" + geçmiş zaman ortacı. Örn. \"ich war\" (ben idim) yerine \"ich bi gsi\" (kelimenin tam anlamıyla \"ben olmuş oldum\") denir."
+      }
+    }
+  ],
   "dialogueExample": [
     { "speaker": "🧑", "schwiizerduetsch": "Grüezi! Wie gaht's dir?", "base": { "es": "¡Hola! ¿Cómo estás?", "en": "Hi! How are you?", "pt": "Olá! Como estás?", "fr": "Salut ! Comment ça va ?", "it": "Ciao! Come stai?", "sq": "Përshëndetje! Si je?", "tr": "Merhaba! Nasılsın?" } },
     { "speaker": "👩", "schwiizerduetsch": "Guet, danke! Und dir?", "base": { "es": "Bien, ¡gracias! ¿Y tú?", "en": "Good, thanks! And you?", "pt": "Bem, obrigado! E tu?", "fr": "Bien, merci ! Et toi ?", "it": "Bene, grazie! E tu?", "sq": "Mirë, faleminderit! Po ti?", "tr": "İyiyim, teşekkürler! Ya sen?" } },
@@ -78,6 +135,24 @@
     { "id": "v6", "hochdeutsch": "Vielen Dank", "schwiizerduetsch": "Merci vilmal", "audioText": "Merci vilmal", "base": { "es": "Muchas gracias", "en": "Thank you very much", "pt": "Muito obrigado", "fr": "Merci beaucoup", "it": "Grazie mille", "sq": "Shumë faleminderit", "tr": "Çok teşekkürler" } }
   ],
   "exercises": {
+    "fillBlanks": [
+      {
+        "id": "fb1",
+        "before": "Ich",
+        "after": "de Marco.",
+        "correctWord": "bi",
+        "options": ["bi", "bisch", "isch"],
+        "hint": { "es": "Completa: 'Yo soy Marco' — usa la forma de 'sii' para 'ich'", "en": "Complete: 'I am Marco' — use the 'sii' form for 'ich'", "pt": "Completa: 'Eu sou o Marco' — usa a forma de 'sii' para 'ich'", "fr": "Complétez : « Je suis Marco » — utilisez la forme de « sii » pour « ich »", "it": "Completa: 'Io sono Marco' — usa la forma di 'sii' per 'ich'", "sq": "Plotëso: 'Unë jam Marco' — përdor formën e 'sii' për 'ich'", "tr": "Tamamla: 'Ben Marco'yum' — 'ich' için 'sii' formunu kullan" }
+      },
+      {
+        "id": "fb2",
+        "before": "Wie",
+        "after": "dir?",
+        "correctWord": "gaht's",
+        "options": ["gaht's", "bisch", "hät"],
+        "hint": { "es": "Completa: '¿Cómo estás?' de forma informal", "en": "Complete: 'How are you?' informally", "pt": "Completa: 'Como estás?' de forma informal", "fr": "Complétez : « Comment ça va ? » familièrement", "it": "Completa: 'Come stai?' in modo informale", "sq": "Plotëso: 'Si je?' në mënyrë joformale", "tr": "Tamamla: 'Nasılsın?' samimi şekilde" }
+      }
+    ],
     "multipleChoice": [
       {
         "id": "mc1",

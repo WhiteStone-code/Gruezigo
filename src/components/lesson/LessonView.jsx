@@ -7,9 +7,12 @@ import { LessonProgressBar } from './LessonProgressBar.jsx'
 import { ExampleDialogue } from './ExampleDialogue.jsx'
 import { VocabIntroCard } from './VocabIntroCard.jsx'
 import { LessonPartBreak } from './LessonPartBreak.jsx'
+import { TheoryCard } from './TheoryCard.jsx'
 import { ExerciseMatchVocabulary } from './ExerciseMatchVocabulary.jsx'
 import { ExerciseListening } from './ExerciseListening.jsx'
 import { ExerciseSentenceBuilder } from './ExerciseSentenceBuilder.jsx'
+import { ExerciseFillBlanks } from './ExerciseFillBlanks.jsx'
+import { DialogueSimulation } from './DialogueSimulation.jsx'
 import { ExerciseSpeaking } from './ExerciseSpeaking.jsx'
 import { ExerciseMultipleChoice } from './ExerciseMultipleChoice.jsx'
 import { Button } from '../ui/Button.jsx'
@@ -58,6 +61,7 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
   const steps = useMemo(() => {
     const list = []
     lesson.dialogueExample?.length && list.push({ type: 'example' })
+    lesson.theory?.forEach((theory) => list.push({ type: 'theory', theory }))
 
     vocabChunks.forEach((words, i) => {
       list.push({ type: 'intro', words, partLabel: `Bloque ${i + 1} de ${vocabChunks.length}` })
@@ -68,7 +72,9 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
       }
     })
 
+    lesson.exercises.fillBlanks?.length && list.push({ type: 'fillBlanks' })
     lesson.exercises.sentenceBuilder?.length && list.push({ type: 'sentence' })
+    lesson.dialogueSimulations?.forEach((simulation) => list.push({ type: 'dialogueSim', simulation }))
     lesson.exercises.pronunciation?.length && list.push({ type: 'speaking' })
     shortExam.length && list.push({ type: 'exam' })
     list.push({ type: 'complete' })
@@ -145,9 +151,23 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
           <LessonPartBreak partNumber={step.partNumber} totalParts={step.totalParts} onContinue={() => advance()} />
         )}
 
+        {step.type === 'theory' && <TheoryCard theory={step.theory} onContinue={() => advance()} />}
+
+        {step.type === 'fillBlanks' && (
+          <Card>
+            <ExerciseFillBlanks exercises={lesson.exercises.fillBlanks} onComplete={advance} />
+          </Card>
+        )}
+
         {step.type === 'sentence' && (
           <Card>
             <ExerciseSentenceBuilder exercises={lesson.exercises.sentenceBuilder} onComplete={advance} />
+          </Card>
+        )}
+
+        {step.type === 'dialogueSim' && (
+          <Card>
+            <DialogueSimulation simulation={step.simulation} onComplete={advance} />
           </Card>
         )}
 

@@ -27,6 +27,41 @@
     { "speaker": "🧑", "schwiizerduetsch": "Merci. Und was choschtet das Brot?", "base": { "es": "Gracias. ¿Y cuánto cuesta el pan?", "en": "Thanks. And how much is the bread?", "pt": "Obrigado. E quanto custa o pão?", "fr": "Merci. Et combien coûte le pain ?", "it": "Grazie. E quanto costa il pane?", "sq": "Faleminderit. Dhe sa kushton buka?", "tr": "Teşekkürler. Peki ekmek ne kadar?" } },
     { "speaker": "🧀", "schwiizerduetsch": "Das choschtet zwöi Franke fünfzg.", "base": { "es": "Cuesta dos francos con cincuenta.", "en": "It costs two francs fifty.", "pt": "Custa dois francos e cinquenta.", "fr": "Ça coûte deux francs cinquante.", "it": "Costa due franchi e cinquanta.", "sq": "Kushton dy franga e pesëdhjetë.", "tr": "İki frank elli sent." } }
   ],
+  "dialogueSimulations": [
+    {
+      "id": "sim-coop-brot",
+      "scenario": { "es": "Comprando pan en la Coop", "en": "Buying bread at the Coop", "pt": "A comprar pão na Coop", "fr": "Acheter du pain à la Coop", "it": "Comprare il pane alla Coop", "sq": "Duke blerë bukë te Coop", "tr": "Coop'ta ekmek almak" },
+      "npcName": "Vendedor/a de la Coop",
+      "npcEmoji": "🧑‍🍳",
+      "turns": [
+        { "speaker": "npc", "text": "Grüezi! Was chan ich für Sie tue?", "base": { "es": "¡Hola! ¿Qué puedo hacer por usted?", "en": "Hello! What can I do for you?", "pt": "Olá! O que posso fazer por si?", "fr": "Bonjour ! Que puis-je faire pour vous ?", "it": "Buongiorno! Cosa posso fare per lei?", "sq": "Përshëndetje! Çfarë mund të bëj për ju?", "tr": "Merhaba! Sizin için ne yapabilirim?" } },
+        {
+          "speaker": "user",
+          "options": [
+            { "text": "Ich hätt gern es Brot, bitte.", "base": { "es": "Quisiera un pan, por favor.", "en": "I would like a bread, please.", "pt": "Gostaria de um pão, por favor.", "fr": "Je voudrais un pain, s'il vous plaît.", "it": "Vorrei un pane, per favore.", "sq": "Do të doja një bukë, ju lutem.", "tr": "Bir ekmek istiyorum, lütfen." }, "correct": true },
+            { "text": "Brot!", "base": { "es": "¡Pan!", "en": "Bread!", "pt": "Pão!", "fr": "Pain !", "it": "Pane!", "sq": "Bukë!", "tr": "Ekmek!" }, "correct": false, "feedback": { "es": "Se entiende, pero suena brusco — con 'Ich hätt gern...' y 'bitte' sonarás mucho más natural y educado.", "en": "It's understood, but it sounds abrupt — with 'Ich hätt gern...' and 'bitte' you'll sound much more natural and polite.", "pt": "Entende-se, mas soa brusco — com 'Ich hätt gern...' e 'bitte' soarás muito mais natural e educado.", "fr": "On comprend, mais ça sonne brusque — avec « Ich hätt gern... » et « bitte » vous paraîtrez bien plus naturel et poli.", "it": "Si capisce, ma suona brusco — con 'Ich hätt gern...' e 'bitte' sembrerai molto più naturale ed educato.", "sq": "Kuptohet, por tingëllon i vrazhdë — me 'Ich hätt gern...' dhe 'bitte' do të tingëllosh shumë më natyral dhe i sjellshëm.", "tr": "Anlaşılır ama kaba gelir — 'Ich hätt gern...' ve 'bitte' ile çok daha doğal ve kibar görünürsün." } },
+            { "text": "Wo isch d'Toilette?", "base": { "es": "¿Dónde está el baño?", "en": "Where is the bathroom?", "pt": "Onde é a casa de banho?", "fr": "Où sont les toilettes ?", "it": "Dov'è il bagno?", "sq": "Ku është banja?", "tr": "Tuvalet nerede?" }, "correct": false, "feedback": { "es": "Es una frase útil, ¡pero no en esta situación! Estás en la panadería, no preguntando por el baño.", "en": "Useful phrase, but not in this situation! You're at the bakery counter, not asking for the bathroom.", "pt": "É uma frase útil, mas não nesta situação! Estás no balcão do pão, não a perguntar pela casa de banho.", "fr": "Phrase utile, mais pas dans cette situation ! Vous êtes au rayon boulangerie, pas en train de demander les toilettes.", "it": "Frase utile, ma non in questa situazione! Sei al banco del pane, non stai chiedendo del bagno.", "sq": "Frazë e dobishme, por jo në këtë situatë! Je te banaku i bukës, jo duke pyetur për banjën.", "tr": "Kullanışlı bir cümle ama bu durumda değil! Ekmek tezgahındasın, tuvalet sormuyorsun." } }
+          ]
+        },
+        { "speaker": "npc", "text": "Gerne! Sowas hend mir hie duube.", "base": { "es": "¡Con gusto! Tenemos justo aquí.", "en": "Sure! We have that right here.", "pt": "Com certeza! Temos mesmo aqui.", "fr": "Avec plaisir ! On en a juste ici.", "it": "Volentieri! Ne abbiamo proprio qui.", "sq": "Me dëshirë! E kemi pikërisht këtu.", "tr": "Tabii! Tam burada var." } },
+        {
+          "speaker": "user",
+          "options": [
+            { "text": "Merci vilmal! Was choschtet's?", "base": { "es": "¡Muchas gracias! ¿Cuánto cuesta?", "en": "Thank you very much! How much does it cost?", "pt": "Muito obrigado! Quanto custa?", "fr": "Merci beaucoup ! Combien ça coûte ?", "it": "Grazie mille! Quanto costa?", "sq": "Shumë faleminderit! Sa kushton?", "tr": "Çok teşekkürler! Ne kadar tutuyor?" }, "correct": true },
+            { "text": "Öppis anders?", "base": { "es": "¿Algo más?", "en": "Anything else?", "pt": "Mais alguma coisa?", "fr": "Autre chose ?", "it": "Altro?", "sq": "Diçka tjetër?", "tr": "Başka bir şey?" }, "correct": false, "feedback": { "es": "Esa frase la diría el vendedor a ti, no al revés — tú quieres saber el precio.", "en": "That's the phrase the seller would say to you, not the other way around — you want to know the price.", "pt": "Essa frase seria dita pelo vendedor, não o contrário — tu queres saber o preço.", "fr": "C'est la phrase que le vendeur vous dirait, pas l'inverse — vous voulez connaître le prix.", "it": "Questa frase la direbbe il venditore a te, non il contrario — tu vuoi sapere il prezzo.", "sq": "Këtë frazë do ta thoshte shitësi ty, jo e kundërta — ti dëshiron të dish çmimin.", "tr": "Bu cümleyi satıcı sana söyler, tersi değil — sen fiyatı öğrenmek istiyorsun." } }
+          ]
+        },
+        { "speaker": "npc", "text": "Das choschtet zwöi Franke fünfzg.", "base": { "es": "Cuesta dos francos con cincuenta.", "en": "It costs two francs fifty.", "pt": "Custa dois francos e cinquenta.", "fr": "Ça coûte deux francs cinquante.", "it": "Costa due franchi e cinquanta.", "sq": "Kushton dy franga e pesëdhjetë.", "tr": "İki frank elli sent." } },
+        {
+          "speaker": "user",
+          "options": [
+            { "text": "Perfekt, merci. Uf Wiederluege!", "base": { "es": "Perfecto, gracias. ¡Hasta luego!", "en": "Perfect, thanks. See you!", "pt": "Perfeito, obrigado. Até logo!", "fr": "Parfait, merci. Au revoir !", "it": "Perfetto, grazie. Arrivederci!", "sq": "Perfekte, faleminderit. Shihemi!", "tr": "Harika, teşekkürler. Görüşürüz!" }, "correct": true },
+            { "text": "Ok.", "base": { "es": "Vale.", "en": "OK.", "pt": "Ok.", "fr": "Ok.", "it": "Ok.", "sq": "Ok.", "tr": "Tamam." }, "correct": false, "feedback": { "es": "No está mal, pero despedirte con 'merci' y 'uf Wiederluege' es mucho más natural y cordial en Suiza.", "en": "Not wrong, but signing off with 'merci' and 'uf Wiederluege' is much more natural and warm in Switzerland.", "pt": "Não está errado, mas despedir-se com 'merci' e 'uf Wiederluege' é muito mais natural e cordial na Suíça.", "fr": "Ce n'est pas faux, mais dire au revoir avec « merci » et « uf Wiederluege » est bien plus naturel et chaleureux en Suisse.", "it": "Non è sbagliato, ma congedarsi con 'merci' e 'uf Wiederluege' è molto più naturale e cordiale in Svizzera.", "sq": "Nuk është gabim, por të lamtumirosh me 'merci' dhe 'uf Wiederluege' është shumë më natyrale dhe e ngrohtë në Zvicër.", "tr": "Yanlış değil ama İsviçre'de 'merci' ve 'uf Wiederluege' ile vedalaşmak çok daha doğal ve sıcak." } }
+          ]
+        }
+      ]
+    }
+  ],
   "comparisonTable": [
     { "base": { "es": "¿Cuánto cuesta?", "en": "How much does it cost?", "pt": "Quanto custa?", "fr": "Combien ça coûte ?", "it": "Quanto costa?", "sq": "Sa kushton?", "tr": "Ne kadar tutuyor?" }, "hochdeutsch": "Was kostet das?", "schwiizerduetsch": "Was choschtet das?" },
     { "base": { "es": "Quisiera...", "en": "I would like...", "pt": "Eu gostaria de...", "fr": "Je voudrais...", "it": "Vorrei...", "sq": "Do të doja...", "tr": "İsterim ki..." }, "hochdeutsch": "Ich hätte gern...", "schwiizerduetsch": "Ich hätt gern..." },
@@ -46,6 +81,24 @@
     { "id": "v6", "hochdeutsch": "Kasse", "schwiizerduetsch": "Kasse", "audioText": "Kasse", "base": { "es": "Caja", "en": "Checkout", "pt": "Caixa", "fr": "Caisse", "it": "Cassa", "sq": "Arka", "tr": "Kasa" } }
   ],
   "exercises": {
+    "fillBlanks": [
+      {
+        "id": "fb1",
+        "before": "Ich",
+        "after": "gern es Brot.",
+        "correctWord": "hätt",
+        "options": ["hätt", "hend", "isch"],
+        "hint": { "es": "Completa: 'Quisiera un pan'", "en": "Complete: 'I would like a bread'", "pt": "Completa: 'Gostaria de um pão'", "fr": "Complétez : « Je voudrais un pain »", "it": "Completa: 'Vorrei un pane'", "sq": "Plotëso: 'Do të doja një bukë'", "tr": "Tamamla: 'Bir ekmek istiyorum'" }
+      },
+      {
+        "id": "fb2",
+        "before": "Was",
+        "after": "das Brot?",
+        "correctWord": "choschtet",
+        "options": ["choschtet", "hätt", "sind"],
+        "hint": { "es": "Completa: '¿Cuánto cuesta el pan?'", "en": "Complete: 'How much does the bread cost?'", "pt": "Completa: 'Quanto custa o pão?'", "fr": "Complétez : « Combien coûte le pain ? »", "it": "Completa: 'Quanto costa il pane?'", "sq": "Plotëso: 'Sa kushton buka?'", "tr": "Tamamla: 'Ekmek ne kadar?'" }
+      }
+    ],
     "multipleChoice": [
       { "id": "mc1", "question": { "es": "¿Cómo se pregunta '¿cuánto cuesta?' en dialecto?", "en": "How do you ask 'how much does it cost?' in dialect?", "pt": "Como se pergunta 'quanto custa?' em dialeto?", "fr": "Comment demande-t-on « combien ça coûte ? » en dialecte ?", "it": "Come si chiede 'quanto costa?' in dialetto?", "sq": "Si pyetet 'sa kushton?' në dialekt?", "tr": "Lehçede 'ne kadar tutuyor?' nasıl sorulur?" }, "options": [ { "text": "Was choschtet das?", "correct": true }, { "text": "Was kostet das?", "correct": false }, { "text": "Hend Sie das?", "correct": false }, { "text": "Ich hätt gern das", "correct": false } ] },
       { "id": "mc2", "question": { "es": "'Öpfel' significa...", "en": "'Öpfel' means...", "pt": "'Öpfel' significa...", "fr": "« Öpfel » signifie...", "it": "'Öpfel' significa...", "sq": "'Öpfel' do të thotë...", "tr": "'Öpfel' anlamı..." }, "options": [ { "text": { "es": "Manzana", "en": "Apple", "pt": "Maçã", "fr": "Pomme", "it": "Mela", "sq": "Mollë", "tr": "Elma" }, "correct": true }, { "text": { "es": "Pan", "en": "Bread", "pt": "Pão", "fr": "Pain", "it": "Pane", "sq": "Bukë", "tr": "Ekmek" }, "correct": false }, { "text": { "es": "Leche", "en": "Milk", "pt": "Leite", "fr": "Lait", "it": "Latte", "sq": "Qumësht", "tr": "Süt" }, "correct": false } ] },

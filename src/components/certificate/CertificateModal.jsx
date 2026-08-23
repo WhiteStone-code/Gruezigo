@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { X, Download, Award } from 'lucide-react'
+import { jsPDF } from 'jspdf'
+import { X, Download, FileText, Award } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
 import { CANTONS } from '../../data/cantons/holidays.js'
@@ -74,13 +75,25 @@ export function CertificateModal({ open, level = 'A1', userName = 'GrüeziGo Lea
     ctx.fillText('🇨🇭', width / 2, height - 70)
   }
 
-  function handleDownload() {
+  function handleDownloadImage() {
     drawCertificate()
     const canvas = canvasRef.current
     const link = document.createElement('a')
     link.download = `gruezigo-certificado-${level}.png`
     link.href = canvas.toDataURL('image/png')
     link.click()
+  }
+
+  // El diploma "de verdad" — mismo dibujo, pero embebido en un PDF a tamaño
+  // de página exacto para imprimir o adjuntar a un CV, no solo compartir
+  // como imagen.
+  function handleDownloadPdf() {
+    drawCertificate()
+    const canvas = canvasRef.current
+    const imgData = canvas.toDataURL('image/png')
+    const pdf = new jsPDF({ orientation: 'landscape', unit: 'pt', format: [canvas.width, canvas.height] })
+    pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height)
+    pdf.save(`gruezigo-certificado-${level}.pdf`)
   }
 
   return (
@@ -132,9 +145,14 @@ export function CertificateModal({ open, level = 'A1', userName = 'GrüeziGo Lea
               </div>
             </div>
 
-            <Button onClick={handleDownload} className="w-full mt-4 flex items-center justify-center gap-2">
-              <Download size={18} /> Exportar como imagen
-            </Button>
+            <div className="flex gap-2 mt-4">
+              <Button onClick={handleDownloadPdf} className="flex-1 flex items-center justify-center gap-2">
+                <FileText size={18} /> Descargar PDF
+              </Button>
+              <Button variant="secondary" onClick={handleDownloadImage} className="flex-1 flex items-center justify-center gap-2">
+                <Download size={18} /> Imagen
+              </Button>
+            </div>
           </motion.div>
         </motion.div>
       )}
