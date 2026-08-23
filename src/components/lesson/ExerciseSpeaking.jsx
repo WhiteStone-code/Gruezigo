@@ -22,6 +22,7 @@ export function ExerciseSpeaking({ exercises, onComplete }) {
   const current = exercises[index]
 
   function handleAttempt() {
+    if (isListening) return // evita solapar dos reconocimientos si tocan el micro dos veces
     setResult(null)
     startListening({
       lang: current.lang ?? 'de-DE',

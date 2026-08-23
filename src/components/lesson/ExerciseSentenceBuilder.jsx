@@ -81,7 +81,7 @@ export function ExerciseSentenceBuilder({ exercises, onComplete }) {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             onClick={() => unpick(pos)}
-            className="px-3 py-1.5 rounded-lg bg-swiss-red/10 dark:bg-swiss-red/25 text-swiss-red dark:text-white font-semibold text-sm"
+            className="px-3 py-1.5 rounded-lg bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 font-semibold text-sm"
           >
             {current.words[wordIdx]}
           </motion.button>

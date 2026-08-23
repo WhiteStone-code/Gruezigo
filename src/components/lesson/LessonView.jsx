@@ -13,6 +13,7 @@ import { ExerciseSpeaking } from './ExerciseSpeaking.jsx'
 import { ExerciseMultipleChoice } from './ExerciseMultipleChoice.jsx'
 import { Button } from '../ui/Button.jsx'
 import { Card } from '../ui/Card.jsx'
+import { buildVocabQuizQuestions } from '../../data/practicePool.js'
 
 const XP_PER_LESSON = 20
 const XP_PER_EXAM_PASS = 15
@@ -33,12 +34,15 @@ const XP_PER_EXAM_PASS = 15
  * Recibe el objeto `lesson` ya parseado desde src/data/lessons/**.json.
  */
 export function LessonView({ lesson, onExit, onRequestCertificate }) {
-  const { t } = useLanguage()
+  const { t, interfaceLang } = useLanguage()
   const { completeLesson, addXp, registerActivityToday, unlockBadge, progress } = useUserProgress()
 
   // Construye la secuencia de pasos a partir del contenido de la lección.
   // Cada paso es {type, key, render}. Esto hace trivial añadir/quitar
-  // módulos por lección sin tocar el resto del componente.
+  // módulos por lección sin tocar el resto del componente. El paso extra
+  // "recap" reutiliza el propio vocabulario de la lección para un mini
+  // repaso mezclado antes del examen — más práctica real sin necesitar
+  // contenido nuevo escrito a mano.
   const steps = useMemo(() => {
     const list = []
     lesson.dialogueExample?.length && list.push({ type: 'example' })
@@ -46,10 +50,16 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
     lesson.exercises.sentenceBuilder?.length && list.push({ type: 'sentence' })
     lesson.exercises.pronunciation?.length && list.push({ type: 'speaking' })
     lesson.exercises.multipleChoice?.length && list.push({ type: 'multipleChoice' })
+    list.push({ type: 'recap' })
     lesson.finalExam?.length && list.push({ type: 'exam' })
     list.push({ type: 'complete' })
     return list
   }, [lesson])
+
+  const recapQuestions = useMemo(
+    () => buildVocabQuizQuestions(lesson.vocabulary, interfaceLang),
+    [lesson, interfaceLang]
+  )
 
   const [stepIndex, setStepIndex] = useState(0)
   const [stats, setStats] = useState({ correct: 0, total: 0 })
@@ -127,6 +137,16 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
               <ExerciseMultipleChoice
                 questions={lesson.exercises.multipleChoice}
                 title="Opción múltiple"
+                onComplete={advance}
+              />
+            </Card>
+          )}
+
+          {step.type === 'recap' && (
+            <Card>
+              <ExerciseMultipleChoice
+                questions={recapQuestions}
+                title="Repaso rápido"
                 onComplete={advance}
               />
             </Card>

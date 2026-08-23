@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 
@@ -15,9 +15,15 @@ function shuffle(arr) {
  * Módulo "emparejar vocabulario": dos columnas (Schwiizerdütsch <-> idioma
  * base). El usuario selecciona una tarjeta de cada lado; si coinciden se
  * bloquean en verde, si no, parpadean en rojo y se deseleccionan.
+ *
+ * Nota de robustez: usa updates funcionales de estado (nunca lee `matched`
+ * directamente en un cierre) y limpia sus temporizadores en el
+ * desmontaje — sin esto, un `setTimeout` pendiente podía disparar
+ * `onComplete` de nuevo después de que la lección ya hubiera avanzado de
+ * paso, dejando la pantalla en blanco.
  */
 export function ExerciseMatchVocabulary({ vocabulary, onComplete }) {
-  const { interfaceLang, t } = useLanguage()
+  const { interfaceLang } = useLanguage()
   const items = useMemo(() => vocabulary.slice(0, 6), [vocabulary])
 
   const left = useMemo(() => shuffle(items.map((v) => ({ id: v.id, text: v.schwiizerduetsch }))), [items])
@@ -31,35 +37,51 @@ export function ExerciseMatchVocabulary({ vocabulary, onComplete }) {
   const [matched, setMatched] = useState(new Set())
   const [wrongPair, setWrongPair] = useState(null)
   const [mistakes, setMistakes] = useState(0)
+  const [locked, setLocked] = useState(false) // bloquea clics mientras se resuelve una pareja
+  const timeoutsRef = useRef([])
+  const completedRef = useRef(false)
+
+  useEffect(() => {
+    return () => {
+      timeoutsRef.current.forEach(clearTimeout)
+    }
+  }, [])
 
   function evaluate(leftId, rightId) {
+    setLocked(true)
     if (leftId === rightId) {
-      const next = new Set(matched)
-      next.add(leftId)
-      setMatched(next)
+      setMatched((prev) => {
+        const next = new Set(prev)
+        next.add(leftId)
+        if (next.size === items.length && !completedRef.current) {
+          completedRef.current = true
+          const t = setTimeout(() => onComplete({ correct: items.length, total: items.length + mistakes }), 400)
+          timeoutsRef.current.push(t)
+        }
+        return next
+      })
       setSelectedLeft(null)
       setSelectedRight(null)
-      if (next.size === items.length) {
-        setTimeout(() => onComplete({ correct: items.length, total: items.length + mistakes }), 400)
-      }
+      setLocked(false)
     } else {
       setMistakes((m) => m + 1)
       setWrongPair([leftId, rightId])
-      setTimeout(() => {
+      const t = setTimeout(() => {
         setWrongPair(null)
         setSelectedLeft(null)
         setSelectedRight(null)
+        setLocked(false)
       }, 500)
+      timeoutsRef.current.push(t)
     }
   }
 
   function handlePick(side, id) {
-    if (matched.has(id) && side === 'left') return
+    if (locked || matched.has(id)) return
     if (side === 'left') {
       setSelectedLeft(id)
       if (selectedRight) evaluate(id, selectedRight)
     } else {
-      if (matched.has(id)) return
       setSelectedRight(id)
       if (selectedLeft) evaluate(selectedLeft, id)
     }
@@ -71,7 +93,9 @@ export function ExerciseMatchVocabulary({ vocabulary, onComplete }) {
     const isWrong = wrongPair && ((side === 'left' && wrongPair[0] === id) || (side === 'right' && wrongPair[1] === id))
     if (isMatched) return 'bg-green-100 border-green-400 text-green-700 dark:bg-green-900/30 dark:border-green-600 dark:text-green-300 pointer-events-none opacity-70'
     if (isWrong) return 'bg-red-100 border-red-400 text-red-700 dark:bg-red-900/30 dark:border-red-600 dark:text-red-300 animate-pulse'
-    if (isSelected) return 'bg-swiss-red/10 border-swiss-red text-swiss-red'
+    // Seleccionada pero todavía sin evaluar: nunca en rojo — el rojo se
+    // reserva exclusivamente para un fallo confirmado (isWrong, arriba).
+    if (isSelected) return 'bg-sky-100 border-sky-400 text-sky-700 dark:bg-sky-900/30 dark:border-sky-500 dark:text-sky-300'
     return 'bg-white dark:bg-alp-900 border-alp-300 dark:border-alp-600 text-alp-800 dark:text-alp-100 hover:border-swiss-red/40'
   }
 

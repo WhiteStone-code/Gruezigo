@@ -19,7 +19,7 @@ export function ExerciseListening({ vocabulary, onComplete }) {
   const { speak, isSpeaking, supportsSynthesis } = useSpeech()
 
   const rounds = useMemo(() => {
-    const pool = vocabulary.slice(0, 4)
+    const pool = vocabulary.slice(0, 6)
     return pool.map((item) => {
       const distractors = shuffle(vocabulary.filter((v) => v.id !== item.id)).slice(0, 2)
       const options = shuffle([item, ...distractors])

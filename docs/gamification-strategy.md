@@ -1,78 +1,78 @@
-# GrüeziGo — Estrategia de Gamificación y Retención
+# GrüeziGo — Gamification and Retention Strategy
 
-> Objetivo: que aprender Schwiizerdütsch se sienta como progresar en un juego, pero cuyo "high score" es una vida real e integrada en Suiza. Cada mecanismo de juego está anclado a un resultado cultural concreto — nunca es gamificación vacía.
+> Goal: learning Schwiizerdütsch should feel like progressing in a game, except the "high score" is a real, integrated life in Switzerland. Every game mechanic is anchored to a concrete cultural outcome — never empty gamification.
 
-## 1. El bucle central (core loop)
+## 1. The core loop
 
 ```
-Abrir app → Ver racha + próximo festivo cantonal → Completar 1 lección (5-8 min)
-   → Ganar XP + posible medalla → Compartir mini-logro (opcional) → Notificación
-     mañana recordando la racha → repetir
+Open app → See streak + upcoming cantonal holiday → Complete 1 lesson (5-8 min)
+   → Earn XP + possible badge → Share mini-achievement (optional) → Notification
+     tomorrow reminding about the streak → repeat
 ```
 
-Cada elemento del bucle está diseñado para responder a una pregunta emocional distinta:
-- **Racha** → "¿voy a romper mi racha?" (pérdida aversión)
-- **XP/Nivel** → "¿cuánto me falta para el siguiente hito?" (progreso visible)
-- **Medalla cultural** → "¿qué he conseguido entender de este país?" (identidad/orgullo)
-- **Compartible** → "¿puedo presumir de esto?" (validación social)
+Each element of the loop is designed to answer a different emotional question:
+- **Streak** → "Am I going to break my streak?" (loss aversion)
+- **XP/Level** → "How far am I from the next milestone?" (visible progress)
+- **Cultural badge** → "What have I actually managed to understand about this country?" (identity/pride)
+- **Shareable** → "Can I show this off?" (social validation)
 
-## 2. Racha diaria ("Streak")
+## 2. Daily streak
 
-- **Regla base**: completar al menos 1 lección o 1 ronda de repaso al día mantiene la racha (ya implementado en `UserProgressContext.registerActivityToday`).
-- **Streak Freeze** 🧊: el usuario acumula 1 "congelador de racha" gratis cada 7 días de racha activa. Se puede usar para perdonar un día perdido — reduce la frustración del "todo o nada" que provoca abandono (principal causa de churn en apps de idiomas tras el día 3).
-- **Streak Society**: a partir de 30 días de racha, el usuario entra en un segmento visual distinto (marco dorado en su avatar/perfil) — refuerzo de identidad, no solo número.
-- **Recordatorio inteligente**: notificación push entre las 18:00–20:00 hora local *solo* si el usuario aún no ha completado su actividad diaria (nunca notificar si ya cumplió — evita fatiga de notificaciones).
-- **Ventana de gracia**: el día se considera "activo" hasta las 03:00 del día siguiente (usuarios que estudian de madrugada no deberían perder la racha injustamente).
+- **Base rule**: completing at least 1 lesson or 1 review round per day keeps the streak alive (already implemented in `UserProgressContext.registerActivityToday`).
+- **Streak Freeze** 🧊: the user earns 1 free "streak freeze" every 7 days of active streak. It can be used to forgive a missed day — reduces the "all or nothing" frustration that drives churn (the main cause of drop-off in language apps after day 3).
+- **Streak Society**: from 30 days of streak onward, the user enters a distinct visual tier (gold frame on their avatar/profile) — reinforces identity, not just a number.
+- **Smart reminder**: push notification between 6-8 PM local time, *only* if the user hasn't completed their daily activity yet (never notify if they already did — avoids notification fatigue).
+- **Grace window**: a day counts as "active" until 3 AM the following day (users who study late at night shouldn't unfairly lose their streak).
 
-## 3. XP y niveles
+## 3. XP and levels
 
-- Cada lección: **20 XP** base + **15 XP** extra si se aprueba el examen final del módulo (≥60% aciertos) — recompensa la profundidad, no solo la finalización.
-- Los niveles de idioma (A1.1 → C2) son la progresión "seria"; en paralelo existe un **nivel de jugador** cosmético (Bronce/Plata/Oro/Edelweiss) basado en XP acumulado, para dar sensación de avance incluso dentro de un mismo nivel de idioma largo.
-- **Ligas semanales** (fase 2): grupos de ~30 usuarios con XP semanal similar compiten por ascender de liga (Liga Bronce → Liga Edelweiss). Sin perdedores públicos: solo se muestra el descenso a quien está en el último puesto, nunca ranking negativo humillante.
+- Every lesson: **20 XP** base + **15 XP** bonus for passing the module's final exam (≥60% correct) — rewards depth, not just completion.
+- Language levels (A1.1 → C2) are the "serious" progression; in parallel there's a cosmetic **player level** (Bronze/Silver/Gold/Edelweiss) based on accumulated XP, to give a sense of advancement even within a single, long language level.
+- **Weekly leagues** (phase 2): groups of ~30 users with similar weekly XP compete to climb leagues (Bronze League → Edelweiss League). No public losers: only the person in last place sees a demotion notice, never a humiliating negative ranking.
 
-## 4. Medallas de integración cultural
+## 4. Cultural integration badges
 
-A diferencia de una medalla genérica de "10 lecciones completadas", cada medalla de GrüeziGo certifica una **acción de integración real o casi-real**:
+Unlike a generic "10 lessons completed" badge, every GrüeziGo badge certifies a **real or near-real integration action**:
 
-| Medalla | Cómo se desbloquea | Por qué importa |
+| Badge | How it unlocks | Why it matters |
 |---|---|---|
-| 🥐 **Grüezi Local** | Completar la lección de Saludos | Primer contacto — refuerzo inmediato temprano (día 1) |
-| 🧀 **Sabe Pedir** | Completar Supermercado + Restaurante | Supervivencia diaria real |
-| 🔥 **Racha de 7** | 7 días seguidos de actividad | Hito de formación de hábito |
-| 🏔️ **Racha de 30** | 30 días seguidos | Hito de compromiso serio |
-| 🎉 **Sechseläuten Ready** | Completar el módulo cultural de Zúrich antes del 3er lunes de abril | Vincula aprendizaje a un evento real que puede vivir esa semana |
-| 🧅 **Zibelemärit Local** | Completar el módulo cultural de Berna en noviembre | Igual, pero cantón Berna |
-| 🎭 **Sobrevivió la Fasnacht** | Completar vocabulario de carnaval antes de febrero/marzo | Relevancia estacional real |
-| 🗣️ **Primera Frase Hablada** | Aprobar el primer ejercicio de reconocimiento de voz | Supera la barrera del miedo a hablar |
-| 📜 **Certificado A1** | Aprobar el examen final de todas las lecciones A1 | Hito de nivel — desbloquea el certificado exportable |
-| 🇨🇭 **Integrado/a** | Completar C2 + todos los módulos culturales | Medalla "capstone" — la más rara, la más deseada |
+| 🥐 **Grüezi Local** | Complete the Greetings lesson | First contact — immediate early reinforcement (day 1) |
+| 🧀 **Order-Ready** | Complete Supermarket + Restaurant | Real daily survival |
+| 🔥 **7-Day Streak** | 7 consecutive days of activity | Habit-formation milestone |
+| 🏔️ **30-Day Streak** | 30 consecutive days | Serious-commitment milestone |
+| 🎉 **Sechseläuten Ready** | Complete the Zürich culture module before the 3rd Monday of April | Ties learning to a real event happening that week |
+| 🧅 **Zibelemärit Local** | Complete the Bern culture module in November | Same idea, Bern canton |
+| 🎭 **Survived Fasnacht** | Complete carnival vocabulary before February/March | Real seasonal relevance |
+| 🗣️ **First Spoken Sentence** | Pass the first speech-recognition exercise | Breaks through the fear of speaking |
+| 📜 **A1 Certificate** | Pass the final exam of every A1 lesson | Level milestone — unlocks the exportable certificate |
+| 🇨🇭 **Fully Integrated** | Complete C2 + every culture module | The "capstone" badge — rarest, most coveted |
 
-**Regla de diseño**: ninguna medalla se otorga solo por "usar la app X días" sin una acción de aprendizaje o cultural asociada — así las medallas siguen siendo señal de estatus creíble, no ruido.
+**Design rule**: no badge is ever awarded just for "using the app for X days" without an associated learning or cultural action — this keeps badges a credible status signal, not noise.
 
-## 5. Mini-logros compartibles en redes
+## 5. Shareable mini-achievements
 
-Cada medalla y cada final de lección genera una **tarjeta compartible** (imagen 1080×1080, generada en `<canvas>`, mismo mecanismo que `CertificateModal`):
+Every badge and every lesson completion generates a **shareable card** (1080×1080 image, generated via `<canvas>`, same mechanism as `CertificateModal`):
 
-- Diseño con la paleta GrüeziGo (rojo/blanco/madera), el emoji de la medalla en grande, el nombre del usuario y un dato concreto ("Ricardo lleva 30 días aprendiendo Züritüütsch 🔥" / "Ricardo ya sabe pedir café en dialecto suizo ☕🇨🇭").
-- Botón "Compartir" con Web Share API (fallback: descarga de imagen) — sin login social requerido, sin fricción.
-- Las tarjetas incluyen siempre un micro-CTA discreto ("gruezigo.app") — cada compartir es marketing orgánico gratuito (mecanismo tipo otra app de idiomas/Wrapped de Spotify).
-- **Cadencia controlada**: máximo 1 sugerencia de compartir por sesión, siempre opcional y nunca bloqueante — la app nunca obliga a compartir para continuar.
+- Designed with the GrüeziGo palette (red/white/wood), the badge emoji large, the user's name, and one concrete fact ("Ricardo has been learning Züritüütsch for 30 days 🔥" / "Ricardo already knows how to order coffee in Swiss dialect ☕🇨🇭").
+- "Share" button using the Web Share API (fallback: image download) — no social login required, no friction.
+- Cards always include a discreet micro-CTA ("gruezigo.app") — every share is free organic marketing (a mechanism similar to otra app de idiomas/Spotify Wrapped).
+- **Controlled cadence**: at most 1 share prompt per session, always optional and never blocking — the app never forces a share to continue.
 
-## 6. Notificaciones y reactivación
+## 6. Notifications and reactivation
 
-- **Día 1 sin volver**: notificación cálida, no culpabilizadora — "Tu Böögg (muñeco del Sechseläuten) te espera 🔥 ¿5 minutos hoy?"
-- **Día 3-7 sin volver**: recordatorio con contexto cultural de temporada (festivo cantonal próximo) en vez de genérico — conecta con el motivo real por el que se instaló la app.
-- **Día 14+ sin volver**: oferta de "reinicio suave" — reanudar desde la última lección en vez de sentir que hay que empezar de cero (evita el efecto "tengo que reaprender todo, mejor no vuelvo").
+- **Day 1 without returning**: warm, non-guilt-tripping notification — "Your Böögg (the Sechseläuten snowman) is waiting for you 🔥 5 minutes today?"
+- **Day 3-7 without returning**: reminder with seasonal cultural context (an upcoming cantonal holiday) instead of a generic one — connects to the real reason the app was installed.
+- **Day 14+ without returning**: a "soft restart" offer — resume from the last lesson instead of feeling like starting from scratch (avoids the "I'd have to relearn everything, better not go back" effect).
 
-## 7. Principios anti-manipulación (importante para retención *sana*)
+## 7. Anti-manipulation principles (important for *healthy* retention)
 
-- Nunca usar temporizadores de urgencia falsos ("¡oferta termina en 10 min!") en un producto educativo — rompe confianza a medio plazo.
-- El streak freeze es gratuito y ganado, no solo comprable — evita que la racha se sienta "pay to win".
-- Las notificaciones se detienen automáticamente si el usuario las ignora 3 veces seguidas (se reducen en frecuencia, nunca en tono agresivo).
+- Never use fake urgency timers ("offer ends in 10 min!") in an educational product — breaks trust over the medium term.
+- The streak freeze is free and earned, not only purchasable — avoids the streak feeling "pay to win".
+- Notifications automatically stop if the user ignores them 3 times in a row (frequency reduces, tone never becomes aggressive).
 
-## 8. Métricas a vigilar
+## 8. Metrics to watch
 
-- **D1/D7/D30 retention** por cohorte de cantón seleccionado (hipótesis: usuarios que ven su festivo cantonal en el dashboard el día 1 retienen mejor).
-- **% de rachas salvadas con freeze** vs. **% de rachas perdidas** — indica si el freeze está bien calibrado (objetivo: ~15-20% de uso).
-- **Tasa de examen aprobado al primer intento** — si es muy alta, el examen es demasiado fácil (no valida aprendizaje real); si es muy baja, frustra y hay que revisar dificultad.
-- **Compartidos por usuario activo semanal** — proxy de crecimiento orgánico (K-factor).
+- **D1/D7/D30 retention** by selected-canton cohort (hypothesis: users who see their cantonal holiday on the dashboard on day 1 retain better).
+- **% of streaks saved with freeze** vs. **% of streaks lost** — indicates whether the freeze is well-calibrated (target: ~15-20% usage).
+- **First-attempt exam pass rate** — if it's very high, the exam is too easy (doesn't validate real learning); if very low, it's frustrating and difficulty should be reviewed.
+- **Shares per weekly active user** — proxy for organic growth (K-factor).

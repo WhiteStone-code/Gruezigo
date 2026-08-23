@@ -2,7 +2,7 @@
 
 Scope: design/token-level critique only, based on current Tailwind config, `index.css`, `NavBar.jsx`, `Dashboard.jsx`, `levels/index.js`. Grouped, actionable, implementable directly.
 
-## Más colorido y divertido, sin ser infantil
+## More colorful and fun, without being childish
 
 - **`.card` is a single flat white box everywhere** (`index.css`) — every card (dashboard stat, lesson item, culture note) looks identical. Add a `card-accent` variant per section: `border-l-4 border-l-wood-400` for culture/vocab cards, `border-l-4 border-l-cheese-400` for gamification/streak cards, `border-l-4 border-l-alp-400` for grammar/neutral cards. Keeps the same base `.card` shadow/radius but gives visual rhythm without touching layout.
 - **`levels/index.js` already has 5 distinct gradients** (`cheese→swiss-red`, `swiss-red-dark→alp-900`, `swiss-red→wood-700`, `wood-600→swiss-red-dark`, `swiss-red via wood-700 to alp-900`) but this variety exists only on `LevelMap`/`LevelCoverArt` — the rest of the app (`Dashboard.jsx`, nav) stays monochrome red/white/alp. Reuse 2-3 of these same gradients as small accent strips (e.g. top border or icon-chip background) on dashboard stat cards and `StreakCounter.jsx` so the palette feels consistent app-wide, not confined to one screen.
@@ -11,7 +11,7 @@ Scope: design/token-level critique only, based on current Tailwind config, `inde
 - **Background is uniform `bg-alp-50` everywhere** (`App.jsx`) — flat and a bit sterile for a "fun" positioning. Add a very subtle repeating SVG topographic-line or cross-hatch pattern at ~3-4% opacity in `alp-200`/`wood-200` behind the main content area (CSS `background-image` on the outer wrapper), evoking "alpine map" without being noisy or reading as decoration aimed at kids.
 - **Streak/gamification elements (`StreakCounter.jsx`) have no motion payoff** — a streak increment or level-up should get a one-time celebratory micro-animation (confetti-lite using existing Framer Motion, cheese/swiss-red colored dots, 400ms, no sound) rather than a static number change — this is the single highest-leverage "fun but adult" touch since it's tied to achievement, not decoration.
 
-## Legibilidad y accesibilidad multi-edad
+## Legibility and multi-age accessibility
 
 - **Set a body text floor of 16px (`text-base`), not `text-sm`** — audit any `text-sm`/`text-xs` used for actual reading content (lesson explanations, culture notes) vs. labels/timestamps; reserve `text-xs`/`text-sm` strictly for metadata, never for sentence-length content.
 - **Line-height**: ensure body copy uses `leading-relaxed` (1.625) rather than default `leading-normal` — meaningfully easier for 55+ readers on longer lesson text blocks, negligible visual cost for younger users.
@@ -21,7 +21,7 @@ Scope: design/token-level critique only, based on current Tailwind config, `inde
 - **Font size toggle — yes, recommend it.** Given the explicit teen-to-55+ range, add a lightweight "Tamaño de texto" control (3 steps: Normal / Grande / Muy grande, mapped to a `data-text-size` attribute on `<html>` that scales a CSS custom property `--text-scale` multiplying base rem sizing, or simpler: toggles a `text-lg`-equivalent class on the root). Place it in a **Settings/Ajustes screen** (not floating on every screen, which would look accessibility-app-y) — likely alongside a future dark-mode toggle, both as simple labeled switches/segmented controls, keeping the main UI chrome uncluttered for the default reader.
 - **Font loading gap**: `font-display`/`font-body` reference Poppins/Inter but there's no Google Fonts `<link>` in `index.html` yet — every user is currently seeing system-font fallback, which quietly undermines both legibility tuning (fallback fonts weren't chosen for x-height/spacing) and the intended "warm but grown-up" typographic voice. Fix in `index.html` `<head>` with a preconnect + swap-display font link (flagged again below since it's also a "unfinished" item).
 
-## Detalles que se sienten "a medio terminar"
+## Details that feel "half-finished"
 
 - **Missing Google Fonts import** — `font-display: 'Poppins'` / `font-body: 'Inter'` are declared in Tailwind config but never loaded (confirmed: no `fonts.googleapis.com` reference anywhere in `index.html` or `src`). Every heading/button is silently falling back to the OS system font, which is the single biggest "why does this look generic" culprit. Fix: add to `index.html` `<head>`:
   `<link rel="preconnect" href="https://fonts.googleapis.com">`
