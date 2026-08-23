@@ -1,0 +1,110 @@
+{
+  "id": "a1-4-01",
+  "level": "A1.4",
+  "canton": "schaffhausen",
+  "order": 1,
+  "title": {
+    "es": "¿De dónde eres?",
+    "en": "Where are you from?",
+    "pt": "De onde és?",
+    "fr": "D'où viens-tu ?",
+    "it": "Di dove sei?",
+    "sq": "Nga je?",
+    "tr": "Nerelisin?"
+  },
+  "grammarConcept": {
+    "es": "Decir tu nacionalidad y país de origen, y conjugar verbos regulares en 'ich' y 'du'.",
+    "en": "Saying your nationality and home country, and conjugating regular verbs for 'ich' and 'du'.",
+    "pt": "Dizer a tua nacionalidade e país de origem, e conjugar verbos regulares para 'ich' e 'du'.",
+    "fr": "Dire sa nationalité et son pays d'origine, et conjuguer les verbes réguliers pour « ich » et « du ».",
+    "it": "Dire la propria nazionalità e paese d'origine, e coniugare i verbi regolari per 'ich' e 'du'.",
+    "sq": "Të thuash kombësinë dhe vendin e origjinës, dhe të zgjedhosh foljet e rregullta për 'ich' dhe 'du'.",
+    "tr": "Uyruğunu ve memleketini söylemek, 'ich' ve 'du' için düzenli fiilleri çekmek."
+  },
+  "theory": [
+    {
+      "id": "th-verbos-regulares",
+      "title": { "es": "Verbos regulares: terminaciones de 'ich' y 'du'", "en": "Regular verbs: 'ich' and 'du' endings", "pt": "Verbos regulares: terminações de 'ich' e 'du'", "fr": "Verbes réguliers : terminaisons de « ich » et « du »", "it": "Verbi regolari: desinenze di 'ich' e 'du'", "sq": "Foljet e rregullta: mbaresat e 'ich' dhe 'du'", "tr": "Düzenli fiiller: 'ich' ve 'du' ekleri" },
+      "explanation": {
+        "es": "La mayoría de verbos suizo-alemanes siguen un patrón sencillo: quita la '-e' final del infinitivo para 'ich', y añade '-sch' para 'du'. Ejemplo con 'choche' (cocinar): 'ich choch', 'du chochsch'.",
+        "en": "Most Swiss German verbs follow a simple pattern: drop the final '-e' of the infinitive for 'ich', and add '-sch' for 'du'. Example with 'choche' (to cook): 'ich choch', 'du chochsch'.",
+        "pt": "A maioria dos verbos suíço-alemães segue um padrão simples: retira o '-e' final do infinitivo para 'ich', e acrescenta '-sch' para 'du'. Exemplo com 'choche' (cozinhar): 'ich choch', 'du chochsch'.",
+        "fr": "La plupart des verbes suisses-allemands suivent un schéma simple : on enlève le « -e » final de l'infinitif pour « ich », et on ajoute « -sch » pour « du ». Exemple avec « choche » (cuisiner) : « ich choch », « du chochsch ».",
+        "it": "La maggior parte dei verbi svizzero-tedeschi segue uno schema semplice: togli la '-e' finale dell'infinito per 'ich', e aggiungi '-sch' per 'du'. Esempio con 'choche' (cucinare): 'ich choch', 'du chochsch'.",
+        "sq": "Shumica e foljeve të gjermanishtes zvicerane ndjekin një model të thjeshtë: hiq '-e'-në fundore të paskajores për 'ich', dhe shto '-sch' për 'du'. Shembull me 'choche' (të gatuash): 'ich choch', 'du chochsch'.",
+        "tr": "Çoğu İsviçre Almancası fiil basit bir kalıp izler: 'ich' için mastarın sonundaki '-e'yi at, 'du' için '-sch' ekle. 'Choche' (pişirmek) örneği: 'ich choch', 'du chochsch'."
+      },
+      "table": {
+        "headers": ["Pronombre", "choche (cocinar)", "wohne (vivir)"],
+        "rows": [
+          ["ich", "choch", "wohn"],
+          ["du", "chochsch", "wohnsch"],
+          ["er/si/es", "chochet", "wohnt"]
+        ]
+      },
+      "culturalNote": {
+        "es": "Preguntar '¿de dónde eres?' es una forma habitual de romper el hielo en Suiza, un país con una altísima proporción de residentes extranjeros — nadie lo verá como una pregunta rara o incómoda.",
+        "en": "Asking 'where are you from?' is a common icebreaker in Switzerland, a country with a very high share of foreign residents — nobody will find it a strange or awkward question.",
+        "pt": "Perguntar 'de onde és?' é uma forma habitual de quebrar o gelo na Suíça, um país com uma proporção muito alta de residentes estrangeiros — ninguém vai achar estranho.",
+        "fr": "Demander « d'où viens-tu ? » est une façon courante de briser la glace en Suisse, un pays avec une très forte proportion de résidents étrangers — personne ne trouvera cette question étrange.",
+        "it": "Chiedere 'di dove sei?' è un modo comune per rompere il ghiaccio in Svizzera, un paese con un'altissima percentuale di residenti stranieri — nessuno lo troverà strano.",
+        "sq": "Të pyesësh 'nga je?' është një mënyrë e zakonshme për të thyer akullin në Zvicër, një vend me përqindje shumë të lartë banorësh të huaj — askush s'do ta gjejë të çuditshme.",
+        "tr": "'Nerelisin?' diye sormak, yabancı sakin oranı çok yüksek bir ülke olan İsviçre'de yaygın bir buz kırıcıdır — kimse bunu garip bulmaz."
+      }
+    }
+  ],
+  "dialogueExample": [
+    { "speaker": "🧑", "schwiizerduetsch": "Vo wo chunnsch du?", "base": { "es": "¿De dónde vienes?", "en": "Where do you come from?", "pt": "De onde vens?", "fr": "D'où viens-tu ?", "it": "Da dove vieni?", "sq": "Nga vjen?", "tr": "Nereden geliyorsun?" } },
+    { "speaker": "👩", "schwiizerduetsch": "Ich chumm us Spanie. Und du?", "base": { "es": "Yo vengo de España. ¿Y tú?", "en": "I come from Spain. And you?", "pt": "Eu venho de Espanha. E tu?", "fr": "Je viens d'Espagne. Et toi ?", "it": "Vengo dalla Spagna. E tu?", "sq": "Unë vij nga Spanja. Po ti?", "tr": "Ben İspanya'dan geliyorum. Ya sen?" } },
+    { "speaker": "🧑", "schwiizerduetsch": "Ich bi vo hie, us Schaffuuse.", "base": { "es": "Yo soy de aquí, de Schaffhausen.", "en": "I'm from here, from Schaffhausen.", "pt": "Eu sou daqui, de Schaffhausen.", "fr": "Je suis d'ici, de Schaffhouse.", "it": "Sono di qui, di Sciaffusa.", "sq": "Unë jam nga këtu, nga Schaffhausen.", "tr": "Ben buralıyım, Schaffhausen'liyim." } },
+    { "speaker": "👩", "schwiizerduetsch": "Ah schön! Wie lang wohnsch du scho da?", "base": { "es": "¡Ah qué bien! ¿Cuánto tiempo llevas viviendo aquí?", "en": "Oh nice! How long have you lived here?", "pt": "Ah que bom! Há quanto tempo vives aqui?", "fr": "Ah super ! Depuis combien de temps habites-tu ici ?", "it": "Ah bello! Da quanto vivi qui?", "sq": "Ah bukur! Sa kohë ke që jeton këtu?", "tr": "Ah güzel! Ne zamandır burada yaşıyorsun?" } }
+  ],
+  "comparisonTable": [
+    { "base": { "es": "¿De dónde vienes?", "en": "Where do you come from?", "pt": "De onde vens?", "fr": "D'où viens-tu ?", "it": "Da dove vieni?", "sq": "Nga vjen?", "tr": "Nereden geliyorsun?" }, "hochdeutsch": "Woher kommst du?", "schwiizerduetsch": "Vo wo chunnsch du?" },
+    { "base": { "es": "Vengo de España", "en": "I come from Spain", "pt": "Venho de Espanha", "fr": "Je viens d'Espagne", "it": "Vengo dalla Spagna", "sq": "Vij nga Spanja", "tr": "İspanya'dan geliyorum" }, "hochdeutsch": "Ich komme aus Spanien", "schwiizerduetsch": "Ich chumm us Spanie" },
+    { "base": { "es": "Soy de aquí", "en": "I'm from here", "pt": "Sou daqui", "fr": "Je suis d'ici", "it": "Sono di qui", "sq": "Jam nga këtu", "tr": "Buralıyım" }, "hochdeutsch": "Ich bin von hier", "schwiizerduetsch": "Ich bi vo hie" },
+    { "base": { "es": "Vivo aquí", "en": "I live here", "pt": "Vivo aqui", "fr": "J'habite ici", "it": "Vivo qui", "sq": "Jetoj këtu", "tr": "Burada yaşıyorum" }, "hochdeutsch": "Ich wohne hier", "schwiizerduetsch": "Ich wohn da" },
+    { "base": { "es": "¿Cuánto tiempo hace?", "en": "How long has it been?", "pt": "Há quanto tempo?", "fr": "Depuis combien de temps ?", "it": "Da quanto tempo?", "sq": "Sa kohë ka?", "tr": "Ne kadar zamandır?" }, "hochdeutsch": "Wie lange schon?", "schwiizerduetsch": "Wie lang scho?" },
+    { "base": { "es": "Extranjero/a", "en": "Foreigner", "pt": "Estrangeiro/a", "fr": "Étranger/ère", "it": "Straniero/a", "sq": "I huaj", "tr": "Yabancı" }, "hochdeutsch": "Ausländer/in", "schwiizerduetsch": "Usländer/in" }
+  ],
+  "vocabulary": [
+    { "id": "v1", "hochdeutsch": "Woher kommst du?", "schwiizerduetsch": "Vo wo chunnsch du?", "audioText": "Vo wo chunnsch du?", "base": { "es": "¿De dónde vienes?", "en": "Where do you come from?", "pt": "De onde vens?", "fr": "D'où viens-tu ?", "it": "Da dove vieni?", "sq": "Nga vjen?", "tr": "Nereden geliyorsun?" } },
+    { "id": "v2", "hochdeutsch": "Ich komme aus Spanien", "schwiizerduetsch": "Ich chumm us Spanie", "audioText": "Ich chumm us Spanie", "base": { "es": "Vengo de España", "en": "I come from Spain", "pt": "Venho de Espanha", "fr": "Je viens d'Espagne", "it": "Vengo dalla Spagna", "sq": "Vij nga Spanja", "tr": "İspanya'dan geliyorum" } },
+    { "id": "v3", "hochdeutsch": "Ich bin von hier", "schwiizerduetsch": "Ich bi vo hie", "audioText": "Ich bi vo hie", "base": { "es": "Soy de aquí", "en": "I'm from here", "pt": "Sou daqui", "fr": "Je suis d'ici", "it": "Sono di qui", "sq": "Jam nga këtu", "tr": "Buralıyım" } },
+    { "id": "v4", "hochdeutsch": "Ich wohne hier", "schwiizerduetsch": "Ich wohn da", "audioText": "Ich wohn da", "base": { "es": "Vivo aquí", "en": "I live here", "pt": "Vivo aqui", "fr": "J'habite ici", "it": "Vivo qui", "sq": "Jetoj këtu", "tr": "Burada yaşıyorum" } },
+    { "id": "v5", "hochdeutsch": "Wie lange schon?", "schwiizerduetsch": "Wie lang scho?", "audioText": "Wie lang scho?", "base": { "es": "¿Cuánto tiempo hace?", "en": "How long has it been?", "pt": "Há quanto tempo?", "fr": "Depuis combien de temps ?", "it": "Da quanto tempo?", "sq": "Sa kohë ka?", "tr": "Ne kadar zamandır?" } },
+    { "id": "v6", "hochdeutsch": "Ausländer/in", "schwiizerduetsch": "Usländer/in", "audioText": "Usländer", "base": { "es": "Extranjero/a", "en": "Foreigner", "pt": "Estrangeiro/a", "fr": "Étranger/ère", "it": "Straniero/a", "sq": "I huaj", "tr": "Yabancı" } }
+  ],
+  "exercises": {
+    "fillBlanks": [
+      { "id": "fb1", "before": "Vo wo", "after": "du?", "correctWord": "chunnsch", "options": ["chunnsch", "chumm", "chunnt"], "hint": { "es": "Completa: '¿De dónde vienes (tú)?'", "en": "Complete: 'Where do you (informal) come from?'", "pt": "Completa: 'De onde vens (tu)?'", "fr": "Complétez : « D'où viens-tu ? »", "it": "Completa: 'Da dove vieni (tu)?'", "sq": "Plotëso: 'Nga vjen (ti)?'", "tr": "Tamamla: '(Sen) nereden geliyorsun?'" } },
+      { "id": "fb2", "before": "Ich", "after": "us Spanie.", "correctWord": "chumm", "options": ["chumm", "chunnsch", "chunnt"], "hint": { "es": "Completa: 'Yo vengo de España'", "en": "Complete: 'I come from Spain'", "pt": "Completa: 'Eu venho de Espanha'", "fr": "Complétez : « Je viens d'Espagne »", "it": "Completa: 'Io vengo dalla Spagna'", "sq": "Plotëso: 'Unë vij nga Spanja'", "tr": "Tamamla: 'Ben İspanya'dan geliyorum'" } }
+    ],
+    "multipleChoice": [
+      { "id": "mc1", "question": { "es": "La forma de 'wohne' para 'du' es...", "en": "The form of 'wohne' for 'du' is...", "pt": "A forma de 'wohne' para 'du' é...", "fr": "La forme de « wohne » pour « du » est...", "it": "La forma di 'wohne' per 'du' è...", "sq": "Forma e 'wohne' për 'du' është...", "tr": "'Du' için 'wohne' biçimi..." }, "options": [ { "text": "wohnsch", "correct": true }, { "text": "wohn", "correct": false }, { "text": "wohnt", "correct": false } ] },
+      { "id": "mc2", "question": { "es": "'Usländer' significa...", "en": "'Usländer' means...", "pt": "'Usländer' significa...", "fr": "« Usländer » signifie...", "it": "'Usländer' significa...", "sq": "'Usländer' do të thotë...", "tr": "'Usländer' anlamı..." }, "options": [ { "text": { "es": "Extranjero/a", "en": "Foreigner", "pt": "Estrangeiro/a", "fr": "Étranger/ère", "it": "Straniero/a", "sq": "I huaj", "tr": "Yabancı" }, "correct": true }, { "text": { "es": "Vecino/a", "en": "Neighbor", "pt": "Vizinho/a", "fr": "Voisin(e)", "it": "Vicino/a", "sq": "Fqinj", "tr": "Komşu" }, "correct": false } ] },
+      { "id": "mc3", "question": { "es": "¿Cómo dices 'soy de aquí'?", "en": "How do you say 'I'm from here'?", "pt": "Como dizes 'sou daqui'?", "fr": "Comment dit-on « je suis d'ici » ?", "it": "Come dici 'sono di qui'?", "sq": "Si e thua 'jam nga këtu'?", "tr": "'Buralıyım' nasıl denir?" }, "options": [ { "text": "Ich bi vo hie", "correct": true }, { "text": "Ich chumm vo hie", "correct": false } ] },
+      { "id": "mc4", "question": { "es": "El infinitivo 'choche' pierde la '-e' final para la forma de...", "en": "The infinitive 'choche' drops its final '-e' for the form of...", "pt": "O infinitivo 'choche' perde o '-e' final na forma de...", "fr": "L'infinitif « choche » perd son « -e » final pour la forme de...", "it": "L'infinito 'choche' perde la '-e' finale per la forma di...", "sq": "Paskajorja 'choche' humbet '-e'-në fundore për formën e...", "tr": "'Choche' mastarı hangi şahıs için sondaki '-e'yi kaybeder..." }, "options": [ { "text": "ich", "correct": true }, { "text": "er/si/es", "correct": false } ] }
+    ],
+    "sentenceBuilder": [
+      { "id": "sb1", "prompt": { "es": "Construye: '¿De dónde vienes?'", "en": "Build: 'Where do you come from?'", "pt": "Constrói: 'De onde vens?'", "fr": "Construisez : « D'où viens-tu ? »", "it": "Costruisci: 'Da dove vieni?'", "sq": "Ndërto: 'Nga vjen?'", "tr": "Kur: 'Nereden geliyorsun?'" }, "words": ["Vo", "wo", "chunnsch", "du", "?"], "correctOrder": [0, 1, 2, 3, 4] },
+      { "id": "sb2", "prompt": { "es": "Construye: 'Vivo aquí desde hace mucho tiempo'", "en": "Build: 'I've lived here for a long time'", "pt": "Constrói: 'Vivo aqui há muito tempo'", "fr": "Construisez : « J'habite ici depuis longtemps »", "it": "Costruisci: 'Vivo qui da molto tempo'", "sq": "Ndërto: 'Jetoj këtu prej shumë kohësh'", "tr": "Kur: 'Uzun zamandır burada yaşıyorum'" }, "words": ["Ich", "wohn", "scho", "lang", "da"], "correctOrder": [0, 1, 2, 3, 4] }
+    ],
+    "pronunciation": [
+      { "id": "p1", "expectedText": "Vo wo chunnsch du?", "lang": "de-DE", "hint": { "es": "Pregunta de dónde viene alguien", "en": "Ask where someone comes from", "pt": "Pergunta de onde vem alguém", "fr": "Demandez d'où vient quelqu'un", "it": "Chiedi da dove viene qualcuno", "sq": "Pyet nga vjen dikush", "tr": "Birinin nereden geldiğini sor" } },
+      { "id": "p2", "expectedText": "Ich bi vo hie", "lang": "de-DE", "hint": { "es": "Di que eres de aquí", "en": "Say you're from here", "pt": "Diz que és daqui", "fr": "Dites que vous êtes d'ici", "it": "Di' che sei di qui", "sq": "Thuaj se je nga këtu", "tr": "Buralı olduğunu söyle" } }
+    ]
+  },
+  "finalExam": [
+    { "id": "e1", "question": { "es": "'Vo wo chunnsch du?' significa...", "en": "'Vo wo chunnsch du?' means...", "pt": "'Vo wo chunnsch du?' significa...", "fr": "« Vo wo chunnsch du? » signifie...", "it": "'Vo wo chunnsch du?' significa...", "sq": "'Vo wo chunnsch du?' do të thotë...", "tr": "'Vo wo chunnsch du?' anlamı..." }, "options": [ { "text": { "es": "¿De dónde vienes?", "en": "Where do you come from?", "pt": "De onde vens?", "fr": "D'où viens-tu ?", "it": "Da dove vieni?", "sq": "Nga vjen?", "tr": "Nereden geliyorsun?" }, "correct": true }, { "text": { "es": "¿Dónde vives?", "en": "Where do you live?", "pt": "Onde vives?", "fr": "Où habites-tu ?", "it": "Dove vivi?", "sq": "Ku jeton?", "tr": "Nerede yaşıyorsun?" }, "correct": false } ] },
+    { "id": "e2", "question": { "es": "'Ich chumm us Spanie' significa...", "en": "'Ich chumm us Spanie' means...", "pt": "'Ich chumm us Spanie' significa...", "fr": "« Ich chumm us Spanie » signifie...", "it": "'Ich chumm us Spanie' significa...", "sq": "'Ich chumm us Spanie' do të thotë...", "tr": "'Ich chumm us Spanie' anlamı..." }, "options": [ { "text": { "es": "Vengo de España", "en": "I come from Spain", "pt": "Venho de Espanha", "fr": "Je viens d'Espagne", "it": "Vengo dalla Spagna", "sq": "Vij nga Spanja", "tr": "İspanya'dan geliyorum" }, "correct": true }, { "text": { "es": "Vivo en España", "en": "I live in Spain", "pt": "Vivo em Espanha", "fr": "J'habite en Espagne", "it": "Vivo in Spagna", "sq": "Jetoj në Spanjë", "tr": "İspanya'da yaşıyorum" }, "correct": false } ] },
+    { "id": "e3", "question": { "es": "La terminación de 'du' en verbos regulares es...", "en": "The 'du' ending on regular verbs is...", "pt": "A terminação de 'du' nos verbos regulares é...", "fr": "La terminaison de « du » sur les verbes réguliers est...", "it": "La desinenza di 'du' nei verbi regolari è...", "sq": "Mbaresa e 'du' në foljet e rregullta është...", "tr": "Düzenli fiillerde 'du' eki..." }, "options": [ { "text": "-sch", "correct": true }, { "text": "-t", "correct": false } ] },
+    { "id": "e4", "question": { "es": "'Usländer' se refiere a...", "en": "'Usländer' refers to...", "pt": "'Usländer' refere-se a...", "fr": "« Usländer » fait référence à...", "it": "'Usländer' si riferisce a...", "sq": "'Usländer' i referohet...", "tr": "'Usländer' şuna işaret eder..." }, "options": [ { "text": { "es": "Una persona extranjera", "en": "A foreign person", "pt": "Uma pessoa estrangeira", "fr": "Une personne étrangère", "it": "Una persona straniera", "sq": "Një person i huaj", "tr": "Yabancı bir kişi" }, "correct": true }, { "text": { "es": "Un vecino", "en": "A neighbor", "pt": "Um vizinho", "fr": "Un voisin", "it": "Un vicino", "sq": "Një fqinj", "tr": "Bir komşu" }, "correct": false } ] },
+    { "id": "e5", "question": { "es": "'Ich wohn da' significa...", "en": "'Ich wohn da' means...", "pt": "'Ich wohn da' significa...", "fr": "« Ich wohn da » signifie...", "it": "'Ich wohn da' significa...", "sq": "'Ich wohn da' do të thotë...", "tr": "'Ich wohn da' anlamı..." }, "options": [ { "text": { "es": "Vivo aquí", "en": "I live here", "pt": "Vivo aqui", "fr": "J'habite ici", "it": "Vivo qui", "sq": "Jetoj këtu", "tr": "Burada yaşıyorum" }, "correct": true }, { "text": { "es": "Vengo de aquí", "en": "I come from here", "pt": "Venho daqui", "fr": "Je viens d'ici", "it": "Vengo da qui", "sq": "Vij nga këtu", "tr": "Buradan geliyorum" }, "correct": false } ] },
+    { "id": "e6", "question": { "es": "En Suiza, preguntar de dónde eres...", "en": "In Switzerland, asking where you're from...", "pt": "Na Suíça, perguntar de onde és...", "fr": "En Suisse, demander d'où l'on vient...", "it": "In Svizzera, chiedere da dove vieni...", "sq": "Në Zvicër, të pyeturit nga je...", "tr": "İsviçre'de nereli olduğunu sormak..." }, "options": [ { "text": { "es": "Es normal, dado el alto número de extranjeros", "en": "Is normal, given the high number of foreigners", "pt": "É normal, dado o elevado número de estrangeiros", "fr": "Est normal, vu le grand nombre d'étrangers", "it": "È normale, dato l'alto numero di stranieri", "sq": "Është normale, duke pasur parasysh numrin e lartë të të huajve", "tr": "Yüksek yabancı sayısı düşünüldüğünde normaldir" }, "correct": true }, { "text": { "es": "Se considera de mala educación", "en": "Is considered rude", "pt": "É considerado falta de educação", "fr": "Est considéré comme impoli", "it": "È considerato scortese", "sq": "Konsiderohet e pasjellshme", "tr": "Kabalık sayılır" }, "correct": false } ] },
+    { "id": "e7", "question": { "es": "'Wie lang scho?' pregunta...", "en": "'Wie lang scho?' asks...", "pt": "'Wie lang scho?' pergunta...", "fr": "« Wie lang scho? » demande...", "it": "'Wie lang scho?' chiede...", "sq": "'Wie lang scho?' pyet...", "tr": "'Wie lang scho?' şunu sorar..." }, "options": [ { "text": { "es": "Cuánto tiempo hace", "en": "How long it's been", "pt": "Há quanto tempo", "fr": "Depuis combien de temps", "it": "Da quanto tempo", "sq": "Sa kohë ka", "tr": "Ne kadar zamandır" }, "correct": true }, { "text": { "es": "Cuánto cuesta", "en": "How much it costs", "pt": "Quanto custa", "fr": "Combien ça coûte", "it": "Quanto costa", "sq": "Sa kushton", "tr": "Ne kadar tuttuğunu" }, "correct": false } ] },
+    { "id": "e8", "question": { "es": "El equivalente Hochdeutsch de 'chunnsch' es...", "en": "The Hochdeutsch equivalent of 'chunnsch' is...", "pt": "O equivalente em Hochdeutsch de 'chunnsch' é...", "fr": "L'équivalent en Hochdeutsch de « chunnsch » est...", "it": "L'equivalente in Hochdeutsch di 'chunnsch' è...", "sq": "Ekuivalenti në Hochdeutsch i 'chunnsch' është...", "tr": "'Chunnsch' kelimesinin Hochdeutsch karşılığı..." }, "options": [ { "text": "kommst", "correct": true }, { "text": "kommt", "correct": false } ] },
+    { "id": "e9", "question": { "es": "Traduce: 'Ich wohn scho lang da'", "en": "Translate: 'Ich wohn scho lang da'", "pt": "Traduz: 'Ich wohn scho lang da'", "fr": "Traduisez : « Ich wohn scho lang da »", "it": "Traduci: 'Ich wohn scho lang da'", "sq": "Përkthe: 'Ich wohn scho lang da'", "tr": "Çevir: 'Ich wohn scho lang da'" }, "options": [ { "text": { "es": "Vivo aquí desde hace tiempo", "en": "I've lived here for a while", "pt": "Vivo aqui há já algum tempo", "fr": "J'habite ici depuis un moment", "it": "Vivo qui da un po' di tempo", "sq": "Jetoj këtu prej kohësh", "tr": "Uzun süredir burada yaşıyorum" }, "correct": true }, { "text": { "es": "Voy a vivir aquí pronto", "en": "I'll live here soon", "pt": "Vou viver aqui em breve", "fr": "Je vais bientôt habiter ici", "it": "Vivrò qui presto", "sq": "Do të jetoj këtu së shpejti", "tr": "Yakında burada yaşayacağım" }, "correct": false } ] },
+    { "id": "e10", "question": { "es": "'Ich choch' significa...", "en": "'Ich choch' means...", "pt": "'Ich choch' significa...", "fr": "« Ich choch » signifie...", "it": "'Ich choch' significa...", "sq": "'Ich choch' do të thotë...", "tr": "'Ich choch' anlamı..." }, "options": [ { "text": { "es": "Yo cocino", "en": "I cook", "pt": "Eu cozinho", "fr": "Je cuisine", "it": "Io cucino", "sq": "Unë gatuaj", "tr": "Ben yemek yaparım" }, "correct": true }, { "text": { "es": "Yo vivo", "en": "I live", "pt": "Eu vivo", "fr": "J'habite", "it": "Io vivo", "sq": "Unë jetoj", "tr": "Ben yaşarım" }, "correct": false } ] }
+  ]
+}

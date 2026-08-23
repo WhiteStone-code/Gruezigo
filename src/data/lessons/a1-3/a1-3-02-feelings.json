@@ -1,0 +1,101 @@
+{
+  "id": "a1-3-02",
+  "level": "A1.3",
+  "canton": "thurgau",
+  "order": 2,
+  "title": {
+    "es": "Cómo te sientes",
+    "en": "How you feel",
+    "pt": "Como te sentes",
+    "fr": "Comment tu te sens",
+    "it": "Come ti senti",
+    "sq": "Si ndihesh",
+    "tr": "Nasıl hissediyorsun"
+  },
+  "grammarConcept": {
+    "es": "Los pronombres personales singulares y todas las formas de 'sein' (ser/estar), para hablar de emociones.",
+    "en": "Singular personal pronouns and all forms of 'sein' (to be), to talk about emotions.",
+    "pt": "Os pronomes pessoais singulares e todas as formas de 'sein' (ser/estar), para falar de emoções.",
+    "fr": "Les pronoms personnels au singulier et toutes les formes de « sein » (être), pour parler d'émotions.",
+    "it": "I pronomi personali singolari e tutte le forme di 'sein' (essere), per parlare di emozioni.",
+    "sq": "Përemrat vetorë njëjës dhe të gjitha format e 'sein' (me qenë), për të folur për emocionet.",
+    "tr": "Tekil kişi zamirleri ve duygulardan bahsetmek için 'sein' (olmak) fiilinin tüm halleri."
+  },
+  "theory": [
+    {
+      "id": "th-sein-singular",
+      "title": { "es": "'Sein' en singular: ich, du, er/sie/es", "en": "'Sein' in the singular: ich, du, er/sie/es", "pt": "'Sein' no singular: ich, du, er/sie/es", "fr": "« Sein » au singulier : ich, du, er/sie/es", "it": "'Sein' al singolare: ich, du, er/sie/es", "sq": "'Sein' në njëjës: ich, du, er/sie/es", "tr": "Tekilde 'sein': ich, du, er/sie/es" },
+      "explanation": {
+        "es": "Ya viste 'ich bi' y 'du bisch' en la lección de Saludos. Ahora completamos el resto de personas del singular: 'er/si/es isch'. Fíjate que el suizo-alemán simplifica: no hay una forma distinta para 'es' (neutro), usa la misma que 'er/si'.",
+        "en": "You already saw 'ich bi' and 'du bisch' in the Greetings lesson. Now we complete the rest of the singular persons: 'er/si/es isch'. Notice that Swiss German simplifies things: there's no separate form for 'es' (neuter) — it uses the same as 'er/si'.",
+        "pt": "Já viste 'ich bi' e 'du bisch' na lição de Cumprimentos. Agora completamos o resto das pessoas do singular: 'er/si/es isch'. Repara que o suíço-alemão simplifica: não há uma forma diferente para 'es' (neutro).",
+        "fr": "Vous avez déjà vu « ich bi » et « du bisch » dans la leçon Salutations. Complétons maintenant le reste des personnes du singulier : « er/si/es isch ». Notez que le suisse-allemand simplifie : pas de forme distincte pour « es » (neutre).",
+        "it": "Hai già visto 'ich bi' e 'du bisch' nella lezione sui Saluti. Ora completiamo il resto delle persone singolari: 'er/si/es isch'. Nota che lo svizzero-tedesco semplifica: non c'è una forma distinta per 'es' (neutro).",
+        "sq": "Tashmë ke parë 'ich bi' dhe 'du bisch' te mësimi i Përshëndetjeve. Tani plotësojmë pjesën tjetër të vetave njëjës: 'er/si/es isch'. Vër re se gjermanishtja zvicerane thjeshtëson: nuk ka formë të veçantë për 'es' (asnjanëse).",
+        "tr": "Selamlar dersinde 'ich bi' ve 'du bisch'i zaten gördün. Şimdi tekildeki diğer şahısları tamamlıyoruz: 'er/si/es isch'. İsviçre Almancasının işi basitleştirdiğine dikkat et: 'es' (nötr) için ayrı bir biçim yok — 'er/si' ile aynısını kullanır."
+      },
+      "table": {
+        "headers": ["Pronombre", "Hochdeutsch", "Schwiizerdütsch"],
+        "rows": [
+          ["ich", "bin", "bi"],
+          ["du", "bist", "bisch"],
+          ["er/si/es", "ist", "isch"]
+        ]
+      }
+    }
+  ],
+  "dialogueExample": [
+    { "speaker": "🧑", "schwiizerduetsch": "Hoi! Wie gaht's dir hüt?", "base": { "es": "¡Hola! ¿Cómo estás hoy?", "en": "Hi! How are you today?", "pt": "Olá! Como estás hoje?", "fr": "Salut ! Comment vas-tu aujourd'hui ?", "it": "Ciao! Come stai oggi?", "sq": "Përshëndetje! Si je sot?", "tr": "Selam! Bugün nasılsın?" } },
+    { "speaker": "👩", "schwiizerduetsch": "Ich bi hüt chli müed, ehrlich gseit.", "base": { "es": "Hoy estoy un poco cansada, la verdad.", "en": "I'm a bit tired today, honestly.", "pt": "Hoje estou um pouco cansada, para ser sincera.", "fr": "Je suis un peu fatiguée aujourd'hui, honnêtement.", "it": "Oggi sono un po' stanca, sinceramente.", "sq": "Sot jam pak e lodhur, sinqerisht.", "tr": "Bugün biraz yorgunum, açıkçası." } },
+    { "speaker": "🧑", "schwiizerduetsch": "Oh nei. Bisch au gstresst?", "base": { "es": "Vaya. ¿Estás también estresada?", "en": "Oh no. Are you also stressed?", "pt": "Ah não. Também estás stressada?", "fr": "Oh non. Tu es aussi stressée ?", "it": "Oh no. Sei anche stressata?", "sq": "Oh jo. A je edhe e stresuar?", "tr": "Aa olmadı. Stresli de misin?" } },
+    { "speaker": "👩", "schwiizerduetsch": "En bitzeli. Aber es isch okay.", "base": { "es": "Un poquito. Pero está bien.", "en": "A little bit. But it's okay.", "pt": "Um bocadinho. Mas está tudo bem.", "fr": "Un petit peu. Mais ça va.", "it": "Un pochino. Ma va bene.", "sq": "Pak. Por është në rregull.", "tr": "Biraz. Ama sorun değil." } }
+  ],
+  "comparisonTable": [
+    { "base": { "es": "Estoy cansado/a", "en": "I'm tired", "pt": "Estou cansado/a", "fr": "Je suis fatigué(e)", "it": "Sono stanco/a", "sq": "Jam i lodhur", "tr": "Yorgunum" }, "hochdeutsch": "Ich bin müde", "schwiizerduetsch": "Ich bi müed" },
+    { "base": { "es": "Estoy estresado/a", "en": "I'm stressed", "pt": "Estou stressado/a", "fr": "Je suis stressé(e)", "it": "Sono stressato/a", "sq": "Jam i stresuar", "tr": "Stresliyim" }, "hochdeutsch": "Ich bin gestresst", "schwiizerduetsch": "Ich bi gstresst" },
+    { "base": { "es": "Estoy contento/a", "en": "I'm happy", "pt": "Estou contente", "fr": "Je suis content(e)", "it": "Sono contento/a", "sq": "Jam i lumtur", "tr": "Mutluyum" }, "hochdeutsch": "Ich bin froh", "schwiizerduetsch": "Ich bi froh" },
+    { "base": { "es": "Estoy triste", "en": "I'm sad", "pt": "Estou triste", "fr": "Je suis triste", "it": "Sono triste", "sq": "Jam i trishtuar", "tr": "Üzgünüm" }, "hochdeutsch": "Ich bin traurig", "schwiizerduetsch": "Ich bi truurig" },
+    { "base": { "es": "¿Estás bien?", "en": "Are you okay?", "pt": "Estás bem?", "fr": "Tu vas bien ?", "it": "Stai bene?", "sq": "A je mirë?", "tr": "İyi misin?" }, "hochdeutsch": "Bist du okay?", "schwiizerduetsch": "Bisch okay?" },
+    { "base": { "es": "Un poquito", "en": "A little bit", "pt": "Um bocadinho", "fr": "Un petit peu", "it": "Un pochino", "sq": "Pak", "tr": "Biraz" }, "hochdeutsch": "Ein bisschen", "schwiizerduetsch": "En bitzeli" }
+  ],
+  "vocabulary": [
+    { "id": "v1", "hochdeutsch": "Ich bin müde", "schwiizerduetsch": "Ich bi müed", "audioText": "Ich bi müed", "base": { "es": "Estoy cansado/a", "en": "I'm tired", "pt": "Estou cansado/a", "fr": "Je suis fatigué(e)", "it": "Sono stanco/a", "sq": "Jam i lodhur", "tr": "Yorgunum" } },
+    { "id": "v2", "hochdeutsch": "Ich bin gestresst", "schwiizerduetsch": "Ich bi gstresst", "audioText": "Ich bi gstresst", "base": { "es": "Estoy estresado/a", "en": "I'm stressed", "pt": "Estou stressado/a", "fr": "Je suis stressé(e)", "it": "Sono stressato/a", "sq": "Jam i stresuar", "tr": "Stresliyim" } },
+    { "id": "v3", "hochdeutsch": "Ich bin froh", "schwiizerduetsch": "Ich bi froh", "audioText": "Ich bi froh", "base": { "es": "Estoy contento/a", "en": "I'm happy", "pt": "Estou contente", "fr": "Je suis content(e)", "it": "Sono contento/a", "sq": "Jam i lumtur", "tr": "Mutluyum" } },
+    { "id": "v4", "hochdeutsch": "Ich bin traurig", "schwiizerduetsch": "Ich bi truurig", "audioText": "Ich bi truurig", "base": { "es": "Estoy triste", "en": "I'm sad", "pt": "Estou triste", "fr": "Je suis triste", "it": "Sono triste", "sq": "Jam i trishtuar", "tr": "Üzgünüm" } },
+    { "id": "v5", "hochdeutsch": "Bist du okay?", "schwiizerduetsch": "Bisch okay?", "audioText": "Bisch okay?", "base": { "es": "¿Estás bien?", "en": "Are you okay?", "pt": "Estás bem?", "fr": "Tu vas bien ?", "it": "Stai bene?", "sq": "A je mirë?", "tr": "İyi misin?" } },
+    { "id": "v6", "hochdeutsch": "Es ist okay", "schwiizerduetsch": "Es isch okay", "audioText": "Es isch okay", "base": { "es": "Está bien", "en": "It's okay", "pt": "Está tudo bem", "fr": "Ça va", "it": "Va bene", "sq": "Është në rregull", "tr": "Sorun değil" } }
+  ],
+  "exercises": {
+    "fillBlanks": [
+      { "id": "fb1", "before": "Ich", "after": "müed.", "correctWord": "bi", "options": ["bi", "bisch", "isch"], "hint": { "es": "Completa: 'Estoy cansado/a'", "en": "Complete: 'I'm tired'", "pt": "Completa: 'Estou cansado/a'", "fr": "Complétez : « Je suis fatigué(e) »", "it": "Completa: 'Sono stanco/a'", "sq": "Plotëso: 'Jam i lodhur'", "tr": "Tamamla: 'Yorgunum'" } },
+      { "id": "fb2", "before": "Es", "after": "okay.", "correctWord": "isch", "options": ["isch", "bi", "bisch"], "hint": { "es": "Completa: 'Está bien' (neutro)", "en": "Complete: 'It's okay' (neuter)", "pt": "Completa: 'Está tudo bem' (neutro)", "fr": "Complétez : « Ça va » (neutre)", "it": "Completa: 'Va bene' (neutro)", "sq": "Plotëso: 'Është në rregull' (asnjanëse)", "tr": "Tamamla: 'Sorun değil' (nötr)" } }
+    ],
+    "multipleChoice": [
+      { "id": "mc1", "question": { "es": "¿Cómo dice 'ella' (si) 'está' en dialecto?", "en": "How does 'she' say 'is' in dialect?", "pt": "Como diz 'ela' 'está' em dialeto?", "fr": "Comment dit-on « elle » « est » en dialecte ?", "it": "Come dice 'lei' 'è' in dialetto?", "sq": "Si e thotë 'ajo' 'është' në dialekt?", "tr": "Lehçede 'o' (kadın) 'dır' nasıl der?" }, "options": [ { "text": "isch", "correct": true }, { "text": "bisch", "correct": false }, { "text": "bi", "correct": false } ] },
+      { "id": "mc2", "question": { "es": "'Ich bi gstresst' significa...", "en": "'Ich bi gstresst' means...", "pt": "'Ich bi gstresst' significa...", "fr": "« Ich bi gstresst » signifie...", "it": "'Ich bi gstresst' significa...", "sq": "'Ich bi gstresst' do të thotë...", "tr": "'Ich bi gstresst' anlamı..." }, "options": [ { "text": { "es": "Estoy estresado/a", "en": "I'm stressed", "pt": "Estou stressado/a", "fr": "Je suis stressé(e)", "it": "Sono stressato/a", "sq": "Jam i stresuar", "tr": "Stresliyim" }, "correct": true }, { "text": { "es": "Estoy contento/a", "en": "I'm happy", "pt": "Estou contente", "fr": "Je suis content(e)", "it": "Sono contento/a", "sq": "Jam i lumtur", "tr": "Mutluyum" }, "correct": false } ] },
+      { "id": "mc3", "question": { "es": "¿Cómo se dice 'estoy triste'?", "en": "How do you say 'I'm sad'?", "pt": "Como se diz 'estou triste'?", "fr": "Comment dit-on « je suis triste » ?", "it": "Come si dice 'sono triste'?", "sq": "Si thuhet 'jam i trishtuar'?", "tr": "'Üzgünüm' nasıl denir?" }, "options": [ { "text": "Ich bi truurig", "correct": true }, { "text": "Ich bi froh", "correct": false } ] },
+      { "id": "mc4", "question": { "es": "'En bitzeli' significa...", "en": "'En bitzeli' means...", "pt": "'En bitzeli' significa...", "fr": "« En bitzeli » signifie...", "it": "'En bitzeli' significa...", "sq": "'En bitzeli' do të thotë...", "tr": "'En bitzeli' anlamı..." }, "options": [ { "text": { "es": "Un poquito", "en": "A little bit", "pt": "Um bocadinho", "fr": "Un petit peu", "it": "Un pochino", "sq": "Pak", "tr": "Biraz" }, "correct": true }, { "text": { "es": "Mucho", "en": "A lot", "pt": "Muito", "fr": "Beaucoup", "it": "Molto", "sq": "Shumë", "tr": "Çok" }, "correct": false } ] }
+    ],
+    "sentenceBuilder": [
+      { "id": "sb1", "prompt": { "es": "Construye: '¿Cómo estás hoy?'", "en": "Build: 'How are you today?'", "pt": "Constrói: 'Como estás hoje?'", "fr": "Construisez : « Comment vas-tu aujourd'hui ? »", "it": "Costruisci: 'Come stai oggi?'", "sq": "Ndërto: 'Si je sot?'", "tr": "Kur: 'Bugün nasılsın?'" }, "words": ["Wie", "gaht's", "dir", "hüt", "?"], "correctOrder": [0, 1, 2, 3, 4] },
+      { "id": "sb2", "prompt": { "es": "Construye: 'Estoy un poco cansada'", "en": "Build: 'I'm a bit tired'", "pt": "Constrói: 'Estou um pouco cansada'", "fr": "Construisez : « Je suis un peu fatiguée »", "it": "Costruisci: 'Sono un po' stanca'", "sq": "Ndërto: 'Jam pak e lodhur'", "tr": "Kur: 'Biraz yorgunum'" }, "words": ["Ich", "bi", "chli", "müed"], "correctOrder": [0, 1, 2, 3] }
+    ],
+    "pronunciation": [
+      { "id": "p1", "expectedText": "Ich bi hüt müed", "lang": "de-DE", "hint": { "es": "Di que hoy estás cansado/a", "en": "Say you're tired today", "pt": "Diz que hoje estás cansado/a", "fr": "Dites que vous êtes fatigué(e) aujourd'hui", "it": "Di' che oggi sei stanco/a", "sq": "Thuaj se sot je i lodhur", "tr": "Bugün yorgun olduğunu söyle" } },
+      { "id": "p2", "expectedText": "Es isch okay", "lang": "de-DE", "hint": { "es": "Di que está bien", "en": "Say it's okay", "pt": "Diz que está tudo bem", "fr": "Dites que ça va", "it": "Di' che va bene", "sq": "Thuaj se është në rregull", "tr": "Sorun olmadığını söyle" } }
+    ]
+  },
+  "finalExam": [
+    { "id": "e1", "question": { "es": "'Ich bi müed' significa...", "en": "'Ich bi müed' means...", "pt": "'Ich bi müed' significa...", "fr": "« Ich bi müed » signifie...", "it": "'Ich bi müed' significa...", "sq": "'Ich bi müed' do të thotë...", "tr": "'Ich bi müed' anlamı..." }, "options": [ { "text": { "es": "Estoy cansado/a", "en": "I'm tired", "pt": "Estou cansado/a", "fr": "Je suis fatigué(e)", "it": "Sono stanco/a", "sq": "Jam i lodhur", "tr": "Yorgunum" }, "correct": true }, { "text": { "es": "Estoy triste", "en": "I'm sad", "pt": "Estou triste", "fr": "Je suis triste", "it": "Sono triste", "sq": "Jam i trishtuar", "tr": "Üzgünüm" }, "correct": false } ] },
+    { "id": "e2", "question": { "es": "La forma de 'sein' para 'du' es...", "en": "The form of 'sein' for 'du' is...", "pt": "A forma de 'sein' para 'du' é...", "fr": "La forme de « sein » pour « du » est...", "it": "La forma di 'sein' per 'du' è...", "sq": "Forma e 'sein' për 'du' është...", "tr": "'Du' için 'sein' biçimi..." }, "options": [ { "text": "bisch", "correct": true }, { "text": "bi", "correct": false } ] },
+    { "id": "e3", "question": { "es": "El suizo-alemán usa la misma forma de 'sein' para 'er/si' y...", "en": "Swiss German uses the same form of 'sein' for 'er/si' and...", "pt": "O suíço-alemão usa a mesma forma de 'sein' para 'er/si' e...", "fr": "Le suisse-allemand utilise la même forme de « sein » pour « er/si » et...", "it": "Lo svizzero-tedesco usa la stessa forma di 'sein' per 'er/si' e...", "sq": "Gjermanishtja zvicerane përdor të njëjtën formë të 'sein' për 'er/si' dhe...", "tr": "İsviçre Almancası 'er/si' için aynı 'sein' biçimini şunun için de kullanır..." }, "options": [ { "text": "es (neutro)", "correct": true }, { "text": "ich", "correct": false } ] },
+    { "id": "e4", "question": { "es": "'Bisch okay?' pregunta...", "en": "'Bisch okay?' asks...", "pt": "'Bisch okay?' pergunta...", "fr": "« Bisch okay? » demande...", "it": "'Bisch okay?' chiede...", "sq": "'Bisch okay?' pyet...", "tr": "'Bisch okay?' şunu sorar..." }, "options": [ { "text": { "es": "Si estás bien", "en": "If you're okay", "pt": "Se estás bem", "fr": "Si vous allez bien", "it": "Se stai bene", "sq": "Nëse je mirë", "tr": "İyi olup olmadığını" }, "correct": true }, { "text": { "es": "Dónde vives", "en": "Where you live", "pt": "Onde vives", "fr": "Où vous habitez", "it": "Dove vivi", "sq": "Ku jeton", "tr": "Nerede yaşadığını" }, "correct": false } ] },
+    { "id": "e5", "question": { "es": "'Truurig' significa...", "en": "'Truurig' means...", "pt": "'Truurig' significa...", "fr": "« Truurig » signifie...", "it": "'Truurig' significa...", "sq": "'Truurig' do të thotë...", "tr": "'Truurig' anlamı..." }, "options": [ { "text": { "es": "Triste", "en": "Sad", "pt": "Triste", "fr": "Triste", "it": "Triste", "sq": "I trishtuar", "tr": "Üzgün" }, "correct": true }, { "text": { "es": "Feliz", "en": "Happy", "pt": "Feliz", "fr": "Heureux", "it": "Felice", "sq": "I lumtur", "tr": "Mutlu" }, "correct": false } ] },
+    { "id": "e6", "question": { "es": "'Froh' es lo opuesto de...", "en": "'Froh' is the opposite of...", "pt": "'Froh' é o oposto de...", "fr": "« Froh » est le contraire de...", "it": "'Froh' è il contrario di...", "sq": "'Froh' është e kundërta e...", "tr": "'Froh' şunun zıttıdır..." }, "options": [ { "text": "truurig", "correct": true }, { "text": "müed", "correct": false } ] },
+    { "id": "e7", "question": { "es": "Traduce: 'Es isch okay'", "en": "Translate: 'Es isch okay'", "pt": "Traduz: 'Es isch okay'", "fr": "Traduisez : « Es isch okay »", "it": "Traduci: 'Es isch okay'", "sq": "Përkthe: 'Es isch okay'", "tr": "Çevir: 'Es isch okay'" }, "options": [ { "text": { "es": "Está bien", "en": "It's okay", "pt": "Está tudo bem", "fr": "Ça va", "it": "Va bene", "sq": "Është në rregull", "tr": "Sorun değil" }, "correct": true }, { "text": { "es": "Estoy bien", "en": "I'm okay", "pt": "Estou bem", "fr": "Je vais bien", "it": "Sto bene", "sq": "Jam mirë", "tr": "İyiyim" }, "correct": false } ] },
+    { "id": "e8", "question": { "es": "El equivalente Hochdeutsch de 'chli' es...", "en": "The Hochdeutsch equivalent of 'chli' is...", "pt": "O equivalente em Hochdeutsch de 'chli' é...", "fr": "L'équivalent en Hochdeutsch de « chli » est...", "it": "L'equivalente in Hochdeutsch di 'chli' è...", "sq": "Ekuivalenti në Hochdeutsch i 'chli' është...", "tr": "'Chli' kelimesinin Hochdeutsch karşılığı..." }, "options": [ { "text": "ein bisschen", "correct": true }, { "text": "sehr", "correct": false } ] },
+    { "id": "e9", "question": { "es": "¿Cuál es la forma correcta para 'yo estoy'?", "en": "What's the correct form for 'I am'?", "pt": "Qual é a forma correta para 'eu estou'?", "fr": "Quelle est la forme correcte pour « je suis » ?", "it": "Qual è la forma corretta per 'io sono'?", "sq": "Cila është forma e saktë për 'unë jam'?", "tr": "'Ben ...yim' için doğru biçim nedir?" }, "options": [ { "text": "ich bi", "correct": true }, { "text": "ich isch", "correct": false } ] },
+    { "id": "e10", "question": { "es": "'Ich bi froh' significa...", "en": "'Ich bi froh' means...", "pt": "'Ich bi froh' significa...", "fr": "« Ich bi froh » signifie...", "it": "'Ich bi froh' significa...", "sq": "'Ich bi froh' do të thotë...", "tr": "'Ich bi froh' anlamı..." }, "options": [ { "text": { "es": "Estoy contento/a", "en": "I'm happy", "pt": "Estou contente", "fr": "Je suis content(e)", "it": "Sono contento/a", "sq": "Jam i lumtur", "tr": "Mutluyum" }, "correct": true }, { "text": { "es": "Estoy enfermo/a", "en": "I'm sick", "pt": "Estou doente", "fr": "Je suis malade", "it": "Sono malato/a", "sq": "Jam i sëmurë", "tr": "Hastayım" }, "correct": false } ] }
+  ]
+}

@@ -1,7 +1,8 @@
 // Mapa completo del curso, estilo "escalera de niveles" (A1 → C2, como en
-// otras apps de idiomas o una app de idiomas). Solo A1.1 y A1.2 tienen lecciones jugables por
-// ahora; el resto se muestra como hoja de ruta ("Próximamente") con temas
-// reales para que quede claro qué viene, sin inventar contenido a medias.
+// otras apps de idiomas o una app de idiomas). El A1 tiene 5 capítulos jugables (A1.1-A1.5,
+// modelados sobre la estructura real del A1 de una app de idiomas); el resto se muestra
+// como hoja de ruta ("Próximamente") con temas reales para que quede claro
+// qué viene, sin inventar contenido a medias.
 //
 // gradient: clases Tailwind para la "portada" ilustrada del nivel.
 // emoji: par de emojis usados como ilustración de portada (sin imágenes
@@ -32,9 +33,45 @@ export const LEVELS = [
     hasContent: true,
   },
   {
+    code: 'A1.3',
+    group: 'A1',
+    chapterNumber: 3,
+    title: {
+      es: 'Cuerpo y sentimientos', en: 'Body and feelings', pt: 'Corpo e sentimentos', fr: 'Corps et sentiments',
+      it: 'Corpo e sentimenti', sq: 'Trupi dhe ndjenjat', tr: 'Beden ve duygular',
+    },
+    gradient: 'from-swiss-red to-cheese-500',
+    emoji: ['🩺', '😊'],
+    hasContent: true,
+  },
+  {
+    code: 'A1.4',
+    group: 'A1',
+    chapterNumber: 4,
+    title: {
+      es: '¿De dónde eres?', en: 'Where are you from?', pt: 'De onde és?', fr: "D'où viens-tu ?",
+      it: 'Di dove sei?', sq: 'Nga je?', tr: 'Nerelisin?',
+    },
+    gradient: 'from-wood-400 to-cheese-600',
+    emoji: ['🌍', '🗣️'],
+    hasContent: true,
+  },
+  {
+    code: 'A1.5',
+    group: 'A1',
+    chapterNumber: 5,
+    title: {
+      es: 'Orientándote en la ciudad', en: 'Finding your way in town', pt: 'Orientar-te na cidade', fr: 'Se repérer en ville',
+      it: 'Orientarsi in città', sq: 'Të orientohesh në qytet', tr: 'Şehirde yön bulmak',
+    },
+    gradient: 'from-alp-300 to-alp-600',
+    emoji: ['🧭', '🏙️'],
+    hasContent: true,
+  },
+  {
     code: 'A2.1',
     group: 'A2',
-    chapterNumber: 3,
+    chapterNumber: 6,
     title: {
       es: 'Explorando el barrio', en: 'Exploring the neighborhood', pt: 'Explorando o bairro', fr: 'Explorer le quartier',
       it: 'Esplorare il quartiere', sq: 'Duke eksploruar lagjen', tr: 'Mahalleyi keşfetmek',
@@ -43,19 +80,19 @@ export const LEVELS = [
     emoji: ['🏔️', '⛺'],
     hasContent: false,
     topics: {
-      es: ['En el médico', 'Hablar del clima y las estaciones', 'Hacer planes con amigos', 'El correo y los trámites'],
-      en: ['At the doctor', 'Talking about weather and seasons', 'Making plans with friends', 'Post office and paperwork'],
-      pt: ['No médico', 'Falar do tempo e das estações', 'Fazer planos com amigos', 'Correios e trâmites'],
-      fr: ['Chez le médecin', 'Parler du temps et des saisons', 'Faire des projets avec des amis', 'La poste et les démarches'],
-      it: ['Dal medico', 'Parlare del meteo e delle stagioni', 'Fare programmi con gli amici', 'Posta e pratiche burocratiche'],
-      sq: ['Te mjeku', 'Të flasësh për motin dhe stinët', 'Të bësh plane me miq', 'Posta dhe procedurat'],
-      tr: ['Doktorda', 'Hava durumu ve mevsimler hakkında konuşmak', 'Arkadaşlarla plan yapmak', 'Postane ve resmi işlemler'],
+      es: ['Hablar del clima y las estaciones', 'Hacer planes con amigos', 'El correo y los trámites'],
+      en: ['Talking about weather and seasons', 'Making plans with friends', 'Post office and paperwork'],
+      pt: ['Falar do tempo e das estações', 'Fazer planos com amigos', 'Correios e trâmites'],
+      fr: ['Parler du temps et des saisons', 'Faire des projets avec des amis', 'La poste et les démarches'],
+      it: ['Parlare del meteo e delle stagioni', 'Fare programmi con gli amici', 'Posta e pratiche burocratiche'],
+      sq: ['Të flasësh për motin dhe stinët', 'Të bësh plane me miq', 'Posta dhe procedurat'],
+      tr: ['Hava durumu ve mevsimler hakkında konuşmak', 'Arkadaşlarla plan yapmak', 'Postane ve resmi işlemler'],
     },
   },
   {
     code: 'A2.2',
     group: 'A2',
-    chapterNumber: 4,
+    chapterNumber: 7,
     title: {
       es: 'Moviéndote por Suiza', en: 'Getting around Switzerland', pt: 'Deslocar-se pela Suíça', fr: 'Se déplacer en Suisse',
       it: 'Muoversi in Svizzera', sq: 'Të lëvizësh nëpër Zvicër', tr: 'İsviçre\'de dolaşmak',
@@ -76,7 +113,7 @@ export const LEVELS = [
   {
     code: 'B1.1',
     group: 'B1',
-    chapterNumber: 5,
+    chapterNumber: 8,
     title: {
       es: 'Conversación real', en: 'Real conversation', pt: 'Conversa real', fr: 'Conversation réelle',
       it: 'Conversazione reale', sq: 'Bisedë reale', tr: 'Gerçek sohbet',
@@ -97,7 +134,7 @@ export const LEVELS = [
   {
     code: 'B1.2',
     group: 'B1',
-    chapterNumber: 6,
+    chapterNumber: 9,
     title: {
       es: 'La vida real', en: 'Real life', pt: 'A vida real', fr: 'La vraie vie',
       it: 'La vita reale', sq: 'Jeta reale', tr: 'Gerçek hayat',
@@ -118,7 +155,7 @@ export const LEVELS = [
   {
     code: 'B2.1',
     group: 'B2',
-    chapterNumber: 7,
+    chapterNumber: 10,
     title: {
       es: 'Fluidez', en: 'Fluency', pt: 'Fluência', fr: 'Aisance',
       it: 'Scioltezza', sq: 'Rrjedhshmëri', tr: 'Akıcılık',
@@ -139,7 +176,7 @@ export const LEVELS = [
   {
     code: 'B2.2',
     group: 'B2',
-    chapterNumber: 8,
+    chapterNumber: 11,
     title: {
       es: 'Cultura profunda', en: 'Deep culture', pt: 'Cultura profunda', fr: 'Culture approfondie',
       it: 'Cultura profonda', sq: 'Kultura e thellë', tr: 'Derin kültür',
@@ -160,7 +197,7 @@ export const LEVELS = [
   {
     code: 'C1',
     group: 'C1',
-    chapterNumber: 9,
+    chapterNumber: 12,
     title: {
       es: 'Dominio', en: 'Mastery', pt: 'Domínio', fr: 'Maîtrise',
       it: 'Padronanza', sq: 'Zotërim', tr: 'Hakimiyet',
@@ -181,7 +218,7 @@ export const LEVELS = [
   {
     code: 'C2',
     group: 'C2',
-    chapterNumber: 10,
+    chapterNumber: 13,
     title: {
       es: 'Maestría', en: 'Mastery+', pt: 'Mestria', fr: 'Excellence',
       it: 'Eccellenza', sq: 'Përsosmëri', tr: 'Ustalık',
