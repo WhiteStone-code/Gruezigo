@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { PartyPopper, Award, Flame } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
@@ -96,14 +96,19 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
         <LessonProgressBar progress={progressRatio} onExit={() => onExit?.({ completed: false })} />
       )}
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={stepIndex}
-          initial={{ opacity: 0, x: 24 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -24 }}
-          transition={{ duration: 0.25 }}
-        >
+      {/* Sin AnimatePresence: con `key={stepIndex}` React ya desmonta el paso
+          anterior y monta el siguiente de forma instantánea y fiable — solo
+          animamos la ENTRADA del nuevo paso. AnimatePresence con mode="wait"
+          se quedaba colgado en la animación de salida en ciertas
+          transiciones, dejando el paso anterior visible para siempre (el bug
+          de "se queda pillado" reportado). Prioriza que nunca se rompa por
+          encima de la transición de salida. */}
+      <motion.div
+        key={stepIndex}
+        initial={{ opacity: 0, x: 24 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.25 }}
+      >
           {step.type === 'example' && <ExampleDialogue lesson={lesson} onContinue={() => advance()} />}
 
           {step.type === 'comparison' && <ComparisonTable lesson={lesson} onContinue={() => advance()} />}
@@ -173,8 +178,7 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
               onRequestCertificate={onRequestCertificate}
             />
           )}
-        </motion.div>
-      </AnimatePresence>
+      </motion.div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { PartyPopper, Shuffle, Headphones, Mic, ListChecks } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
+import { useUserProgress } from '../../context/UserProgressContext.jsx'
 import { getPracticeSources, pickPracticeWords, buildVocabQuizQuestions, buildPronunciationExercises } from '../../data/practicePool.js'
 import { ExerciseMatchVocabulary } from '../lesson/ExerciseMatchVocabulary.jsx'
 import { ExerciseListening } from '../lesson/ExerciseListening.jsx'
@@ -26,6 +27,7 @@ const MODES = [
  */
 export function PracticeSession() {
   const { interfaceLang } = useLanguage()
+  const { registerActivityToday, addXp } = useUserProgress()
   const sources = useMemo(() => getPracticeSources(), [])
   const [sourceId, setSourceId] = useState('all')
   const [mode, setMode] = useState(null)
@@ -37,6 +39,11 @@ export function PracticeSession() {
   }
 
   function finishSession(result) {
+    // Una sesión de práctica también cuenta como "actividad de hoy" para la
+    // racha y el calendario de actividad — no hace falta completar una
+    // lección entera para que el día quede marcado.
+    registerActivityToday()
+    addXp(5)
     setSession((s) => ({ ...s, result }))
   }
 

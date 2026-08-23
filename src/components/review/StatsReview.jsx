@@ -5,6 +5,7 @@ import { ALL_LESSONS } from '../../data/lessons/index.js'
 import { getAllLessonAccuracies, getOverallAccuracy, getStrongestLesson, getWeakestLesson } from '../../data/progressInsights.js'
 import { Card } from '../ui/Card.jsx'
 import { EmptyState } from '../ui/EmptyState.jsx'
+import { ActivityCalendar } from './ActivityCalendar.jsx'
 
 const BADGE_LABELS = {
   'racha-7': { emoji: '🔥', label: 'Racha de 7 días' },
@@ -21,16 +22,21 @@ export function StatsReview({ onPracticeLesson }) {
 
   if (overall === null) {
     return (
-      <EmptyState
-        icon="📊"
-        title="Todavía no hay estadísticas"
-        description="Completa tu primera lección y aquí verás en qué eres mejor y qué conviene reforzar."
-      />
+      <div className="space-y-4">
+        <ActivityCalendar />
+        <EmptyState
+          icon="📊"
+          title="Todavía no hay estadísticas"
+          description="Completa tu primera lección y aquí verás en qué eres mejor y qué conviene reforzar."
+        />
+      </div>
     )
   }
 
   return (
     <div className="space-y-4">
+      <ActivityCalendar />
+
       <div className="grid grid-cols-3 gap-3">
         <Card className="!p-3 text-center">
           <p className="text-2xl font-display font-bold text-swiss-red">{overall}%</p>

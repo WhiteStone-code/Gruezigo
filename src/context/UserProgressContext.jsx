@@ -15,6 +15,7 @@ const DEFAULT_PROGRESS = {
   completedLessons: [], // ['a1-01', ...]
   badges: [], // ['racha-7', 'a1-completo', ...]
   exerciseStats: {}, // { [lessonId]: { correct, total } }
+  activityLog: [], // ['2026-08-20', '2026-08-22', ...] — todos los días activos, para el calendario de actividad
   settings: {
     ageGroup: 'adult', // 'teen' | 'young-adult' | 'adult' | 'senior'
     textSize: 'normal', // 'normal' | 'grande' | 'muy-grande'
@@ -44,6 +45,7 @@ export function UserProgressProvider({ children }) {
       ...raw,
       streak: { ...DEFAULT_PROGRESS.streak, ...raw.streak },
       settings: { ...DEFAULT_PROGRESS.settings, ...raw.settings },
+      activityLog: raw.activityLog ?? DEFAULT_PROGRESS.activityLog,
     }),
     [raw]
   )
@@ -57,11 +59,13 @@ export function UserProgressProvider({ children }) {
       registerActivityToday: () =>
         setProgress((p) => {
           const today = todayISO()
-          if (p.streak.lastActiveDate === today) return p // ya contabilizado hoy
+          const activityLog = p.activityLog?.includes(today) ? p.activityLog : [...(p.activityLog ?? []), today]
+          if (p.streak.lastActiveDate === today) return { ...p, activityLog } // racha ya contabilizada, pero igual se registra el día
           const gap = p.streak.lastActiveDate ? daysBetween(p.streak.lastActiveDate, today) : null
           const current = gap === 1 || gap === null ? p.streak.current + 1 : 1
           return {
             ...p,
+            activityLog,
             streak: {
               current,
               longest: Math.max(current, p.streak.longest ?? 0),

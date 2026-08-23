@@ -56,25 +56,61 @@ export function useSpeech() {
   )
 
   const startListening = useCallback(
-    ({ lang = 'de-DE', onResult } = {}) => {
-      if (!supportsRecognition) return
+    // onResult(heard) se llama si se oyó algo; onError(reason) se llama si
+    // falla o no se detecta voz a tiempo — sin esto último, un micrófono sin
+    // permiso o sin hardware dejaba al usuario sin ninguna forma de
+    // continuar el ejercicio (ni "reintentar" ni "continuar" aparecían).
+    ({ lang = 'de-DE', onResult, onError, timeoutMs = 6000 } = {}) => {
+      if (!supportsRecognition) {
+        onError?.('unsupported')
+        return
+      }
       const recognition = new SpeechRecognitionImpl()
       recognition.lang = lang
       recognition.interimResults = false
       recognition.maxAlternatives = 3
+
+      let settled = false
+      const timeoutId = setTimeout(() => {
+        if (settled) return
+        settled = true
+        try {
+          recognition.stop()
+        } catch {
+          // ya pudo haberse detenido solo; ignorar
+        }
+        setIsListening(false)
+        onError?.('timeout')
+      }, timeoutMs)
+
       recognition.onstart = () => {
         setIsListening(true)
         setTranscript('')
       }
       recognition.onresult = (event) => {
+        if (settled) return
+        settled = true
+        clearTimeout(timeoutId)
         const heard = event.results[0][0].transcript
         setTranscript(heard)
         onResult?.(heard)
       }
       recognition.onend = () => setIsListening(false)
-      recognition.onerror = () => setIsListening(false)
+      recognition.onerror = (event) => {
+        if (settled) return
+        settled = true
+        clearTimeout(timeoutId)
+        setIsListening(false)
+        onError?.(event?.error ?? 'error')
+      }
       recognitionRef.current = recognition
-      recognition.start()
+      try {
+        recognition.start()
+      } catch {
+        clearTimeout(timeoutId)
+        setIsListening(false)
+        onError?.('start-failed')
+      }
     },
     [SpeechRecognitionImpl, supportsRecognition]
   )
