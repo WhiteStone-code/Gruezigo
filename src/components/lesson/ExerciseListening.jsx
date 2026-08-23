@@ -14,18 +14,23 @@ function shuffle(arr) {
  * como mejor sustituto del dialecto) y el usuario elige la traducción
  * correcta entre varias opciones.
  */
-export function ExerciseListening({ vocabulary, onComplete }) {
+export function ExerciseListening({ vocabulary, distractorPool, onComplete }) {
   const { interfaceLang, t } = useLanguage()
   const { speak, isSpeaking, supportsSynthesis } = useSpeech()
 
+  // `distractorPool` permite sacar las opciones incorrectas de un conjunto
+  // más amplio que lo que realmente se pregunta (p. ej. toda la lección,
+  // aunque esta ronda solo trate un trocito de 2-3 palabras) — así las
+  // opciones no se repiten idénticas entre rondas de un mismo bloque.
   const rounds = useMemo(() => {
     const pool = vocabulary.slice(0, 6)
+    const candidates = distractorPool ?? vocabulary
     return pool.map((item) => {
-      const distractors = shuffle(vocabulary.filter((v) => v.id !== item.id)).slice(0, 2)
+      const distractors = shuffle(candidates.filter((v) => v.id !== item.id)).slice(0, 2)
       const options = shuffle([item, ...distractors])
       return { item, options }
     })
-  }, [vocabulary])
+  }, [vocabulary, distractorPool])
 
   const [roundIndex, setRoundIndex] = useState(0)
   const [selected, setSelected] = useState(null)

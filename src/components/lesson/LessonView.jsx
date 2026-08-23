@@ -5,7 +5,8 @@ import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
 import { LessonProgressBar } from './LessonProgressBar.jsx'
 import { ExampleDialogue } from './ExampleDialogue.jsx'
-import { ComparisonTable } from './ComparisonTable.jsx'
+import { VocabIntroCard } from './VocabIntroCard.jsx'
+import { LessonPartBreak } from './LessonPartBreak.jsx'
 import { ExerciseMatchVocabulary } from './ExerciseMatchVocabulary.jsx'
 import { ExerciseListening } from './ExerciseListening.jsx'
 import { ExerciseSentenceBuilder } from './ExerciseSentenceBuilder.jsx'
@@ -13,23 +14,33 @@ import { ExerciseSpeaking } from './ExerciseSpeaking.jsx'
 import { ExerciseMultipleChoice } from './ExerciseMultipleChoice.jsx'
 import { Button } from '../ui/Button.jsx'
 import { Card } from '../ui/Card.jsx'
-import { buildVocabQuizQuestions } from '../../data/practicePool.js'
 
 const XP_PER_LESSON = 20
 const XP_PER_EXAM_PASS = 15
+const CHUNK_SIZE = 2
+const FORMAT_CYCLE = ['match', 'listening']
+
+function chunk(arr, size) {
+  const out = []
+  for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size))
+  return out
+}
 
 /**
  * Componente principal de la lección interactiva de GrüeziGo.
  *
- * Orquesta, en un único flujo tipo otra app de idiomas, todos los módulos pedidos:
- *   1. Comparación Hochdeutsch vs. Schwiizerdütsch (momento de aprendizaje)
- *   2. Emparejar vocabulario
- *   3. Escuchar audio (Web Speech API — síntesis)
- *   4. Construcción de oraciones
- *   5. Práctica de pronunciación (Web Speech API — reconocimiento)
- *   6. Opción múltiple
- *   7. Examen final del módulo (10 preguntas, sin límite de tiempo)
- *   8. Pantalla de finalización (XP, racha, y acceso al certificado)
+ * Estructura por bloques (inspirada en cómo una app de idiomas reparte una lección en
+ * 3-4 mini-lecciones sobre el mismo vocabulario, en vez de arrastrar todas
+ * las palabras por un ejercicio entero antes de pasar al siguiente):
+ *   1. Diálogo de ejemplo (contexto real antes de nada)
+ *   2. Por cada bloque de 2 palabras: tarjetas + UN ejercicio de práctica
+ *      (alterna emparejar/escuchar), con una pausa "Parte X de Y" cada 2
+ *      bloques
+ *   3. Construcción de oraciones (si la lección la trae)
+ *   4. Pronunciación (si la trae — con botón "Saltar" siempre disponible)
+ *   5. Un único examen final, recortado al tamaño de la lección (no tres
+ *      cuestionarios seguidos sobre las mismas palabras)
+ *   6. Pantalla de finalización (XP, racha, certificado)
  *
  * Recibe el objeto `lesson` ya parseado desde src/data/lessons/**.json.
  */
@@ -37,29 +48,32 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
   const { t, interfaceLang } = useLanguage()
   const { completeLesson, addXp, registerActivityToday, unlockBadge, progress } = useUserProgress()
 
-  // Construye la secuencia de pasos a partir del contenido de la lección.
-  // Cada paso es {type, key, render}. Esto hace trivial añadir/quitar
-  // módulos por lección sin tocar el resto del componente. El paso extra
-  // "recap" reutiliza el propio vocabulario de la lección para un mini
-  // repaso mezclado antes del examen — más práctica real sin necesitar
-  // contenido nuevo escrito a mano.
+  const vocabChunks = useMemo(() => chunk(lesson.vocabulary, CHUNK_SIZE), [lesson])
+  const shortExam = useMemo(() => {
+    if (!lesson.finalExam?.length) return []
+    const size = Math.min(lesson.finalExam.length, Math.max(4, Math.ceil(lesson.vocabulary.length * 1.5)))
+    return lesson.finalExam.slice(0, size)
+  }, [lesson])
+
   const steps = useMemo(() => {
     const list = []
     lesson.dialogueExample?.length && list.push({ type: 'example' })
-    list.push({ type: 'comparison' }, { type: 'match' }, { type: 'listening' })
+
+    vocabChunks.forEach((words, i) => {
+      list.push({ type: 'intro', words, partLabel: `Bloque ${i + 1} de ${vocabChunks.length}` })
+      list.push({ type: FORMAT_CYCLE[i % FORMAT_CYCLE.length], words })
+      // Pausa breve cada 2 bloques, salvo justo al final de la lección.
+      if ((i + 1) % 2 === 0 && i + 1 < vocabChunks.length) {
+        list.push({ type: 'partBreak', partNumber: Math.ceil((i + 1) / 2), totalParts: Math.ceil(vocabChunks.length / 2) })
+      }
+    })
+
     lesson.exercises.sentenceBuilder?.length && list.push({ type: 'sentence' })
     lesson.exercises.pronunciation?.length && list.push({ type: 'speaking' })
-    lesson.exercises.multipleChoice?.length && list.push({ type: 'multipleChoice' })
-    list.push({ type: 'recap' })
-    lesson.finalExam?.length && list.push({ type: 'exam' })
+    shortExam.length && list.push({ type: 'exam' })
     list.push({ type: 'complete' })
     return list
-  }, [lesson])
-
-  const recapQuestions = useMemo(
-    () => buildVocabQuizQuestions(lesson.vocabulary, interfaceLang),
-    [lesson, interfaceLang]
-  )
+  }, [lesson, vocabChunks, shortExam])
 
   const [stepIndex, setStepIndex] = useState(0)
   const [stats, setStats] = useState({ correct: 0, total: 0 })
@@ -109,75 +123,57 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.25 }}
       >
-          {step.type === 'example' && <ExampleDialogue lesson={lesson} onContinue={() => advance()} />}
+        {step.type === 'example' && <ExampleDialogue lesson={lesson} onContinue={() => advance()} />}
 
-          {step.type === 'comparison' && <ComparisonTable lesson={lesson} onContinue={() => advance()} />}
+        {step.type === 'intro' && (
+          <VocabIntroCard words={step.words} partLabel={step.partLabel} onContinue={() => advance()} />
+        )}
 
-          {step.type === 'match' && (
-            <Card>
-              <ExerciseMatchVocabulary vocabulary={lesson.vocabulary} onComplete={advance} />
-            </Card>
-          )}
+        {step.type === 'match' && (
+          <Card>
+            <ExerciseMatchVocabulary vocabulary={step.words} onComplete={advance} />
+          </Card>
+        )}
 
-          {step.type === 'listening' && (
-            <Card>
-              <ExerciseListening vocabulary={lesson.vocabulary} onComplete={advance} />
-            </Card>
-          )}
+        {step.type === 'listening' && (
+          <Card>
+            <ExerciseListening vocabulary={step.words} distractorPool={lesson.vocabulary} onComplete={advance} />
+          </Card>
+        )}
 
-          {step.type === 'sentence' && (
-            <Card>
-              <ExerciseSentenceBuilder exercises={lesson.exercises.sentenceBuilder} onComplete={advance} />
-            </Card>
-          )}
+        {step.type === 'partBreak' && (
+          <LessonPartBreak partNumber={step.partNumber} totalParts={step.totalParts} onContinue={() => advance()} />
+        )}
 
-          {step.type === 'speaking' && (
-            <Card>
-              <ExerciseSpeaking exercises={lesson.exercises.pronunciation} onComplete={advance} />
-            </Card>
-          )}
+        {step.type === 'sentence' && (
+          <Card>
+            <ExerciseSentenceBuilder exercises={lesson.exercises.sentenceBuilder} onComplete={advance} />
+          </Card>
+        )}
 
-          {step.type === 'multipleChoice' && (
-            <Card>
-              <ExerciseMultipleChoice
-                questions={lesson.exercises.multipleChoice}
-                title="Opción múltiple"
-                onComplete={advance}
-              />
-            </Card>
-          )}
+        {step.type === 'speaking' && (
+          <Card>
+            <ExerciseSpeaking exercises={lesson.exercises.pronunciation} onComplete={advance} />
+          </Card>
+        )}
 
-          {step.type === 'recap' && (
-            <Card>
-              <ExerciseMultipleChoice
-                questions={recapQuestions}
-                title="Repaso rápido"
-                onComplete={advance}
-              />
-            </Card>
-          )}
+        {step.type === 'exam' && (
+          <Card>
+            <ExerciseMultipleChoice questions={shortExam} title="Comprobación final" onComplete={handleExamComplete} />
+          </Card>
+        )}
 
-          {step.type === 'exam' && (
-            <Card>
-              <ExerciseMultipleChoice
-                questions={lesson.finalExam}
-                title="Examen final del módulo"
-                onComplete={handleExamComplete}
-              />
-            </Card>
-          )}
-
-          {step.type === 'complete' && (
-            <LessonComplete
-              lesson={lesson}
-              stats={stats}
-              examPassed={examPassed}
-              xpEarned={XP_PER_LESSON + (examPassed ? XP_PER_EXAM_PASS : 0)}
-              streak={progress.streak.current + 1}
-              onFinish={finishLesson}
-              onRequestCertificate={onRequestCertificate}
-            />
-          )}
+        {step.type === 'complete' && (
+          <LessonComplete
+            lesson={lesson}
+            stats={stats}
+            examPassed={examPassed}
+            xpEarned={XP_PER_LESSON + (examPassed ? XP_PER_EXAM_PASS : 0)}
+            streak={progress.streak.current + 1}
+            onFinish={finishLesson}
+            onRequestCertificate={onRequestCertificate}
+          />
+        )}
       </motion.div>
     </div>
   )
