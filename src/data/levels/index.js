@@ -34,6 +34,7 @@ export const LEVELS = [
   {
     code: 'A2.1',
     group: 'A2',
+    chapterNumber: 3,
     title: {
       es: 'Explorando el barrio', en: 'Exploring the neighborhood', pt: 'Explorando o bairro', fr: 'Explorer le quartier',
       it: 'Esplorare il quartiere', sq: 'Duke eksploruar lagjen', tr: 'Mahalleyi keşfetmek',
@@ -54,6 +55,7 @@ export const LEVELS = [
   {
     code: 'A2.2',
     group: 'A2',
+    chapterNumber: 4,
     title: {
       es: 'Moviéndote por Suiza', en: 'Getting around Switzerland', pt: 'Deslocar-se pela Suíça', fr: 'Se déplacer en Suisse',
       it: 'Muoversi in Svizzera', sq: 'Të lëvizësh nëpër Zvicër', tr: 'İsviçre\'de dolaşmak',
@@ -74,6 +76,7 @@ export const LEVELS = [
   {
     code: 'B1.1',
     group: 'B1',
+    chapterNumber: 5,
     title: {
       es: 'Conversación real', en: 'Real conversation', pt: 'Conversa real', fr: 'Conversation réelle',
       it: 'Conversazione reale', sq: 'Bisedë reale', tr: 'Gerçek sohbet',
@@ -94,6 +97,7 @@ export const LEVELS = [
   {
     code: 'B1.2',
     group: 'B1',
+    chapterNumber: 6,
     title: {
       es: 'La vida real', en: 'Real life', pt: 'A vida real', fr: 'La vraie vie',
       it: 'La vita reale', sq: 'Jeta reale', tr: 'Gerçek hayat',
@@ -114,6 +118,7 @@ export const LEVELS = [
   {
     code: 'B2.1',
     group: 'B2',
+    chapterNumber: 7,
     title: {
       es: 'Fluidez', en: 'Fluency', pt: 'Fluência', fr: 'Aisance',
       it: 'Scioltezza', sq: 'Rrjedhshmëri', tr: 'Akıcılık',
@@ -134,6 +139,7 @@ export const LEVELS = [
   {
     code: 'B2.2',
     group: 'B2',
+    chapterNumber: 8,
     title: {
       es: 'Cultura profunda', en: 'Deep culture', pt: 'Cultura profunda', fr: 'Culture approfondie',
       it: 'Cultura profonda', sq: 'Kultura e thellë', tr: 'Derin kültür',
@@ -154,6 +160,7 @@ export const LEVELS = [
   {
     code: 'C1',
     group: 'C1',
+    chapterNumber: 9,
     title: {
       es: 'Dominio', en: 'Mastery', pt: 'Domínio', fr: 'Maîtrise',
       it: 'Padronanza', sq: 'Zotërim', tr: 'Hakimiyet',
@@ -174,6 +181,7 @@ export const LEVELS = [
   {
     code: 'C2',
     group: 'C2',
+    chapterNumber: 10,
     title: {
       es: 'Maestría', en: 'Mastery+', pt: 'Mestria', fr: 'Excellence',
       it: 'Eccellenza', sq: 'Përsosmëri', tr: 'Ustalık',

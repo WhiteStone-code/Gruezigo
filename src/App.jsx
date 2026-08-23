@@ -17,6 +17,7 @@ export default function App() {
   const [view, setView] = useState('dashboard') // dashboard | lessons | review | calendar | culture | settings
   const [activeLessonId, setActiveLessonId] = useState(null)
   const [certificateOpen, setCertificateOpen] = useState(false)
+  const [certificateLevel, setCertificateLevel] = useState(null)
   const { progress } = useUserProgress()
 
   // Sincroniza el tamaño de texto guardado (Ajustes) con el atributo que
@@ -42,14 +43,15 @@ export default function App() {
           <LessonView
             lesson={activeLesson}
             onExit={closeLesson}
-            onRequestCertificate={() => {
+            onRequestCertificate={(levelCode) => {
+              setCertificateLevel(levelCode ?? progress.level)
               closeLesson()
               setCertificateOpen(true)
             }}
           />
           <CertificateModal
             open={certificateOpen}
-            level={progress.level.split('.')[0]}
+            level={(certificateLevel ?? progress.level).split('.')[0]}
             onClose={() => setCertificateOpen(false)}
           />
         </div>
@@ -88,7 +90,7 @@ export default function App() {
         </div>
         <CertificateModal
           open={certificateOpen}
-          level={progress.level.split('.')[0]}
+          level={(certificateLevel ?? progress.level).split('.')[0]}
           onClose={() => setCertificateOpen(false)}
         />
       </div>

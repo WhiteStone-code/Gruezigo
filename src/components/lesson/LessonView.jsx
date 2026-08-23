@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { PartyPopper, Award, Flame } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
+import { getLessonsByLevel } from '../../data/lessons/index.js'
+import { LEVELS, getLevelByCode } from '../../data/levels/index.js'
 import { LessonProgressBar } from './LessonProgressBar.jsx'
 import { ExampleDialogue } from './ExampleDialogue.jsx'
 import { VocabIntroCard } from './VocabIntroCard.jsx'
@@ -84,6 +86,21 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
   const [stepIndex, setStepIndex] = useState(0)
   const [stats, setStats] = useState({ correct: 0, total: 0 })
   const [examPassed, setExamPassed] = useState(null)
+
+  // ¿Es esta la última lección de todo el NIVEL CEFR (p. ej. "A1" entero —
+  // A1.1 + A1.2 juntos), no solo de este "capítulo"? El certificado debe
+  // aparecer al terminar el nivel completo, igual que en una app de idiomas el banner de
+  // fin de curso solo sale tras el último de sus ~30 capítulos, no tras
+  // cada uno por separado.
+  const isLastLessonOfLevel = useMemo(() => {
+    const currentLevel = getLevelByCode(lesson.level)
+    const sameGroupLevels = LEVELS.filter((l) => l.group === currentLevel?.group && l.hasContent)
+    const allLessonsInGroup = sameGroupLevels.flatMap((l) => getLessonsByLevel(l.code))
+    const doneIds = new Set(progress.completedLessons)
+    doneIds.add(lesson.id)
+    return allLessonsInGroup.length > 0 && allLessonsInGroup.every((l) => doneIds.has(l.id))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lesson])
 
   const step = steps[stepIndex]
   const progressRatio = stepIndex / (steps.length - 1)
@@ -190,8 +207,9 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
             examPassed={examPassed}
             xpEarned={XP_PER_LESSON + (examPassed ? XP_PER_EXAM_PASS : 0)}
             streak={progress.streak.current + 1}
+            isLevelComplete={isLastLessonOfLevel}
             onFinish={finishLesson}
-            onRequestCertificate={onRequestCertificate}
+            onRequestCertificate={() => onRequestCertificate?.(lesson.level)}
           />
         )}
       </motion.div>
@@ -199,9 +217,10 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
   )
 }
 
-function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, onFinish, onRequestCertificate }) {
+function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, isLevelComplete, onFinish, onRequestCertificate }) {
   const { interfaceLang } = useLanguage()
   const accuracy = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 100
+  const level = getLevelByCode(lesson.level)
 
   return (
     <div className="text-center py-6">
@@ -241,11 +260,34 @@ function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, onFinish,
         </div>
       )}
 
+      {/* Puerta de fin de nivel: aparece solo tras la ÚLTIMA lección de un
+          nivel con contenido — al estilo del banner azul de una app de idiomas
+          ("¿Te animas a pasar de nivel? Has llegado al final del curso...
+          demuestra tus logros con un certificado"). El resto de lecciones
+          solo ofrecen el enlace discreto de siempre. */}
+      {isLevelComplete && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="bg-gradient-to-br from-alp-700 to-alp-900 text-white rounded-xl2 p-5 mb-4 text-left"
+        >
+          <p className="font-display font-bold text-lg mb-1">🎉 ¡Nivel {level?.group ?? lesson.level} completado!</p>
+          <p className="text-sm text-alp-200 mb-4">
+            Has terminado todos los capítulos del nivel {level?.group}. Descarga tu certificado como recuerdo o para
+            tu currículum.
+          </p>
+          <Button onClick={onRequestCertificate} className="w-full !bg-cheese-400 !text-alp-900 hover:!bg-cheese-300">
+            🏆 Obtener mi certificado
+          </Button>
+        </motion.div>
+      )}
+
       <div className="space-y-2">
         <Button onClick={onFinish} className="w-full">
           Continuar
         </Button>
-        {onRequestCertificate && (
+        {!isLevelComplete && onRequestCertificate && (
           <Button variant="secondary" onClick={onRequestCertificate} className="w-full">
             Ver progreso hacia mi certificado
           </Button>
