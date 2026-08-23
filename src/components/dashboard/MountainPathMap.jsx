@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { X, Lock, Check, Sparkles } from 'lucide-react'
+import { X, Lock, Check, Sparkles, BookOpen, Mic, MessageCircle } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
 import { LEVELS, computeLevelStates } from '../../data/levels/index.js'
@@ -124,7 +124,9 @@ export function MountainPathMap({ onOpenLesson }) {
                     {selected.emoji[0]}
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase text-alp-400">{selected.group}</p>
+                    <p className="text-xs font-bold uppercase text-alp-400">
+                      {selected.chapterNumber ? `Capítulo ${selected.chapterNumber} · ${selected.group}` : selected.group}
+                    </p>
                     <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50">
                       {selected.title[interfaceLang] ?? selected.title.es}
                     </h3>
@@ -139,6 +141,13 @@ export function MountainPathMap({ onOpenLesson }) {
                 <div className="space-y-2">
                   {selectedLessons.map((lesson) => {
                     const done = progress.completedLessons.includes(lesson.id)
+                    // Insignias de tipo de lección, al estilo de los nodos
+                    // amarillos "Gramática" / morados "Habla" del mapa de
+                    // una app de idiomas — derivadas del propio contenido de la lección,
+                    // no de un campo aparte que se pueda desincronizar.
+                    const hasGrammar = lesson.theory?.length > 0
+                    const hasSpeaking = lesson.exercises?.pronunciation?.length > 0
+                    const hasSimulation = lesson.dialogueSimulations?.length > 0
                     return (
                       <button
                         key={lesson.id}
@@ -152,7 +161,24 @@ export function MountainPathMap({ onOpenLesson }) {
                         <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${done ? 'bg-green-500 text-white' : 'bg-swiss-red/10 text-swiss-red dark:bg-swiss-red/25 dark:text-white'}`}>
                           {done ? '✓' : lesson.order}
                         </span>
-                        <span className="font-medium text-alp-800 dark:text-alp-100">{lesson.title[interfaceLang] ?? lesson.title.es}</span>
+                        <span className="font-medium text-alp-800 dark:text-alp-100 flex-1">{lesson.title[interfaceLang] ?? lesson.title.es}</span>
+                        <span className="flex items-center gap-1 shrink-0">
+                          {hasGrammar && (
+                            <span title="Incluye gramática" className="w-5 h-5 rounded-full bg-cheese-100 dark:bg-cheese-900/40 flex items-center justify-center">
+                              <BookOpen size={11} className="text-cheese-700 dark:text-cheese-300" />
+                            </span>
+                          )}
+                          {hasSpeaking && (
+                            <span title="Práctica de expresión oral" className="w-5 h-5 rounded-full bg-sky-100 dark:bg-sky-900/40 flex items-center justify-center">
+                              <Mic size={11} className="text-sky-700 dark:text-sky-300" />
+                            </span>
+                          )}
+                          {hasSimulation && (
+                            <span title="Simulación de diálogo" className="w-5 h-5 rounded-full bg-meadow-100 dark:bg-meadow-900/40 flex items-center justify-center">
+                              <MessageCircle size={11} className="text-meadow-700 dark:text-meadow-300" />
+                            </span>
+                          )}
+                        </span>
                       </button>
                     )
                   })}

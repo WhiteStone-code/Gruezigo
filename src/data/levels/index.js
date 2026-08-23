@@ -10,6 +10,7 @@ export const LEVELS = [
   {
     code: 'A1.1',
     group: 'A1',
+    chapterNumber: 1,
     title: {
       es: 'Primeros pasos', en: 'First steps', pt: 'Primeiros passos', fr: 'Premiers pas',
       it: 'Primi passi', sq: 'Hapat e para', tr: 'İlk adımlar',
@@ -21,6 +22,7 @@ export const LEVELS = [
   {
     code: 'A1.2',
     group: 'A1',
+    chapterNumber: 2,
     title: {
       es: 'Vida diaria', en: 'Daily life', pt: 'Vida quotidiana', fr: 'Vie quotidienne',
       it: 'Vita quotidiana', sq: 'Jeta e përditshme', tr: 'Günlük yaşam',
