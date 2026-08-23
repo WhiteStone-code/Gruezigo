@@ -34,9 +34,10 @@ function chunk(arr, size) {
 /**
  * Componente principal de la lección interactiva de GrüeziGo.
  *
- * Estructura por bloques (inspirada en cómo una app de idiomas reparte una lección en
- * 3-4 mini-lecciones sobre el mismo vocabulario, en vez de arrastrar todas
- * las palabras por un ejercicio entero antes de pasar al siguiente):
+ * Estructura por bloques (inspirada en apps de idiomas líderes, que reparten
+ * una lección en 3-4 mini-lecciones sobre el mismo vocabulario, en vez de
+ * arrastrar todas las palabras por un ejercicio entero antes de pasar al
+ * siguiente):
  *   1. Diálogo de ejemplo (contexto real antes de nada)
  *   2. Por cada bloque de 2 palabras: tarjetas + UN ejercicio de práctica
  *      (alterna emparejar/escuchar), con una pausa "Parte X de Y" cada 2
@@ -89,9 +90,8 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
 
   // ¿Es esta la última lección de todo el NIVEL CEFR (p. ej. "A1" entero —
   // A1.1 + A1.2 juntos), no solo de este "capítulo"? El certificado debe
-  // aparecer al terminar el nivel completo, igual que en una app de idiomas el banner de
-  // fin de curso solo sale tras el último de sus ~30 capítulos, no tras
-  // cada uno por separado.
+  // aparecer al terminar el nivel completo, no tras cada capítulo por
+  // separado.
   const isLastLessonOfLevel = useMemo(() => {
     const currentLevel = getLevelByCode(lesson.level)
     const sameGroupLevels = LEVELS.filter((l) => l.group === currentLevel?.group && l.hasContent)
@@ -261,10 +261,9 @@ function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, isLevelCo
       )}
 
       {/* Puerta de fin de nivel: aparece solo tras la ÚLTIMA lección de un
-          nivel con contenido — al estilo del banner azul de una app de idiomas
-          ("¿Te animas a pasar de nivel? Has llegado al final del curso...
-          demuestra tus logros con un certificado"). El resto de lecciones
-          solo ofrecen el enlace discreto de siempre. */}
+          nivel con contenido — un banner destacado invitando a obtener el
+          certificado del nivel completado. El resto de lecciones solo
+          ofrecen el enlace discreto de siempre. */}
       {isLevelComplete && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}

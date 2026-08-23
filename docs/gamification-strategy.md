@@ -55,7 +55,7 @@ Every badge and every lesson completion generates a **shareable card** (1080×10
 
 - Designed with the GrüeziGo palette (red/white/wood), the badge emoji large, the user's name, and one concrete fact ("Ricardo has been learning Züritüütsch for 30 days 🔥" / "Ricardo already knows how to order coffee in Swiss dialect ☕🇨🇭").
 - "Share" button using the Web Share API (fallback: image download) — no social login required, no friction.
-- Cards always include a discreet micro-CTA ("gruezigo.app") — every share is free organic marketing (a mechanism similar to otra app de idiomas/Spotify Wrapped).
+- Cards always include a discreet micro-CTA ("gruezigo.app") — every share is free organic marketing (the same year-in-review/achievement-card mechanism several popular apps use).
 - **Controlled cadence**: at most 1 share prompt per session, always optional and never blocking — the app never forces a share to continue.
 
 ## 6. Notifications and reactivation

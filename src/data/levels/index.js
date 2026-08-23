@@ -1,8 +1,7 @@
-// Mapa completo del curso, estilo "escalera de niveles" (A1 → C2, como en
-// otras apps de idiomas o una app de idiomas). El A1 tiene 5 capítulos jugables (A1.1-A1.5,
-// modelados sobre la estructura real del A1 de una app de idiomas); el resto se muestra
-// como hoja de ruta ("Próximamente") con temas reales para que quede claro
-// qué viene, sin inventar contenido a medias.
+// Mapa completo del curso, estilo "escalera de niveles" (A1 → C2). El A1
+// tiene 5 capítulos jugables (A1.1-A1.5); el resto se muestra como hoja de
+// ruta ("Próximamente") con temas reales para que quede claro qué viene,
+// sin inventar contenido a medias.
 //
 // gradient: clases Tailwind para la "portada" ilustrada del nivel.
 // emoji: par de emojis usados como ilustración de portada (sin imágenes

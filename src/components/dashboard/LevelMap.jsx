@@ -15,9 +15,9 @@ const STATE_LABEL = {
 }
 
 /**
- * Mapa completo del curso (A1.1 → C2), al estilo de la ruta de niveles de
- * otras apps de idiomas / una app de idiomas: portadas ilustradas, progreso por nivel, y
- * vista previa de temas para los niveles aún no publicados.
+ * Mapa completo del curso (A1.1 → C2): ruta de niveles con portadas
+ * ilustradas, progreso por nivel, y vista previa de temas para los niveles
+ * aún no publicados.
  */
 export function LevelMap({ onOpenLesson }) {
   const { interfaceLang, t } = useLanguage()

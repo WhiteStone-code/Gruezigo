@@ -23,7 +23,7 @@ Aprendiste alemán en el instituto y aun así no entiendes ni una palabra en la 
 
 ### No es que se te den mal los idiomas. Es que te enseñaron el idioma equivocado.
 
-Hochdeutsch en otra app de idiomas, en la escuela, en los libros. Pero en el súper de tu barrio en Zúrich, en la panadería de Berna o en el bar de Lucerna, la gente no dice "*Guten Tag*" — dice "*Grüezi*". No dice "*Tschüss*" — dice "*Ciao*" o "*Ade*". Y esa distancia de dos centímetros entre lo que estudiaste y lo que oyes cada día es exactamente donde vive la sensación de no encajar.
+Hochdeutsch en la app que uses, en la escuela, en los libros. Pero en el súper de tu barrio en Zúrich, en la panadería de Berna o en el bar de Lucerna, la gente no dice "*Guten Tag*" — dice "*Grüezi*". No dice "*Tschüss*" — dice "*Ciao*" o "*Ade*". Y esa distancia de dos centímetros entre lo que estudiaste y lo que oyes cada día es exactamente donde vive la sensación de no encajar.
 
 GrüeziGo cierra esa distancia.
 

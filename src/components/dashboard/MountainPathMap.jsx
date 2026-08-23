@@ -141,10 +141,10 @@ export function MountainPathMap({ onOpenLesson }) {
                 <div className="space-y-2">
                   {selectedLessons.map((lesson) => {
                     const done = progress.completedLessons.includes(lesson.id)
-                    // Insignias de tipo de lección, al estilo de los nodos
-                    // amarillos "Gramática" / morados "Habla" del mapa de
-                    // una app de idiomas — derivadas del propio contenido de la lección,
-                    // no de un campo aparte que se pueda desincronizar.
+                    // Insignias de tipo de lección ("Gramática" / "Habla" /
+                    // "Simulación") — derivadas del propio contenido de la
+                    // lección, no de un campo aparte que se pueda
+                    // desincronizar.
                     const hasGrammar = lesson.theory?.length > 0
                     const hasSpeaking = lesson.exercises?.pronunciation?.length > 0
                     const hasSimulation = lesson.dialogueSimulations?.length > 0

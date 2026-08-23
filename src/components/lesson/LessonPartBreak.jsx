@@ -4,8 +4,8 @@ import { Button } from '../ui/Button.jsx'
 
 /**
  * Micro-celebración entre "partes" de la lección (no la pantalla final) —
- * un respiro corto de "vas bien" cada 2 bloques de vocabulario, al estilo
- * de las mini-lecciones de una app de idiomas, en vez de un único tramo largo sin
+ * un respiro corto de "vas bien" cada 2 bloques de vocabulario, dividiendo
+ * la lección en mini-lecciones cortas en vez de un único tramo largo sin
  * ninguna pausa hasta el final.
  */
 export function LessonPartBreak({ partNumber, totalParts, onContinue }) {
