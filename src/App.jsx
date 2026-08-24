@@ -10,8 +10,10 @@ import { SettingsScreen } from './components/settings/SettingsScreen.jsx'
 import { LessonView } from './components/lesson/LessonView.jsx'
 import { CertificateModal } from './components/certificate/CertificateModal.jsx'
 import { ErrorBoundary } from './components/ErrorBoundary.jsx'
+import { Onboarding } from './components/onboarding/Onboarding.jsx'
 import { getLessonById } from './data/lessons/index.js'
 import { useUserProgress } from './context/UserProgressContext.jsx'
+import { useLanguage } from './context/LanguageContext.jsx'
 
 export default function App() {
   const [view, setView] = useState('dashboard') // dashboard | lessons | review | calendar | culture | settings
@@ -19,6 +21,7 @@ export default function App() {
   const [certificateOpen, setCertificateOpen] = useState(false)
   const [certificateLevel, setCertificateLevel] = useState(null)
   const { progress } = useUserProgress()
+  const { t } = useLanguage()
 
   // Sincroniza el tamaño de texto guardado (Ajustes) con el atributo que
   // usa el CSS global — hace falta también al cargar, no solo al cambiarlo.
@@ -34,6 +37,14 @@ export default function App() {
 
   function closeLesson() {
     setActiveLessonId(null)
+  }
+
+  if (!progress.hasOnboarded) {
+    return (
+      <ErrorBoundary onReset={() => window.location.reload()}>
+        <Onboarding />
+      </ErrorBoundary>
+    )
   }
 
   if (activeLesson) {
@@ -74,8 +85,8 @@ export default function App() {
           )}
           {view === 'lessons' && (
             <div className="max-w-xl mx-auto px-4 py-6 pb-24">
-              <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50 mb-1">Tu ruta A1 → C2</h2>
-              <p className="text-sm text-alp-500 dark:text-alp-300 mb-4">Toca un nodo del camino para ver sus lecciones o su temario.</p>
+              <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50 mb-1">{t('roadmapHeading')}</h2>
+              <p className="text-sm text-alp-500 dark:text-alp-300 mb-4">{t('roadmapSubheading')}</p>
               <MountainPathMap onOpenLesson={openLesson} />
             </div>
           )}

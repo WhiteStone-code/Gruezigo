@@ -4,6 +4,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage.js'
 const UserProgressContext = createContext(null)
 
 const DEFAULT_PROGRESS = {
+  hasOnboarded: false, // se pone a `true` al terminar la bienvenida de primer uso
   canton: 'zurich',
   level: 'A1.1',
   xp: 0,
@@ -93,6 +94,14 @@ export function UserProgressProvider({ children }) {
         setProgress((p) => ({ ...p, settings: { ...DEFAULT_PROGRESS.settings, ...p.settings, ...patch } })),
 
       resetProgress: () => setProgress(DEFAULT_PROGRESS),
+
+      completeOnboarding: (patch = {}) =>
+        setProgress((p) => ({
+          ...p,
+          hasOnboarded: true,
+          canton: patch.canton ?? p.canton,
+          settings: { ...p.settings, ...(patch.ageGroup ? { ageGroup: patch.ageGroup } : null) },
+        })),
     }),
     [setProgress]
   )
