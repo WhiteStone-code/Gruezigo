@@ -1,5 +1,7 @@
 import { Component } from 'react'
 import { AlertTriangle } from 'lucide-react'
+import { LanguageContext } from '../context/LanguageContext.jsx'
+import { t as translate } from '../data/i18n/strings.js'
 
 /**
  * Red de seguridad para toda la app: si cualquier componente lanza un error
@@ -9,6 +11,8 @@ import { AlertTriangle } from 'lucide-react'
  * vacío sin explicación.
  */
 export class ErrorBoundary extends Component {
+  static contextType = LanguageContext
+
   constructor(props) {
     super(props)
     this.state = { hasError: false }
@@ -29,18 +33,18 @@ export class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
+      const lang = this.context?.interfaceLang ?? 'es'
+      const t = (key) => translate(key, lang)
       return (
         <div className="min-h-screen bg-alp-50 dark:bg-alp-900 flex items-center justify-center p-6">
-          <div className="card max-w-sm w-full text-center">
+          <div className="card-lg max-w-sm w-full text-center">
             <div className="w-14 h-14 mx-auto rounded-full bg-swiss-red/10 dark:bg-swiss-red/20 flex items-center justify-center mb-4">
               <AlertTriangle size={28} className="text-swiss-red" />
             </div>
-            <h2 className="font-display font-bold text-xl text-alp-900 dark:text-alp-50 mb-2">Vaya, algo se atascó</h2>
-            <p className="text-sm text-alp-500 dark:text-alp-300 mb-5">
-              No perdiste tu progreso — solo esta pantalla falló. Vuelve al inicio e inténtalo de nuevo.
-            </p>
+            <h2 className="font-display font-bold text-xl text-alp-900 dark:text-alp-50 mb-2">{t('errorTitle')}</h2>
+            <p className="text-sm text-alp-500 dark:text-alp-300 mb-5">{t('errorBody')}</p>
             <button onClick={this.handleReset} className="btn-primary w-full">
-              Volver al inicio
+              {t('errorButton')}
             </button>
           </div>
         </div>
