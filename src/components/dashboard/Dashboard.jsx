@@ -68,22 +68,22 @@ export function Dashboard({ onOpenLesson, onOpenCalendar, onOpenRoadmap }) {
             </div>
           </div>
         ) : (
-          <p className="text-sm text-alp-500 dark:text-alp-300">Sin próximos eventos registrados.</p>
+          <p className="text-sm text-alp-500 dark:text-alp-300">{t('noUpcomingEvents')}</p>
         )}
       </Card>
 
-      <button onClick={onOpenRoadmap} className="w-full nav-item">
-        <Card className="card-accent-cheese flex items-center gap-3 hover:bg-alp-50 dark:hover:bg-alp-700 transition-colors">
+      <motion.button onClick={onOpenRoadmap} whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} className="w-full nav-item">
+        <Card className="card-accent-cheese flex items-center gap-3 hover:shadow-card-lg dark:hover:border-cheese-400/50 transition-shadow">
           <div className="w-11 h-11 rounded-full bg-cheese-100 dark:bg-cheese-900/40 flex items-center justify-center shrink-0">
             <Map size={20} className="text-cheese-600 dark:text-cheese-300" />
           </div>
           <div className="text-left flex-1">
-            <p className="font-display font-bold text-alp-900 dark:text-alp-50">Ver el mapa completo A1 → C2</p>
-            <p className="text-sm text-alp-500 dark:text-alp-300">Tu ruta entera, nivel a nivel</p>
+            <p className="font-display font-bold text-alp-900 dark:text-alp-50">{t('fullRoadmapTitle')}</p>
+            <p className="text-sm text-alp-500 dark:text-alp-300">{t('fullRoadmapSubtitle')}</p>
           </div>
           <span className="text-alp-300">→</span>
         </Card>
-      </button>
+      </motion.button>
     </div>
   )
 }

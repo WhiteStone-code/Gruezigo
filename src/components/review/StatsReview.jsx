@@ -13,7 +13,7 @@ const BADGE_LABELS = {
 }
 
 export function StatsReview({ onPracticeLesson }) {
-  const { interfaceLang } = useLanguage()
+  const { interfaceLang, t } = useLanguage()
   const { progress } = useUserProgress()
   const overall = getOverallAccuracy(progress.exerciseStats)
   const weakest = getWeakestLesson(progress.exerciseStats, ALL_LESSONS)
@@ -26,8 +26,8 @@ export function StatsReview({ onPracticeLesson }) {
         <ActivityCalendar />
         <EmptyState
           icon="📊"
-          title="Todavía no hay estadísticas"
-          description="Completa tu primera lección y aquí verás en qué eres mejor y qué conviene reforzar."
+          title={t('statsEmptyTitle')}
+          description={t('statsEmptyDescription')}
         />
       </div>
     )
@@ -120,7 +120,7 @@ export function StatsReview({ onPracticeLesson }) {
                   style={{ width: `${Math.round(accuracy * 100)}%` }}
                 />
               </div>
-              <span className="text-xs text-alp-400 w-9 text-right shrink-0">{Math.round(accuracy * 100)}%</span>
+              <span className="text-xs text-alp-500 w-9 text-right shrink-0">{Math.round(accuracy * 100)}%</span>
             </div>
           ))}
         </div>

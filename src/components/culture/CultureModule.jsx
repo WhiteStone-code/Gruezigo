@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { Landmark, Snowflake, Compass } from 'lucide-react'
+import { useLanguage } from '../../context/LanguageContext.jsx'
 import { Card } from '../ui/Card.jsx'
 import { WinterSpecial } from './WinterSpecial.jsx'
 import { SurvivalGuide } from './SurvivalGuide.jsx'
 
 const TABS = [
-  { id: 'history', label: 'Historia básica', icon: Landmark },
-  { id: 'winter', label: 'Invierno', icon: Snowflake },
-  { id: 'survival', label: 'Supervivencia', icon: Compass },
+  { id: 'history', labelKey: 'tabHistory', icon: Landmark },
+  { id: 'winter', labelKey: 'tabWinter', icon: Snowflake },
+  { id: 'survival', labelKey: 'tabSurvival', icon: Compass },
 ]
 
 function HistoryBasics() {
@@ -33,24 +34,25 @@ function HistoryBasics() {
 }
 
 export function CultureModule() {
+  const { t } = useLanguage()
   const [tab, setTab] = useState('history')
 
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4 pb-24">
-      <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50">Cultura</h2>
+      <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50">{t('cultureTitle')}</h2>
 
       <div className="flex gap-2">
-        {TABS.map(({ id, label, icon: Icon }) => (
+        {TABS.map(({ id, labelKey, icon: Icon }) => (
           <button
             key={id}
             onClick={() => setTab(id)}
             className={`nav-item flex-1 flex flex-col items-center gap-1 py-2.5 rounded-xl border text-xs font-semibold transition-colors min-h-[44px]
               ${tab === id
-                ? 'bg-swiss-red text-white border-swiss-red'
+                ? 'bg-swiss-red text-white border-swiss-red shadow-sm'
                 : 'bg-white dark:bg-alp-800 text-alp-600 dark:text-alp-300 border-alp-300 dark:border-alp-600'}`}
           >
             <Icon size={18} />
-            {label}
+            {t(labelKey)}
           </button>
         ))}
       </div>

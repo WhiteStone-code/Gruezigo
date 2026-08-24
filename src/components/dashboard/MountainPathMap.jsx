@@ -29,7 +29,7 @@ function nodeStateRing(state) {
  * lecciones de ese nivel (o su temario, si todavía es "Próximamente").
  */
 export function MountainPathMap({ onOpenLesson }) {
-  const { interfaceLang } = useLanguage()
+  const { interfaceLang, t } = useLanguage()
   const { progress } = useUserProgress()
   const [openGroup, setOpenGroup] = useState(null)
 
@@ -97,7 +97,7 @@ export function MountainPathMap({ onOpenLesson }) {
             <span className="text-xs font-bold text-alp-700 dark:text-alp-200 bg-white/80 dark:bg-alp-800/80 backdrop-blur-sm px-2 py-0.5 rounded-full">
               {group.code}
             </span>
-            <span className="text-[10px] text-alp-400">{label}</span>
+            <span className="text-[10px] text-alp-500">{label}</span>
           </div>
         )
       })}
@@ -125,13 +125,17 @@ export function MountainPathMap({ onOpenLesson }) {
                     {selected.emoji?.[0]}
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase text-alp-400">Nivel {selected.code}</p>
+                    <p className="text-xs font-bold uppercase text-alp-500">{t('levelWord')} {selected.code}</p>
                     <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50">
                       {GROUP_TITLES[selected.code]?.[interfaceLang] ?? GROUP_TITLES[selected.code]?.es}
                     </h3>
                   </div>
                 </div>
-                <button onClick={() => setOpenGroup(null)} className="nav-item text-alp-400 hover:text-alp-700 dark:hover:text-alp-200 min-h-[44px] min-w-[44px]">
+                <button
+                  onClick={() => setOpenGroup(null)}
+                  aria-label={t('close')}
+                  className="nav-item text-alp-500 hover:text-alp-700 dark:hover:text-alp-200 min-h-[44px] min-w-[44px]"
+                >
                   <X size={22} />
                 </button>
               </div>
@@ -148,7 +152,7 @@ export function MountainPathMap({ onOpenLesson }) {
                             {chapter.title[interfaceLang] ?? chapter.title.es}
                           </h4>
                           {chapter.hasContent && (
-                            <span className="text-[10px] text-alp-400">{chapterLabel}</span>
+                            <span className="text-[10px] text-alp-500">{chapterLabel}</span>
                           )}
                         </div>
 
@@ -215,7 +219,7 @@ export function MountainPathMap({ onOpenLesson }) {
               ) : (
                 <div>
                   <p className="text-xs font-semibold text-cheese-700 dark:text-cheese-300 flex items-center gap-1 mb-3">
-                    <Sparkles size={14} /> Próximamente — se aprenderá:
+                    <Sparkles size={14} /> {t('comingSoonTopics')}
                   </p>
                   <ul className="space-y-1">
                     {selected.chapters.flatMap((chapter) => chapter.topics?.[interfaceLang] ?? chapter.topics?.es ?? []).map((topic) => (

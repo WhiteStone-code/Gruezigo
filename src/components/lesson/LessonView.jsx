@@ -196,7 +196,7 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
 
         {step.type === 'exam' && (
           <Card>
-            <ExerciseMultipleChoice questions={shortExam} title="Comprobación final" onComplete={handleExamComplete} />
+            <ExerciseMultipleChoice questions={shortExam} title={t('finalCheck')} onComplete={handleExamComplete} />
           </Card>
         )}
 
@@ -218,7 +218,7 @@ export function LessonView({ lesson, onExit, onRequestCertificate }) {
 }
 
 function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, isLevelComplete, onFinish, onRequestCertificate }) {
-  const { interfaceLang } = useLanguage()
+  const { interfaceLang, t } = useLanguage()
   const accuracy = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 100
   const level = getLevelByCode(lesson.level)
 
@@ -233,7 +233,7 @@ function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, isLevelCo
         <PartyPopper size={44} className="text-cheese-600" />
       </motion.div>
 
-      <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50 mb-1">¡Lección completada!</h2>
+      <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50 mb-1">{t('lessonCompleteTitle')}</h2>
       <p className="text-alp-500 dark:text-alp-300 mb-6">{lesson.title[interfaceLang] ?? lesson.title.es}</p>
 
       <div className="grid grid-cols-3 gap-3 mb-6">
@@ -243,20 +243,20 @@ function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, isLevelCo
         </Card>
         <Card className="!p-3">
           <p className="text-2xl font-display font-bold text-alp-800 dark:text-alp-100">{accuracy}%</p>
-          <p className="text-xs text-alp-500 dark:text-alp-300">Precisión</p>
+          <p className="text-xs text-alp-500 dark:text-alp-300">{t('accuracyLabel')}</p>
         </Card>
         <Card className="!p-3 flex flex-col items-center">
           <p className="text-2xl font-display font-bold text-cheese-600 dark:text-cheese-300 flex items-center gap-1">
             <Flame size={20} /> {streak}
           </p>
-          <p className="text-xs text-alp-500 dark:text-alp-300">Racha</p>
+          <p className="text-xs text-alp-500 dark:text-alp-300">{t('streak')}</p>
         </Card>
       </div>
 
       {examPassed !== null && (
-        <div className={`flex items-center justify-center gap-2 mb-6 font-semibold ${examPassed ? 'text-green-600' : 'text-amber-600'}`}>
+        <div className={`flex items-center justify-center gap-2 mb-6 font-semibold ${examPassed ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'}`}>
           <Award size={18} />
-          {examPassed ? 'Examen del módulo aprobado' : 'Examen no superado — puedes repetir la lección'}
+          {examPassed ? t('examPassed') : t('examFailed')}
         </div>
       )}
 
@@ -271,24 +271,21 @@ function LessonComplete({ lesson, stats, examPassed, xpEarned, streak, isLevelCo
           transition={{ delay: 0.2 }}
           className="bg-gradient-to-br from-alp-700 to-alp-900 text-white rounded-xl2 p-5 mb-4 text-left"
         >
-          <p className="font-display font-bold text-lg mb-1">🎉 ¡Nivel {level?.group ?? lesson.level} completado!</p>
-          <p className="text-sm text-alp-200 mb-4">
-            Has terminado todos los capítulos del nivel {level?.group}. Descarga tu certificado como recuerdo o para
-            tu currículum.
-          </p>
+          <p className="font-display font-bold text-lg mb-1">{t('levelCompleteTitle', { level: level?.group ?? lesson.level })}</p>
+          <p className="text-sm text-alp-200 mb-4">{t('levelCompleteBody', { level: level?.group ?? lesson.level })}</p>
           <Button onClick={onRequestCertificate} className="w-full !bg-cheese-400 !text-alp-900 hover:!bg-cheese-300">
-            🏆 Obtener mi certificado
+            {t('getMyCertificate')}
           </Button>
         </motion.div>
       )}
 
       <div className="space-y-2">
         <Button onClick={onFinish} className="w-full">
-          Continuar
+          {t('continue')}
         </Button>
         {!isLevelComplete && onRequestCertificate && (
           <Button variant="secondary" onClick={onRequestCertificate} className="w-full">
-            Ver progreso hacia mi certificado
+            {t('viewCertificateProgress')}
           </Button>
         )}
       </div>

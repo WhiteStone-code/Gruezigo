@@ -25,7 +25,7 @@ const VARIANTS_SENIOR = [
  * puede cerrar y respeta el ajuste "Recordatorios de repaso" de Ajustes.
  */
 export function ReviewReminderBanner({ exerciseStats, ageGroup, enabled, onPractice }) {
-  const { interfaceLang } = useLanguage()
+  const { interfaceLang, t } = useLanguage()
   const [dismissed, setDismissed] = useState(false)
 
   const weakest = useMemo(() => getWeakestLesson(exerciseStats, ALL_LESSONS), [exerciseStats])
@@ -58,13 +58,13 @@ export function ReviewReminderBanner({ exerciseStats, ageGroup, enabled, onPract
             onClick={() => onPractice(weakest.lesson.id)}
             className="text-sm font-semibold text-swiss-red hover:underline mt-1"
           >
-            Practicar ahora →
+            {t('practiceNow')}
           </button>
         </div>
         <button
           onClick={() => setDismissed(true)}
-          className="nav-item text-alp-400 hover:text-alp-600 dark:hover:text-alp-200 shrink-0"
-          aria-label="Cerrar"
+          className="nav-item text-alp-500 hover:text-alp-600 dark:hover:text-alp-200 shrink-0"
+          aria-label={t('close')}
         >
           <X size={16} />
         </button>

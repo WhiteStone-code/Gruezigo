@@ -15,7 +15,7 @@ const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
  * imagen PNG para compartir en redes o guardar como recuerdo/CV.
  */
 export function CertificateModal({ open, level = 'A1', userName = 'GrüeziGo Learner', onClose }) {
-  const { interfaceLang } = useLanguage()
+  const { interfaceLang, t } = useLanguage()
   const { progress } = useUserProgress()
   const canvasRef = useRef(null)
   const canton = CANTONS.find((c) => c.id === progress.canton)
@@ -118,7 +118,7 @@ export function CertificateModal({ open, level = 'A1', userName = 'GrüeziGo Lea
               <h3 className="font-display font-bold text-xl text-alp-900 dark:text-alp-50 flex items-center gap-2">
                 <Award className="text-cheese-500" /> Tu certificado
               </h3>
-              <button onClick={onClose} className="nav-item text-alp-400 hover:text-alp-700 dark:hover:text-alp-200 min-h-[44px] min-w-[44px]">
+              <button onClick={onClose} aria-label={t('close')} className="nav-item text-alp-500 hover:text-alp-700 dark:hover:text-alp-200 min-h-[44px] min-w-[44px]">
                 <X size={22} />
               </button>
             </div>
@@ -136,7 +136,7 @@ export function CertificateModal({ open, level = 'A1', userName = 'GrüeziGo Lea
                   <span
                     key={lvl}
                     className={`text-xs text-center py-1 rounded ${
-                      lvl === level ? 'bg-swiss-red text-white font-bold' : 'bg-alp-100 dark:bg-alp-700 text-alp-400'
+                      lvl === level ? 'bg-swiss-red text-white font-bold' : 'bg-alp-100 dark:bg-alp-700 text-alp-500'
                     }`}
                   >
                     {lvl}
