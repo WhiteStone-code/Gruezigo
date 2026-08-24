@@ -47,6 +47,14 @@ export function UserProgressProvider({ children }) {
       streak: { ...DEFAULT_PROGRESS.streak, ...raw.streak },
       settings: { ...DEFAULT_PROGRESS.settings, ...raw.settings },
       activityLog: raw.activityLog ?? DEFAULT_PROGRESS.activityLog,
+      // Migración: a quien ya tuviera progreso guardado ANTES de que
+      // existiera este campo (raw.hasOnboarded === undefined) no hay que
+      // mostrarle la bienvenida de nuevo — se le da por ya "onboardeado" si
+      // ya tenía avance real. Solo alguien realmente nuevo (progreso vacío)
+      // ve la pantalla de bienvenida.
+      hasOnboarded:
+        raw.hasOnboarded ??
+        (raw.completedLessons?.length > 0 || raw.xp > 0 || raw.canton !== DEFAULT_PROGRESS.canton),
     }),
     [raw]
   )
