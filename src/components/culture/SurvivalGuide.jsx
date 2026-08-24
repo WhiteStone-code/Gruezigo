@@ -12,7 +12,7 @@ const TOPICS = [
     icon: Train,
     accent: 'sky',
     title: 'Transporte público',
-    body: 'Compra el billete ANTES de subir (SBB app o máquina) — los controles son frecuentes y sin billete válido hay multa inmediata, sin excusas de "no encontré la máquina".',
+    body: 'Compra el billete ANTES de subir (app del tren o máquina en el andén) — los controles son frecuentes y sin billete válido hay multa inmediata, sin excusas de "no encontré la máquina".',
   },
   {
     icon: Phone,
