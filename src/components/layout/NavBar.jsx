@@ -1,4 +1,5 @@
 import { Home, BookOpen, Calendar, Landmark, RotateCcw, Settings } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { GrueziGoLogo } from '../brand/GrueziGoLogo.jsx'
 
@@ -61,9 +62,16 @@ export function NavBar({ active, onNavigate }) {
           <button
             key={id}
             onClick={() => onNavigate(id)}
-            className={`nav-item flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-2 text-[10px] font-semibold
-              ${active === id ? 'text-swiss-red dark:text-cheese-300' : 'text-alp-400 dark:text-alp-400'}`}
+            className={`nav-item relative flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-2 text-[10px] font-semibold
+              ${active === id ? 'text-swiss-red dark:text-cheese-300' : 'text-alp-500 dark:text-alp-400'}`}
           >
+            {active === id && (
+              <motion.span
+                layoutId="nav-active-pill"
+                transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                className="absolute top-0 w-8 h-1 rounded-full bg-swiss-red dark:bg-cheese-300"
+              />
+            )}
             <Icon size={20} />
             {t(labelKey)}
           </button>
