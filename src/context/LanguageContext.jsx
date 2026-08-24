@@ -2,7 +2,7 @@ import { createContext, useContext } from 'react'
 import { useLocalStorage } from '../hooks/useLocalStorage.js'
 import { t as translate } from '../data/i18n/strings.js'
 
-const LanguageContext = createContext(null)
+export const LanguageContext = createContext(null)
 
 export function LanguageProvider({ children }) {
   const [interfaceLang, setInterfaceLang] = useLocalStorage('gruezigo:interfaceLang', 'es')
@@ -10,7 +10,7 @@ export function LanguageProvider({ children }) {
   const value = {
     interfaceLang,
     setInterfaceLang,
-    t: (key) => translate(key, interfaceLang),
+    t: (key, vars) => translate(key, interfaceLang, vars),
   }
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
