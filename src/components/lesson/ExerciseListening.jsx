@@ -77,7 +77,7 @@ export function ExerciseListening({ vocabulary, distractorPool, onComplete }) {
           <Volume2 size={32} />
         </motion.button>
         {!supportsSynthesis && (
-          <p className="text-xs text-alp-400">Tu navegador no soporta síntesis de voz.</p>
+          <p className="text-xs text-alp-500">Tu navegador no soporta síntesis de voz.</p>
         )}
       </div>
 

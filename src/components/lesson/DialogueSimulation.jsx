@@ -91,7 +91,7 @@ export function DialogueSimulation({ simulation, onComplete }) {
           )
         })}
         {!done && currentTurn?.speaker === 'npc' && (
-          <p className="text-xs text-alp-400 italic">escribiendo…</p>
+          <p className="text-xs text-alp-500 italic">escribiendo…</p>
         )}
       </div>
 
@@ -120,7 +120,7 @@ export function DialogueSimulation({ simulation, onComplete }) {
                     e.stopPropagation()
                     speak(opt.text, { lang: 'de-DE' })
                   }}
-                  className="text-alp-400 hover:text-swiss-red shrink-0"
+                  className="text-alp-500 hover:text-swiss-red shrink-0"
                 >
                   <Volume2 size={16} />
                 </span>

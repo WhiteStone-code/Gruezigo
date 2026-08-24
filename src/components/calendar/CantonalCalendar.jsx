@@ -96,7 +96,7 @@ export function CantonalCalendar() {
           </button>
         </div>
 
-        <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-alp-400 dark:text-alp-400 mb-1">
+        <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-alp-500 dark:text-alp-400 mb-1">
           {WEEKDAY_LABELS.map((d) => (
             <div key={d}>{d}</div>
           ))}
@@ -155,7 +155,7 @@ export function CantonalCalendar() {
                     {new Date(event.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long' })}
                   </p>
                 </div>
-                <Icon size={16} className="text-alp-400" />
+                <Icon size={16} className="text-alp-500" />
               </motion.button>
             )
           })}

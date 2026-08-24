@@ -66,7 +66,7 @@ export function ActivityCalendar() {
         </button>
       </div>
 
-      <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-alp-400 mb-1">
+      <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-alp-500 mb-1">
         {WEEKDAY_LABELS.map((d) => (
           <div key={d}>{d}</div>
         ))}
@@ -90,7 +90,7 @@ export function ActivityCalendar() {
                   ? 'bg-meadow-400 text-white dark:bg-meadow-500'
                   : isFuture
                     ? 'text-alp-300 dark:text-alp-600'
-                    : 'bg-alp-100 dark:bg-alp-700 text-alp-400 dark:text-alp-400'}`}
+                    : 'bg-alp-100 dark:bg-alp-700 text-alp-500 dark:text-alp-400'}`}
             >
               {cell.date.getDate()}
             </div>

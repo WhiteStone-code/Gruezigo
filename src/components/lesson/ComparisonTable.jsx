@@ -49,7 +49,7 @@ export function ComparisonTable({ lesson, onContinue }) {
                   {supportsSynthesis && (
                     <button
                       onClick={() => speak(row.schwiizerduetsch, { lang: 'de-DE' })}
-                      className="nav-item text-alp-400 hover:text-swiss-red min-h-[44px] min-w-[44px] flex items-center justify-center"
+                      className="nav-item text-alp-500 hover:text-swiss-red min-h-[44px] min-w-[44px] flex items-center justify-center"
                       aria-label="Escuchar"
                     >
                       <Volume2 size={16} />

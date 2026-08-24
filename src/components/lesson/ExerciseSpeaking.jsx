@@ -70,7 +70,7 @@ export function ExerciseSpeaking({ exercises, onComplete }) {
       </div>
 
       {!supportsRecognition ? (
-        <p className="text-sm text-alp-400 mb-4">
+        <p className="text-sm text-alp-500 mb-4">
           Tu navegador no soporta reconocimiento de voz. Prueba con Chrome/Edge de escritorio o Android — mientras
           tanto, puedes saltar este ejercicio.
         </p>
@@ -86,7 +86,7 @@ export function ExerciseSpeaking({ exercises, onComplete }) {
           >
             <Mic size={32} />
           </motion.button>
-          <p className="text-xs text-alp-400">{isListening ? 'Escuchando... (máx. 6s)' : 'Toca y habla'}</p>
+          <p className="text-xs text-alp-500">{isListening ? 'Escuchando... (máx. 6s)' : 'Toca y habla'}</p>
           {transcript && <p className="text-sm text-alp-600 dark:text-alp-300 italic">"{transcript}"</p>}
         </div>
       )}

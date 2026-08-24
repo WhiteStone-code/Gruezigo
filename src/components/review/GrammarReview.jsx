@@ -25,12 +25,12 @@ export function GrammarReview() {
               className="nav-item w-full flex items-center justify-between p-4 text-left"
             >
               <div>
-                <p className="text-xs font-bold uppercase tracking-wide text-alp-400">{lesson.level.split('.')[0]}</p>
+                <p className="text-xs font-bold uppercase tracking-wide text-alp-500">{lesson.level.split('.')[0]}</p>
                 <p className="font-display font-bold text-alp-900 dark:text-alp-50">
                   {lesson.title[interfaceLang] ?? lesson.title.es}
                 </p>
               </div>
-              <ChevronDown size={18} className={`text-alp-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+              <ChevronDown size={18} className={`text-alp-500 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
             </button>
             {isOpen && (
               <div className="px-4 pb-4">

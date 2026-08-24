@@ -38,7 +38,7 @@ export function WinterSpecial() {
             <div key={p.schwiizerduetsch} className="flex items-center justify-between text-sm border-b border-alp-100 dark:border-alp-700 last:border-0 pb-2 last:pb-0">
               <div>
                 <p className="font-semibold text-swiss-red">{p.schwiizerduetsch}</p>
-                <p className="text-alp-400 text-xs">{p.hochdeutsch}</p>
+                <p className="text-alp-500 text-xs">{p.hochdeutsch}</p>
               </div>
               <p className="text-alp-600 dark:text-alp-300">{p.es}</p>
             </div>

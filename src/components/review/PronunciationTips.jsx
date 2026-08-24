@@ -26,7 +26,7 @@ export function PronunciationTips() {
           <p className="font-display font-bold text-alp-900 dark:text-alp-50">🗣️ Consejos de pronunciación</p>
           <p className="text-xs text-alp-500 dark:text-alp-300">Las umlaut (ä/ö/ü) — la voz del navegador no siempre las clava</p>
         </div>
-        <ChevronDown size={18} className={`text-alp-400 transition-transform shrink-0 ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown size={18} className={`text-alp-500 transition-transform shrink-0 ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && (
         <div className="px-4 pb-4 space-y-2">
@@ -39,12 +39,12 @@ export function PronunciationTips() {
               <div>
                 <span className="font-display font-bold text-swiss-red text-lg">{tip.letter}</span>
                 <p className="text-xs text-alp-600 dark:text-alp-300">{tip.sound}</p>
-                <p className="text-xs text-alp-400 italic">{tip.example}</p>
+                <p className="text-xs text-alp-500 italic">{tip.example}</p>
               </div>
               {supportsSynthesis && (
                 <button
                   onClick={() => speak(tip.example.split(' ')[0], { lang: 'de-DE', rate: 0.75 })}
-                  className="nav-item text-alp-400 hover:text-swiss-red shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  className="nav-item text-alp-500 hover:text-swiss-red shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
                   aria-label="Escuchar ejemplo"
                 >
                   <Volume2 size={18} />

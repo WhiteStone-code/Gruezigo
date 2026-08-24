@@ -47,7 +47,7 @@ export function ExerciseMultipleChoice({ questions, title, onComplete }) {
     <div>
       <div className="flex items-center justify-between mb-1">
         <h3 className="font-display font-bold text-lg text-alp-900 dark:text-alp-50">{title}</h3>
-        <span className="text-xs font-semibold text-alp-400">
+        <span className="text-xs font-semibold text-alp-500">
           {index + 1} / {questions.length}
         </span>
       </div>

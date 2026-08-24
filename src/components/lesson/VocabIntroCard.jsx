@@ -31,7 +31,7 @@ export function VocabIntroCard({ words, partLabel, onContinue }) {
           >
             <div>
               <p className="font-display font-bold text-lg text-swiss-red">{word.schwiizerduetsch}</p>
-              <p className="text-xs text-alp-400">Hochdeutsch: {word.hochdeutsch}</p>
+              <p className="text-xs text-alp-500">Hochdeutsch: {word.hochdeutsch}</p>
               <p className="text-sm text-alp-700 dark:text-alp-200">{word.base[interfaceLang] ?? word.base.es}</p>
             </div>
             {supportsSynthesis && (

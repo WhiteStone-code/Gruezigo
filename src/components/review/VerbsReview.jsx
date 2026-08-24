@@ -92,7 +92,7 @@ export function VerbsReview() {
         <Card key={verb.infinitive.schwiizerduetsch} className="card-accent-wood">
           <div className="flex items-baseline gap-2 mb-1">
             <h4 className="font-display font-bold text-lg text-swiss-red">{verb.infinitive.schwiizerduetsch}</h4>
-            <span className="text-sm text-alp-400">({verb.infinitive.hochdeutsch})</span>
+            <span className="text-sm text-alp-500">({verb.infinitive.hochdeutsch})</span>
           </div>
           <p className="text-sm text-alp-500 dark:text-alp-300 mb-3">{verb.meaning[interfaceLang] ?? verb.meaning.es}</p>
           <div className="overflow-x-auto rounded-xl border border-alp-100 dark:border-alp-700">

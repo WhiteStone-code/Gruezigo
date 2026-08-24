@@ -30,7 +30,7 @@ export function StreakCounter() {
       </div>
       <div className="ml-auto text-right">
         <p className="text-lg font-display font-bold text-cheese-600 dark:text-cheese-300">{progress.xp} XP</p>
-        <p className="text-sm text-alp-400 dark:text-alp-400">Nivel {currentGroup}</p>
+        <p className="text-sm text-alp-500 dark:text-alp-400">Nivel {currentGroup}</p>
       </div>
     </Card>
   )

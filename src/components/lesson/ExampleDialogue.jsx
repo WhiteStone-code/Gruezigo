@@ -41,7 +41,7 @@ export function ExampleDialogue({ lesson, onContinue }) {
                   {supportsSynthesis && (
                     <button
                       onClick={() => speak(line.schwiizerduetsch, { lang: 'de-DE' })}
-                      className="nav-item text-alp-400 hover:text-swiss-red shrink-0"
+                      className="nav-item text-alp-500 hover:text-swiss-red shrink-0"
                       aria-label="Escuchar"
                     >
                       <Volume2 size={14} />

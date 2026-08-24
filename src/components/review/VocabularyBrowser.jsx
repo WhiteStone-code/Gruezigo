@@ -14,13 +14,13 @@ function WordCard({ word }) {
     <div className="p-3 rounded-xl bg-alp-50 dark:bg-alp-900 flex items-center justify-between gap-2">
       <div>
         <p className="font-semibold text-swiss-red">{word.schwiizerduetsch}</p>
-        <p className="text-xs text-alp-400">{word.hochdeutsch}</p>
+        <p className="text-xs text-alp-500">{word.hochdeutsch}</p>
         <p className="text-sm text-alp-700 dark:text-alp-200">{word.base[interfaceLang] ?? word.base.es}</p>
       </div>
       {supportsSynthesis && (
         <button
           onClick={() => speak(word.audioText, { lang: 'de-DE' })}
-          className="nav-item text-alp-400 hover:text-swiss-red shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
+          className="nav-item text-alp-500 hover:text-swiss-red shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
           aria-label="Escuchar"
         >
           <Volume2 size={18} />
@@ -45,7 +45,7 @@ function ThemesGrid({ onOpen }) {
           <span className="font-semibold text-alp-800 dark:text-alp-100 text-sm text-center">
             {theme.title[interfaceLang] ?? theme.title.es}
           </span>
-          <span className="text-xs text-alp-400">{theme.words.length} palabras</span>
+          <span className="text-xs text-alp-500">{theme.words.length} palabras</span>
         </motion.button>
       ))}
     </div>
@@ -84,25 +84,25 @@ function ProfessionDetail({ profession, onBack }) {
         <span className="text-4xl">{profession.emoji}</span>
         <div>
           <p className="font-display font-bold text-lg text-swiss-red">{profession.schwiizerduetsch}</p>
-          <p className="text-xs text-alp-400">{profession.hochdeutsch}</p>
+          <p className="text-xs text-alp-500">{profession.hochdeutsch}</p>
         </div>
       </div>
       <p className="text-sm text-alp-600 dark:text-alp-300 leading-relaxed mb-4">
         {profession.description[interfaceLang] ?? profession.description.es}
       </p>
-      <p className="text-xs font-bold uppercase tracking-wide text-alp-400 mb-2">Frases útiles</p>
+      <p className="text-xs font-bold uppercase tracking-wide text-alp-500 mb-2">Frases útiles</p>
       <div className="space-y-2">
         {profession.usefulPhrases.map((phrase, idx) => (
           <div key={idx} className="p-3 rounded-xl bg-alp-50 dark:bg-alp-900 flex items-center justify-between gap-2">
             <div>
               <p className="font-semibold text-alp-800 dark:text-alp-100 text-sm">{phrase.schwiizerduetsch}</p>
-              <p className="text-xs text-alp-400">{phrase.hochdeutsch}</p>
+              <p className="text-xs text-alp-500">{phrase.hochdeutsch}</p>
               <p className="text-sm text-alp-600 dark:text-alp-300">{phrase.base[interfaceLang] ?? phrase.base.es}</p>
             </div>
             {supportsSynthesis && (
               <button
                 onClick={() => speak(phrase.schwiizerduetsch, { lang: 'de-DE' })}
-                className="nav-item text-alp-400 hover:text-swiss-red shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
+                className="nav-item text-alp-500 hover:text-swiss-red shrink-0 min-h-[44px] min-w-[44px] flex items-center justify-center"
                 aria-label="Escuchar"
               >
                 <Volume2 size={18} />

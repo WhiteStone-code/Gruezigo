@@ -42,12 +42,12 @@ export function LevelMap({ onOpenLesson }) {
               <LevelCoverArt level={level} state={level.state} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wide text-alp-400 dark:text-alp-400">{level.group}</span>
+                  <span className="text-xs font-bold uppercase tracking-wide text-alp-500 dark:text-alp-400">{level.group}</span>
                   <span
                     className={`text-[11px] font-semibold px-2 py-0.5 rounded-full
                       ${level.state === 'done' ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' : ''}
                       ${level.state === 'current' ? 'bg-swiss-red/10 text-swiss-red dark:bg-swiss-red/20 dark:text-white' : ''}
-                      ${level.state === 'locked' ? 'bg-alp-100 text-alp-400 dark:bg-alp-700 dark:text-alp-400' : ''}
+                      ${level.state === 'locked' ? 'bg-alp-100 text-alp-500 dark:bg-alp-700 dark:text-alp-400' : ''}
                       ${level.state === 'soon' ? 'bg-cheese-100 text-cheese-700 dark:bg-cheese-900/40 dark:text-cheese-300' : ''}`}
                   >
                     {label}
@@ -64,7 +64,7 @@ export function LevelMap({ onOpenLesson }) {
               </div>
               <ChevronDown
                 size={18}
-                className={`text-alp-400 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                className={`text-alp-500 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`}
               />
             </button>
 
