@@ -8,22 +8,22 @@ import { Card } from '../ui/Card.jsx'
 import { Button } from '../ui/Button.jsx'
 
 const AGE_GROUPS = [
-  { id: 'teen', label: '≤ 17', desc: 'Adolescente' },
-  { id: 'young-adult', label: '18–35', desc: 'Joven adulto' },
-  { id: 'adult', label: '36–55', desc: 'Adulto' },
-  { id: 'senior', label: '55+', desc: 'Adulto mayor' },
+  { id: 'teen', label: '≤ 17', descKey: 'ageTeen' },
+  { id: 'young-adult', label: '18–35', descKey: 'ageYoungAdult' },
+  { id: 'adult', label: '36–55', descKey: 'ageAdult' },
+  { id: 'senior', label: '55+', descKey: 'ageSenior' },
 ]
 
 const TEXT_SIZES = [
-  { id: 'normal', label: 'Normal' },
-  { id: 'grande', label: 'Grande' },
-  { id: 'muy-grande', label: 'Muy grande' },
+  { id: 'normal', labelKey: 'textSizeNormal' },
+  { id: 'grande', labelKey: 'textSizeLarge' },
+  { id: 'muy-grande', labelKey: 'textSizeXLarge' },
 ]
 
 const THEME_MODES = [
-  { id: 'light', label: 'Claro', icon: Sun },
-  { id: 'dark', label: 'Oscuro', icon: Moon },
-  { id: 'system', label: 'Sistema', icon: Laptop },
+  { id: 'light', labelKey: 'themeLight', icon: Sun },
+  { id: 'dark', labelKey: 'themeDark', icon: Moon },
+  { id: 'system', labelKey: 'themeSystem', icon: Laptop },
 ]
 
 function Section({ icon: Icon, title, accent = 'alp', children }) {
@@ -49,7 +49,7 @@ function SegmentedControl({ options, value, onChange, renderLabel }) {
             onClick={() => onChange(opt.id)}
             className={`nav-item px-3 py-2 rounded-xl text-sm font-semibold border transition-colors min-h-[44px]
               ${active
-                ? 'bg-swiss-red text-white border-swiss-red'
+                ? 'bg-swiss-red text-white border-swiss-red shadow-sm'
                 : 'bg-white dark:bg-alp-900 text-alp-700 dark:text-alp-200 border-alp-300 dark:border-alp-600 hover:border-swiss-red/50'}`}
           >
             {renderLabel ? renderLabel(opt) : opt.label}
@@ -71,7 +71,7 @@ export function SettingsScreen() {
   }
 
   function handleReset() {
-    if (window.confirm('¿Seguro que quieres reiniciar todo tu progreso? Esto borra racha, XP, lecciones completadas y medallas — no se puede deshacer.')) {
+    if (window.confirm(t('settingsResetConfirm'))) {
       resetProgress()
     }
   }
@@ -80,25 +80,30 @@ export function SettingsScreen() {
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4 pb-24">
       <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50">{t('settings')}</h2>
 
-      <Section icon={Moon} title="Apariencia" accent="alp">
-        <p className="text-sm text-alp-500 dark:text-alp-300 mb-2">Tema</p>
+      <Section icon={Moon} title={t('settingsAppearance')} accent="alp">
+        <p className="text-sm text-alp-500 dark:text-alp-300 mb-2">{t('settingsTheme')}</p>
         <SegmentedControl
           options={THEME_MODES}
           value={themeMode}
           onChange={setThemeMode}
           renderLabel={(opt) => (
             <span className="flex items-center gap-1.5">
-              <opt.icon size={14} /> {opt.label}
+              <opt.icon size={14} /> {t(opt.labelKey)}
             </span>
           )}
         />
         <p className="text-sm text-alp-500 dark:text-alp-300 mt-4 mb-2 flex items-center gap-1.5">
-          <Type size={14} /> Tamaño de texto
+          <Type size={14} /> {t('settingsTextSize')}
         </p>
-        <SegmentedControl options={TEXT_SIZES} value={progress.settings.textSize} onChange={setTextSize} />
+        <SegmentedControl
+          options={TEXT_SIZES}
+          value={progress.settings.textSize}
+          onChange={setTextSize}
+          renderLabel={(opt) => t(opt.labelKey)}
+        />
       </Section>
 
-      <Section icon={Globe} title="Idioma de la interfaz" accent="sky">
+      <Section icon={Globe} title={t('settingsInterfaceLang')} accent="sky">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {SUPPORTED_LANGUAGES.map((lang) => (
             <button
@@ -106,7 +111,7 @@ export function SettingsScreen() {
               onClick={() => setInterfaceLang(lang.code)}
               className={`nav-item flex items-center gap-2 px-3 py-2.5 rounded-xl text-sm font-semibold border transition-colors min-h-[44px]
                 ${interfaceLang === lang.code
-                  ? 'bg-swiss-red text-white border-swiss-red'
+                  ? 'bg-swiss-red text-white border-swiss-red shadow-sm'
                   : 'bg-white dark:bg-alp-900 text-alp-700 dark:text-alp-200 border-alp-300 dark:border-alp-600 hover:border-swiss-red/50'}`}
             >
               <span>{lang.flag}</span> {lang.label}
@@ -115,7 +120,7 @@ export function SettingsScreen() {
         </div>
       </Section>
 
-      <Section icon={MapPin} title="Tu cantón" accent="wood">
+      <Section icon={MapPin} title={t('settingsCanton')} accent="wood">
         <div className="flex flex-wrap gap-2">
           {CANTONS.map((canton) => (
             <button
@@ -123,7 +128,7 @@ export function SettingsScreen() {
               onClick={() => setCanton(canton.id)}
               className={`nav-item px-3 py-1.5 rounded-full text-sm font-semibold border transition-colors
                 ${progress.canton === canton.id
-                  ? 'text-white border-transparent'
+                  ? 'text-white border-transparent shadow-card'
                   : 'bg-white dark:bg-alp-900 text-alp-700 dark:text-alp-200 border-alp-300 dark:border-alp-600'}`}
               style={progress.canton === canton.id ? { backgroundColor: canton.color } : undefined}
             >
@@ -133,10 +138,8 @@ export function SettingsScreen() {
         </div>
       </Section>
 
-      <Section icon={Users} title="Tu perfil" accent="cheese">
-        <p className="text-sm text-alp-500 dark:text-alp-300 mb-2">
-          Usamos esto solo para ajustar el tono de mensajes y recordatorios — nunca sale de tu dispositivo.
-        </p>
+      <Section icon={Users} title={t('settingsProfile')} accent="cheese">
+        <p className="text-sm text-alp-500 dark:text-alp-300 mb-2">{t('settingsProfileBody')}</p>
         <SegmentedControl
           options={AGE_GROUPS}
           value={progress.settings.ageGroup}
@@ -144,17 +147,15 @@ export function SettingsScreen() {
           renderLabel={(opt) => (
             <span className="flex flex-col items-center leading-tight">
               <span>{opt.label}</span>
-              <span className="text-[10px] font-normal opacity-80">{opt.desc}</span>
+              <span className="text-[10px] font-normal opacity-80">{t(opt.descKey)}</span>
             </span>
           )}
         />
       </Section>
 
-      <Section icon={Bell} title="Recordatorios de repaso" accent="meadow">
+      <Section icon={Bell} title={t('settingsReminders')} accent="meadow">
         <label className="flex items-center justify-between cursor-pointer">
-          <span className="text-sm text-alp-700 dark:text-alp-200">
-            Avisarme en el panel cuando tenga un tema flojo que repasar
-          </span>
+          <span className="text-sm text-alp-700 dark:text-alp-200">{t('settingsRemindersBody')}</span>
           <input
             type="checkbox"
             checked={progress.settings.reviewRemindersEnabled}
@@ -164,11 +165,9 @@ export function SettingsScreen() {
         </label>
       </Section>
 
-      <Section icon={FlaskConical} title="Modo prueba" accent="alp">
+      <Section icon={FlaskConical} title={t('settingsTestMode')} accent="alp">
         <label className="flex items-center justify-between cursor-pointer">
-          <span className="text-sm text-alp-700 dark:text-alp-200">
-            Desbloquear todos los niveles con contenido para poder probarlos ya
-          </span>
+          <span className="text-sm text-alp-700 dark:text-alp-200">{t('settingsTestModeBody')}</span>
           <input
             type="checkbox"
             checked={progress.settings.testModeUnlockAll}
@@ -181,13 +180,11 @@ export function SettingsScreen() {
       <Card className="card-accent-wood">
         <div className="flex items-center gap-2 mb-2">
           <Trash2 size={18} className="text-swiss-red" />
-          <h3 className="font-display font-bold text-alp-900 dark:text-alp-50">Reiniciar progreso</h3>
+          <h3 className="font-display font-bold text-alp-900 dark:text-alp-50">{t('settingsResetTitle')}</h3>
         </div>
-        <p className="text-sm text-alp-500 dark:text-alp-300 mb-3">
-          Borra racha, XP, lecciones completadas y medallas para empezar de cero.
-        </p>
+        <p className="text-sm text-alp-500 dark:text-alp-300 mb-3">{t('settingsResetBody')}</p>
         <Button variant="secondary" onClick={handleReset} className="w-full !text-swiss-red">
-          Reiniciar todo
+          {t('settingsResetButton')}
         </Button>
       </Card>
     </div>
