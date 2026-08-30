@@ -1,15 +1,16 @@
 import { motion } from 'framer-motion'
-import { BookOpenCheck, MapPin, Map } from 'lucide-react'
+import { BookOpenCheck, MapPin, Map, Plane } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { useUserProgress } from '../../context/UserProgressContext.jsx'
 import { getNextLesson } from '../../data/lessons/index.js'
 import { CANTONS, getUpcomingEvent } from '../../data/cantons/holidays.js'
 import { StreakCounter } from './StreakCounter.jsx'
 import { ReviewReminderBanner } from './ReviewReminderBanner.jsx'
+import { WarmupPrompt } from './WarmupPrompt.jsx'
 import { Card } from '../ui/Card.jsx'
 import { Button } from '../ui/Button.jsx'
 
-export function Dashboard({ onOpenLesson, onOpenCalendar, onOpenRoadmap }) {
+export function Dashboard({ onOpenLesson, onOpenCalendar, onOpenRoadmap, onOpenReview }) {
   const { interfaceLang, t } = useLanguage()
   const { progress } = useUserProgress()
   const nextLesson = getNextLesson(progress.completedLessons)
@@ -31,6 +32,8 @@ export function Dashboard({ onOpenLesson, onOpenCalendar, onOpenRoadmap }) {
         enabled={progress.settings.reviewRemindersEnabled}
         onPractice={onOpenLesson}
       />
+
+      <WarmupPrompt />
 
       {nextLesson && (
         <motion.div whileHover={{ y: -2 }}>
@@ -84,6 +87,26 @@ export function Dashboard({ onOpenLesson, onOpenCalendar, onOpenRoadmap }) {
           <span className="text-alp-300">→</span>
         </Card>
       </motion.button>
+
+      {onOpenReview && (
+        <motion.button
+          onClick={() => onOpenReview('travel')}
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          className="w-full nav-item"
+        >
+          <Card className="card-accent-wood flex items-center gap-3 hover:shadow-card-lg dark:hover:border-wood-400/50 transition-shadow">
+            <div className="w-11 h-11 rounded-full bg-wood-100 dark:bg-wood-900/40 flex items-center justify-center shrink-0">
+              <Plane size={20} className="text-wood-600 dark:text-wood-300" />
+            </div>
+            <div className="text-left flex-1">
+              <p className="font-display font-bold text-alp-900 dark:text-alp-50">{t('travelDeckTitle')}</p>
+              <p className="text-sm text-alp-500 dark:text-alp-300">{t('travelDeckSubtitle')}</p>
+            </div>
+            <span className="text-alp-300">→</span>
+          </Card>
+        </motion.button>
+      )}
     </div>
   )
 }
