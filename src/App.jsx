@@ -17,6 +17,7 @@ import { useLanguage } from './context/LanguageContext.jsx'
 
 export default function App() {
   const [view, setView] = useState('dashboard') // dashboard | lessons | review | calendar | culture | settings
+  const [reviewTab, setReviewTab] = useState(null) // pestaña con la que abrir Repaso al entrar desde un atajo del Dashboard
   const [activeLessonId, setActiveLessonId] = useState(null)
   const [certificateOpen, setCertificateOpen] = useState(false)
   const [certificateLevel, setCertificateLevel] = useState(null)
@@ -73,7 +74,16 @@ export default function App() {
   return (
     <ErrorBoundary onReset={() => setView('dashboard')}>
       <div className="min-h-screen bg-alp-50 dark:bg-alp-900 md:flex">
-        <NavBar active={view} onNavigate={setView} />
+        <NavBar
+          active={view}
+          onNavigate={(v) => {
+            // La navegación normal de la barra siempre abre Repaso en su
+            // pestaña por defecto — solo los atajos del Dashboard (p. ej.
+            // "Frases de viaje") piden una pestaña concreta.
+            setReviewTab(null)
+            setView(v)
+          }}
+        />
         <div className="flex-1 pb-16 md:pb-0">
           <Header />
           {view === 'dashboard' && (
@@ -81,6 +91,10 @@ export default function App() {
               onOpenLesson={openLesson}
               onOpenCalendar={() => setView('calendar')}
               onOpenRoadmap={() => setView('lessons')}
+              onOpenReview={(tab) => {
+                setReviewTab(tab ?? null)
+                setView('review')
+              }}
             />
           )}
           {view === 'lessons' && (
@@ -90,7 +104,7 @@ export default function App() {
               <MountainPathMap onOpenLesson={openLesson} />
             </div>
           )}
-          {view === 'review' && <ReviewHub onOpenLesson={openLesson} />}
+          {view === 'review' && <ReviewHub key={reviewTab ?? 'default'} initialTab={reviewTab} onOpenLesson={openLesson} />}
           {view === 'calendar' && (
             <div className="max-w-xl mx-auto px-4 py-6 pb-24">
               <CantonalCalendar />
