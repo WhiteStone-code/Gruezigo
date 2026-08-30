@@ -1,7 +1,7 @@
 // Mapa completo del curso, estilo "escalera de niveles" (A1 → C2). El A1
-// tiene 5 capítulos jugables (A1.1-A1.5); el resto se muestra como hoja de
-// ruta ("Próximamente") con temas reales para que quede claro qué viene,
-// sin inventar contenido a medias.
+// tiene 5 capítulos jugables (A1.1-A1.5) y el A2 tiene 4 (A2.1-A2.4); el
+// resto se muestra como hoja de ruta ("Próximamente") con temas reales para
+// que quede claro qué viene, sin inventar contenido a medias.
 //
 // gradient: clases Tailwind para la "portada" ilustrada del nivel.
 // emoji: par de emojis usados como ilustración de portada (sin imágenes
@@ -92,9 +92,33 @@ export const LEVELS = [
     hasContent: true,
   },
   {
+    code: 'A2.3',
+    group: 'A2',
+    chapterNumber: 8,
+    title: {
+      es: 'Trámites y salud', en: 'Paperwork and health', pt: 'Trâmites e saúde', fr: 'Démarches et santé',
+      it: 'Pratiche e salute', sq: 'Procedura dhe shëndeti', tr: 'İşlemler ve sağlık',
+    },
+    gradient: 'from-meadow-400 to-alp-600',
+    emoji: ['🏥', '📋'],
+    hasContent: true,
+  },
+  {
+    code: 'A2.4',
+    group: 'A2',
+    chapterNumber: 9,
+    title: {
+      es: 'La naturaleza y el tiempo libre', en: 'Nature and free time', pt: 'A natureza e o tempo livre', fr: 'La nature et le temps libre',
+      it: 'La natura e il tempo libero', sq: 'Natyra dhe koha e lirë', tr: 'Doğa ve boş zaman',
+    },
+    gradient: 'from-meadow-500 to-wood-600',
+    emoji: ['⛰️', '📖'],
+    hasContent: true,
+  },
+  {
     code: 'B1.1',
     group: 'B1',
-    chapterNumber: 8,
+    chapterNumber: 10,
     title: {
       es: 'Conversación real', en: 'Real conversation', pt: 'Conversa real', fr: 'Conversation réelle',
       it: 'Conversazione reale', sq: 'Bisedë reale', tr: 'Gerçek sohbet',
@@ -115,7 +139,7 @@ export const LEVELS = [
   {
     code: 'B1.2',
     group: 'B1',
-    chapterNumber: 9,
+    chapterNumber: 11,
     title: {
       es: 'La vida real', en: 'Real life', pt: 'A vida real', fr: 'La vraie vie',
       it: 'La vita reale', sq: 'Jeta reale', tr: 'Gerçek hayat',
@@ -136,7 +160,7 @@ export const LEVELS = [
   {
     code: 'B2.1',
     group: 'B2',
-    chapterNumber: 10,
+    chapterNumber: 12,
     title: {
       es: 'Fluidez', en: 'Fluency', pt: 'Fluência', fr: 'Aisance',
       it: 'Scioltezza', sq: 'Rrjedhshmëri', tr: 'Akıcılık',
@@ -157,7 +181,7 @@ export const LEVELS = [
   {
     code: 'B2.2',
     group: 'B2',
-    chapterNumber: 11,
+    chapterNumber: 13,
     title: {
       es: 'Cultura profunda', en: 'Deep culture', pt: 'Cultura profunda', fr: 'Culture approfondie',
       it: 'Cultura profonda', sq: 'Kultura e thellë', tr: 'Derin kültür',
@@ -178,7 +202,7 @@ export const LEVELS = [
   {
     code: 'C1',
     group: 'C1',
-    chapterNumber: 12,
+    chapterNumber: 14,
     title: {
       es: 'Dominio', en: 'Mastery', pt: 'Domínio', fr: 'Maîtrise',
       it: 'Padronanza', sq: 'Zotërim', tr: 'Hakimiyet',
@@ -199,7 +223,7 @@ export const LEVELS = [
   {
     code: 'C2',
     group: 'C2',
-    chapterNumber: 13,
+    chapterNumber: 15,
     title: {
       es: 'Maestría', en: 'Mastery+', pt: 'Mestria', fr: 'Excellence',
       it: 'Eccellenza', sq: 'Përsosmëri', tr: 'Ustalık',
