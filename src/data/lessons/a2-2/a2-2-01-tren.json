@@ -42,84 +42,968 @@
         "sq": "'Vo wele Gleis fahrt de Zug...?' (nga cili binar niset treni...?) është pyetja kyçe në çdo stacion. Rrjeti hekurudhor zviceran është i saktë dhe i shpeshtë, kështu që është normale të lëvizësh mes qyteteve në të njëjtën ditë — ia vlen ta zotërosh këtë fjalor.",
         "tr": "'Vo wele Gleis fahrt de Zug...?' (tren hangi perondan kalkıyor?) her istasyondaki temel sorudur. İsviçre tren ağı dakik ve sıktır, bu yüzden aynı gün içinde şehirler arasında seyahat etmek normaldir — bu kelimeleri öğrenmeye değer."
       },
-      "table": [
-        { "left": "Vo wele Gleis fahrt de Zug?", "right": { "es": "¿De qué andén sale el tren?", "en": "Which platform does the train leave from?", "pt": "De que via parte o comboio?", "fr": "De quel quai part le train ?", "it": "Da quale binario parte il treno?", "sq": "Nga cili binar niset treni?", "tr": "Tren hangi perondan kalkıyor?" } },
-        { "left": "De Zug het Verspötig.", "right": { "es": "El tren tiene retraso.", "en": "The train is delayed.", "pt": "O comboio está atrasado.", "fr": "Le train a du retard.", "it": "Il treno è in ritardo.", "sq": "Treni ka vonesë.", "tr": "Tren gecikmeli." } }
-      ]
+      "table": {
+        "headers": [
+          "Frase",
+          "Schwiizerdütsch"
+        ],
+        "rows": [
+          [
+            "¿De qué andén sale el tren?",
+            "Vo wele Gleis fahrt de Zug?"
+          ],
+          [
+            "El tren tiene retraso.",
+            "De Zug het Verspötig."
+          ]
+        ]
+      }
     }
   ],
   "dialogueSimulations": [
     {
       "id": "sim-zug",
-      "scenario": { "es": "Preguntando en la estación por el andén correcto", "en": "Asking at the station for the right platform", "pt": "A perguntar na estação pela via certa", "fr": "Demander en gare le bon quai", "it": "Chiedere in stazione il binario giusto", "sq": "Duke pyetur në stacion për binarin e duhur", "tr": "İstasyonda doğru peronu sormak" },
+      "scenario": {
+        "es": "Preguntando en la estación por el andén correcto",
+        "en": "Asking at the station for the right platform",
+        "pt": "A perguntar na estação pela via certa",
+        "fr": "Demander en gare le bon quai",
+        "it": "Chiedere in stazione il binario giusto",
+        "sq": "Duke pyetur në stacion për binarin e duhur",
+        "tr": "İstasyonda doğru peronu sormak"
+      },
       "npcName": "Empleado/a",
       "npcEmoji": "🧑‍💼",
       "turns": [
-        { "speaker": "npc", "text": "Grüezi, chan ich Ihne hälfe?", "base": { "es": "Hola, ¿puedo ayudarle?", "en": "Hi, can I help you?", "pt": "Olá, posso ajudá-lo?", "fr": "Bonjour, je peux vous aider ?", "it": "Buongiorno, posso aiutarla?", "sq": "Përshëndetje, a mund t'ju ndihmoj?", "tr": "Merhaba, size yardımcı olabilir miyim?" } },
+        {
+          "speaker": "npc",
+          "text": "Grüezi, chan ich Ihne hälfe?",
+          "base": {
+            "es": "Hola, ¿puedo ayudarle?",
+            "en": "Hi, can I help you?",
+            "pt": "Olá, posso ajudá-lo?",
+            "fr": "Bonjour, je peux vous aider ?",
+            "it": "Buongiorno, posso aiutarla?",
+            "sq": "Përshëndetje, a mund t'ju ndihmoj?",
+            "tr": "Merhaba, size yardımcı olabilir miyim?"
+          }
+        },
         {
           "speaker": "user",
           "options": [
-            { "text": "Vo wele Gleis fahrt de Zug uf Luzern?", "base": { "es": "¿De qué andén sale el tren a Lucerna?", "en": "Which platform does the train to Lucerne leave from?", "pt": "De que via parte o comboio para Lucerna?", "fr": "De quel quai part le train pour Lucerne ?", "it": "Da quale binario parte il treno per Lucerna?", "sq": "Nga cili binar niset treni për në Lucerne?", "tr": "Luzern treni hangi perondan kalkıyor?" }, "correct": true },
-            { "text": "Ich ha kei Zit.", "base": { "es": "No tengo tiempo.", "en": "I don't have time.", "pt": "Não tenho tempo.", "fr": "Je n'ai pas le temps.", "it": "Non ho tempo.", "sq": "Nuk kam kohë.", "tr": "Vaktim yok." }, "correct": false, "feedback": { "es": "Aprovecha para preguntar directamente por el andén, que es lo que necesitas.", "en": "Use this moment to ask directly for the platform, which is what you actually need.", "pt": "Aproveita para perguntar diretamente pela via, que é o que precisas.", "fr": "Profitez-en pour demander directement le quai, ce dont vous avez besoin.", "it": "Approfitta per chiedere direttamente il binario, che è ciò di cui hai bisogno.", "sq": "Përfito ta pyesësh direkt për binarin, gjë që të nevojitet.", "tr": "İhtiyacın olan şeyi, yani peronu doğrudan sormak için bu fırsatı kullan." } }
+            {
+              "text": "Vo wele Gleis fahrt de Zug uf Luzern?",
+              "base": {
+                "es": "¿De qué andén sale el tren a Lucerna?",
+                "en": "Which platform does the train to Lucerne leave from?",
+                "pt": "De que via parte o comboio para Lucerna?",
+                "fr": "De quel quai part le train pour Lucerne ?",
+                "it": "Da quale binario parte il treno per Lucerna?",
+                "sq": "Nga cili binar niset treni për në Lucerne?",
+                "tr": "Luzern treni hangi perondan kalkıyor?"
+              },
+              "correct": true
+            },
+            {
+              "text": "Ich ha kei Zit.",
+              "base": {
+                "es": "No tengo tiempo.",
+                "en": "I don't have time.",
+                "pt": "Não tenho tempo.",
+                "fr": "Je n'ai pas le temps.",
+                "it": "Non ho tempo.",
+                "sq": "Nuk kam kohë.",
+                "tr": "Vaktim yok."
+              },
+              "correct": false,
+              "feedback": {
+                "es": "Aprovecha para preguntar directamente por el andén, que es lo que necesitas.",
+                "en": "Use this moment to ask directly for the platform, which is what you actually need.",
+                "pt": "Aproveita para perguntar diretamente pela via, que é o que precisas.",
+                "fr": "Profitez-en pour demander directement le quai, ce dont vous avez besoin.",
+                "it": "Approfitta per chiedere direttamente il binario, che è ciò di cui hai bisogno.",
+                "sq": "Përfito ta pyesësh direkt për binarin, gjë që të nevojitet.",
+                "tr": "İhtiyacın olan şeyi, yani peronu doğrudan sormak için bu fırsatı kullan."
+              }
+            }
           ]
         },
-        { "speaker": "npc", "text": "Gleis 4, aber de Zug het es paar Minute Verspötig.", "base": { "es": "Andén 4, pero el tren tiene unos minutos de retraso.", "en": "Platform 4, but the train is a few minutes delayed.", "pt": "Via 4, mas o comboio tem uns minutos de atraso.", "fr": "Quai 4, mais le train a quelques minutes de retard.", "it": "Binario 4, ma il treno ha qualche minuto di ritardo.", "sq": "Binari 4, por treni ka disa minuta vonesë.", "tr": "4. peron, ama tren birkaç dakika gecikmeli." } },
+        {
+          "speaker": "npc",
+          "text": "Gleis 4, aber de Zug het es paar Minute Verspötig.",
+          "base": {
+            "es": "Andén 4, pero el tren tiene unos minutos de retraso.",
+            "en": "Platform 4, but the train is a few minutes delayed.",
+            "pt": "Via 4, mas o comboio tem uns minutos de atraso.",
+            "fr": "Quai 4, mais le train a quelques minutes de retard.",
+            "it": "Binario 4, ma il treno ha qualche minuto di ritardo.",
+            "sq": "Binari 4, por treni ka disa minuta vonesë.",
+            "tr": "4. peron, ama tren birkaç dakika gecikmeli."
+          }
+        },
         {
           "speaker": "user",
           "options": [
-            { "text": "Okay, danke vielmal für d'Info!", "base": { "es": "Vale, ¡muchas gracias por la información!", "en": "Okay, thanks a lot for the info!", "pt": "Ok, muito obrigado pela informação!", "fr": "D'accord, merci beaucoup pour l'info !", "it": "Ok, grazie mille per l'informazione!", "sq": "Në rregull, faleminderit shumë për informacionin!", "tr": "Tamam, bilgi için çok teşekkürler!" }, "correct": true },
-            { "text": "Das isch mir egal.", "base": { "es": "Me da igual.", "en": "I don't care.", "pt": "Tanto me faz.", "fr": "Ça m'est égal.", "it": "Non mi importa.", "sq": "Nuk më intereson.", "tr": "Umurumda değil." }, "correct": false, "feedback": { "es": "Es más natural agradecer la información antes de irte.", "en": "It's more natural to thank them for the info before you leave.", "pt": "É mais natural agradecer a informação antes de saíres.", "fr": "Il est plus naturel de remercier pour l'info avant de partir.", "it": "È più naturale ringraziare per l'informazione prima di andare.", "sq": "Është më natyrale të falenderosh për informacionin para se të largohesh.", "tr": "Ayrılmadan önce bilgi için teşekkür etmek daha doğal." } }
+            {
+              "text": "Okay, danke vielmal für d'Info!",
+              "base": {
+                "es": "Vale, ¡muchas gracias por la información!",
+                "en": "Okay, thanks a lot for the info!",
+                "pt": "Ok, muito obrigado pela informação!",
+                "fr": "D'accord, merci beaucoup pour l'info !",
+                "it": "Ok, grazie mille per l'informazione!",
+                "sq": "Në rregull, faleminderit shumë për informacionin!",
+                "tr": "Tamam, bilgi için çok teşekkürler!"
+              },
+              "correct": true
+            },
+            {
+              "text": "Das isch mir egal.",
+              "base": {
+                "es": "Me da igual.",
+                "en": "I don't care.",
+                "pt": "Tanto me faz.",
+                "fr": "Ça m'est égal.",
+                "it": "Non mi importa.",
+                "sq": "Nuk më intereson.",
+                "tr": "Umurumda değil."
+              },
+              "correct": false,
+              "feedback": {
+                "es": "Es más natural agradecer la información antes de irte.",
+                "en": "It's more natural to thank them for the info before you leave.",
+                "pt": "É mais natural agradecer a informação antes de saíres.",
+                "fr": "Il est plus naturel de remercier pour l'info avant de partir.",
+                "it": "È più naturale ringraziare per l'informazione prima di andare.",
+                "sq": "Është më natyrale të falenderosh për informacionin para se të largohesh.",
+                "tr": "Ayrılmadan önce bilgi için teşekkür etmek daha doğal."
+              }
+            }
           ]
         }
       ]
     }
   ],
   "comparisonTable": [
-    { "base": { "es": "El tren", "en": "The train", "pt": "O comboio", "fr": "Le train", "it": "Il treno", "sq": "Treni", "tr": "Tren" }, "hochdeutsch": "Der Zug", "schwiizerduetsch": "Dr Zug" },
-    { "base": { "es": "El andén", "en": "The platform", "pt": "A via", "fr": "Le quai", "it": "Il binario", "sq": "Binari", "tr": "Peron" }, "hochdeutsch": "Das Gleis", "schwiizerduetsch": "S Gleis" },
-    { "base": { "es": "El billete", "en": "The ticket", "pt": "O bilhete", "fr": "Le billet", "it": "Il biglietto", "sq": "Bileta", "tr": "Bilet" }, "hochdeutsch": "Das Billett", "schwiizerduetsch": "S Billett" },
-    { "base": { "es": "Directo", "en": "Direct", "pt": "Direto", "fr": "Direct", "it": "Diretto", "sq": "Direkt", "tr": "Direkt" }, "hochdeutsch": "Direkt", "schwiizerduetsch": "Direkt" },
-    { "base": { "es": "Hacer trasbordo", "en": "To change trains", "pt": "Fazer transbordo", "fr": "Faire une correspondance", "it": "Cambiare treno", "sq": "Të ndërrosh trenin", "tr": "Aktarma yapmak" }, "hochdeutsch": "Umsteigen", "schwiizerduetsch": "Umsteige" },
-    { "base": { "es": "El retraso", "en": "The delay", "pt": "O atraso", "fr": "Le retard", "it": "Il ritardo", "sq": "Vonesa", "tr": "Gecikme" }, "hochdeutsch": "Die Verspätung", "schwiizerduetsch": "D Verspötig" }
+    {
+      "base": {
+        "es": "El tren",
+        "en": "The train",
+        "pt": "O comboio",
+        "fr": "Le train",
+        "it": "Il treno",
+        "sq": "Treni",
+        "tr": "Tren"
+      },
+      "hochdeutsch": "Der Zug",
+      "schwiizerduetsch": "Dr Zug"
+    },
+    {
+      "base": {
+        "es": "El andén",
+        "en": "The platform",
+        "pt": "A via",
+        "fr": "Le quai",
+        "it": "Il binario",
+        "sq": "Binari",
+        "tr": "Peron"
+      },
+      "hochdeutsch": "Das Gleis",
+      "schwiizerduetsch": "S Gleis"
+    },
+    {
+      "base": {
+        "es": "El billete",
+        "en": "The ticket",
+        "pt": "O bilhete",
+        "fr": "Le billet",
+        "it": "Il biglietto",
+        "sq": "Bileta",
+        "tr": "Bilet"
+      },
+      "hochdeutsch": "Das Billett",
+      "schwiizerduetsch": "S Billett"
+    },
+    {
+      "base": {
+        "es": "Directo",
+        "en": "Direct",
+        "pt": "Direto",
+        "fr": "Direct",
+        "it": "Diretto",
+        "sq": "Direkt",
+        "tr": "Direkt"
+      },
+      "hochdeutsch": "Direkt",
+      "schwiizerduetsch": "Direkt"
+    },
+    {
+      "base": {
+        "es": "Hacer trasbordo",
+        "en": "To change trains",
+        "pt": "Fazer transbordo",
+        "fr": "Faire une correspondance",
+        "it": "Cambiare treno",
+        "sq": "Të ndërrosh trenin",
+        "tr": "Aktarma yapmak"
+      },
+      "hochdeutsch": "Umsteigen",
+      "schwiizerduetsch": "Umsteige"
+    },
+    {
+      "base": {
+        "es": "El retraso",
+        "en": "The delay",
+        "pt": "O atraso",
+        "fr": "Le retard",
+        "it": "Il ritardo",
+        "sq": "Vonesa",
+        "tr": "Gecikme"
+      },
+      "hochdeutsch": "Die Verspätung",
+      "schwiizerduetsch": "D Verspötig"
+    }
   ],
   "vocabulary": [
-    { "id": "v1", "hochdeutsch": "Der Zug", "schwiizerduetsch": "Dr Zug", "audioText": "Dr Zug", "base": { "es": "El tren", "en": "The train", "pt": "O comboio", "fr": "Le train", "it": "Il treno", "sq": "Treni", "tr": "Tren" } },
-    { "id": "v2", "hochdeutsch": "Das Gleis", "schwiizerduetsch": "S Gleis", "audioText": "S Gleis", "base": { "es": "El andén", "en": "The platform", "pt": "A via", "fr": "Le quai", "it": "Il binario", "sq": "Binari", "tr": "Peron" } },
-    { "id": "v3", "hochdeutsch": "Das Billett", "schwiizerduetsch": "S Billett", "audioText": "S Billett", "base": { "es": "El billete", "en": "The ticket", "pt": "O bilhete", "fr": "Le billet", "it": "Il biglietto", "sq": "Bileta", "tr": "Bilet" } },
-    { "id": "v4", "hochdeutsch": "Direkt", "schwiizerduetsch": "Direkt", "audioText": "Direkt", "base": { "es": "Directo", "en": "Direct", "pt": "Direto", "fr": "Direct", "it": "Diretto", "sq": "Direkt", "tr": "Direkt" } },
-    { "id": "v5", "hochdeutsch": "Umsteigen", "schwiizerduetsch": "Umsteige", "audioText": "Ich mues umsteige", "base": { "es": "Hacer trasbordo", "en": "To change trains", "pt": "Fazer transbordo", "fr": "Faire une correspondance", "it": "Cambiare treno", "sq": "Të ndërrosh trenin", "tr": "Aktarma yapmak" } },
-    { "id": "v6", "hochdeutsch": "Die Verspätung", "schwiizerduetsch": "D Verspötig", "audioText": "D Verspötig", "base": { "es": "El retraso", "en": "The delay", "pt": "O atraso", "fr": "Le retard", "it": "Il ritardo", "sq": "Vonesa", "tr": "Gecikme" } }
+    {
+      "id": "v1",
+      "hochdeutsch": "Der Zug",
+      "schwiizerduetsch": "Dr Zug",
+      "audioText": "Dr Zug",
+      "base": {
+        "es": "El tren",
+        "en": "The train",
+        "pt": "O comboio",
+        "fr": "Le train",
+        "it": "Il treno",
+        "sq": "Treni",
+        "tr": "Tren"
+      }
+    },
+    {
+      "id": "v2",
+      "hochdeutsch": "Das Gleis",
+      "schwiizerduetsch": "S Gleis",
+      "audioText": "S Gleis",
+      "base": {
+        "es": "El andén",
+        "en": "The platform",
+        "pt": "A via",
+        "fr": "Le quai",
+        "it": "Il binario",
+        "sq": "Binari",
+        "tr": "Peron"
+      }
+    },
+    {
+      "id": "v3",
+      "hochdeutsch": "Das Billett",
+      "schwiizerduetsch": "S Billett",
+      "audioText": "S Billett",
+      "base": {
+        "es": "El billete",
+        "en": "The ticket",
+        "pt": "O bilhete",
+        "fr": "Le billet",
+        "it": "Il biglietto",
+        "sq": "Bileta",
+        "tr": "Bilet"
+      }
+    },
+    {
+      "id": "v4",
+      "hochdeutsch": "Direkt",
+      "schwiizerduetsch": "Direkt",
+      "audioText": "Direkt",
+      "base": {
+        "es": "Directo",
+        "en": "Direct",
+        "pt": "Direto",
+        "fr": "Direct",
+        "it": "Diretto",
+        "sq": "Direkt",
+        "tr": "Direkt"
+      }
+    },
+    {
+      "id": "v5",
+      "hochdeutsch": "Umsteigen",
+      "schwiizerduetsch": "Umsteige",
+      "audioText": "Ich mues umsteige",
+      "base": {
+        "es": "Hacer trasbordo",
+        "en": "To change trains",
+        "pt": "Fazer transbordo",
+        "fr": "Faire une correspondance",
+        "it": "Cambiare treno",
+        "sq": "Të ndërrosh trenin",
+        "tr": "Aktarma yapmak"
+      }
+    },
+    {
+      "id": "v6",
+      "hochdeutsch": "Die Verspätung",
+      "schwiizerduetsch": "D Verspötig",
+      "audioText": "D Verspötig",
+      "base": {
+        "es": "El retraso",
+        "en": "The delay",
+        "pt": "O atraso",
+        "fr": "Le retard",
+        "it": "Il ritardo",
+        "sq": "Vonesa",
+        "tr": "Gecikme"
+      }
+    }
   ],
   "exercises": {
     "fillBlanks": [
-      { "id": "fb1", "before": "Vo wele", "after": "fahrt de Zug?", "correctWord": "Gleis", "options": ["Gleis", "Billett", "Zug"], "hint": { "es": "Completa: '¿De qué andén sale el tren?'", "en": "Complete: 'Which platform does the train leave from?'", "pt": "Completa: 'De que via parte o comboio?'", "fr": "Complétez : « De quel quai part le train ? »", "it": "Completa: 'Da quale binario parte il treno?'", "sq": "Plotëso: 'Nga cili binar niset treni?'", "tr": "Tamamla: 'Tren hangi perondan kalkıyor?'" } },
-      { "id": "fb2", "before": "De Zug het", "after": ".", "correctWord": "Verspötig", "options": ["Verspötig", "Gleis", "Billett"], "hint": { "es": "Completa: 'El tren tiene retraso'", "en": "Complete: 'The train is delayed'", "pt": "Completa: 'O comboio está atrasado'", "fr": "Complétez : « Le train a du retard »", "it": "Completa: 'Il treno è in ritardo'", "sq": "Plotëso: 'Treni ka vonesë'", "tr": "Tamamla: 'Tren gecikmeli'" } }
+      {
+        "id": "fb1",
+        "before": "Vo wele",
+        "after": "fahrt de Zug?",
+        "correctWord": "Gleis",
+        "options": [
+          "Gleis",
+          "Billett",
+          "Zug"
+        ],
+        "hint": {
+          "es": "Completa: '¿De qué andén sale el tren?'",
+          "en": "Complete: 'Which platform does the train leave from?'",
+          "pt": "Completa: 'De que via parte o comboio?'",
+          "fr": "Complétez : « De quel quai part le train ? »",
+          "it": "Completa: 'Da quale binario parte il treno?'",
+          "sq": "Plotëso: 'Nga cili binar niset treni?'",
+          "tr": "Tamamla: 'Tren hangi perondan kalkıyor?'"
+        }
+      },
+      {
+        "id": "fb2",
+        "before": "De Zug het",
+        "after": ".",
+        "correctWord": "Verspötig",
+        "options": [
+          "Verspötig",
+          "Gleis",
+          "Billett"
+        ],
+        "hint": {
+          "es": "Completa: 'El tren tiene retraso'",
+          "en": "Complete: 'The train is delayed'",
+          "pt": "Completa: 'O comboio está atrasado'",
+          "fr": "Complétez : « Le train a du retard »",
+          "it": "Completa: 'Il treno è in ritardo'",
+          "sq": "Plotëso: 'Treni ka vonesë'",
+          "tr": "Tamamla: 'Tren gecikmeli'"
+        }
+      }
     ],
     "multipleChoice": [
-      { "id": "mc1", "question": { "es": "'S Gleis' significa...", "en": "'S Gleis' means...", "pt": "'S Gleis' significa...", "fr": "« S Gleis » signifie...", "it": "'S Gleis' significa...", "sq": "'S Gleis' do të thotë...", "tr": "'S Gleis' anlamı..." }, "options": [ { "text": { "es": "El andén", "en": "The platform", "pt": "A via", "fr": "Le quai", "it": "Il binario", "sq": "Binari", "tr": "Peron" }, "correct": true }, { "text": { "es": "El billete", "en": "The ticket", "pt": "O bilhete", "fr": "Le billet", "it": "Il biglietto", "sq": "Bileta", "tr": "Bilet" }, "correct": false } ] },
-      { "id": "mc2", "question": { "es": "'Umsteige' significa...", "en": "'Umsteige' means...", "pt": "'Umsteige' significa...", "fr": "« Umsteige » signifie...", "it": "'Umsteige' significa...", "sq": "'Umsteige' do të thotë...", "tr": "'Umsteige' anlamı..." }, "options": [ { "text": { "es": "Hacer trasbordo", "en": "To change trains", "pt": "Fazer transbordo", "fr": "Faire une correspondance", "it": "Cambiare treno", "sq": "Të ndërrosh trenin", "tr": "Aktarma yapmak" }, "correct": true }, { "text": { "es": "Comprar un billete", "en": "To buy a ticket", "pt": "Comprar um bilhete", "fr": "Acheter un billet", "it": "Comprare un biglietto", "sq": "Të blesh një biletë", "tr": "Bilet almak" }, "correct": false } ] },
-      { "id": "mc3", "question": { "es": "'D Verspötig' significa...", "en": "'D Verspötig' means...", "pt": "'D Verspötig' significa...", "fr": "« D Verspötig » signifie...", "it": "'D Verspötig' significa...", "sq": "'D Verspötig' do të thotë...", "tr": "'D Verspötig' anlamı..." }, "options": [ { "text": { "es": "El retraso", "en": "The delay", "pt": "O atraso", "fr": "Le retard", "it": "Il ritardo", "sq": "Vonesa", "tr": "Gecikme" }, "correct": true }, { "text": { "es": "El horario", "en": "The schedule", "pt": "O horário", "fr": "L'horaire", "it": "L'orario", "sq": "Orari", "tr": "Tarife" }, "correct": false } ] },
-      { "id": "mc4", "question": { "es": "'Direkt' significa que el tren...", "en": "'Direkt' means the train...", "pt": "'Direkt' significa que o comboio...", "fr": "« Direkt » signifie que le train...", "it": "'Direkt' significa che il treno...", "sq": "'Direkt' do të thotë se treni...", "tr": "'Direkt' trenin şu anlama gelir..." }, "options": [ { "text": { "es": "No requiere trasbordo", "en": "Doesn't require a change", "pt": "Não requer transbordo", "fr": "Ne nécessite pas de correspondance", "it": "Non richiede cambio", "sq": "Nuk kërkon ndërrim", "tr": "Aktarma gerektirmez" }, "correct": true }, { "text": { "es": "Está lleno", "en": "Is full", "pt": "Está cheio", "fr": "Est plein", "it": "È pieno", "sq": "Është plot", "tr": "Doludur" }, "correct": false } ] }
+      {
+        "id": "mc1",
+        "question": {
+          "es": "'S Gleis' significa...",
+          "en": "'S Gleis' means...",
+          "pt": "'S Gleis' significa...",
+          "fr": "« S Gleis » signifie...",
+          "it": "'S Gleis' significa...",
+          "sq": "'S Gleis' do të thotë...",
+          "tr": "'S Gleis' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "El andén",
+              "en": "The platform",
+              "pt": "A via",
+              "fr": "Le quai",
+              "it": "Il binario",
+              "sq": "Binari",
+              "tr": "Peron"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "El billete",
+              "en": "The ticket",
+              "pt": "O bilhete",
+              "fr": "Le billet",
+              "it": "Il biglietto",
+              "sq": "Bileta",
+              "tr": "Bilet"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc2",
+        "question": {
+          "es": "'Umsteige' significa...",
+          "en": "'Umsteige' means...",
+          "pt": "'Umsteige' significa...",
+          "fr": "« Umsteige » signifie...",
+          "it": "'Umsteige' significa...",
+          "sq": "'Umsteige' do të thotë...",
+          "tr": "'Umsteige' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Hacer trasbordo",
+              "en": "To change trains",
+              "pt": "Fazer transbordo",
+              "fr": "Faire une correspondance",
+              "it": "Cambiare treno",
+              "sq": "Të ndërrosh trenin",
+              "tr": "Aktarma yapmak"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Comprar un billete",
+              "en": "To buy a ticket",
+              "pt": "Comprar um bilhete",
+              "fr": "Acheter un billet",
+              "it": "Comprare un biglietto",
+              "sq": "Të blesh një biletë",
+              "tr": "Bilet almak"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc3",
+        "question": {
+          "es": "'D Verspötig' significa...",
+          "en": "'D Verspötig' means...",
+          "pt": "'D Verspötig' significa...",
+          "fr": "« D Verspötig » signifie...",
+          "it": "'D Verspötig' significa...",
+          "sq": "'D Verspötig' do të thotë...",
+          "tr": "'D Verspötig' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "El retraso",
+              "en": "The delay",
+              "pt": "O atraso",
+              "fr": "Le retard",
+              "it": "Il ritardo",
+              "sq": "Vonesa",
+              "tr": "Gecikme"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "El horario",
+              "en": "The schedule",
+              "pt": "O horário",
+              "fr": "L'horaire",
+              "it": "L'orario",
+              "sq": "Orari",
+              "tr": "Tarife"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc4",
+        "question": {
+          "es": "'Direkt' significa que el tren...",
+          "en": "'Direkt' means the train...",
+          "pt": "'Direkt' significa que o comboio...",
+          "fr": "« Direkt » signifie que le train...",
+          "it": "'Direkt' significa che il treno...",
+          "sq": "'Direkt' do të thotë se treni...",
+          "tr": "'Direkt' trenin şu anlama gelir..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "No requiere trasbordo",
+              "en": "Doesn't require a change",
+              "pt": "Não requer transbordo",
+              "fr": "Ne nécessite pas de correspondance",
+              "it": "Non richiede cambio",
+              "sq": "Nuk kërkon ndërrim",
+              "tr": "Aktarma gerektirmez"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Está lleno",
+              "en": "Is full",
+              "pt": "Está cheio",
+              "fr": "Est plein",
+              "it": "È pieno",
+              "sq": "Është plot",
+              "tr": "Doludur"
+            },
+            "correct": false
+          }
+        ]
+      }
     ],
     "sentenceBuilder": [
-      { "id": "sb1", "prompt": { "es": "Construye: '¿De qué andén sale el tren?'", "en": "Build: 'Which platform does the train leave from?'", "pt": "Constrói: 'De que via parte o comboio?'", "fr": "Construisez : « De quel quai part le train ? »", "it": "Costruisci: 'Da quale binario parte il treno?'", "sq": "Ndërto: 'Nga cili binar niset treni?'", "tr": "Kur: 'Tren hangi perondan kalkıyor?'" }, "words": ["Vo", "wele", "Gleis", "fahrt", "de", "Zug", "?"], "correctOrder": [0, 1, 2, 3, 4, 5, 6] },
-      { "id": "sb2", "prompt": { "es": "Construye: 'El tren tiene retraso'", "en": "Build: 'The train is delayed'", "pt": "Constrói: 'O comboio está atrasado'", "fr": "Construisez : « Le train a du retard »", "it": "Costruisci: 'Il treno è in ritardo'", "sq": "Ndërto: 'Treni ka vonesë'", "tr": "Kur: 'Tren gecikmeli'" }, "words": ["De", "Zug", "het", "Verspötig"], "correctOrder": [0, 1, 2, 3] }
+      {
+        "id": "sb1",
+        "prompt": {
+          "es": "Construye: '¿De qué andén sale el tren?'",
+          "en": "Build: 'Which platform does the train leave from?'",
+          "pt": "Constrói: 'De que via parte o comboio?'",
+          "fr": "Construisez : « De quel quai part le train ? »",
+          "it": "Costruisci: 'Da quale binario parte il treno?'",
+          "sq": "Ndërto: 'Nga cili binar niset treni?'",
+          "tr": "Kur: 'Tren hangi perondan kalkıyor?'"
+        },
+        "words": [
+          "Vo",
+          "wele",
+          "Gleis",
+          "fahrt",
+          "de",
+          "Zug",
+          "?"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "id": "sb2",
+        "prompt": {
+          "es": "Construye: 'El tren tiene retraso'",
+          "en": "Build: 'The train is delayed'",
+          "pt": "Constrói: 'O comboio está atrasado'",
+          "fr": "Construisez : « Le train a du retard »",
+          "it": "Costruisci: 'Il treno è in ritardo'",
+          "sq": "Ndërto: 'Treni ka vonesë'",
+          "tr": "Kur: 'Tren gecikmeli'"
+        },
+        "words": [
+          "De",
+          "Zug",
+          "het",
+          "Verspötig"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
     ],
     "pronunciation": [
-      { "id": "p1", "expectedText": "Vo wele Gleis fahrt de Zug?", "lang": "de-DE", "hint": { "es": "Pregunta de qué andén sale el tren", "en": "Ask which platform the train leaves from", "pt": "Pergunta de que via parte o comboio", "fr": "Demandez de quel quai part le train", "it": "Chiedi da quale binario parte il treno", "sq": "Pyet nga cili binar niset treni", "tr": "Trenin hangi perondan kalktığını sor" } },
-      { "id": "p2", "expectedText": "Danke vielmal für d'Info", "lang": "de-DE", "hint": { "es": "Agradece la información", "en": "Thank them for the info", "pt": "Agradece a informação", "fr": "Remerciez pour l'info", "it": "Ringrazia per l'informazione", "sq": "Falenderoje për informacionin", "tr": "Bilgi için teşekkür et" } }
+      {
+        "id": "p1",
+        "expectedText": "Vo wele Gleis fahrt de Zug?",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Pregunta de qué andén sale el tren",
+          "en": "Ask which platform the train leaves from",
+          "pt": "Pergunta de que via parte o comboio",
+          "fr": "Demandez de quel quai part le train",
+          "it": "Chiedi da quale binario parte il treno",
+          "sq": "Pyet nga cili binar niset treni",
+          "tr": "Trenin hangi perondan kalktığını sor"
+        }
+      },
+      {
+        "id": "p2",
+        "expectedText": "Danke vielmal für d'Info",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Agradece la información",
+          "en": "Thank them for the info",
+          "pt": "Agradece a informação",
+          "fr": "Remerciez pour l'info",
+          "it": "Ringrazia per l'informazione",
+          "sq": "Falenderoje për informacionin",
+          "tr": "Bilgi için teşekkür et"
+        }
+      }
     ]
   },
   "finalExam": [
-    { "id": "e1", "question": { "es": "'Dr Zug' significa...", "en": "'Dr Zug' means...", "pt": "'Dr Zug' significa...", "fr": "« Dr Zug » signifie...", "it": "'Dr Zug' significa...", "sq": "'Dr Zug' do të thotë...", "tr": "'Dr Zug' anlamı..." }, "options": [ { "text": { "es": "El tren", "en": "The train", "pt": "O comboio", "fr": "Le train", "it": "Il treno", "sq": "Treni", "tr": "Tren" }, "correct": true }, { "text": { "es": "El autobús", "en": "The bus", "pt": "O autocarro", "fr": "Le bus", "it": "L'autobus", "sq": "Autobusi", "tr": "Otobüs" }, "correct": false } ] },
-    { "id": "e2", "question": { "es": "'S Billett' significa...", "en": "'S Billett' means...", "pt": "'S Billett' significa...", "fr": "« S Billett » signifie...", "it": "'S Billett' significa...", "sq": "'S Billett' do të thotë...", "tr": "'S Billett' anlamı..." }, "options": [ { "text": { "es": "El billete", "en": "The ticket", "pt": "O bilhete", "fr": "Le billet", "it": "Il biglietto", "sq": "Bileta", "tr": "Bilet" }, "correct": true }, { "text": { "es": "El andén", "en": "The platform", "pt": "A via", "fr": "Le quai", "it": "Il binario", "sq": "Binari", "tr": "Peron" }, "correct": false } ] },
-    { "id": "e3", "question": { "es": "'Umsteige' significa...", "en": "'Umsteige' means...", "pt": "'Umsteige' significa...", "fr": "« Umsteige » signifie...", "it": "'Umsteige' significa...", "sq": "'Umsteige' do të thotë...", "tr": "'Umsteige' anlamı..." }, "options": [ { "text": { "es": "Hacer trasbordo", "en": "To change trains", "pt": "Fazer transbordo", "fr": "Faire une correspondance", "it": "Cambiare treno", "sq": "Të ndërrosh trenin", "tr": "Aktarma yapmak" }, "correct": true }, { "text": { "es": "Bajarse del tren", "en": "To get off the train", "pt": "Sair do comboio", "fr": "Descendre du train", "it": "Scendere dal treno", "sq": "Të zbresësh nga treni", "tr": "Trenden inmek" }, "correct": false } ] },
-    { "id": "e4", "question": { "es": "'Vo wele Gleis fahrt de Zug?' significa...", "en": "'Vo wele Gleis fahrt de Zug?' means...", "pt": "'Vo wele Gleis fahrt de Zug?' significa...", "fr": "« Vo wele Gleis fahrt de Zug? » signifie...", "it": "'Vo wele Gleis fahrt de Zug?' significa...", "sq": "'Vo wele Gleis fahrt de Zug?' do të thotë...", "tr": "'Vo wele Gleis fahrt de Zug?' anlamı..." }, "options": [ { "text": { "es": "¿De qué andén sale el tren?", "en": "Which platform does the train leave from?", "pt": "De que via parte o comboio?", "fr": "De quel quai part le train ?", "it": "Da quale binario parte il treno?", "sq": "Nga cili binar niset treni?", "tr": "Tren hangi perondan kalkıyor?" }, "correct": true }, { "text": { "es": "¿Cuánto cuesta el billete?", "en": "How much does the ticket cost?", "pt": "Quanto custa o bilhete?", "fr": "Combien coûte le billet ?", "it": "Quanto costa il biglietto?", "sq": "Sa kushton bileta?", "tr": "Bilet ne kadar?" }, "correct": false } ] },
-    { "id": "e5", "question": { "es": "'D Verspötig' significa...", "en": "'D Verspötig' means...", "pt": "'D Verspötig' significa...", "fr": "« D Verspötig » signifie...", "it": "'D Verspötig' significa...", "sq": "'D Verspötig' do të thotë...", "tr": "'D Verspötig' anlamı..." }, "options": [ { "text": { "es": "El retraso", "en": "The delay", "pt": "O atraso", "fr": "Le retard", "it": "Il ritardo", "sq": "Vonesa", "tr": "Gecikme" }, "correct": true }, { "text": { "es": "El destino", "en": "The destination", "pt": "O destino", "fr": "La destination", "it": "La destinazione", "sq": "Destinacioni", "tr": "Varış noktası" }, "correct": false } ] },
-    { "id": "e6", "question": { "es": "Un tren 'direkt' significa que...", "en": "A 'direkt' train means...", "pt": "Um comboio 'direkt' significa que...", "fr": "Un train « direkt » signifie que...", "it": "Un treno 'direkt' significa che...", "sq": "Një tren 'direkt' do të thotë se...", "tr": "'Direkt' bir tren şu anlama gelir..." }, "options": [ { "text": { "es": "No hay que hacer trasbordo", "en": "You don't need to change trains", "pt": "Não é preciso fazer transbordo", "fr": "Il n'y a pas de correspondance à faire", "it": "Non serve cambiare treno", "sq": "Nuk duhet të ndërrosh tren", "tr": "Aktarma yapman gerekmez" }, "correct": true }, { "text": { "es": "El tren está retrasado", "en": "The train is delayed", "pt": "O comboio está atrasado", "fr": "Le train est en retard", "it": "Il treno è in ritardo", "sq": "Treni ka vonesë", "tr": "Tren gecikmeli" }, "correct": false } ] },
-    { "id": "e7", "question": { "es": "Traduce: 'Gleis 4, aber de Zug het Verspötig'", "en": "Translate: 'Gleis 4, aber de Zug het Verspötig'", "pt": "Traduz: 'Gleis 4, aber de Zug het Verspötig'", "fr": "Traduisez : « Gleis 4, aber de Zug het Verspötig »", "it": "Traduci: 'Gleis 4, aber de Zug het Verspötig'", "sq": "Përkthe: 'Gleis 4, aber de Zug het Verspötig'", "tr": "Çevir: 'Gleis 4, aber de Zug het Verspötig'" }, "options": [ { "text": { "es": "Andén 4, pero el tren tiene retraso", "en": "Platform 4, but the train is delayed", "pt": "Via 4, mas o comboio está atrasado", "fr": "Quai 4, mais le train a du retard", "it": "Binario 4, ma il treno è in ritardo", "sq": "Binari 4, por treni ka vonesë", "tr": "4. peron, ama tren gecikmeli" }, "correct": true }, { "text": { "es": "Andén 4, el tren llega puntual", "en": "Platform 4, the train is on time", "pt": "Via 4, o comboio chega a horas", "fr": "Quai 4, le train est à l'heure", "it": "Binario 4, il treno è in orario", "sq": "Binari 4, treni vjen në kohë", "tr": "4. peron, tren zamanında" }, "correct": false } ] },
-    { "id": "e8", "question": { "es": "La red de trenes en Suiza es conocida por ser...", "en": "The Swiss train network is known for being...", "pt": "A rede ferroviária na Suíça é conhecida por ser...", "fr": "Le réseau ferroviaire en Suisse est connu pour être...", "it": "La rete ferroviaria in Svizzera è nota per essere...", "sq": "Rrjeti hekurudhor në Zvicër njihet për të qenë...", "tr": "İsviçre'deki tren ağı şunlarla bilinir..." }, "options": [ { "text": { "es": "Puntual y frecuente", "en": "Punctual and frequent", "pt": "Pontual e frequente", "fr": "Ponctuel et fréquent", "it": "Puntuale e frequente", "sq": "I saktë dhe i shpeshtë", "tr": "Dakik ve sık" }, "correct": true }, { "text": { "es": "Muy lenta", "en": "Very slow", "pt": "Muito lenta", "fr": "Très lent", "it": "Molto lenta", "sq": "Shumë e ngadaltë", "tr": "Çok yavaş" }, "correct": false } ] },
-    { "id": "e9", "question": { "es": "'S Gleis' significa...", "en": "'S Gleis' means...", "pt": "'S Gleis' significa...", "fr": "« S Gleis » signifie...", "it": "'S Gleis' significa...", "sq": "'S Gleis' do të thotë...", "tr": "'S Gleis' anlamı..." }, "options": [ { "text": { "es": "El andén", "en": "The platform", "pt": "A via", "fr": "Le quai", "it": "Il binario", "sq": "Binari", "tr": "Peron" }, "correct": true }, { "text": { "es": "La estación", "en": "The station", "pt": "A estação", "fr": "La gare", "it": "La stazione", "sq": "Stacioni", "tr": "İstasyon" }, "correct": false } ] },
-    { "id": "e10", "question": { "es": "Al despedirte agradeciendo información, dices...", "en": "When saying goodbye after thanking someone for info, you say...", "pt": "Ao despedires-te agradecendo a informação, dizes...", "fr": "En prenant congé après avoir remercié pour l'info, on dit...", "it": "Quando ti congedi ringraziando per l'informazione, dici...", "sq": "Kur ndahesh duke falenderuar për informacionin, thua...", "tr": "Bilgi için teşekkür ederek vedalaşırken dersin ki..." }, "options": [ { "text": "Danke vielmal für d'Info!", "correct": true }, { "text": "Das isch mir egal.", "correct": false } ] }
+    {
+      "id": "e1",
+      "question": {
+        "es": "'Dr Zug' significa...",
+        "en": "'Dr Zug' means...",
+        "pt": "'Dr Zug' significa...",
+        "fr": "« Dr Zug » signifie...",
+        "it": "'Dr Zug' significa...",
+        "sq": "'Dr Zug' do të thotë...",
+        "tr": "'Dr Zug' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El tren",
+            "en": "The train",
+            "pt": "O comboio",
+            "fr": "Le train",
+            "it": "Il treno",
+            "sq": "Treni",
+            "tr": "Tren"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El autobús",
+            "en": "The bus",
+            "pt": "O autocarro",
+            "fr": "Le bus",
+            "it": "L'autobus",
+            "sq": "Autobusi",
+            "tr": "Otobüs"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "question": {
+        "es": "'S Billett' significa...",
+        "en": "'S Billett' means...",
+        "pt": "'S Billett' significa...",
+        "fr": "« S Billett » signifie...",
+        "it": "'S Billett' significa...",
+        "sq": "'S Billett' do të thotë...",
+        "tr": "'S Billett' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El billete",
+            "en": "The ticket",
+            "pt": "O bilhete",
+            "fr": "Le billet",
+            "it": "Il biglietto",
+            "sq": "Bileta",
+            "tr": "Bilet"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El andén",
+            "en": "The platform",
+            "pt": "A via",
+            "fr": "Le quai",
+            "it": "Il binario",
+            "sq": "Binari",
+            "tr": "Peron"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "question": {
+        "es": "'Umsteige' significa...",
+        "en": "'Umsteige' means...",
+        "pt": "'Umsteige' significa...",
+        "fr": "« Umsteige » signifie...",
+        "it": "'Umsteige' significa...",
+        "sq": "'Umsteige' do të thotë...",
+        "tr": "'Umsteige' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Hacer trasbordo",
+            "en": "To change trains",
+            "pt": "Fazer transbordo",
+            "fr": "Faire une correspondance",
+            "it": "Cambiare treno",
+            "sq": "Të ndërrosh trenin",
+            "tr": "Aktarma yapmak"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Bajarse del tren",
+            "en": "To get off the train",
+            "pt": "Sair do comboio",
+            "fr": "Descendre du train",
+            "it": "Scendere dal treno",
+            "sq": "Të zbresësh nga treni",
+            "tr": "Trenden inmek"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "question": {
+        "es": "'Vo wele Gleis fahrt de Zug?' significa...",
+        "en": "'Vo wele Gleis fahrt de Zug?' means...",
+        "pt": "'Vo wele Gleis fahrt de Zug?' significa...",
+        "fr": "« Vo wele Gleis fahrt de Zug? » signifie...",
+        "it": "'Vo wele Gleis fahrt de Zug?' significa...",
+        "sq": "'Vo wele Gleis fahrt de Zug?' do të thotë...",
+        "tr": "'Vo wele Gleis fahrt de Zug?' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "¿De qué andén sale el tren?",
+            "en": "Which platform does the train leave from?",
+            "pt": "De que via parte o comboio?",
+            "fr": "De quel quai part le train ?",
+            "it": "Da quale binario parte il treno?",
+            "sq": "Nga cili binar niset treni?",
+            "tr": "Tren hangi perondan kalkıyor?"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "¿Cuánto cuesta el billete?",
+            "en": "How much does the ticket cost?",
+            "pt": "Quanto custa o bilhete?",
+            "fr": "Combien coûte le billet ?",
+            "it": "Quanto costa il biglietto?",
+            "sq": "Sa kushton bileta?",
+            "tr": "Bilet ne kadar?"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "question": {
+        "es": "'D Verspötig' significa...",
+        "en": "'D Verspötig' means...",
+        "pt": "'D Verspötig' significa...",
+        "fr": "« D Verspötig » signifie...",
+        "it": "'D Verspötig' significa...",
+        "sq": "'D Verspötig' do të thotë...",
+        "tr": "'D Verspötig' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El retraso",
+            "en": "The delay",
+            "pt": "O atraso",
+            "fr": "Le retard",
+            "it": "Il ritardo",
+            "sq": "Vonesa",
+            "tr": "Gecikme"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El destino",
+            "en": "The destination",
+            "pt": "O destino",
+            "fr": "La destination",
+            "it": "La destinazione",
+            "sq": "Destinacioni",
+            "tr": "Varış noktası"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "question": {
+        "es": "Un tren 'direkt' significa que...",
+        "en": "A 'direkt' train means...",
+        "pt": "Um comboio 'direkt' significa que...",
+        "fr": "Un train « direkt » signifie que...",
+        "it": "Un treno 'direkt' significa che...",
+        "sq": "Një tren 'direkt' do të thotë se...",
+        "tr": "'Direkt' bir tren şu anlama gelir..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "No hay que hacer trasbordo",
+            "en": "You don't need to change trains",
+            "pt": "Não é preciso fazer transbordo",
+            "fr": "Il n'y a pas de correspondance à faire",
+            "it": "Non serve cambiare treno",
+            "sq": "Nuk duhet të ndërrosh tren",
+            "tr": "Aktarma yapman gerekmez"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El tren está retrasado",
+            "en": "The train is delayed",
+            "pt": "O comboio está atrasado",
+            "fr": "Le train est en retard",
+            "it": "Il treno è in ritardo",
+            "sq": "Treni ka vonesë",
+            "tr": "Tren gecikmeli"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "question": {
+        "es": "Traduce: 'Gleis 4, aber de Zug het Verspötig'",
+        "en": "Translate: 'Gleis 4, aber de Zug het Verspötig'",
+        "pt": "Traduz: 'Gleis 4, aber de Zug het Verspötig'",
+        "fr": "Traduisez : « Gleis 4, aber de Zug het Verspötig »",
+        "it": "Traduci: 'Gleis 4, aber de Zug het Verspötig'",
+        "sq": "Përkthe: 'Gleis 4, aber de Zug het Verspötig'",
+        "tr": "Çevir: 'Gleis 4, aber de Zug het Verspötig'"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Andén 4, pero el tren tiene retraso",
+            "en": "Platform 4, but the train is delayed",
+            "pt": "Via 4, mas o comboio está atrasado",
+            "fr": "Quai 4, mais le train a du retard",
+            "it": "Binario 4, ma il treno è in ritardo",
+            "sq": "Binari 4, por treni ka vonesë",
+            "tr": "4. peron, ama tren gecikmeli"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Andén 4, el tren llega puntual",
+            "en": "Platform 4, the train is on time",
+            "pt": "Via 4, o comboio chega a horas",
+            "fr": "Quai 4, le train est à l'heure",
+            "it": "Binario 4, il treno è in orario",
+            "sq": "Binari 4, treni vjen në kohë",
+            "tr": "4. peron, tren zamanında"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "question": {
+        "es": "La red de trenes en Suiza es conocida por ser...",
+        "en": "The Swiss train network is known for being...",
+        "pt": "A rede ferroviária na Suíça é conhecida por ser...",
+        "fr": "Le réseau ferroviaire en Suisse est connu pour être...",
+        "it": "La rete ferroviaria in Svizzera è nota per essere...",
+        "sq": "Rrjeti hekurudhor në Zvicër njihet për të qenë...",
+        "tr": "İsviçre'deki tren ağı şunlarla bilinir..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Puntual y frecuente",
+            "en": "Punctual and frequent",
+            "pt": "Pontual e frequente",
+            "fr": "Ponctuel et fréquent",
+            "it": "Puntuale e frequente",
+            "sq": "I saktë dhe i shpeshtë",
+            "tr": "Dakik ve sık"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Muy lenta",
+            "en": "Very slow",
+            "pt": "Muito lenta",
+            "fr": "Très lent",
+            "it": "Molto lenta",
+            "sq": "Shumë e ngadaltë",
+            "tr": "Çok yavaş"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "question": {
+        "es": "'S Gleis' significa...",
+        "en": "'S Gleis' means...",
+        "pt": "'S Gleis' significa...",
+        "fr": "« S Gleis » signifie...",
+        "it": "'S Gleis' significa...",
+        "sq": "'S Gleis' do të thotë...",
+        "tr": "'S Gleis' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El andén",
+            "en": "The platform",
+            "pt": "A via",
+            "fr": "Le quai",
+            "it": "Il binario",
+            "sq": "Binari",
+            "tr": "Peron"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "La estación",
+            "en": "The station",
+            "pt": "A estação",
+            "fr": "La gare",
+            "it": "La stazione",
+            "sq": "Stacioni",
+            "tr": "İstasyon"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "question": {
+        "es": "Al despedirte agradeciendo información, dices...",
+        "en": "When saying goodbye after thanking someone for info, you say...",
+        "pt": "Ao despedires-te agradecendo a informação, dizes...",
+        "fr": "En prenant congé après avoir remercié pour l'info, on dit...",
+        "it": "Quando ti congedi ringraziando per l'informazione, dici...",
+        "sq": "Kur ndahesh duke falenderuar për informacionin, thua...",
+        "tr": "Bilgi için teşekkür ederek vedalaşırken dersin ki..."
+      },
+      "options": [
+        {
+          "text": "Danke vielmal für d'Info!",
+          "correct": true
+        },
+        {
+          "text": "Das isch mir egal.",
+          "correct": false
+        }
+      ]
+    }
   ]
 }

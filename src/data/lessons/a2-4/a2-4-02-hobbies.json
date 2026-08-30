@@ -42,84 +42,984 @@
         "sq": "Nuk ka folje 'të pëlqesh' si e tillë — shtohet fjala 'gern' (me kënaqësi) pas foljes: 'Ich läse gern' (më pëlqen të lexoj, fjalë për fjalë 'unë lexoj me kënaqësi'). Për të thënë se diçka të pëlqen MË SHUMË, përdor 'lieber': 'Ich lisen lieber am Abig' (preferoj të lexoj në mbrëmje).",
         "tr": "'Sevmek' diye bir fiil yoktur — fiilden sonra 'gern' (seve seve) kelimesi eklenir: 'Ich läse gern' (okumayı severim, kelimenin tam anlamıyla 'seve seve okurum'). Bir şeyi DAHA ÇOK sevdiğini söylemek için 'lieber' kullanılır: 'Ich lisen lieber am Abig' (akşamları okumayı tercih ederim)."
       },
-      "table": [
-        { "left": "Ich gang gern wandere.", "right": { "es": "Me gusta ir de excursión.", "en": "I like going hiking.", "pt": "Gosto de ir caminhar.", "fr": "J'aime aller randonner.", "it": "Mi piace fare escursioni.", "sq": "Më pëlqen të bëj ecje malore.", "tr": "Yürüyüşe gitmeyi severim." } },
-        { "left": "Was machsch gern i dyner Freizit?", "right": { "es": "¿Qué te gusta hacer en tu tiempo libre?", "en": "What do you like doing in your free time?", "pt": "O que gostas de fazer no teu tempo livre?", "fr": "Qu'aimes-tu faire pendant ton temps libre ?", "it": "Cosa ti piace fare nel tuo tempo libero?", "sq": "Çfarë të pëlqen të bësh në kohën tënde të lirë?", "tr": "Boş zamanında ne yapmayı seversin?" } }
-      ]
+      "table": {
+        "headers": [
+          "Frase",
+          "Schwiizerdütsch"
+        ],
+        "rows": [
+          [
+            "Me gusta ir de excursión.",
+            "Ich gang gern wandere."
+          ],
+          [
+            "¿Qué te gusta hacer en tu tiempo libre?",
+            "Was machsch gern i dyner Freizit?"
+          ]
+        ]
+      }
     }
   ],
   "dialogueSimulations": [
     {
       "id": "sim-hobbies",
-      "scenario": { "es": "Charlando sobre aficiones con un vecino nuevo", "en": "Chatting about hobbies with a new neighbor", "pt": "A conversar sobre passatempos com um vizinho novo", "fr": "Discuter de loisirs avec un nouveau voisin", "it": "Chiacchierare di hobby con un nuovo vicino", "sq": "Duke biseduar për hobi me një fqinj të ri", "tr": "Yeni bir komşuyla hobiler hakkında sohbet etmek" },
+      "scenario": {
+        "es": "Charlando sobre aficiones con un vecino nuevo",
+        "en": "Chatting about hobbies with a new neighbor",
+        "pt": "A conversar sobre passatempos com um vizinho novo",
+        "fr": "Discuter de loisirs avec un nouveau voisin",
+        "it": "Chiacchierare di hobby con un nuovo vicino",
+        "sq": "Duke biseduar për hobi me një fqinj të ri",
+        "tr": "Yeni bir komşuyla hobiler hakkında sohbet etmek"
+      },
       "npcName": "Vecino/a",
       "npcEmoji": "🏘️",
       "turns": [
-        { "speaker": "npc", "text": "Was machsch gern i dyner Freizit?", "base": { "es": "¿Qué te gusta hacer en tu tiempo libre?", "en": "What do you like doing in your free time?", "pt": "O que gostas de fazer no teu tempo livre?", "fr": "Qu'aimes-tu faire pendant ton temps libre ?", "it": "Cosa ti piace fare nel tuo tempo libero?", "sq": "Çfarë të pëlqen të bësh në kohën tënde të lirë?", "tr": "Boş zamanında ne yapmayı seversin?" } },
+        {
+          "speaker": "npc",
+          "text": "Was machsch gern i dyner Freizit?",
+          "base": {
+            "es": "¿Qué te gusta hacer en tu tiempo libre?",
+            "en": "What do you like doing in your free time?",
+            "pt": "O que gostas de fazer no teu tempo livre?",
+            "fr": "Qu'aimes-tu faire pendant ton temps libre ?",
+            "it": "Cosa ti piace fare nel tuo tempo libero?",
+            "sq": "Çfarë të pëlqen të bësh në kohën tënde të lirë?",
+            "tr": "Boş zamanında ne yapmayı seversin?"
+          }
+        },
         {
           "speaker": "user",
           "options": [
-            { "text": "Ich gang gern wandere und lise gern Bücher.", "base": { "es": "Me gusta ir de excursión y leer libros.", "en": "I like hiking and reading books.", "pt": "Gosto de caminhar e ler livros.", "fr": "J'aime randonner et lire des livres.", "it": "Mi piace fare escursioni e leggere libri.", "sq": "Më pëlqen të bëj ecje malore dhe të lexoj libra.", "tr": "Yürüyüş yapmayı ve kitap okumayı severim." }, "correct": true },
-            { "text": "Ich ha kei Freizit.", "base": { "es": "No tengo tiempo libre.", "en": "I don't have any free time.", "pt": "Não tenho tempo livre.", "fr": "Je n'ai pas de temps libre.", "it": "Non ho tempo libero.", "sq": "Nuk kam kohë të lirë.", "tr": "Hiç boş zamanım yok." }, "correct": false, "feedback": { "es": "Es una charla amistosa — mejor compartir alguna afición, aunque sea pequeña.", "en": "This is friendly small talk — better to share a hobby, even a small one.", "pt": "É uma conversa amigável — é melhor partilhar algum passatempo, mesmo que pequeno.", "fr": "C'est une conversation amicale — mieux vaut partager un loisir, même petit.", "it": "È una chiacchierata amichevole — meglio condividere un hobby, anche piccolo.", "sq": "Kjo është një bisedë miqësore — më mirë ndaj një hobi, edhe pse të vogël.", "tr": "Bu samimi bir sohbet — küçük de olsa bir hobi paylaşmak daha iyi." } }
+            {
+              "text": "Ich gang gern wandere und lise gern Bücher.",
+              "base": {
+                "es": "Me gusta ir de excursión y leer libros.",
+                "en": "I like hiking and reading books.",
+                "pt": "Gosto de caminhar e ler livros.",
+                "fr": "J'aime randonner et lire des livres.",
+                "it": "Mi piace fare escursioni e leggere libri.",
+                "sq": "Më pëlqen të bëj ecje malore dhe të lexoj libra.",
+                "tr": "Yürüyüş yapmayı ve kitap okumayı severim."
+              },
+              "correct": true
+            },
+            {
+              "text": "Ich ha kei Freizit.",
+              "base": {
+                "es": "No tengo tiempo libre.",
+                "en": "I don't have any free time.",
+                "pt": "Não tenho tempo livre.",
+                "fr": "Je n'ai pas de temps libre.",
+                "it": "Non ho tempo libero.",
+                "sq": "Nuk kam kohë të lirë.",
+                "tr": "Hiç boş zamanım yok."
+              },
+              "correct": false,
+              "feedback": {
+                "es": "Es una charla amistosa — mejor compartir alguna afición, aunque sea pequeña.",
+                "en": "This is friendly small talk — better to share a hobby, even a small one.",
+                "pt": "É uma conversa amigável — é melhor partilhar algum passatempo, mesmo que pequeno.",
+                "fr": "C'est une conversation amicale — mieux vaut partager un loisir, même petit.",
+                "it": "È una chiacchierata amichevole — meglio condividere un hobby, anche piccolo.",
+                "sq": "Kjo është një bisedë miqësore — më mirë ndaj një hobi, edhe pse të vogël.",
+                "tr": "Bu samimi bir sohbet — küçük de olsa bir hobi paylaşmak daha iyi."
+              }
+            }
           ]
         },
-        { "speaker": "npc", "text": "Cool! Ich gang lieber go schwimme als wandere.", "base": { "es": "¡Genial! Yo prefiero nadar antes que ir de excursión.", "en": "Cool! I prefer swimming over hiking.", "pt": "Fixe! Eu prefiro nadar a caminhar.", "fr": "Cool ! Je préfère nager plutôt que randonner.", "it": "Fico! Io preferisco nuotare piuttosto che fare escursioni.", "sq": "Për bukuri! Unë preferoj të notoj sesa të bëj ecje malore.", "tr": "Harika! Ben yürüyüşten çok yüzmeyi tercih ederim." } },
+        {
+          "speaker": "npc",
+          "text": "Cool! Ich gang lieber go schwimme als wandere.",
+          "base": {
+            "es": "¡Genial! Yo prefiero nadar antes que ir de excursión.",
+            "en": "Cool! I prefer swimming over hiking.",
+            "pt": "Fixe! Eu prefiro nadar a caminhar.",
+            "fr": "Cool ! Je préfère nager plutôt que randonner.",
+            "it": "Fico! Io preferisco nuotare piuttosto che fare escursioni.",
+            "sq": "Për bukuri! Unë preferoj të notoj sesa të bëj ecje malore.",
+            "tr": "Harika! Ben yürüyüşten çok yüzmeyi tercih ederim."
+          }
+        },
         {
           "speaker": "user",
           "options": [
-            { "text": "Interessant! Wei mer emal zäme öppis mache?", "base": { "es": "¡Interesante! ¿Quedamos alguna vez para hacer algo juntos?", "en": "Interesting! Shall we do something together sometime?", "pt": "Interessante! Vamos fazer algo juntos alguma vez?", "fr": "Intéressant ! On fait quelque chose ensemble un de ces jours ?", "it": "Interessante! Facciamo qualcosa insieme qualche volta?", "sq": "Interesante! A të bëjmë ndonjëherë diçka së bashku?", "tr": "İlginç! Bir ara birlikte bir şeyler yapalım mı?" }, "correct": true },
-            { "text": "Schwimme isch langwilig.", "base": { "es": "Nadar es aburrido.", "en": "Swimming is boring.", "pt": "Nadar é aborrecido.", "fr": "Nager, c'est ennuyeux.", "it": "Nuotare è noioso.", "sq": "Notimi është i mërzitshëm.", "tr": "Yüzmek sıkıcı." }, "correct": false, "feedback": { "es": "Mejor no criticar la afición de tu vecino/a recién conocido/a — busca algo en común.", "en": "Better not to criticize your new neighbor's hobby — look for common ground instead.", "pt": "É melhor não criticar o passatempo do teu vizinho recém-conhecido — procura algo em comum.", "fr": "Mieux vaut ne pas critiquer le loisir de votre nouveau voisin — cherchez plutôt un point commun.", "it": "Meglio non criticare l'hobby del tuo nuovo vicino — cerca invece un punto in comune.", "sq": "Më mirë mos e kritiko hobin e fqinjit tënd të ri — kërko diçka të përbashkët.", "tr": "Yeni komşunun hobisini eleştirmemek daha iyi — ortak bir nokta ara." } }
+            {
+              "text": "Interessant! Wei mer emal zäme öppis mache?",
+              "base": {
+                "es": "¡Interesante! ¿Quedamos alguna vez para hacer algo juntos?",
+                "en": "Interesting! Shall we do something together sometime?",
+                "pt": "Interessante! Vamos fazer algo juntos alguma vez?",
+                "fr": "Intéressant ! On fait quelque chose ensemble un de ces jours ?",
+                "it": "Interessante! Facciamo qualcosa insieme qualche volta?",
+                "sq": "Interesante! A të bëjmë ndonjëherë diçka së bashku?",
+                "tr": "İlginç! Bir ara birlikte bir şeyler yapalım mı?"
+              },
+              "correct": true
+            },
+            {
+              "text": "Schwimme isch langwilig.",
+              "base": {
+                "es": "Nadar es aburrido.",
+                "en": "Swimming is boring.",
+                "pt": "Nadar é aborrecido.",
+                "fr": "Nager, c'est ennuyeux.",
+                "it": "Nuotare è noioso.",
+                "sq": "Notimi është i mërzitshëm.",
+                "tr": "Yüzmek sıkıcı."
+              },
+              "correct": false,
+              "feedback": {
+                "es": "Mejor no criticar la afición de tu vecino/a recién conocido/a — busca algo en común.",
+                "en": "Better not to criticize your new neighbor's hobby — look for common ground instead.",
+                "pt": "É melhor não criticar o passatempo do teu vizinho recém-conhecido — procura algo em comum.",
+                "fr": "Mieux vaut ne pas critiquer le loisir de votre nouveau voisin — cherchez plutôt un point commun.",
+                "it": "Meglio non criticare l'hobby del tuo nuovo vicino — cerca invece un punto in comune.",
+                "sq": "Më mirë mos e kritiko hobin e fqinjit tënd të ri — kërko diçka të përbashkët.",
+                "tr": "Yeni komşunun hobisini eleştirmemek daha iyi — ortak bir nokta ara."
+              }
+            }
           ]
         }
       ]
     }
   ],
   "comparisonTable": [
-    { "base": { "es": "El tiempo libre", "en": "Free time", "pt": "O tempo livre", "fr": "Le temps libre", "it": "Il tempo libero", "sq": "Koha e lirë", "tr": "Boş zaman" }, "hochdeutsch": "Die Freizeit", "schwiizerduetsch": "D'Freizit" },
-    { "base": { "es": "Me gusta (hacer algo)", "en": "I like (doing something)", "pt": "Gosto de (fazer algo)", "fr": "J'aime (faire quelque chose)", "it": "Mi piace (fare qualcosa)", "sq": "Më pëlqen (të bëj diçka)", "tr": "(Bir şey yapmayı) severim" }, "hochdeutsch": "Gern (+ Verb)", "schwiizerduetsch": "Gern (+ Verb)" },
-    { "base": { "es": "Prefiero", "en": "I prefer", "pt": "Prefiro", "fr": "Je préfère", "it": "Preferisco", "sq": "Preferoj", "tr": "Tercih ederim" }, "hochdeutsch": "Lieber (+ Verb)", "schwiizerduetsch": "Lieber (+ Verb)" },
-    { "base": { "es": "Nadar", "en": "To swim", "pt": "Nadar", "fr": "Nager", "it": "Nuotare", "sq": "Të notosh", "tr": "Yüzmek" }, "hochdeutsch": "Schwimmen", "schwiizerduetsch": "Schwimme" },
-    { "base": { "es": "Leer", "en": "To read", "pt": "Ler", "fr": "Lire", "it": "Leggere", "sq": "Të lexosh", "tr": "Okumak" }, "hochdeutsch": "Lesen", "schwiizerduetsch": "Lise" },
-    { "base": { "es": "Aburrido/a", "en": "Boring", "pt": "Aborrecido", "fr": "Ennuyeux", "it": "Noioso", "sq": "I mërzitshëm", "tr": "Sıkıcı" }, "hochdeutsch": "Langweilig", "schwiizerduetsch": "Langwilig" }
+    {
+      "base": {
+        "es": "El tiempo libre",
+        "en": "Free time",
+        "pt": "O tempo livre",
+        "fr": "Le temps libre",
+        "it": "Il tempo libero",
+        "sq": "Koha e lirë",
+        "tr": "Boş zaman"
+      },
+      "hochdeutsch": "Die Freizeit",
+      "schwiizerduetsch": "D'Freizit"
+    },
+    {
+      "base": {
+        "es": "Me gusta (hacer algo)",
+        "en": "I like (doing something)",
+        "pt": "Gosto de (fazer algo)",
+        "fr": "J'aime (faire quelque chose)",
+        "it": "Mi piace (fare qualcosa)",
+        "sq": "Më pëlqen (të bëj diçka)",
+        "tr": "(Bir şey yapmayı) severim"
+      },
+      "hochdeutsch": "Gern (+ Verb)",
+      "schwiizerduetsch": "Gern (+ Verb)"
+    },
+    {
+      "base": {
+        "es": "Prefiero",
+        "en": "I prefer",
+        "pt": "Prefiro",
+        "fr": "Je préfère",
+        "it": "Preferisco",
+        "sq": "Preferoj",
+        "tr": "Tercih ederim"
+      },
+      "hochdeutsch": "Lieber (+ Verb)",
+      "schwiizerduetsch": "Lieber (+ Verb)"
+    },
+    {
+      "base": {
+        "es": "Nadar",
+        "en": "To swim",
+        "pt": "Nadar",
+        "fr": "Nager",
+        "it": "Nuotare",
+        "sq": "Të notosh",
+        "tr": "Yüzmek"
+      },
+      "hochdeutsch": "Schwimmen",
+      "schwiizerduetsch": "Schwimme"
+    },
+    {
+      "base": {
+        "es": "Leer",
+        "en": "To read",
+        "pt": "Ler",
+        "fr": "Lire",
+        "it": "Leggere",
+        "sq": "Të lexosh",
+        "tr": "Okumak"
+      },
+      "hochdeutsch": "Lesen",
+      "schwiizerduetsch": "Lise"
+    },
+    {
+      "base": {
+        "es": "Aburrido/a",
+        "en": "Boring",
+        "pt": "Aborrecido",
+        "fr": "Ennuyeux",
+        "it": "Noioso",
+        "sq": "I mërzitshëm",
+        "tr": "Sıkıcı"
+      },
+      "hochdeutsch": "Langweilig",
+      "schwiizerduetsch": "Langwilig"
+    }
   ],
   "vocabulary": [
-    { "id": "v1", "hochdeutsch": "Die Freizeit", "schwiizerduetsch": "D'Freizit", "audioText": "I dyner Freizit", "base": { "es": "El tiempo libre", "en": "Free time", "pt": "O tempo livre", "fr": "Le temps libre", "it": "Il tempo libero", "sq": "Koha e lirë", "tr": "Boş zaman" } },
-    { "id": "v2", "hochdeutsch": "Gern (+ Verb)", "schwiizerduetsch": "Gern (+ Verb)", "audioText": "Ich lise gern", "base": { "es": "Me gusta (hacer algo)", "en": "I like (doing something)", "pt": "Gosto de (fazer algo)", "fr": "J'aime (faire quelque chose)", "it": "Mi piace (fare qualcosa)", "sq": "Më pëlqen (të bëj diçka)", "tr": "(Bir şey yapmayı) severim" } },
-    { "id": "v3", "hochdeutsch": "Lieber (+ Verb)", "schwiizerduetsch": "Lieber (+ Verb)", "audioText": "Ich gang lieber schwimme", "base": { "es": "Prefiero", "en": "I prefer", "pt": "Prefiro", "fr": "Je préfère", "it": "Preferisco", "sq": "Preferoj", "tr": "Tercih ederim" } },
-    { "id": "v4", "hochdeutsch": "Schwimmen", "schwiizerduetsch": "Schwimme", "audioText": "Schwimme", "base": { "es": "Nadar", "en": "To swim", "pt": "Nadar", "fr": "Nager", "it": "Nuotare", "sq": "Të notosh", "tr": "Yüzmek" } },
-    { "id": "v5", "hochdeutsch": "Lesen", "schwiizerduetsch": "Lise", "audioText": "Lise", "base": { "es": "Leer", "en": "To read", "pt": "Ler", "fr": "Lire", "it": "Leggere", "sq": "Të lexosh", "tr": "Okumak" } },
-    { "id": "v6", "hochdeutsch": "Langweilig", "schwiizerduetsch": "Langwilig", "audioText": "Langwilig", "base": { "es": "Aburrido/a", "en": "Boring", "pt": "Aborrecido", "fr": "Ennuyeux", "it": "Noioso", "sq": "I mërzitshëm", "tr": "Sıkıcı" } }
+    {
+      "id": "v1",
+      "hochdeutsch": "Die Freizeit",
+      "schwiizerduetsch": "D'Freizit",
+      "audioText": "I dyner Freizit",
+      "base": {
+        "es": "El tiempo libre",
+        "en": "Free time",
+        "pt": "O tempo livre",
+        "fr": "Le temps libre",
+        "it": "Il tempo libero",
+        "sq": "Koha e lirë",
+        "tr": "Boş zaman"
+      }
+    },
+    {
+      "id": "v2",
+      "hochdeutsch": "Gern (+ Verb)",
+      "schwiizerduetsch": "Gern (+ Verb)",
+      "audioText": "Ich lise gern",
+      "base": {
+        "es": "Me gusta (hacer algo)",
+        "en": "I like (doing something)",
+        "pt": "Gosto de (fazer algo)",
+        "fr": "J'aime (faire quelque chose)",
+        "it": "Mi piace (fare qualcosa)",
+        "sq": "Më pëlqen (të bëj diçka)",
+        "tr": "(Bir şey yapmayı) severim"
+      }
+    },
+    {
+      "id": "v3",
+      "hochdeutsch": "Lieber (+ Verb)",
+      "schwiizerduetsch": "Lieber (+ Verb)",
+      "audioText": "Ich gang lieber schwimme",
+      "base": {
+        "es": "Prefiero",
+        "en": "I prefer",
+        "pt": "Prefiro",
+        "fr": "Je préfère",
+        "it": "Preferisco",
+        "sq": "Preferoj",
+        "tr": "Tercih ederim"
+      }
+    },
+    {
+      "id": "v4",
+      "hochdeutsch": "Schwimmen",
+      "schwiizerduetsch": "Schwimme",
+      "audioText": "Schwimme",
+      "base": {
+        "es": "Nadar",
+        "en": "To swim",
+        "pt": "Nadar",
+        "fr": "Nager",
+        "it": "Nuotare",
+        "sq": "Të notosh",
+        "tr": "Yüzmek"
+      }
+    },
+    {
+      "id": "v5",
+      "hochdeutsch": "Lesen",
+      "schwiizerduetsch": "Lise",
+      "audioText": "Lise",
+      "base": {
+        "es": "Leer",
+        "en": "To read",
+        "pt": "Ler",
+        "fr": "Lire",
+        "it": "Leggere",
+        "sq": "Të lexosh",
+        "tr": "Okumak"
+      }
+    },
+    {
+      "id": "v6",
+      "hochdeutsch": "Langweilig",
+      "schwiizerduetsch": "Langwilig",
+      "audioText": "Langwilig",
+      "base": {
+        "es": "Aburrido/a",
+        "en": "Boring",
+        "pt": "Aborrecido",
+        "fr": "Ennuyeux",
+        "it": "Noioso",
+        "sq": "I mërzitshëm",
+        "tr": "Sıkıcı"
+      }
+    }
   ],
   "exercises": {
     "fillBlanks": [
-      { "id": "fb1", "before": "Ich läse", "after": ".", "correctWord": "gern", "options": ["gern", "lieber", "nöd"], "hint": { "es": "Completa: 'Me gusta leer'", "en": "Complete: 'I like reading'", "pt": "Completa: 'Gosto de ler'", "fr": "Complétez : « J'aime lire »", "it": "Completa: 'Mi piace leggere'", "sq": "Plotëso: 'Më pëlqen të lexoj'", "tr": "Tamamla: 'Okumayı severim'" } },
-      { "id": "fb2", "before": "Was machsch gern i dyner", "after": "?", "correctWord": "Freizit", "options": ["Freizit", "Arbeit", "Schuel"], "hint": { "es": "Completa: '¿Qué te gusta hacer en tu tiempo libre?'", "en": "Complete: 'What do you like doing in your free time?'", "pt": "Completa: 'O que gostas de fazer no teu tempo livre?'", "fr": "Complétez : « Qu'aimes-tu faire pendant ton temps libre ? »", "it": "Completa: 'Cosa ti piace fare nel tuo tempo libero?'", "sq": "Plotëso: 'Çfarë të pëlqen të bësh në kohën tënde të lirë?'", "tr": "Tamamla: 'Boş zamanında ne yapmayı seversin?'" } }
+      {
+        "id": "fb1",
+        "before": "Ich läse",
+        "after": ".",
+        "correctWord": "gern",
+        "options": [
+          "gern",
+          "lieber",
+          "nöd"
+        ],
+        "hint": {
+          "es": "Completa: 'Me gusta leer'",
+          "en": "Complete: 'I like reading'",
+          "pt": "Completa: 'Gosto de ler'",
+          "fr": "Complétez : « J'aime lire »",
+          "it": "Completa: 'Mi piace leggere'",
+          "sq": "Plotëso: 'Më pëlqen të lexoj'",
+          "tr": "Tamamla: 'Okumayı severim'"
+        }
+      },
+      {
+        "id": "fb2",
+        "before": "Was machsch gern i dyner",
+        "after": "?",
+        "correctWord": "Freizit",
+        "options": [
+          "Freizit",
+          "Arbeit",
+          "Schuel"
+        ],
+        "hint": {
+          "es": "Completa: '¿Qué te gusta hacer en tu tiempo libre?'",
+          "en": "Complete: 'What do you like doing in your free time?'",
+          "pt": "Completa: 'O que gostas de fazer no teu tempo livre?'",
+          "fr": "Complétez : « Qu'aimes-tu faire pendant ton temps libre ? »",
+          "it": "Completa: 'Cosa ti piace fare nel tuo tempo libero?'",
+          "sq": "Plotëso: 'Çfarë të pëlqen të bësh në kohën tënde të lirë?'",
+          "tr": "Tamamla: 'Boş zamanında ne yapmayı seversin?'"
+        }
+      }
     ],
     "multipleChoice": [
-      { "id": "mc1", "question": { "es": "'Gern' se coloca...", "en": "'Gern' is placed...", "pt": "'Gern' coloca-se...", "fr": "« Gern » se place...", "it": "'Gern' si mette...", "sq": "'Gern' vendoset...", "tr": "'Gern' konumu..." }, "options": [ { "text": { "es": "Después del verbo", "en": "After the verb", "pt": "Depois do verbo", "fr": "Après le verbe", "it": "Dopo il verbo", "sq": "Pas foljes", "tr": "Fiilden sonra" }, "correct": true }, { "text": { "es": "Antes del sujeto", "en": "Before the subject", "pt": "Antes do sujeito", "fr": "Avant le sujet", "it": "Prima del soggetto", "sq": "Para kryefjalës", "tr": "Öznenin önünde" }, "correct": false } ] },
-      { "id": "mc2", "question": { "es": "'Lieber' se usa para...", "en": "'Lieber' is used to...", "pt": "'Lieber' usa-se para...", "fr": "« Lieber » sert à...", "it": "'Lieber' si usa per...", "sq": "'Lieber' përdoret për...", "tr": "'Lieber' şunun için kullanılır..." }, "options": [ { "text": { "es": "Decir qué prefieres", "en": "Say what you prefer", "pt": "Dizer o que preferes", "fr": "Dire ce que l'on préfère", "it": "Dire cosa preferisci", "sq": "Të thuash çfarë preferon", "tr": "Neyi tercih ettiğini söylemek" }, "correct": true }, { "text": { "es": "Pedir perdón", "en": "Apologize", "pt": "Pedir desculpa", "fr": "S'excuser", "it": "Scusarsi", "sq": "Të kërkosh falje", "tr": "Özür dilemek" }, "correct": false } ] },
-      { "id": "mc3", "question": { "es": "'Langwilig' significa...", "en": "'Langwilig' means...", "pt": "'Langwilig' significa...", "fr": "« Langwilig » signifie...", "it": "'Langwilig' significa...", "sq": "'Langwilig' do të thotë...", "tr": "'Langwilig' anlamı..." }, "options": [ { "text": { "es": "Aburrido/a", "en": "Boring", "pt": "Aborrecido", "fr": "Ennuyeux", "it": "Noioso", "sq": "I mërzitshëm", "tr": "Sıkıcı" }, "correct": true }, { "text": { "es": "Divertido/a", "en": "Fun", "pt": "Divertido", "fr": "Amusant", "it": "Divertente", "sq": "Argëtues", "tr": "Eğlenceli" }, "correct": false } ] },
-      { "id": "mc4", "question": { "es": "'Schwimme' significa...", "en": "'Schwimme' means...", "pt": "'Schwimme' significa...", "fr": "« Schwimme » signifie...", "it": "'Schwimme' significa...", "sq": "'Schwimme' do të thotë...", "tr": "'Schwimme' anlamı..." }, "options": [ { "text": { "es": "Nadar", "en": "To swim", "pt": "Nadar", "fr": "Nager", "it": "Nuotare", "sq": "Të notosh", "tr": "Yüzmek" }, "correct": true }, { "text": { "es": "Correr", "en": "To run", "pt": "Correr", "fr": "Courir", "it": "Correre", "sq": "Të vraposh", "tr": "Koşmak" }, "correct": false } ] }
+      {
+        "id": "mc1",
+        "question": {
+          "es": "'Gern' se coloca...",
+          "en": "'Gern' is placed...",
+          "pt": "'Gern' coloca-se...",
+          "fr": "« Gern » se place...",
+          "it": "'Gern' si mette...",
+          "sq": "'Gern' vendoset...",
+          "tr": "'Gern' konumu..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Después del verbo",
+              "en": "After the verb",
+              "pt": "Depois do verbo",
+              "fr": "Après le verbe",
+              "it": "Dopo il verbo",
+              "sq": "Pas foljes",
+              "tr": "Fiilden sonra"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Antes del sujeto",
+              "en": "Before the subject",
+              "pt": "Antes do sujeito",
+              "fr": "Avant le sujet",
+              "it": "Prima del soggetto",
+              "sq": "Para kryefjalës",
+              "tr": "Öznenin önünde"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc2",
+        "question": {
+          "es": "'Lieber' se usa para...",
+          "en": "'Lieber' is used to...",
+          "pt": "'Lieber' usa-se para...",
+          "fr": "« Lieber » sert à...",
+          "it": "'Lieber' si usa per...",
+          "sq": "'Lieber' përdoret për...",
+          "tr": "'Lieber' şunun için kullanılır..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Decir qué prefieres",
+              "en": "Say what you prefer",
+              "pt": "Dizer o que preferes",
+              "fr": "Dire ce que l'on préfère",
+              "it": "Dire cosa preferisci",
+              "sq": "Të thuash çfarë preferon",
+              "tr": "Neyi tercih ettiğini söylemek"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Pedir perdón",
+              "en": "Apologize",
+              "pt": "Pedir desculpa",
+              "fr": "S'excuser",
+              "it": "Scusarsi",
+              "sq": "Të kërkosh falje",
+              "tr": "Özür dilemek"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc3",
+        "question": {
+          "es": "'Langwilig' significa...",
+          "en": "'Langwilig' means...",
+          "pt": "'Langwilig' significa...",
+          "fr": "« Langwilig » signifie...",
+          "it": "'Langwilig' significa...",
+          "sq": "'Langwilig' do të thotë...",
+          "tr": "'Langwilig' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Aburrido/a",
+              "en": "Boring",
+              "pt": "Aborrecido",
+              "fr": "Ennuyeux",
+              "it": "Noioso",
+              "sq": "I mërzitshëm",
+              "tr": "Sıkıcı"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Divertido/a",
+              "en": "Fun",
+              "pt": "Divertido",
+              "fr": "Amusant",
+              "it": "Divertente",
+              "sq": "Argëtues",
+              "tr": "Eğlenceli"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc4",
+        "question": {
+          "es": "'Schwimme' significa...",
+          "en": "'Schwimme' means...",
+          "pt": "'Schwimme' significa...",
+          "fr": "« Schwimme » signifie...",
+          "it": "'Schwimme' significa...",
+          "sq": "'Schwimme' do të thotë...",
+          "tr": "'Schwimme' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Nadar",
+              "en": "To swim",
+              "pt": "Nadar",
+              "fr": "Nager",
+              "it": "Nuotare",
+              "sq": "Të notosh",
+              "tr": "Yüzmek"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Correr",
+              "en": "To run",
+              "pt": "Correr",
+              "fr": "Courir",
+              "it": "Correre",
+              "sq": "Të vraposh",
+              "tr": "Koşmak"
+            },
+            "correct": false
+          }
+        ]
+      }
     ],
     "sentenceBuilder": [
-      { "id": "sb1", "prompt": { "es": "Construye: 'Me gusta ir de excursión'", "en": "Build: 'I like going hiking'", "pt": "Constrói: 'Gosto de ir caminhar'", "fr": "Construisez : « J'aime aller randonner »", "it": "Costruisci: 'Mi piace fare escursioni'", "sq": "Ndërto: 'Më pëlqen të bëj ecje malore'", "tr": "Kur: 'Yürüyüşe gitmeyi severim'" }, "words": ["Ich", "gang", "gern", "wandere"], "correctOrder": [0, 1, 2, 3] },
-      { "id": "sb2", "prompt": { "es": "Construye: '¿Qué te gusta hacer en tu tiempo libre?'", "en": "Build: 'What do you like doing in your free time?'", "pt": "Constrói: 'O que gostas de fazer no teu tempo livre?'", "fr": "Construisez : « Qu'aimes-tu faire pendant ton temps libre ? »", "it": "Costruisci: 'Cosa ti piace fare nel tuo tempo libero?'", "sq": "Ndërto: 'Çfarë të pëlqen të bësh në kohën tënde të lirë?'", "tr": "Kur: 'Boş zamanında ne yapmayı seversin?'" }, "words": ["Was", "machsch", "gern", "i", "dyner", "Freizit", "?"], "correctOrder": [0, 1, 2, 3, 4, 5, 6] }
+      {
+        "id": "sb1",
+        "prompt": {
+          "es": "Construye: 'Me gusta ir de excursión'",
+          "en": "Build: 'I like going hiking'",
+          "pt": "Constrói: 'Gosto de ir caminhar'",
+          "fr": "Construisez : « J'aime aller randonner »",
+          "it": "Costruisci: 'Mi piace fare escursioni'",
+          "sq": "Ndërto: 'Më pëlqen të bëj ecje malore'",
+          "tr": "Kur: 'Yürüyüşe gitmeyi severim'"
+        },
+        "words": [
+          "Ich",
+          "gang",
+          "gern",
+          "wandere"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "sb2",
+        "prompt": {
+          "es": "Construye: '¿Qué te gusta hacer en tu tiempo libre?'",
+          "en": "Build: 'What do you like doing in your free time?'",
+          "pt": "Constrói: 'O que gostas de fazer no teu tempo livre?'",
+          "fr": "Construisez : « Qu'aimes-tu faire pendant ton temps libre ? »",
+          "it": "Costruisci: 'Cosa ti piace fare nel tuo tempo libero?'",
+          "sq": "Ndërto: 'Çfarë të pëlqen të bësh në kohën tënde të lirë?'",
+          "tr": "Kur: 'Boş zamanında ne yapmayı seversin?'"
+        },
+        "words": [
+          "Was",
+          "machsch",
+          "gern",
+          "i",
+          "dyner",
+          "Freizit",
+          "?"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
     ],
     "pronunciation": [
-      { "id": "p1", "expectedText": "Ich gang gern wandere", "lang": "de-DE", "hint": { "es": "Di que te gusta ir de excursión", "en": "Say you like going hiking", "pt": "Diz que gostas de ir caminhar", "fr": "Dites que vous aimez aller randonner", "it": "Di' che ti piace fare escursioni", "sq": "Thuaj se të pëlqen të bësh ecje malore", "tr": "Yürüyüşe gitmeyi sevdiğini söyle" } },
-      { "id": "p2", "expectedText": "Was machsch gern i dyner Freizit?", "lang": "de-DE", "hint": { "es": "Pregunta qué le gusta hacer en su tiempo libre", "en": "Ask what they like doing in their free time", "pt": "Pergunta o que gosta de fazer no tempo livre", "fr": "Demandez ce qu'il/elle aime faire pendant son temps libre", "it": "Chiedi cosa gli/le piace fare nel tempo libero", "sq": "Pyet çfarë i pëlqen të bëjë në kohën e lirë", "tr": "Boş zamanında ne yapmayı sevdiğini sor" } }
+      {
+        "id": "p1",
+        "expectedText": "Ich gang gern wandere",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Di que te gusta ir de excursión",
+          "en": "Say you like going hiking",
+          "pt": "Diz que gostas de ir caminhar",
+          "fr": "Dites que vous aimez aller randonner",
+          "it": "Di' che ti piace fare escursioni",
+          "sq": "Thuaj se të pëlqen të bësh ecje malore",
+          "tr": "Yürüyüşe gitmeyi sevdiğini söyle"
+        }
+      },
+      {
+        "id": "p2",
+        "expectedText": "Was machsch gern i dyner Freizit?",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Pregunta qué le gusta hacer en su tiempo libre",
+          "en": "Ask what they like doing in their free time",
+          "pt": "Pergunta o que gosta de fazer no tempo livre",
+          "fr": "Demandez ce qu'il/elle aime faire pendant son temps libre",
+          "it": "Chiedi cosa gli/le piace fare nel tempo libero",
+          "sq": "Pyet çfarë i pëlqen të bëjë në kohën e lirë",
+          "tr": "Boş zamanında ne yapmayı sevdiğini sor"
+        }
+      }
     ]
   },
   "finalExam": [
-    { "id": "e1", "question": { "es": "'D'Freizit' significa...", "en": "'D'Freizit' means...", "pt": "'D'Freizit' significa...", "fr": "« D'Freizit » signifie...", "it": "'D'Freizit' significa...", "sq": "'D'Freizit' do të thotë...", "tr": "'D'Freizit' anlamı..." }, "options": [ { "text": { "es": "El tiempo libre", "en": "Free time", "pt": "O tempo livre", "fr": "Le temps libre", "it": "Il tempo libero", "sq": "Koha e lirë", "tr": "Boş zaman" }, "correct": true }, { "text": { "es": "El trabajo", "en": "Work", "pt": "O trabalho", "fr": "Le travail", "it": "Il lavoro", "sq": "Puna", "tr": "İş" }, "correct": false } ] },
-    { "id": "e2", "question": { "es": "'Ich läse gern' significa...", "en": "'Ich läse gern' means...", "pt": "'Ich läse gern' significa...", "fr": "« Ich läse gern » signifie...", "it": "'Ich läse gern' significa...", "sq": "'Ich läse gern' do të thotë...", "tr": "'Ich läse gern' anlamı..." }, "options": [ { "text": { "es": "Me gusta leer", "en": "I like reading", "pt": "Gosto de ler", "fr": "J'aime lire", "it": "Mi piace leggere", "sq": "Më pëlqen të lexoj", "tr": "Okumayı severim" }, "correct": true }, { "text": { "es": "No me gusta leer", "en": "I don't like reading", "pt": "Não gosto de ler", "fr": "Je n'aime pas lire", "it": "Non mi piace leggere", "sq": "Nuk më pëlqen të lexoj", "tr": "Okumayı sevmem" }, "correct": false } ] },
-    { "id": "e3", "question": { "es": "'Schwimme' significa...", "en": "'Schwimme' means...", "pt": "'Schwimme' significa...", "fr": "« Schwimme » signifie...", "it": "'Schwimme' significa...", "sq": "'Schwimme' do të thotë...", "tr": "'Schwimme' anlamı..." }, "options": [ { "text": { "es": "Nadar", "en": "To swim", "pt": "Nadar", "fr": "Nager", "it": "Nuotare", "sq": "Të notosh", "tr": "Yüzmek" }, "correct": true }, { "text": { "es": "Leer", "en": "To read", "pt": "Ler", "fr": "Lire", "it": "Leggere", "sq": "Të lexosh", "tr": "Okumak" }, "correct": false } ] },
-    { "id": "e4", "question": { "es": "'Lieber' se usa para...", "en": "'Lieber' is used to...", "pt": "'Lieber' usa-se para...", "fr": "« Lieber » sert à...", "it": "'Lieber' si usa per...", "sq": "'Lieber' përdoret për...", "tr": "'Lieber' şunun için kullanılır..." }, "options": [ { "text": { "es": "Expresar preferencia", "en": "Express a preference", "pt": "Expressar preferência", "fr": "Exprimer une préférence", "it": "Esprimere una preferenza", "sq": "Të shprehësh preferencë", "tr": "Tercih belirtmek" }, "correct": true }, { "text": { "es": "Dar una orden", "en": "Give an order", "pt": "Dar uma ordem", "fr": "Donner un ordre", "it": "Dare un ordine", "sq": "Të japësh urdhër", "tr": "Emir vermek" }, "correct": false } ] },
-    { "id": "e5", "question": { "es": "'Langwilig' significa...", "en": "'Langwilig' means...", "pt": "'Langwilig' significa...", "fr": "« Langwilig » signifie...", "it": "'Langwilig' significa...", "sq": "'Langwilig' do të thotë...", "tr": "'Langwilig' anlamı..." }, "options": [ { "text": { "es": "Aburrido/a", "en": "Boring", "pt": "Aborrecido", "fr": "Ennuyeux", "it": "Noioso", "sq": "I mërzitshëm", "tr": "Sıkıcı" }, "correct": true }, { "text": { "es": "Interesante", "en": "Interesting", "pt": "Interessante", "fr": "Intéressant", "it": "Interessante", "sq": "Interesant", "tr": "İlginç" }, "correct": false } ] },
-    { "id": "e6", "question": { "es": "En la simulación, ¿cuál es la mejor respuesta ante una afición distinta a la tuya?", "en": "In the simulation, what's the best response to a hobby different from yours?", "pt": "Na simulação, qual é a melhor resposta a um passatempo diferente do teu?", "fr": "Dans la simulation, quelle est la meilleure réponse à un loisir différent du vôtre ?", "it": "Nella simulazione, qual è la risposta migliore a un hobby diverso dal tuo?", "sq": "Në simulim, cila është përgjigjja më e mirë ndaj një hobi ndryshe nga i yti?", "tr": "Simülasyonda, kendinden farklı bir hobiye en iyi yanıt hangisidir?" }, "options": [ { "text": { "es": "Proponer hacer algo juntos", "en": "Propose doing something together", "pt": "Propor fazer algo juntos", "fr": "Proposer de faire quelque chose ensemble", "it": "Proporre di fare qualcosa insieme", "sq": "Të propozosh të bësh diçka së bashku", "tr": "Birlikte bir şey yapmayı önermek" }, "correct": true }, { "text": { "es": "Decir que esa afición es aburrida", "en": "Say that hobby is boring", "pt": "Dizer que esse passatempo é aborrecido", "fr": "Dire que ce loisir est ennuyeux", "it": "Dire che quell'hobby è noioso", "sq": "Të thuash se ai hobi është i mërzitshëm", "tr": "O hobinin sıkıcı olduğunu söylemek" }, "correct": false } ] },
-    { "id": "e7", "question": { "es": "Traduce: 'Ich gang lieber go schwimme als wandere'", "en": "Translate: 'Ich gang lieber go schwimme als wandere'", "pt": "Traduz: 'Ich gang lieber go schwimme als wandere'", "fr": "Traduisez : « Ich gang lieber go schwimme als wandere »", "it": "Traduci: 'Ich gang lieber go schwimme als wandere'", "sq": "Përkthe: 'Ich gang lieber go schwimme als wandere'", "tr": "Çevir: 'Ich gang lieber go schwimme als wandere'" }, "options": [ { "text": { "es": "Prefiero nadar antes que ir de excursión", "en": "I prefer swimming over hiking", "pt": "Prefiro nadar a caminhar", "fr": "Je préfère nager plutôt que randonner", "it": "Preferisco nuotare piuttosto che fare escursioni", "sq": "Preferoj të notoj sesa të bëj ecje malore", "tr": "Yürüyüşten çok yüzmeyi tercih ederim" }, "correct": true }, { "text": { "es": "No sé nadar", "en": "I don't know how to swim", "pt": "Não sei nadar", "fr": "Je ne sais pas nager", "it": "Non so nuotare", "sq": "Nuk di të noj", "tr": "Yüzme bilmiyorum" }, "correct": false } ] },
-    { "id": "e8", "question": { "es": "'Was machsch gern i dyner Freizit?' significa...", "en": "'Was machsch gern i dyner Freizit?' means...", "pt": "'Was machsch gern i dyner Freizit?' significa...", "fr": "« Was machsch gern i dyner Freizit? » signifie...", "it": "'Was machsch gern i dyner Freizit?' significa...", "sq": "'Was machsch gern i dyner Freizit?' do të thotë...", "tr": "'Was machsch gern i dyner Freizit?' anlamı..." }, "options": [ { "text": { "es": "¿Qué te gusta hacer en tu tiempo libre?", "en": "What do you like doing in your free time?", "pt": "O que gostas de fazer no teu tempo livre?", "fr": "Qu'aimes-tu faire pendant ton temps libre ?", "it": "Cosa ti piace fare nel tuo tempo libero?", "sq": "Çfarë të pëlqen të bësh në kohën tënde të lirë?", "tr": "Boş zamanında ne yapmayı seversin?" }, "correct": true }, { "text": { "es": "¿A qué te dedicas?", "en": "What do you do for a living?", "pt": "No que trabalhas?", "fr": "Que fais-tu dans la vie ?", "it": "Di cosa ti occupi?", "sq": "Me çfarë merresh?", "tr": "Ne iş yapıyorsun?" }, "correct": false } ] },
-    { "id": "e9", "question": { "es": "'Lise' significa...", "en": "'Lise' means...", "pt": "'Lise' significa...", "fr": "« Lise » signifie...", "it": "'Lise' significa...", "sq": "'Lise' do të thotë...", "tr": "'Lise' anlamı..." }, "options": [ { "text": { "es": "Leer", "en": "To read", "pt": "Ler", "fr": "Lire", "it": "Leggere", "sq": "Të lexosh", "tr": "Okumak" }, "correct": true }, { "text": { "es": "Escribir", "en": "To write", "pt": "Escrever", "fr": "Écrire", "it": "Scrivere", "sq": "Të shkruash", "tr": "Yazmak" }, "correct": false } ] },
-    { "id": "e10", "question": { "es": "Para decir que algo te gusta, en Schwiizerdütsch...", "en": "To say you like something, in Schwiizerdütsch...", "pt": "Para dizer que gostas de algo, em suíço-alemão...", "fr": "Pour dire qu'on aime quelque chose, en suisse-allemand...", "it": "Per dire che ti piace qualcosa, in svizzero-tedesco...", "sq": "Për të thënë se diçka të pëlqen, në gjermanishten zvicerane...", "tr": "İsviçre Almancasında bir şeyi sevdiğini söylemek için..." }, "options": [ { "text": { "es": "Se añade 'gern' después del verbo", "en": "You add 'gern' after the verb", "pt": "Acrescenta-se 'gern' depois do verbo", "fr": "On ajoute « gern » après le verbe", "it": "Si aggiunge 'gern' dopo il verbo", "sq": "Shtohet 'gern' pas foljes", "tr": "Fiilden sonra 'gern' eklenir" }, "correct": true }, { "text": { "es": "Se usa un verbo especial 'gustar'", "en": "You use a special verb 'to like'", "pt": "Usa-se um verbo especial 'gostar'", "fr": "On utilise un verbe spécial « aimer »", "it": "Si usa un verbo speciale 'piacere'", "sq": "Përdoret një folje e veçantë 'të pëlqesh'", "tr": "Özel bir 'sevmek' fiili kullanılır" }, "correct": false } ] }
+    {
+      "id": "e1",
+      "question": {
+        "es": "'D'Freizit' significa...",
+        "en": "'D'Freizit' means...",
+        "pt": "'D'Freizit' significa...",
+        "fr": "« D'Freizit » signifie...",
+        "it": "'D'Freizit' significa...",
+        "sq": "'D'Freizit' do të thotë...",
+        "tr": "'D'Freizit' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El tiempo libre",
+            "en": "Free time",
+            "pt": "O tempo livre",
+            "fr": "Le temps libre",
+            "it": "Il tempo libero",
+            "sq": "Koha e lirë",
+            "tr": "Boş zaman"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El trabajo",
+            "en": "Work",
+            "pt": "O trabalho",
+            "fr": "Le travail",
+            "it": "Il lavoro",
+            "sq": "Puna",
+            "tr": "İş"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "question": {
+        "es": "'Ich läse gern' significa...",
+        "en": "'Ich läse gern' means...",
+        "pt": "'Ich läse gern' significa...",
+        "fr": "« Ich läse gern » signifie...",
+        "it": "'Ich läse gern' significa...",
+        "sq": "'Ich läse gern' do të thotë...",
+        "tr": "'Ich läse gern' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Me gusta leer",
+            "en": "I like reading",
+            "pt": "Gosto de ler",
+            "fr": "J'aime lire",
+            "it": "Mi piace leggere",
+            "sq": "Më pëlqen të lexoj",
+            "tr": "Okumayı severim"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "No me gusta leer",
+            "en": "I don't like reading",
+            "pt": "Não gosto de ler",
+            "fr": "Je n'aime pas lire",
+            "it": "Non mi piace leggere",
+            "sq": "Nuk më pëlqen të lexoj",
+            "tr": "Okumayı sevmem"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "question": {
+        "es": "'Schwimme' significa...",
+        "en": "'Schwimme' means...",
+        "pt": "'Schwimme' significa...",
+        "fr": "« Schwimme » signifie...",
+        "it": "'Schwimme' significa...",
+        "sq": "'Schwimme' do të thotë...",
+        "tr": "'Schwimme' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Nadar",
+            "en": "To swim",
+            "pt": "Nadar",
+            "fr": "Nager",
+            "it": "Nuotare",
+            "sq": "Të notosh",
+            "tr": "Yüzmek"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Leer",
+            "en": "To read",
+            "pt": "Ler",
+            "fr": "Lire",
+            "it": "Leggere",
+            "sq": "Të lexosh",
+            "tr": "Okumak"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "question": {
+        "es": "'Lieber' se usa para...",
+        "en": "'Lieber' is used to...",
+        "pt": "'Lieber' usa-se para...",
+        "fr": "« Lieber » sert à...",
+        "it": "'Lieber' si usa per...",
+        "sq": "'Lieber' përdoret për...",
+        "tr": "'Lieber' şunun için kullanılır..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Expresar preferencia",
+            "en": "Express a preference",
+            "pt": "Expressar preferência",
+            "fr": "Exprimer une préférence",
+            "it": "Esprimere una preferenza",
+            "sq": "Të shprehësh preferencë",
+            "tr": "Tercih belirtmek"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Dar una orden",
+            "en": "Give an order",
+            "pt": "Dar uma ordem",
+            "fr": "Donner un ordre",
+            "it": "Dare un ordine",
+            "sq": "Të japësh urdhër",
+            "tr": "Emir vermek"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "question": {
+        "es": "'Langwilig' significa...",
+        "en": "'Langwilig' means...",
+        "pt": "'Langwilig' significa...",
+        "fr": "« Langwilig » signifie...",
+        "it": "'Langwilig' significa...",
+        "sq": "'Langwilig' do të thotë...",
+        "tr": "'Langwilig' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Aburrido/a",
+            "en": "Boring",
+            "pt": "Aborrecido",
+            "fr": "Ennuyeux",
+            "it": "Noioso",
+            "sq": "I mërzitshëm",
+            "tr": "Sıkıcı"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Interesante",
+            "en": "Interesting",
+            "pt": "Interessante",
+            "fr": "Intéressant",
+            "it": "Interessante",
+            "sq": "Interesant",
+            "tr": "İlginç"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "question": {
+        "es": "En la simulación, ¿cuál es la mejor respuesta ante una afición distinta a la tuya?",
+        "en": "In the simulation, what's the best response to a hobby different from yours?",
+        "pt": "Na simulação, qual é a melhor resposta a um passatempo diferente do teu?",
+        "fr": "Dans la simulation, quelle est la meilleure réponse à un loisir différent du vôtre ?",
+        "it": "Nella simulazione, qual è la risposta migliore a un hobby diverso dal tuo?",
+        "sq": "Në simulim, cila është përgjigjja më e mirë ndaj një hobi ndryshe nga i yti?",
+        "tr": "Simülasyonda, kendinden farklı bir hobiye en iyi yanıt hangisidir?"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Proponer hacer algo juntos",
+            "en": "Propose doing something together",
+            "pt": "Propor fazer algo juntos",
+            "fr": "Proposer de faire quelque chose ensemble",
+            "it": "Proporre di fare qualcosa insieme",
+            "sq": "Të propozosh të bësh diçka së bashku",
+            "tr": "Birlikte bir şey yapmayı önermek"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Decir que esa afición es aburrida",
+            "en": "Say that hobby is boring",
+            "pt": "Dizer que esse passatempo é aborrecido",
+            "fr": "Dire que ce loisir est ennuyeux",
+            "it": "Dire che quell'hobby è noioso",
+            "sq": "Të thuash se ai hobi është i mërzitshëm",
+            "tr": "O hobinin sıkıcı olduğunu söylemek"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "question": {
+        "es": "Traduce: 'Ich gang lieber go schwimme als wandere'",
+        "en": "Translate: 'Ich gang lieber go schwimme als wandere'",
+        "pt": "Traduz: 'Ich gang lieber go schwimme als wandere'",
+        "fr": "Traduisez : « Ich gang lieber go schwimme als wandere »",
+        "it": "Traduci: 'Ich gang lieber go schwimme als wandere'",
+        "sq": "Përkthe: 'Ich gang lieber go schwimme als wandere'",
+        "tr": "Çevir: 'Ich gang lieber go schwimme als wandere'"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Prefiero nadar antes que ir de excursión",
+            "en": "I prefer swimming over hiking",
+            "pt": "Prefiro nadar a caminhar",
+            "fr": "Je préfère nager plutôt que randonner",
+            "it": "Preferisco nuotare piuttosto che fare escursioni",
+            "sq": "Preferoj të notoj sesa të bëj ecje malore",
+            "tr": "Yürüyüşten çok yüzmeyi tercih ederim"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "No sé nadar",
+            "en": "I don't know how to swim",
+            "pt": "Não sei nadar",
+            "fr": "Je ne sais pas nager",
+            "it": "Non so nuotare",
+            "sq": "Nuk di të noj",
+            "tr": "Yüzme bilmiyorum"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "question": {
+        "es": "'Was machsch gern i dyner Freizit?' significa...",
+        "en": "'Was machsch gern i dyner Freizit?' means...",
+        "pt": "'Was machsch gern i dyner Freizit?' significa...",
+        "fr": "« Was machsch gern i dyner Freizit? » signifie...",
+        "it": "'Was machsch gern i dyner Freizit?' significa...",
+        "sq": "'Was machsch gern i dyner Freizit?' do të thotë...",
+        "tr": "'Was machsch gern i dyner Freizit?' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "¿Qué te gusta hacer en tu tiempo libre?",
+            "en": "What do you like doing in your free time?",
+            "pt": "O que gostas de fazer no teu tempo livre?",
+            "fr": "Qu'aimes-tu faire pendant ton temps libre ?",
+            "it": "Cosa ti piace fare nel tuo tempo libero?",
+            "sq": "Çfarë të pëlqen të bësh në kohën tënde të lirë?",
+            "tr": "Boş zamanında ne yapmayı seversin?"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "¿A qué te dedicas?",
+            "en": "What do you do for a living?",
+            "pt": "No que trabalhas?",
+            "fr": "Que fais-tu dans la vie ?",
+            "it": "Di cosa ti occupi?",
+            "sq": "Me çfarë merresh?",
+            "tr": "Ne iş yapıyorsun?"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "question": {
+        "es": "'Lise' significa...",
+        "en": "'Lise' means...",
+        "pt": "'Lise' significa...",
+        "fr": "« Lise » signifie...",
+        "it": "'Lise' significa...",
+        "sq": "'Lise' do të thotë...",
+        "tr": "'Lise' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Leer",
+            "en": "To read",
+            "pt": "Ler",
+            "fr": "Lire",
+            "it": "Leggere",
+            "sq": "Të lexosh",
+            "tr": "Okumak"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Escribir",
+            "en": "To write",
+            "pt": "Escrever",
+            "fr": "Écrire",
+            "it": "Scrivere",
+            "sq": "Të shkruash",
+            "tr": "Yazmak"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "question": {
+        "es": "Para decir que algo te gusta, en Schwiizerdütsch...",
+        "en": "To say you like something, in Schwiizerdütsch...",
+        "pt": "Para dizer que gostas de algo, em suíço-alemão...",
+        "fr": "Pour dire qu'on aime quelque chose, en suisse-allemand...",
+        "it": "Per dire che ti piace qualcosa, in svizzero-tedesco...",
+        "sq": "Për të thënë se diçka të pëlqen, në gjermanishten zvicerane...",
+        "tr": "İsviçre Almancasında bir şeyi sevdiğini söylemek için..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Se añade 'gern' después del verbo",
+            "en": "You add 'gern' after the verb",
+            "pt": "Acrescenta-se 'gern' depois do verbo",
+            "fr": "On ajoute « gern » après le verbe",
+            "it": "Si aggiunge 'gern' dopo il verbo",
+            "sq": "Shtohet 'gern' pas foljes",
+            "tr": "Fiilden sonra 'gern' eklenir"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Se usa un verbo especial 'gustar'",
+            "en": "You use a special verb 'to like'",
+            "pt": "Usa-se um verbo especial 'gostar'",
+            "fr": "On utilise un verbe spécial « aimer »",
+            "it": "Si usa un verbo speciale 'piacere'",
+            "sq": "Përdoret një folje e veçantë 'të pëlqesh'",
+            "tr": "Özel bir 'sevmek' fiili kullanılır"
+          },
+          "correct": false
+        }
+      ]
+    }
   ]
 }

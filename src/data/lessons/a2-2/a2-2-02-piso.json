@@ -42,63 +42,883 @@
         "sq": "'Ich zieh i' (po shpërngulem) vjen nga folja e ndashme 'ihizieh' — parashtesa 'i-' (ekuivalente me 'ein-' në gjermanishten standarde) ndahet dhe shkon në fund. Përdoret si për t'u zhvendosur në një apartament të ri, ashtu edhe për të gjithë procesin e vendosjes në Zvicër.",
         "tr": "'Ich zieh i' (taşınıyorum) ayrılabilir fiil 'ihizieh'den gelir — 'i-' öneki (standart Almanca'daki 'ein-' karşılığı) ayrılıp sona gider. Hem yeni bir daireye taşınmak için hem de İsviçre'ye yerleşme sürecinin tamamı için kullanılır."
       },
-      "table": [
-        { "left": "Ich zieh nächscht Monet i.", "right": { "es": "Me mudo el próximo mes.", "en": "I'm moving in next month.", "pt": "Mudo-me no próximo mês.", "fr": "J'emménage le mois prochain.", "it": "Mi trasferisco il mese prossimo.", "sq": "Do të shpërngulem muajin tjetër.", "tr": "Gelecek ay taşınıyorum." } },
-        { "left": "Ich interessiere mi für s'Inserat.", "right": { "es": "Estoy interesado en el anuncio.", "en": "I'm interested in the listing.", "pt": "Estou interessado no anúncio.", "fr": "Je suis intéressé par l'annonce.", "it": "Sono interessato all'annuncio.", "sq": "Jam i interesuar për shpalljen.", "tr": "İlanla ilgileniyorum." } }
-      ]
+      "table": {
+        "headers": [
+          "Frase",
+          "Schwiizerdütsch"
+        ],
+        "rows": [
+          [
+            "Me mudo el próximo mes.",
+            "Ich zieh nächscht Monet i."
+          ],
+          [
+            "Estoy interesado en el anuncio.",
+            "Ich interessiere mi für s'Inserat."
+          ]
+        ]
+      }
     }
   ],
   "dialogueExample": [
-    { "speaker": "A", "text": "Ich interessiere mi für Ihres Inserat.", "base": { "es": "Estoy interesado en su anuncio.", "en": "I'm interested in your listing.", "pt": "Estou interessado no seu anúncio.", "fr": "Je suis intéressé par votre annonce.", "it": "Sono interessato al suo annuncio.", "sq": "Jam i interesuar për shpalljen tuaj.", "tr": "İlanınızla ilgileniyorum." } },
-    { "speaker": "B", "text": "Guet, wei mer en Termin für e Besichtigung mache?", "base": { "es": "Bien, ¿quedamos para una visita?", "en": "Great, shall we set up a viewing?", "pt": "Ótimo, marcamos uma visita?", "fr": "Super, on fixe un rendez-vous pour une visite ?", "it": "Bene, fissiamo un appuntamento per una visita?", "sq": "Mirë, a caktojmë një takim për vizitë?", "tr": "Harika, bir gezi için randevu ayarlayalım mı?" } },
-    { "speaker": "A", "text": "Ja gern. Und wieviel isch d'Kaution?", "base": { "es": "Sí, encantado. ¿Y cuánto es la fianza?", "en": "Yes, happily. And how much is the deposit?", "pt": "Sim, com gosto. E quanto é a fiança?", "fr": "Oui, avec plaisir. Et quel est le montant de la caution ?", "it": "Sì, volentieri. E quanto è la cauzione?", "sq": "Po, me kënaqësi. Dhe sa është kaucioni?", "tr": "Evet, memnuniyetle. Depozito ne kadar?" } }
+    {
+      "speaker": "A",
+      "text": "Ich interessiere mi für Ihres Inserat.",
+      "base": {
+        "es": "Estoy interesado en su anuncio.",
+        "en": "I'm interested in your listing.",
+        "pt": "Estou interessado no seu anúncio.",
+        "fr": "Je suis intéressé par votre annonce.",
+        "it": "Sono interessato al suo annuncio.",
+        "sq": "Jam i interesuar për shpalljen tuaj.",
+        "tr": "İlanınızla ilgileniyorum."
+      }
+    },
+    {
+      "speaker": "B",
+      "text": "Guet, wei mer en Termin für e Besichtigung mache?",
+      "base": {
+        "es": "Bien, ¿quedamos para una visita?",
+        "en": "Great, shall we set up a viewing?",
+        "pt": "Ótimo, marcamos uma visita?",
+        "fr": "Super, on fixe un rendez-vous pour une visite ?",
+        "it": "Bene, fissiamo un appuntamento per una visita?",
+        "sq": "Mirë, a caktojmë një takim për vizitë?",
+        "tr": "Harika, bir gezi için randevu ayarlayalım mı?"
+      }
+    },
+    {
+      "speaker": "A",
+      "text": "Ja gern. Und wieviel isch d'Kaution?",
+      "base": {
+        "es": "Sí, encantado. ¿Y cuánto es la fianza?",
+        "en": "Yes, happily. And how much is the deposit?",
+        "pt": "Sim, com gosto. E quanto é a fiança?",
+        "fr": "Oui, avec plaisir. Et quel est le montant de la caution ?",
+        "it": "Sì, volentieri. E quanto è la cauzione?",
+        "sq": "Po, me kënaqësi. Dhe sa është kaucioni?",
+        "tr": "Evet, memnuniyetle. Depozito ne kadar?"
+      }
+    }
   ],
   "comparisonTable": [
-    { "base": { "es": "El contrato de alquiler", "en": "The rental contract", "pt": "O contrato de arrendamento", "fr": "Le contrat de location", "it": "Il contratto d'affitto", "sq": "Kontrata e qirasë", "tr": "Kira sözleşmesi" }, "hochdeutsch": "Der Mietvertrag", "schwiizerduetsch": "Dr Mietvertrag" },
-    { "base": { "es": "La fianza", "en": "The deposit", "pt": "A fiança", "fr": "La caution", "it": "La cauzione", "sq": "Kaucioni", "tr": "Depozito" }, "hochdeutsch": "Die Kaution", "schwiizerduetsch": "D Kaution" },
-    { "base": { "es": "El anuncio", "en": "The listing", "pt": "O anúncio", "fr": "L'annonce", "it": "L'annuncio", "sq": "Shpallja", "tr": "İlan" }, "hochdeutsch": "Das Inserat", "schwiizerduetsch": "S Inserat" },
-    { "base": { "es": "La visita al piso", "en": "The viewing", "pt": "A visita", "fr": "La visite", "it": "La visita", "sq": "Vizita", "tr": "Gezi" }, "hochdeutsch": "Die Besichtigung", "schwiizerduetsch": "D Besichtigung" },
-    { "base": { "es": "Me mudo", "en": "I'm moving in", "pt": "Mudo-me", "fr": "J'emménage", "it": "Mi trasferisco", "sq": "Po shpërngulem", "tr": "Taşınıyorum" }, "hochdeutsch": "Ich ziehe ein", "schwiizerduetsch": "Ich zieh i" },
-    { "base": { "es": "Dar de baja/rescindir", "en": "To give notice/cancel", "pt": "Rescindir", "fr": "Résilier", "it": "Disdire", "sq": "Të japësh njoftim/anulosh", "tr": "İptal etmek/bildirmek" }, "hochdeutsch": "Kündigen", "schwiizerduetsch": "Kündige" }
+    {
+      "base": {
+        "es": "El contrato de alquiler",
+        "en": "The rental contract",
+        "pt": "O contrato de arrendamento",
+        "fr": "Le contrat de location",
+        "it": "Il contratto d'affitto",
+        "sq": "Kontrata e qirasë",
+        "tr": "Kira sözleşmesi"
+      },
+      "hochdeutsch": "Der Mietvertrag",
+      "schwiizerduetsch": "Dr Mietvertrag"
+    },
+    {
+      "base": {
+        "es": "La fianza",
+        "en": "The deposit",
+        "pt": "A fiança",
+        "fr": "La caution",
+        "it": "La cauzione",
+        "sq": "Kaucioni",
+        "tr": "Depozito"
+      },
+      "hochdeutsch": "Die Kaution",
+      "schwiizerduetsch": "D Kaution"
+    },
+    {
+      "base": {
+        "es": "El anuncio",
+        "en": "The listing",
+        "pt": "O anúncio",
+        "fr": "L'annonce",
+        "it": "L'annuncio",
+        "sq": "Shpallja",
+        "tr": "İlan"
+      },
+      "hochdeutsch": "Das Inserat",
+      "schwiizerduetsch": "S Inserat"
+    },
+    {
+      "base": {
+        "es": "La visita al piso",
+        "en": "The viewing",
+        "pt": "A visita",
+        "fr": "La visite",
+        "it": "La visita",
+        "sq": "Vizita",
+        "tr": "Gezi"
+      },
+      "hochdeutsch": "Die Besichtigung",
+      "schwiizerduetsch": "D Besichtigung"
+    },
+    {
+      "base": {
+        "es": "Me mudo",
+        "en": "I'm moving in",
+        "pt": "Mudo-me",
+        "fr": "J'emménage",
+        "it": "Mi trasferisco",
+        "sq": "Po shpërngulem",
+        "tr": "Taşınıyorum"
+      },
+      "hochdeutsch": "Ich ziehe ein",
+      "schwiizerduetsch": "Ich zieh i"
+    },
+    {
+      "base": {
+        "es": "Dar de baja/rescindir",
+        "en": "To give notice/cancel",
+        "pt": "Rescindir",
+        "fr": "Résilier",
+        "it": "Disdire",
+        "sq": "Të japësh njoftim/anulosh",
+        "tr": "İptal etmek/bildirmek"
+      },
+      "hochdeutsch": "Kündigen",
+      "schwiizerduetsch": "Kündige"
+    }
   ],
   "vocabulary": [
-    { "id": "v1", "hochdeutsch": "Der Mietvertrag", "schwiizerduetsch": "Dr Mietvertrag", "audioText": "Dr Mietvertrag", "base": { "es": "El contrato de alquiler", "en": "The rental contract", "pt": "O contrato de arrendamento", "fr": "Le contrat de location", "it": "Il contratto d'affitto", "sq": "Kontrata e qirasë", "tr": "Kira sözleşmesi" } },
-    { "id": "v2", "hochdeutsch": "Die Kaution", "schwiizerduetsch": "D Kaution", "audioText": "D Kaution", "base": { "es": "La fianza", "en": "The deposit", "pt": "A fiança", "fr": "La caution", "it": "La cauzione", "sq": "Kaucioni", "tr": "Depozito" } },
-    { "id": "v3", "hochdeutsch": "Das Inserat", "schwiizerduetsch": "S Inserat", "audioText": "S Inserat", "base": { "es": "El anuncio", "en": "The listing", "pt": "O anúncio", "fr": "L'annonce", "it": "L'annuncio", "sq": "Shpallja", "tr": "İlan" } },
-    { "id": "v4", "hochdeutsch": "Die Besichtigung", "schwiizerduetsch": "D Besichtigung", "audioText": "D Besichtigung", "base": { "es": "La visita al piso", "en": "The viewing", "pt": "A visita", "fr": "La visite", "it": "La visita", "sq": "Vizita", "tr": "Gezi" } },
-    { "id": "v5", "hochdeutsch": "Ich ziehe ein", "schwiizerduetsch": "Ich zieh i", "audioText": "Ich zieh nächscht Monet i", "base": { "es": "Me mudo", "en": "I'm moving in", "pt": "Mudo-me", "fr": "J'emménage", "it": "Mi trasferisco", "sq": "Po shpërngulem", "tr": "Taşınıyorum" } },
-    { "id": "v6", "hochdeutsch": "Kündigen", "schwiizerduetsch": "Kündige", "audioText": "Ich mues kündige", "base": { "es": "Dar de baja/rescindir", "en": "To give notice/cancel", "pt": "Rescindir", "fr": "Résilier", "it": "Disdire", "sq": "Të japësh njoftim/anulosh", "tr": "İptal etmek/bildirmek" } }
+    {
+      "id": "v1",
+      "hochdeutsch": "Der Mietvertrag",
+      "schwiizerduetsch": "Dr Mietvertrag",
+      "audioText": "Dr Mietvertrag",
+      "base": {
+        "es": "El contrato de alquiler",
+        "en": "The rental contract",
+        "pt": "O contrato de arrendamento",
+        "fr": "Le contrat de location",
+        "it": "Il contratto d'affitto",
+        "sq": "Kontrata e qirasë",
+        "tr": "Kira sözleşmesi"
+      }
+    },
+    {
+      "id": "v2",
+      "hochdeutsch": "Die Kaution",
+      "schwiizerduetsch": "D Kaution",
+      "audioText": "D Kaution",
+      "base": {
+        "es": "La fianza",
+        "en": "The deposit",
+        "pt": "A fiança",
+        "fr": "La caution",
+        "it": "La cauzione",
+        "sq": "Kaucioni",
+        "tr": "Depozito"
+      }
+    },
+    {
+      "id": "v3",
+      "hochdeutsch": "Das Inserat",
+      "schwiizerduetsch": "S Inserat",
+      "audioText": "S Inserat",
+      "base": {
+        "es": "El anuncio",
+        "en": "The listing",
+        "pt": "O anúncio",
+        "fr": "L'annonce",
+        "it": "L'annuncio",
+        "sq": "Shpallja",
+        "tr": "İlan"
+      }
+    },
+    {
+      "id": "v4",
+      "hochdeutsch": "Die Besichtigung",
+      "schwiizerduetsch": "D Besichtigung",
+      "audioText": "D Besichtigung",
+      "base": {
+        "es": "La visita al piso",
+        "en": "The viewing",
+        "pt": "A visita",
+        "fr": "La visite",
+        "it": "La visita",
+        "sq": "Vizita",
+        "tr": "Gezi"
+      }
+    },
+    {
+      "id": "v5",
+      "hochdeutsch": "Ich ziehe ein",
+      "schwiizerduetsch": "Ich zieh i",
+      "audioText": "Ich zieh nächscht Monet i",
+      "base": {
+        "es": "Me mudo",
+        "en": "I'm moving in",
+        "pt": "Mudo-me",
+        "fr": "J'emménage",
+        "it": "Mi trasferisco",
+        "sq": "Po shpërngulem",
+        "tr": "Taşınıyorum"
+      }
+    },
+    {
+      "id": "v6",
+      "hochdeutsch": "Kündigen",
+      "schwiizerduetsch": "Kündige",
+      "audioText": "Ich mues kündige",
+      "base": {
+        "es": "Dar de baja/rescindir",
+        "en": "To give notice/cancel",
+        "pt": "Rescindir",
+        "fr": "Résilier",
+        "it": "Disdire",
+        "sq": "Të japësh njoftim/anulosh",
+        "tr": "İptal etmek/bildirmek"
+      }
+    }
   ],
   "exercises": {
     "fillBlanks": [
-      { "id": "fb1", "before": "Ich interessiere mi für s'", "after": ".", "correctWord": "Inserat", "options": ["Inserat", "Kaution", "Mietvertrag"], "hint": { "es": "Completa: 'Estoy interesado en el anuncio'", "en": "Complete: 'I'm interested in the listing'", "pt": "Completa: 'Estou interessado no anúncio'", "fr": "Complétez : « Je suis intéressé par l'annonce »", "it": "Completa: 'Sono interessato all'annuncio'", "sq": "Plotëso: 'Jam i interesuar për shpalljen'", "tr": "Tamamla: 'İlanla ilgileniyorum'" } },
-      { "id": "fb2", "before": "Wieviel isch d'", "after": "?", "correctWord": "Kaution", "options": ["Kaution", "Besichtigung", "Inserat"], "hint": { "es": "Completa: '¿Cuánto es la fianza?'", "en": "Complete: 'How much is the deposit?'", "pt": "Completa: 'Quanto é a fiança?'", "fr": "Complétez : « Quel est le montant de la caution ? »", "it": "Completa: 'Quanto è la cauzione?'", "sq": "Plotëso: 'Sa është kaucioni?'", "tr": "Tamamla: 'Depozito ne kadar?'" } }
+      {
+        "id": "fb1",
+        "before": "Ich interessiere mi für s'",
+        "after": ".",
+        "correctWord": "Inserat",
+        "options": [
+          "Inserat",
+          "Kaution",
+          "Mietvertrag"
+        ],
+        "hint": {
+          "es": "Completa: 'Estoy interesado en el anuncio'",
+          "en": "Complete: 'I'm interested in the listing'",
+          "pt": "Completa: 'Estou interessado no anúncio'",
+          "fr": "Complétez : « Je suis intéressé par l'annonce »",
+          "it": "Completa: 'Sono interessato all'annuncio'",
+          "sq": "Plotëso: 'Jam i interesuar për shpalljen'",
+          "tr": "Tamamla: 'İlanla ilgileniyorum'"
+        }
+      },
+      {
+        "id": "fb2",
+        "before": "Wieviel isch d'",
+        "after": "?",
+        "correctWord": "Kaution",
+        "options": [
+          "Kaution",
+          "Besichtigung",
+          "Inserat"
+        ],
+        "hint": {
+          "es": "Completa: '¿Cuánto es la fianza?'",
+          "en": "Complete: 'How much is the deposit?'",
+          "pt": "Completa: 'Quanto é a fiança?'",
+          "fr": "Complétez : « Quel est le montant de la caution ? »",
+          "it": "Completa: 'Quanto è la cauzione?'",
+          "sq": "Plotëso: 'Sa është kaucioni?'",
+          "tr": "Tamamla: 'Depozito ne kadar?'"
+        }
+      }
     ],
     "multipleChoice": [
-      { "id": "mc1", "question": { "es": "'D Besichtigung' significa...", "en": "'D Besichtigung' means...", "pt": "'D Besichtigung' significa...", "fr": "« D Besichtigung » signifie...", "it": "'D Besichtigung' significa...", "sq": "'D Besichtigung' do të thotë...", "tr": "'D Besichtigung' anlamı..." }, "options": [ { "text": { "es": "La visita al piso", "en": "The viewing", "pt": "A visita", "fr": "La visite", "it": "La visita", "sq": "Vizita", "tr": "Gezi" }, "correct": true }, { "text": { "es": "El contrato", "en": "The contract", "pt": "O contrato", "fr": "Le contrat", "it": "Il contratto", "sq": "Kontrata", "tr": "Sözleşme" }, "correct": false } ] },
-      { "id": "mc2", "question": { "es": "'Ich zieh i' significa...", "en": "'Ich zieh i' means...", "pt": "'Ich zieh i' significa...", "fr": "« Ich zieh i » signifie...", "it": "'Ich zieh i' significa...", "sq": "'Ich zieh i' do të thotë...", "tr": "'Ich zieh i' anlamı..." }, "options": [ { "text": { "es": "Me mudo", "en": "I'm moving in", "pt": "Mudo-me", "fr": "J'emménage", "it": "Mi trasferisco", "sq": "Po shpërngulem", "tr": "Taşınıyorum" }, "correct": true }, { "text": { "es": "Me voy de vacaciones", "en": "I'm going on vacation", "pt": "Vou de férias", "fr": "Je pars en vacances", "it": "Vado in vacanza", "sq": "Po shkoj me pushime", "tr": "Tatile gidiyorum" }, "correct": false } ] },
-      { "id": "mc3", "question": { "es": "'Kündige' significa...", "en": "'Kündige' means...", "pt": "'Kündige' significa...", "fr": "« Kündige » signifie...", "it": "'Kündige' significa...", "sq": "'Kündige' do të thotë...", "tr": "'Kündige' anlamı..." }, "options": [ { "text": { "es": "Rescindir/dar de baja", "en": "To give notice/cancel", "pt": "Rescindir", "fr": "Résilier", "it": "Disdire", "sq": "Të japësh njoftim", "tr": "İptal etmek" }, "correct": true }, { "text": { "es": "Firmar", "en": "To sign", "pt": "Assinar", "fr": "Signer", "it": "Firmare", "sq": "Të nënshkruash", "tr": "İmzalamak" }, "correct": false } ] },
-      { "id": "mc4", "question": { "es": "'Dr Mietvertrag' significa...", "en": "'Dr Mietvertrag' means...", "pt": "'Dr Mietvertrag' significa...", "fr": "« Dr Mietvertrag » signifie...", "it": "'Dr Mietvertrag' significa...", "sq": "'Dr Mietvertrag' do të thotë...", "tr": "'Dr Mietvertrag' anlamı..." }, "options": [ { "text": { "es": "El contrato de alquiler", "en": "The rental contract", "pt": "O contrato de arrendamento", "fr": "Le contrat de location", "it": "Il contratto d'affitto", "sq": "Kontrata e qirasë", "tr": "Kira sözleşmesi" }, "correct": true }, { "text": { "es": "El anuncio", "en": "The listing", "pt": "O anúncio", "fr": "L'annonce", "it": "L'annuncio", "sq": "Shpallja", "tr": "İlan" }, "correct": false } ] }
+      {
+        "id": "mc1",
+        "question": {
+          "es": "'D Besichtigung' significa...",
+          "en": "'D Besichtigung' means...",
+          "pt": "'D Besichtigung' significa...",
+          "fr": "« D Besichtigung » signifie...",
+          "it": "'D Besichtigung' significa...",
+          "sq": "'D Besichtigung' do të thotë...",
+          "tr": "'D Besichtigung' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "La visita al piso",
+              "en": "The viewing",
+              "pt": "A visita",
+              "fr": "La visite",
+              "it": "La visita",
+              "sq": "Vizita",
+              "tr": "Gezi"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "El contrato",
+              "en": "The contract",
+              "pt": "O contrato",
+              "fr": "Le contrat",
+              "it": "Il contratto",
+              "sq": "Kontrata",
+              "tr": "Sözleşme"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc2",
+        "question": {
+          "es": "'Ich zieh i' significa...",
+          "en": "'Ich zieh i' means...",
+          "pt": "'Ich zieh i' significa...",
+          "fr": "« Ich zieh i » signifie...",
+          "it": "'Ich zieh i' significa...",
+          "sq": "'Ich zieh i' do të thotë...",
+          "tr": "'Ich zieh i' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Me mudo",
+              "en": "I'm moving in",
+              "pt": "Mudo-me",
+              "fr": "J'emménage",
+              "it": "Mi trasferisco",
+              "sq": "Po shpërngulem",
+              "tr": "Taşınıyorum"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Me voy de vacaciones",
+              "en": "I'm going on vacation",
+              "pt": "Vou de férias",
+              "fr": "Je pars en vacances",
+              "it": "Vado in vacanza",
+              "sq": "Po shkoj me pushime",
+              "tr": "Tatile gidiyorum"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc3",
+        "question": {
+          "es": "'Kündige' significa...",
+          "en": "'Kündige' means...",
+          "pt": "'Kündige' significa...",
+          "fr": "« Kündige » signifie...",
+          "it": "'Kündige' significa...",
+          "sq": "'Kündige' do të thotë...",
+          "tr": "'Kündige' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Rescindir/dar de baja",
+              "en": "To give notice/cancel",
+              "pt": "Rescindir",
+              "fr": "Résilier",
+              "it": "Disdire",
+              "sq": "Të japësh njoftim",
+              "tr": "İptal etmek"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Firmar",
+              "en": "To sign",
+              "pt": "Assinar",
+              "fr": "Signer",
+              "it": "Firmare",
+              "sq": "Të nënshkruash",
+              "tr": "İmzalamak"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc4",
+        "question": {
+          "es": "'Dr Mietvertrag' significa...",
+          "en": "'Dr Mietvertrag' means...",
+          "pt": "'Dr Mietvertrag' significa...",
+          "fr": "« Dr Mietvertrag » signifie...",
+          "it": "'Dr Mietvertrag' significa...",
+          "sq": "'Dr Mietvertrag' do të thotë...",
+          "tr": "'Dr Mietvertrag' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "El contrato de alquiler",
+              "en": "The rental contract",
+              "pt": "O contrato de arrendamento",
+              "fr": "Le contrat de location",
+              "it": "Il contratto d'affitto",
+              "sq": "Kontrata e qirasë",
+              "tr": "Kira sözleşmesi"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "El anuncio",
+              "en": "The listing",
+              "pt": "O anúncio",
+              "fr": "L'annonce",
+              "it": "L'annuncio",
+              "sq": "Shpallja",
+              "tr": "İlan"
+            },
+            "correct": false
+          }
+        ]
+      }
     ],
     "sentenceBuilder": [
-      { "id": "sb1", "prompt": { "es": "Construye: 'Estoy interesado en el anuncio'", "en": "Build: 'I'm interested in the listing'", "pt": "Constrói: 'Estou interessado no anúncio'", "fr": "Construisez : « Je suis intéressé par l'annonce »", "it": "Costruisci: 'Sono interessato all'annuncio'", "sq": "Ndërto: 'Jam i interesuar për shpalljen'", "tr": "Kur: 'İlanla ilgileniyorum'" }, "words": ["Ich", "interessiere", "mi", "für", "s'Inserat"], "correctOrder": [0, 1, 2, 3, 4] },
-      { "id": "sb2", "prompt": { "es": "Construye: 'Me mudo el próximo mes'", "en": "Build: 'I'm moving in next month'", "pt": "Constrói: 'Mudo-me no próximo mês'", "fr": "Construisez : « J'emménage le mois prochain »", "it": "Costruisci: 'Mi trasferisco il mese prossimo'", "sq": "Ndërto: 'Do të shpërngulem muajin tjetër'", "tr": "Kur: 'Gelecek ay taşınıyorum'" }, "words": ["Ich", "zieh", "nächscht", "Monet", "i"], "correctOrder": [0, 1, 2, 3, 4] }
+      {
+        "id": "sb1",
+        "prompt": {
+          "es": "Construye: 'Estoy interesado en el anuncio'",
+          "en": "Build: 'I'm interested in the listing'",
+          "pt": "Constrói: 'Estou interessado no anúncio'",
+          "fr": "Construisez : « Je suis intéressé par l'annonce »",
+          "it": "Costruisci: 'Sono interessato all'annuncio'",
+          "sq": "Ndërto: 'Jam i interesuar për shpalljen'",
+          "tr": "Kur: 'İlanla ilgileniyorum'"
+        },
+        "words": [
+          "Ich",
+          "interessiere",
+          "mi",
+          "für",
+          "s'Inserat"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "id": "sb2",
+        "prompt": {
+          "es": "Construye: 'Me mudo el próximo mes'",
+          "en": "Build: 'I'm moving in next month'",
+          "pt": "Constrói: 'Mudo-me no próximo mês'",
+          "fr": "Construisez : « J'emménage le mois prochain »",
+          "it": "Costruisci: 'Mi trasferisco il mese prossimo'",
+          "sq": "Ndërto: 'Do të shpërngulem muajin tjetër'",
+          "tr": "Kur: 'Gelecek ay taşınıyorum'"
+        },
+        "words": [
+          "Ich",
+          "zieh",
+          "nächscht",
+          "Monet",
+          "i"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ],
     "pronunciation": [
-      { "id": "p1", "expectedText": "Ich interessiere mi für s'Inserat", "lang": "de-DE", "hint": { "es": "Di que estás interesado en el anuncio", "en": "Say you're interested in the listing", "pt": "Diz que estás interessado no anúncio", "fr": "Dites que vous êtes intéressé par l'annonce", "it": "Di' che sei interessato all'annuncio", "sq": "Thuaj se je i interesuar për shpalljen", "tr": "İlanla ilgilendiğini söyle" } },
-      { "id": "p2", "expectedText": "Wieviel isch d'Kaution?", "lang": "de-DE", "hint": { "es": "Pregunta cuánto es la fianza", "en": "Ask how much the deposit is", "pt": "Pergunta quanto é a fiança", "fr": "Demandez quel est le montant de la caution", "it": "Chiedi quanto è la cauzione", "sq": "Pyet sa është kaucioni", "tr": "Depozitonun ne kadar olduğunu sor" } }
+      {
+        "id": "p1",
+        "expectedText": "Ich interessiere mi für s'Inserat",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Di que estás interesado en el anuncio",
+          "en": "Say you're interested in the listing",
+          "pt": "Diz que estás interessado no anúncio",
+          "fr": "Dites que vous êtes intéressé par l'annonce",
+          "it": "Di' che sei interessato all'annuncio",
+          "sq": "Thuaj se je i interesuar për shpalljen",
+          "tr": "İlanla ilgilendiğini söyle"
+        }
+      },
+      {
+        "id": "p2",
+        "expectedText": "Wieviel isch d'Kaution?",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Pregunta cuánto es la fianza",
+          "en": "Ask how much the deposit is",
+          "pt": "Pergunta quanto é a fiança",
+          "fr": "Demandez quel est le montant de la caution",
+          "it": "Chiedi quanto è la cauzione",
+          "sq": "Pyet sa është kaucioni",
+          "tr": "Depozitonun ne kadar olduğunu sor"
+        }
+      }
     ]
   },
   "finalExam": [
-    { "id": "e1", "question": { "es": "'Dr Mietvertrag' significa...", "en": "'Dr Mietvertrag' means...", "pt": "'Dr Mietvertrag' significa...", "fr": "« Dr Mietvertrag » signifie...", "it": "'Dr Mietvertrag' significa...", "sq": "'Dr Mietvertrag' do të thotë...", "tr": "'Dr Mietvertrag' anlamı..." }, "options": [ { "text": { "es": "El contrato de alquiler", "en": "The rental contract", "pt": "O contrato de arrendamento", "fr": "Le contrat de location", "it": "Il contratto d'affitto", "sq": "Kontrata e qirasë", "tr": "Kira sözleşmesi" }, "correct": true }, { "text": { "es": "La visita", "en": "The viewing", "pt": "A visita", "fr": "La visite", "it": "La visita", "sq": "Vizita", "tr": "Gezi" }, "correct": false } ] },
-    { "id": "e2", "question": { "es": "'D Kaution' significa...", "en": "'D Kaution' means...", "pt": "'D Kaution' significa...", "fr": "« D Kaution » signifie...", "it": "'D Kaution' significa...", "sq": "'D Kaution' do të thotë...", "tr": "'D Kaution' anlamı..." }, "options": [ { "text": { "es": "La fianza", "en": "The deposit", "pt": "A fiança", "fr": "La caution", "it": "La cauzione", "sq": "Kaucioni", "tr": "Depozito" }, "correct": true }, { "text": { "es": "El anuncio", "en": "The listing", "pt": "O anúncio", "fr": "L'annonce", "it": "L'annuncio", "sq": "Shpallja", "tr": "İlan" }, "correct": false } ] },
-    { "id": "e3", "question": { "es": "'S Inserat' significa...", "en": "'S Inserat' means...", "pt": "'S Inserat' significa...", "fr": "« S Inserat » signifie...", "it": "'S Inserat' significa...", "sq": "'S Inserat' do të thotë...", "tr": "'S Inserat' anlamı..." }, "options": [ { "text": { "es": "El anuncio", "en": "The listing", "pt": "O anúncio", "fr": "L'annonce", "it": "L'annuncio", "sq": "Shpallja", "tr": "İlan" }, "correct": true }, { "text": { "es": "El contrato", "en": "The contract", "pt": "O contrato", "fr": "Le contrat", "it": "Il contratto", "sq": "Kontrata", "tr": "Sözleşme" }, "correct": false } ] },
-    { "id": "e4", "question": { "es": "'Ich zieh i' significa...", "en": "'Ich zieh i' means...", "pt": "'Ich zieh i' significa...", "fr": "« Ich zieh i » signifie...", "it": "'Ich zieh i' significa...", "sq": "'Ich zieh i' do të thotë...", "tr": "'Ich zieh i' anlamı..." }, "options": [ { "text": { "es": "Me mudo", "en": "I'm moving in", "pt": "Mudo-me", "fr": "J'emménage", "it": "Mi trasferisco", "sq": "Po shpërngulem", "tr": "Taşınıyorum" }, "correct": true }, { "text": { "es": "Me caso", "en": "I'm getting married", "pt": "Vou casar-me", "fr": "Je me marie", "it": "Mi sposo", "sq": "Po martohem", "tr": "Evleniyorum" }, "correct": false } ] },
-    { "id": "e5", "question": { "es": "'D Besichtigung' significa...", "en": "'D Besichtigung' means...", "pt": "'D Besichtigung' significa...", "fr": "« D Besichtigung » signifie...", "it": "'D Besichtigung' significa...", "sq": "'D Besichtigung' do të thotë...", "tr": "'D Besichtigung' anlamı..." }, "options": [ { "text": { "es": "La visita al piso", "en": "The viewing", "pt": "A visita", "fr": "La visite", "it": "La visita", "sq": "Vizita", "tr": "Gezi" }, "correct": true }, { "text": { "es": "El pago", "en": "The payment", "pt": "O pagamento", "fr": "Le paiement", "it": "Il pagamento", "sq": "Pagesa", "tr": "Ödeme" }, "correct": false } ] },
-    { "id": "e6", "question": { "es": "'Kündige' se refiere a...", "en": "'Kündige' refers to...", "pt": "'Kündige' refere-se a...", "fr": "« Kündige » fait référence à...", "it": "'Kündige' si riferisce a...", "sq": "'Kündige' i referohet...", "tr": "'Kündige' şuna işaret eder..." }, "options": [ { "text": { "es": "Rescindir/dar de baja el contrato", "en": "Giving notice/cancelling the contract", "pt": "Rescindir o contrato", "fr": "Résilier le contrat", "it": "Disdire il contratto", "sq": "Të japësh njoftim/anulosh kontratën", "tr": "Sözleşmeyi iptal etmek" }, "correct": true }, { "text": { "es": "Firmar el contrato", "en": "Signing the contract", "pt": "Assinar o contrato", "fr": "Signer le contrat", "it": "Firmare il contratto", "sq": "Të nënshkruash kontratën", "tr": "Sözleşmeyi imzalamak" }, "correct": false } ] },
-    { "id": "e7", "question": { "es": "Traduce: 'Wei mer en Termin für e Besichtigung mache?'", "en": "Translate: 'Wei mer en Termin für e Besichtigung mache?'", "pt": "Traduz: 'Wei mer en Termin für e Besichtigung mache?'", "fr": "Traduisez : « Wei mer en Termin für e Besichtigung mache? »", "it": "Traduci: 'Wei mer en Termin für e Besichtigung mache?'", "sq": "Përkthe: 'Wei mer en Termin für e Besichtigung mache?'", "tr": "Çevir: 'Wei mer en Termin für e Besichtigung mache?'" }, "options": [ { "text": { "es": "¿Quedamos para una visita?", "en": "Shall we set up a viewing?", "pt": "Marcamos uma visita?", "fr": "On fixe un rendez-vous pour une visite ?", "it": "Fissiamo un appuntamento per una visita?", "sq": "A caktojmë një takim për vizitë?", "tr": "Bir gezi için randevu ayarlayalım mı?" }, "correct": true }, { "text": { "es": "¿Firmamos el contrato ya?", "en": "Shall we sign the contract already?", "pt": "Assinamos já o contrato?", "fr": "On signe déjà le contrat ?", "it": "Firmiamo già il contratto?", "sq": "A ta nënshkruajmë tashmë kontratën?", "tr": "Sözleşmeyi hemen imzalayalım mı?" }, "correct": false } ] },
-    { "id": "e8", "question": { "es": "El prefijo separable de 'ihizieh' es...", "en": "The separable prefix of 'ihizieh' is...", "pt": "O prefixo separável de 'ihizieh' é...", "fr": "Le préfixe séparable de « ihizieh » est...", "it": "Il prefisso separabile di 'ihizieh' è...", "sq": "Parashtesa e ndashme e 'ihizieh' është...", "tr": "'ihizieh' fiilinin ayrılabilir öneki..." }, "options": [ { "text": "i-", "correct": true }, { "text": "-zieh", "correct": false } ] },
-    { "id": "e9", "question": { "es": "Traduce: 'Ich interessiere mi für Ihres Inserat'", "en": "Translate: 'Ich interessiere mi für Ihres Inserat'", "pt": "Traduz: 'Ich interessiere mi für Ihres Inserat'", "fr": "Traduisez : « Ich interessiere mi für Ihres Inserat »", "it": "Traduci: 'Ich interessiere mi für Ihres Inserat'", "sq": "Përkthe: 'Ich interessiere mi für Ihres Inserat'", "tr": "Çevir: 'Ich interessiere mi für Ihres Inserat'" }, "options": [ { "text": { "es": "Estoy interesado en su anuncio", "en": "I'm interested in your listing", "pt": "Estou interessado no seu anúncio", "fr": "Je suis intéressé par votre annonce", "it": "Sono interessato al suo annuncio", "sq": "Jam i interesuar për shpalljen tuaj", "tr": "İlanınızla ilgileniyorum" }, "correct": true }, { "text": { "es": "No estoy interesado", "en": "I'm not interested", "pt": "Não estou interessado", "fr": "Je ne suis pas intéressé", "it": "Non sono interessato", "sq": "Nuk jam i interesuar", "tr": "İlgilenmiyorum" }, "correct": false } ] },
-    { "id": "e10", "question": { "es": "Antes de firmar un contrato de alquiler, es normal preguntar por...", "en": "Before signing a rental contract, it's normal to ask about...", "pt": "Antes de assinar um contrato de arrendamento, é normal perguntar por...", "fr": "Avant de signer un contrat de location, il est normal de demander...", "it": "Prima di firmare un contratto d'affitto, è normale chiedere...", "sq": "Përpara se të nënshkruash një kontratë qiraje, është normale të pyesësh për...", "tr": "Kira sözleşmesi imzalamadan önce şunu sormak normaldir..." }, "options": [ { "text": { "es": "El importe de la fianza", "en": "The deposit amount", "pt": "O valor da fiança", "fr": "Le montant de la caution", "it": "L'importo della cauzione", "sq": "Shumën e kaucionit", "tr": "Depozito miktarı" }, "correct": true }, { "text": { "es": "El color de las paredes de tus vecinos", "en": "The color of your neighbors' walls", "pt": "A cor das paredes dos vizinhos", "fr": "La couleur des murs des voisins", "it": "Il colore delle pareti dei vicini", "sq": "Ngjyrën e mureve të fqinjëve", "tr": "Komşularının duvar rengi" }, "correct": false } ] }
+    {
+      "id": "e1",
+      "question": {
+        "es": "'Dr Mietvertrag' significa...",
+        "en": "'Dr Mietvertrag' means...",
+        "pt": "'Dr Mietvertrag' significa...",
+        "fr": "« Dr Mietvertrag » signifie...",
+        "it": "'Dr Mietvertrag' significa...",
+        "sq": "'Dr Mietvertrag' do të thotë...",
+        "tr": "'Dr Mietvertrag' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El contrato de alquiler",
+            "en": "The rental contract",
+            "pt": "O contrato de arrendamento",
+            "fr": "Le contrat de location",
+            "it": "Il contratto d'affitto",
+            "sq": "Kontrata e qirasë",
+            "tr": "Kira sözleşmesi"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "La visita",
+            "en": "The viewing",
+            "pt": "A visita",
+            "fr": "La visite",
+            "it": "La visita",
+            "sq": "Vizita",
+            "tr": "Gezi"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "question": {
+        "es": "'D Kaution' significa...",
+        "en": "'D Kaution' means...",
+        "pt": "'D Kaution' significa...",
+        "fr": "« D Kaution » signifie...",
+        "it": "'D Kaution' significa...",
+        "sq": "'D Kaution' do të thotë...",
+        "tr": "'D Kaution' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "La fianza",
+            "en": "The deposit",
+            "pt": "A fiança",
+            "fr": "La caution",
+            "it": "La cauzione",
+            "sq": "Kaucioni",
+            "tr": "Depozito"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El anuncio",
+            "en": "The listing",
+            "pt": "O anúncio",
+            "fr": "L'annonce",
+            "it": "L'annuncio",
+            "sq": "Shpallja",
+            "tr": "İlan"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "question": {
+        "es": "'S Inserat' significa...",
+        "en": "'S Inserat' means...",
+        "pt": "'S Inserat' significa...",
+        "fr": "« S Inserat » signifie...",
+        "it": "'S Inserat' significa...",
+        "sq": "'S Inserat' do të thotë...",
+        "tr": "'S Inserat' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El anuncio",
+            "en": "The listing",
+            "pt": "O anúncio",
+            "fr": "L'annonce",
+            "it": "L'annuncio",
+            "sq": "Shpallja",
+            "tr": "İlan"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El contrato",
+            "en": "The contract",
+            "pt": "O contrato",
+            "fr": "Le contrat",
+            "it": "Il contratto",
+            "sq": "Kontrata",
+            "tr": "Sözleşme"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "question": {
+        "es": "'Ich zieh i' significa...",
+        "en": "'Ich zieh i' means...",
+        "pt": "'Ich zieh i' significa...",
+        "fr": "« Ich zieh i » signifie...",
+        "it": "'Ich zieh i' significa...",
+        "sq": "'Ich zieh i' do të thotë...",
+        "tr": "'Ich zieh i' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Me mudo",
+            "en": "I'm moving in",
+            "pt": "Mudo-me",
+            "fr": "J'emménage",
+            "it": "Mi trasferisco",
+            "sq": "Po shpërngulem",
+            "tr": "Taşınıyorum"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Me caso",
+            "en": "I'm getting married",
+            "pt": "Vou casar-me",
+            "fr": "Je me marie",
+            "it": "Mi sposo",
+            "sq": "Po martohem",
+            "tr": "Evleniyorum"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "question": {
+        "es": "'D Besichtigung' significa...",
+        "en": "'D Besichtigung' means...",
+        "pt": "'D Besichtigung' significa...",
+        "fr": "« D Besichtigung » signifie...",
+        "it": "'D Besichtigung' significa...",
+        "sq": "'D Besichtigung' do të thotë...",
+        "tr": "'D Besichtigung' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "La visita al piso",
+            "en": "The viewing",
+            "pt": "A visita",
+            "fr": "La visite",
+            "it": "La visita",
+            "sq": "Vizita",
+            "tr": "Gezi"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El pago",
+            "en": "The payment",
+            "pt": "O pagamento",
+            "fr": "Le paiement",
+            "it": "Il pagamento",
+            "sq": "Pagesa",
+            "tr": "Ödeme"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "question": {
+        "es": "'Kündige' se refiere a...",
+        "en": "'Kündige' refers to...",
+        "pt": "'Kündige' refere-se a...",
+        "fr": "« Kündige » fait référence à...",
+        "it": "'Kündige' si riferisce a...",
+        "sq": "'Kündige' i referohet...",
+        "tr": "'Kündige' şuna işaret eder..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Rescindir/dar de baja el contrato",
+            "en": "Giving notice/cancelling the contract",
+            "pt": "Rescindir o contrato",
+            "fr": "Résilier le contrat",
+            "it": "Disdire il contratto",
+            "sq": "Të japësh njoftim/anulosh kontratën",
+            "tr": "Sözleşmeyi iptal etmek"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Firmar el contrato",
+            "en": "Signing the contract",
+            "pt": "Assinar o contrato",
+            "fr": "Signer le contrat",
+            "it": "Firmare il contratto",
+            "sq": "Të nënshkruash kontratën",
+            "tr": "Sözleşmeyi imzalamak"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "question": {
+        "es": "Traduce: 'Wei mer en Termin für e Besichtigung mache?'",
+        "en": "Translate: 'Wei mer en Termin für e Besichtigung mache?'",
+        "pt": "Traduz: 'Wei mer en Termin für e Besichtigung mache?'",
+        "fr": "Traduisez : « Wei mer en Termin für e Besichtigung mache? »",
+        "it": "Traduci: 'Wei mer en Termin für e Besichtigung mache?'",
+        "sq": "Përkthe: 'Wei mer en Termin für e Besichtigung mache?'",
+        "tr": "Çevir: 'Wei mer en Termin für e Besichtigung mache?'"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "¿Quedamos para una visita?",
+            "en": "Shall we set up a viewing?",
+            "pt": "Marcamos uma visita?",
+            "fr": "On fixe un rendez-vous pour une visite ?",
+            "it": "Fissiamo un appuntamento per una visita?",
+            "sq": "A caktojmë një takim për vizitë?",
+            "tr": "Bir gezi için randevu ayarlayalım mı?"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "¿Firmamos el contrato ya?",
+            "en": "Shall we sign the contract already?",
+            "pt": "Assinamos já o contrato?",
+            "fr": "On signe déjà le contrat ?",
+            "it": "Firmiamo già il contratto?",
+            "sq": "A ta nënshkruajmë tashmë kontratën?",
+            "tr": "Sözleşmeyi hemen imzalayalım mı?"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "question": {
+        "es": "El prefijo separable de 'ihizieh' es...",
+        "en": "The separable prefix of 'ihizieh' is...",
+        "pt": "O prefixo separável de 'ihizieh' é...",
+        "fr": "Le préfixe séparable de « ihizieh » est...",
+        "it": "Il prefisso separabile di 'ihizieh' è...",
+        "sq": "Parashtesa e ndashme e 'ihizieh' është...",
+        "tr": "'ihizieh' fiilinin ayrılabilir öneki..."
+      },
+      "options": [
+        {
+          "text": "i-",
+          "correct": true
+        },
+        {
+          "text": "-zieh",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "question": {
+        "es": "Traduce: 'Ich interessiere mi für Ihres Inserat'",
+        "en": "Translate: 'Ich interessiere mi für Ihres Inserat'",
+        "pt": "Traduz: 'Ich interessiere mi für Ihres Inserat'",
+        "fr": "Traduisez : « Ich interessiere mi für Ihres Inserat »",
+        "it": "Traduci: 'Ich interessiere mi für Ihres Inserat'",
+        "sq": "Përkthe: 'Ich interessiere mi für Ihres Inserat'",
+        "tr": "Çevir: 'Ich interessiere mi für Ihres Inserat'"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Estoy interesado en su anuncio",
+            "en": "I'm interested in your listing",
+            "pt": "Estou interessado no seu anúncio",
+            "fr": "Je suis intéressé par votre annonce",
+            "it": "Sono interessato al suo annuncio",
+            "sq": "Jam i interesuar për shpalljen tuaj",
+            "tr": "İlanınızla ilgileniyorum"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "No estoy interesado",
+            "en": "I'm not interested",
+            "pt": "Não estou interessado",
+            "fr": "Je ne suis pas intéressé",
+            "it": "Non sono interessato",
+            "sq": "Nuk jam i interesuar",
+            "tr": "İlgilenmiyorum"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "question": {
+        "es": "Antes de firmar un contrato de alquiler, es normal preguntar por...",
+        "en": "Before signing a rental contract, it's normal to ask about...",
+        "pt": "Antes de assinar um contrato de arrendamento, é normal perguntar por...",
+        "fr": "Avant de signer un contrat de location, il est normal de demander...",
+        "it": "Prima di firmare un contratto d'affitto, è normale chiedere...",
+        "sq": "Përpara se të nënshkruash një kontratë qiraje, është normale të pyesësh për...",
+        "tr": "Kira sözleşmesi imzalamadan önce şunu sormak normaldir..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El importe de la fianza",
+            "en": "The deposit amount",
+            "pt": "O valor da fiança",
+            "fr": "Le montant de la caution",
+            "it": "L'importo della cauzione",
+            "sq": "Shumën e kaucionit",
+            "tr": "Depozito miktarı"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El color de las paredes de tus vecinos",
+            "en": "The color of your neighbors' walls",
+            "pt": "A cor das paredes dos vizinhos",
+            "fr": "La couleur des murs des voisins",
+            "it": "Il colore delle pareti dei vicini",
+            "sq": "Ngjyrën e mureve të fqinjëve",
+            "tr": "Komşularının duvar rengi"
+          },
+          "correct": false
+        }
+      ]
+    }
   ]
 }

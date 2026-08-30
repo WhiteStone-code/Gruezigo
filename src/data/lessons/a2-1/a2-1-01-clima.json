@@ -42,12 +42,27 @@
         "sq": "Njësoj si në shqip thuhet 'është me diell' pa kryefjalë reale, gjermanishtja zvicerane përdor 'Es isch...' (fjalë për fjalë 'është'). Është e njëjta ndërtim joveror si gjermanishtja standarde 'Es ist...', vetëm e shqiptuar ndryshe.",
         "tr": "İspanyolcada gerçek özne olmadan 'güneşli' denildiği gibi, İsviçre Almancası 'Es isch...' (kelimenin tam anlamıyla 'o dur') kullanır. Standart Almanca 'Es ist...' ile aynı kişisiz yapıdır, sadece farklı telaffuz edilir."
       },
-      "table": [
-        { "left": "Es isch sunnig.", "right": { "es": "Está soleado.", "en": "It's sunny.", "pt": "Está sol.", "fr": "Il fait soleil.", "it": "C'è il sole.", "sq": "Është me diell.", "tr": "Hava güneşli." } },
-        { "left": "Es isch chalt.", "right": { "es": "Hace frío.", "en": "It's cold.", "pt": "Está frio.", "fr": "Il fait froid.", "it": "Fa freddo.", "sq": "Është ftohtë.", "tr": "Hava soğuk." } },
-        { "left": "Es rägnet.", "right": { "es": "Está lloviendo.", "en": "It's raining.", "pt": "Está a chover.", "fr": "Il pleut.", "it": "Sta piovendo.", "sq": "Po bie shi.", "tr": "Yağmur yağıyor." } }
-      ],
-      "note": {
+      "table": {
+        "headers": [
+          "Frase",
+          "Schwiizerdütsch"
+        ],
+        "rows": [
+          [
+            "Está soleado.",
+            "Es isch sunnig."
+          ],
+          [
+            "Hace frío.",
+            "Es isch chalt."
+          ],
+          [
+            "Está lloviendo.",
+            "Es rägnet."
+          ]
+        ]
+      },
+      "culturalNote": {
         "es": "En invierno, en los cantones de montaña como Uri, no es raro que la nieve llegue hasta el valle — vale la pena aprender también 'Es schneit' (está nevando).",
         "en": "In winter, in mountain cantons like Uri, it's not unusual for snow to reach the valley — worth also learning 'Es schneit' (it's snowing).",
         "pt": "No inverno, nos cantões de montanha como Uri, não é raro a neve chegar ao vale — vale a pena aprender também 'Es schneit' (está a nevar).",
@@ -59,56 +74,798 @@
     }
   ],
   "dialogueExample": [
-    { "speaker": "A", "text": "Wie isch s'Wätter hüt?", "base": { "es": "¿Qué tal el clima hoy?", "en": "How's the weather today?", "pt": "Como está o tempo hoje?", "fr": "Quel temps fait-il aujourd'hui ?", "it": "Che tempo fa oggi?", "sq": "Si është moti sot?", "tr": "Bugün hava nasıl?" } },
-    { "speaker": "B", "text": "Hüt isch es sunnig, aber chalt — typisch Winter.", "base": { "es": "Hoy está soleado, pero frío — típico invierno.", "en": "Today it's sunny but cold — typical winter.", "pt": "Hoje está sol, mas frio — inverno típico.", "fr": "Aujourd'hui il fait soleil, mais froid — hiver typique.", "it": "Oggi c'è il sole ma fa freddo — tipico inverno.", "sq": "Sot është me diell, por ftohtë — dimër tipik.", "tr": "Bugün güneşli ama soğuk — tipik bir kış." } },
-    { "speaker": "A", "text": "Im Fröhlig wird's besser.", "base": { "es": "En primavera mejorará.", "en": "It'll get better in spring.", "pt": "Na primavera vai melhorar.", "fr": "Ça ira mieux au printemps.", "it": "In primavera migliorerà.", "sq": "Në pranverë do të përmirësohet.", "tr": "İlkbaharda düzelecek." } }
+    {
+      "speaker": "A",
+      "text": "Wie isch s'Wätter hüt?",
+      "base": {
+        "es": "¿Qué tal el clima hoy?",
+        "en": "How's the weather today?",
+        "pt": "Como está o tempo hoje?",
+        "fr": "Quel temps fait-il aujourd'hui ?",
+        "it": "Che tempo fa oggi?",
+        "sq": "Si është moti sot?",
+        "tr": "Bugün hava nasıl?"
+      }
+    },
+    {
+      "speaker": "B",
+      "text": "Hüt isch es sunnig, aber chalt — typisch Winter.",
+      "base": {
+        "es": "Hoy está soleado, pero frío — típico invierno.",
+        "en": "Today it's sunny but cold — typical winter.",
+        "pt": "Hoje está sol, mas frio — inverno típico.",
+        "fr": "Aujourd'hui il fait soleil, mais froid — hiver typique.",
+        "it": "Oggi c'è il sole ma fa freddo — tipico inverno.",
+        "sq": "Sot është me diell, por ftohtë — dimër tipik.",
+        "tr": "Bugün güneşli ama soğuk — tipik bir kış."
+      }
+    },
+    {
+      "speaker": "A",
+      "text": "Im Fröhlig wird's besser.",
+      "base": {
+        "es": "En primavera mejorará.",
+        "en": "It'll get better in spring.",
+        "pt": "Na primavera vai melhorar.",
+        "fr": "Ça ira mieux au printemps.",
+        "it": "In primavera migliorerà.",
+        "sq": "Në pranverë do të përmirësohet.",
+        "tr": "İlkbaharda düzelecek."
+      }
+    }
   ],
   "comparisonTable": [
-    { "base": { "es": "Soleado", "en": "Sunny", "pt": "Com sol", "fr": "Ensoleillé", "it": "Soleggiato", "sq": "Me diell", "tr": "Güneşli" }, "hochdeutsch": "Sonnig", "schwiizerduetsch": "Sunnig" },
-    { "base": { "es": "Lluvioso", "en": "Rainy", "pt": "Chuvoso", "fr": "Pluvieux", "it": "Piovoso", "sq": "Me shi", "tr": "Yağmurlu" }, "hochdeutsch": "Regnerisch", "schwiizerduetsch": "Rägnerisch" },
-    { "base": { "es": "Frío", "en": "Cold", "pt": "Frio", "fr": "Froid", "it": "Freddo", "sq": "Ftohtë", "tr": "Soğuk" }, "hochdeutsch": "Kalt", "schwiizerduetsch": "Chalt" },
-    { "base": { "es": "Cálido", "en": "Warm", "pt": "Quente", "fr": "Chaud", "it": "Caldo", "sq": "Ngrohtë", "tr": "Sıcak" }, "hochdeutsch": "Warm", "schwiizerduetsch": "Warm" },
-    { "base": { "es": "La primavera", "en": "Spring", "pt": "A primavera", "fr": "Le printemps", "it": "La primavera", "sq": "Pranvera", "tr": "İlkbahar" }, "hochdeutsch": "Der Frühling", "schwiizerduetsch": "Dr Fröhlig" },
-    { "base": { "es": "El invierno", "en": "Winter", "pt": "O inverno", "fr": "L'hiver", "it": "L'inverno", "sq": "Dimri", "tr": "Kış" }, "hochdeutsch": "Der Winter", "schwiizerduetsch": "Dr Winter" }
+    {
+      "base": {
+        "es": "Soleado",
+        "en": "Sunny",
+        "pt": "Com sol",
+        "fr": "Ensoleillé",
+        "it": "Soleggiato",
+        "sq": "Me diell",
+        "tr": "Güneşli"
+      },
+      "hochdeutsch": "Sonnig",
+      "schwiizerduetsch": "Sunnig"
+    },
+    {
+      "base": {
+        "es": "Lluvioso",
+        "en": "Rainy",
+        "pt": "Chuvoso",
+        "fr": "Pluvieux",
+        "it": "Piovoso",
+        "sq": "Me shi",
+        "tr": "Yağmurlu"
+      },
+      "hochdeutsch": "Regnerisch",
+      "schwiizerduetsch": "Rägnerisch"
+    },
+    {
+      "base": {
+        "es": "Frío",
+        "en": "Cold",
+        "pt": "Frio",
+        "fr": "Froid",
+        "it": "Freddo",
+        "sq": "Ftohtë",
+        "tr": "Soğuk"
+      },
+      "hochdeutsch": "Kalt",
+      "schwiizerduetsch": "Chalt"
+    },
+    {
+      "base": {
+        "es": "Cálido",
+        "en": "Warm",
+        "pt": "Quente",
+        "fr": "Chaud",
+        "it": "Caldo",
+        "sq": "Ngrohtë",
+        "tr": "Sıcak"
+      },
+      "hochdeutsch": "Warm",
+      "schwiizerduetsch": "Warm"
+    },
+    {
+      "base": {
+        "es": "La primavera",
+        "en": "Spring",
+        "pt": "A primavera",
+        "fr": "Le printemps",
+        "it": "La primavera",
+        "sq": "Pranvera",
+        "tr": "İlkbahar"
+      },
+      "hochdeutsch": "Der Frühling",
+      "schwiizerduetsch": "Dr Fröhlig"
+    },
+    {
+      "base": {
+        "es": "El invierno",
+        "en": "Winter",
+        "pt": "O inverno",
+        "fr": "L'hiver",
+        "it": "L'inverno",
+        "sq": "Dimri",
+        "tr": "Kış"
+      },
+      "hochdeutsch": "Der Winter",
+      "schwiizerduetsch": "Dr Winter"
+    }
   ],
   "vocabulary": [
-    { "id": "v1", "hochdeutsch": "Sonnig", "schwiizerduetsch": "Sunnig", "audioText": "Es isch sunnig", "base": { "es": "Soleado", "en": "Sunny", "pt": "Com sol", "fr": "Ensoleillé", "it": "Soleggiato", "sq": "Me diell", "tr": "Güneşli" } },
-    { "id": "v2", "hochdeutsch": "Regnerisch", "schwiizerduetsch": "Rägnerisch", "audioText": "Es isch rägnerisch", "base": { "es": "Lluvioso", "en": "Rainy", "pt": "Chuvoso", "fr": "Pluvieux", "it": "Piovoso", "sq": "Me shi", "tr": "Yağmurlu" } },
-    { "id": "v3", "hochdeutsch": "Kalt", "schwiizerduetsch": "Chalt", "audioText": "Es isch chalt", "base": { "es": "Frío", "en": "Cold", "pt": "Frio", "fr": "Froid", "it": "Freddo", "sq": "Ftohtë", "tr": "Soğuk" } },
-    { "id": "v4", "hochdeutsch": "Warm", "schwiizerduetsch": "Warm", "audioText": "Es isch warm", "base": { "es": "Cálido", "en": "Warm", "pt": "Quente", "fr": "Chaud", "it": "Caldo", "sq": "Ngrohtë", "tr": "Sıcak" } },
-    { "id": "v5", "hochdeutsch": "Der Frühling", "schwiizerduetsch": "Dr Fröhlig", "audioText": "Dr Fröhlig", "base": { "es": "La primavera", "en": "Spring", "pt": "A primavera", "fr": "Le printemps", "it": "La primavera", "sq": "Pranvera", "tr": "İlkbahar" } },
-    { "id": "v6", "hochdeutsch": "Der Winter", "schwiizerduetsch": "Dr Winter", "audioText": "Dr Winter", "base": { "es": "El invierno", "en": "Winter", "pt": "O inverno", "fr": "L'hiver", "it": "L'inverno", "sq": "Dimri", "tr": "Kış" } }
+    {
+      "id": "v1",
+      "hochdeutsch": "Sonnig",
+      "schwiizerduetsch": "Sunnig",
+      "audioText": "Es isch sunnig",
+      "base": {
+        "es": "Soleado",
+        "en": "Sunny",
+        "pt": "Com sol",
+        "fr": "Ensoleillé",
+        "it": "Soleggiato",
+        "sq": "Me diell",
+        "tr": "Güneşli"
+      }
+    },
+    {
+      "id": "v2",
+      "hochdeutsch": "Regnerisch",
+      "schwiizerduetsch": "Rägnerisch",
+      "audioText": "Es isch rägnerisch",
+      "base": {
+        "es": "Lluvioso",
+        "en": "Rainy",
+        "pt": "Chuvoso",
+        "fr": "Pluvieux",
+        "it": "Piovoso",
+        "sq": "Me shi",
+        "tr": "Yağmurlu"
+      }
+    },
+    {
+      "id": "v3",
+      "hochdeutsch": "Kalt",
+      "schwiizerduetsch": "Chalt",
+      "audioText": "Es isch chalt",
+      "base": {
+        "es": "Frío",
+        "en": "Cold",
+        "pt": "Frio",
+        "fr": "Froid",
+        "it": "Freddo",
+        "sq": "Ftohtë",
+        "tr": "Soğuk"
+      }
+    },
+    {
+      "id": "v4",
+      "hochdeutsch": "Warm",
+      "schwiizerduetsch": "Warm",
+      "audioText": "Es isch warm",
+      "base": {
+        "es": "Cálido",
+        "en": "Warm",
+        "pt": "Quente",
+        "fr": "Chaud",
+        "it": "Caldo",
+        "sq": "Ngrohtë",
+        "tr": "Sıcak"
+      }
+    },
+    {
+      "id": "v5",
+      "hochdeutsch": "Der Frühling",
+      "schwiizerduetsch": "Dr Fröhlig",
+      "audioText": "Dr Fröhlig",
+      "base": {
+        "es": "La primavera",
+        "en": "Spring",
+        "pt": "A primavera",
+        "fr": "Le printemps",
+        "it": "La primavera",
+        "sq": "Pranvera",
+        "tr": "İlkbahar"
+      }
+    },
+    {
+      "id": "v6",
+      "hochdeutsch": "Der Winter",
+      "schwiizerduetsch": "Dr Winter",
+      "audioText": "Dr Winter",
+      "base": {
+        "es": "El invierno",
+        "en": "Winter",
+        "pt": "O inverno",
+        "fr": "L'hiver",
+        "it": "L'inverno",
+        "sq": "Dimri",
+        "tr": "Kış"
+      }
+    }
   ],
   "exercises": {
     "fillBlanks": [
-      { "id": "fb1", "before": "Es", "after": "sunnig hüt.", "correctWord": "isch", "options": ["isch", "het", "sind"], "hint": { "es": "Completa: 'Está soleado hoy'", "en": "Complete: 'It's sunny today'", "pt": "Completa: 'Está sol hoje'", "fr": "Complétez : « Il fait soleil aujourd'hui »", "it": "Completa: 'C'è il sole oggi'", "sq": "Plotëso: 'Sot është me diell'", "tr": "Tamamla: 'Bugün hava güneşli'" } },
-      { "id": "fb2", "before": "Im", "after": "isch es chalt.", "correctWord": "Winter", "options": ["Winter", "Fröhlig", "Sunnig"], "hint": { "es": "Completa: 'En invierno hace frío'", "en": "Complete: 'In winter it's cold'", "pt": "Completa: 'No inverno está frio'", "fr": "Complétez : « En hiver il fait froid »", "it": "Completa: 'In inverno fa freddo'", "sq": "Plotëso: 'Në dimër është ftohtë'", "tr": "Tamamla: 'Kışın hava soğuk'" } }
+      {
+        "id": "fb1",
+        "before": "Es",
+        "after": "sunnig hüt.",
+        "correctWord": "isch",
+        "options": [
+          "isch",
+          "het",
+          "sind"
+        ],
+        "hint": {
+          "es": "Completa: 'Está soleado hoy'",
+          "en": "Complete: 'It's sunny today'",
+          "pt": "Completa: 'Está sol hoje'",
+          "fr": "Complétez : « Il fait soleil aujourd'hui »",
+          "it": "Completa: 'C'è il sole oggi'",
+          "sq": "Plotëso: 'Sot është me diell'",
+          "tr": "Tamamla: 'Bugün hava güneşli'"
+        }
+      },
+      {
+        "id": "fb2",
+        "before": "Im",
+        "after": "isch es chalt.",
+        "correctWord": "Winter",
+        "options": [
+          "Winter",
+          "Fröhlig",
+          "Sunnig"
+        ],
+        "hint": {
+          "es": "Completa: 'En invierno hace frío'",
+          "en": "Complete: 'In winter it's cold'",
+          "pt": "Completa: 'No inverno está frio'",
+          "fr": "Complétez : « En hiver il fait froid »",
+          "it": "Completa: 'In inverno fa freddo'",
+          "sq": "Plotëso: 'Në dimër është ftohtë'",
+          "tr": "Tamamla: 'Kışın hava soğuk'"
+        }
+      }
     ],
     "multipleChoice": [
-      { "id": "mc1", "question": { "es": "'Es isch rägnerisch' significa...", "en": "'Es isch rägnerisch' means...", "pt": "'Es isch rägnerisch' significa...", "fr": "« Es isch rägnerisch » signifie...", "it": "'Es isch rägnerisch' significa...", "sq": "'Es isch rägnerisch' do të thotë...", "tr": "'Es isch rägnerisch' anlamı..." }, "options": [ { "text": { "es": "Está lluvioso", "en": "It's rainy", "pt": "Está chuvoso", "fr": "Il pleut", "it": "È piovoso", "sq": "Është me shi", "tr": "Yağmurlu" }, "correct": true }, { "text": { "es": "Está soleado", "en": "It's sunny", "pt": "Está sol", "fr": "Il fait soleil", "it": "C'è il sole", "sq": "Është me diell", "tr": "Güneşli" }, "correct": false } ] },
-      { "id": "mc2", "question": { "es": "'Dr Fröhlig' es...", "en": "'Dr Fröhlig' is...", "pt": "'Dr Fröhlig' é...", "fr": "« Dr Fröhlig » est...", "it": "'Dr Fröhlig' è...", "sq": "'Dr Fröhlig' është...", "tr": "'Dr Fröhlig' şudur..." }, "options": [ { "text": { "es": "La primavera", "en": "Spring", "pt": "A primavera", "fr": "Le printemps", "it": "La primavera", "sq": "Pranvera", "tr": "İlkbahar" }, "correct": true }, { "text": { "es": "El invierno", "en": "Winter", "pt": "O inverno", "fr": "L'hiver", "it": "L'inverno", "sq": "Dimri", "tr": "Kış" }, "correct": false } ] },
-      { "id": "mc3", "question": { "es": "Para decir 'hace frío' dices...", "en": "To say 'it's cold' you say...", "pt": "Para dizer 'está frio' dizes...", "fr": "Pour dire « il fait froid » on dit...", "it": "Per dire 'fa freddo' dici...", "sq": "Për të thënë 'është ftohtë' thua...", "tr": "'Hava soğuk' demek için dersiniz..." }, "options": [ { "text": "Es isch chalt", "correct": true }, { "text": "Es isch warm", "correct": false } ] },
-      { "id": "mc4", "question": { "es": "'Sunnig' viene del Hochdeutsch...", "en": "'Sunnig' comes from the Hochdeutsch word...", "pt": "'Sunnig' vem do alemão padrão...", "fr": "« Sunnig » vient de l'allemand standard...", "it": "'Sunnig' deriva dal tedesco standard...", "sq": "'Sunnig' vjen nga gjermanishtja standarde...", "tr": "'Sunnig' kelimesi standart Almanca'dan gelir..." }, "options": [ { "text": "Sonnig", "correct": true }, { "text": "Regnerisch", "correct": false } ] }
+      {
+        "id": "mc1",
+        "question": {
+          "es": "'Es isch rägnerisch' significa...",
+          "en": "'Es isch rägnerisch' means...",
+          "pt": "'Es isch rägnerisch' significa...",
+          "fr": "« Es isch rägnerisch » signifie...",
+          "it": "'Es isch rägnerisch' significa...",
+          "sq": "'Es isch rägnerisch' do të thotë...",
+          "tr": "'Es isch rägnerisch' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Está lluvioso",
+              "en": "It's rainy",
+              "pt": "Está chuvoso",
+              "fr": "Il pleut",
+              "it": "È piovoso",
+              "sq": "Është me shi",
+              "tr": "Yağmurlu"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Está soleado",
+              "en": "It's sunny",
+              "pt": "Está sol",
+              "fr": "Il fait soleil",
+              "it": "C'è il sole",
+              "sq": "Është me diell",
+              "tr": "Güneşli"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc2",
+        "question": {
+          "es": "'Dr Fröhlig' es...",
+          "en": "'Dr Fröhlig' is...",
+          "pt": "'Dr Fröhlig' é...",
+          "fr": "« Dr Fröhlig » est...",
+          "it": "'Dr Fröhlig' è...",
+          "sq": "'Dr Fröhlig' është...",
+          "tr": "'Dr Fröhlig' şudur..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "La primavera",
+              "en": "Spring",
+              "pt": "A primavera",
+              "fr": "Le printemps",
+              "it": "La primavera",
+              "sq": "Pranvera",
+              "tr": "İlkbahar"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "El invierno",
+              "en": "Winter",
+              "pt": "O inverno",
+              "fr": "L'hiver",
+              "it": "L'inverno",
+              "sq": "Dimri",
+              "tr": "Kış"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc3",
+        "question": {
+          "es": "Para decir 'hace frío' dices...",
+          "en": "To say 'it's cold' you say...",
+          "pt": "Para dizer 'está frio' dizes...",
+          "fr": "Pour dire « il fait froid » on dit...",
+          "it": "Per dire 'fa freddo' dici...",
+          "sq": "Për të thënë 'është ftohtë' thua...",
+          "tr": "'Hava soğuk' demek için dersiniz..."
+        },
+        "options": [
+          {
+            "text": "Es isch chalt",
+            "correct": true
+          },
+          {
+            "text": "Es isch warm",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc4",
+        "question": {
+          "es": "'Sunnig' viene del Hochdeutsch...",
+          "en": "'Sunnig' comes from the Hochdeutsch word...",
+          "pt": "'Sunnig' vem do alemão padrão...",
+          "fr": "« Sunnig » vient de l'allemand standard...",
+          "it": "'Sunnig' deriva dal tedesco standard...",
+          "sq": "'Sunnig' vjen nga gjermanishtja standarde...",
+          "tr": "'Sunnig' kelimesi standart Almanca'dan gelir..."
+        },
+        "options": [
+          {
+            "text": "Sonnig",
+            "correct": true
+          },
+          {
+            "text": "Regnerisch",
+            "correct": false
+          }
+        ]
+      }
     ],
     "sentenceBuilder": [
-      { "id": "sb1", "prompt": { "es": "Construye: 'Hoy está soleado'", "en": "Build: 'Today it's sunny'", "pt": "Constrói: 'Hoje está sol'", "fr": "Construisez : « Aujourd'hui il fait soleil »", "it": "Costruisci: 'Oggi c'è il sole'", "sq": "Ndërto: 'Sot është me diell'", "tr": "Kur: 'Bugün hava güneşli'" }, "words": ["Hüt", "isch", "es", "sunnig"], "correctOrder": [0, 1, 2, 3] },
-      { "id": "sb2", "prompt": { "es": "Construye: 'En invierno hace frío'", "en": "Build: 'In winter it's cold'", "pt": "Constrói: 'No inverno está frio'", "fr": "Construisez : « En hiver il fait froid »", "it": "Costruisci: 'In inverno fa freddo'", "sq": "Ndërto: 'Në dimër është ftohtë'", "tr": "Kur: 'Kışın hava soğuk'" }, "words": ["Im", "Winter", "isch", "es", "chalt"], "correctOrder": [0, 1, 2, 3, 4] }
+      {
+        "id": "sb1",
+        "prompt": {
+          "es": "Construye: 'Hoy está soleado'",
+          "en": "Build: 'Today it's sunny'",
+          "pt": "Constrói: 'Hoje está sol'",
+          "fr": "Construisez : « Aujourd'hui il fait soleil »",
+          "it": "Costruisci: 'Oggi c'è il sole'",
+          "sq": "Ndërto: 'Sot është me diell'",
+          "tr": "Kur: 'Bugün hava güneşli'"
+        },
+        "words": [
+          "Hüt",
+          "isch",
+          "es",
+          "sunnig"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "sb2",
+        "prompt": {
+          "es": "Construye: 'En invierno hace frío'",
+          "en": "Build: 'In winter it's cold'",
+          "pt": "Constrói: 'No inverno está frio'",
+          "fr": "Construisez : « En hiver il fait froid »",
+          "it": "Costruisci: 'In inverno fa freddo'",
+          "sq": "Ndërto: 'Në dimër është ftohtë'",
+          "tr": "Kur: 'Kışın hava soğuk'"
+        },
+        "words": [
+          "Im",
+          "Winter",
+          "isch",
+          "es",
+          "chalt"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ],
     "pronunciation": [
-      { "id": "p1", "expectedText": "Es isch hüt sunnig", "lang": "de-DE", "hint": { "es": "Di que hoy está soleado", "en": "Say it's sunny today", "pt": "Diz que hoje está sol", "fr": "Dites qu'il fait soleil aujourd'hui", "it": "Di' che oggi c'è il sole", "sq": "Thuaj se sot është me diell", "tr": "Bugün güneşli olduğunu söyle" } },
-      { "id": "p2", "expectedText": "Im Winter isch es chalt", "lang": "de-DE", "hint": { "es": "Di que en invierno hace frío", "en": "Say it's cold in winter", "pt": "Diz que no inverno está frio", "fr": "Dites qu'il fait froid en hiver", "it": "Di' che in inverno fa freddo", "sq": "Thuaj se në dimër është ftohtë", "tr": "Kışın hava soğuk olduğunu söyle" } }
+      {
+        "id": "p1",
+        "expectedText": "Es isch hüt sunnig",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Di que hoy está soleado",
+          "en": "Say it's sunny today",
+          "pt": "Diz que hoje está sol",
+          "fr": "Dites qu'il fait soleil aujourd'hui",
+          "it": "Di' che oggi c'è il sole",
+          "sq": "Thuaj se sot është me diell",
+          "tr": "Bugün güneşli olduğunu söyle"
+        }
+      },
+      {
+        "id": "p2",
+        "expectedText": "Im Winter isch es chalt",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Di que en invierno hace frío",
+          "en": "Say it's cold in winter",
+          "pt": "Diz que no inverno está frio",
+          "fr": "Dites qu'il fait froid en hiver",
+          "it": "Di' che in inverno fa freddo",
+          "sq": "Thuaj se në dimër është ftohtë",
+          "tr": "Kışın hava soğuk olduğunu söyle"
+        }
+      }
     ]
   },
   "finalExam": [
-    { "id": "e1", "question": { "es": "'Es isch sunnig' significa...", "en": "'Es isch sunnig' means...", "pt": "'Es isch sunnig' significa...", "fr": "« Es isch sunnig » signifie...", "it": "'Es isch sunnig' significa...", "sq": "'Es isch sunnig' do të thotë...", "tr": "'Es isch sunnig' anlamı..." }, "options": [ { "text": { "es": "Está soleado", "en": "It's sunny", "pt": "Está sol", "fr": "Il fait soleil", "it": "C'è il sole", "sq": "Është me diell", "tr": "Hava güneşli" }, "correct": true }, { "text": { "es": "Está nevando", "en": "It's snowing", "pt": "Está a nevar", "fr": "Il neige", "it": "Sta nevicando", "sq": "Po bie borë", "tr": "Kar yağıyor" }, "correct": false } ] },
-    { "id": "e2", "question": { "es": "'Dr Winter' significa...", "en": "'Dr Winter' means...", "pt": "'Dr Winter' significa...", "fr": "« Dr Winter » signifie...", "it": "'Dr Winter' significa...", "sq": "'Dr Winter' do të thotë...", "tr": "'Dr Winter' anlamı..." }, "options": [ { "text": { "es": "El invierno", "en": "Winter", "pt": "O inverno", "fr": "L'hiver", "it": "L'inverno", "sq": "Dimri", "tr": "Kış" }, "correct": true }, { "text": { "es": "La primavera", "en": "Spring", "pt": "A primavera", "fr": "Le printemps", "it": "La primavera", "sq": "Pranvera", "tr": "İlkbahar" }, "correct": false } ] },
-    { "id": "e3", "question": { "es": "'Chalt' es lo opuesto de...", "en": "'Chalt' is the opposite of...", "pt": "'Chalt' é o oposto de...", "fr": "« Chalt » est le contraire de...", "it": "'Chalt' è il contrario di...", "sq": "'Chalt' është e kundërta e...", "tr": "'Chalt' kelimesinin zıttı..." }, "options": [ { "text": "Warm", "correct": true }, { "text": "Rägnerisch", "correct": false } ] },
-    { "id": "e4", "question": { "es": "Para preguntar por el clima dices...", "en": "To ask about the weather you say...", "pt": "Para perguntar pelo tempo dizes...", "fr": "Pour demander le temps qu'il fait on dit...", "it": "Per chiedere del meteo dici...", "sq": "Për të pyetur për motin thua...", "tr": "Hava durumunu sormak için dersiniz..." }, "options": [ { "text": "Wie isch s'Wätter?", "correct": true }, { "text": "Wie heissisch du?", "correct": false } ] },
-    { "id": "e5", "question": { "es": "'Es rägnet' significa...", "en": "'Es rägnet' means...", "pt": "'Es rägnet' significa...", "fr": "« Es rägnet » signifie...", "it": "'Es rägnet' significa...", "sq": "'Es rägnet' do të thotë...", "tr": "'Es rägnet' anlamı..." }, "options": [ { "text": { "es": "Está lloviendo", "en": "It's raining", "pt": "Está a chover", "fr": "Il pleut", "it": "Sta piovendo", "sq": "Po bie shi", "tr": "Yağmur yağıyor" }, "correct": true }, { "text": { "es": "Está soleado", "en": "It's sunny", "pt": "Está sol", "fr": "Il fait soleil", "it": "C'è il sole", "sq": "Është me diell", "tr": "Hava güneşli" }, "correct": false } ] },
-    { "id": "e6", "question": { "es": "La construcción 'Es isch...' es equivalente a la del Hochdeutsch...", "en": "The construction 'Es isch...' is equivalent to Hochdeutsch's...", "pt": "A construção 'Es isch...' é equivalente à do alemão padrão...", "fr": "La construction « Es isch... » équivaut à celle de l'allemand standard...", "it": "La costruzione 'Es isch...' equivale a quella del tedesco standard...", "sq": "Ndërtimi 'Es isch...' është ekuivalent me gjermanishten standarde...", "tr": "'Es isch...' yapısı standart Almanca'daki şuna denktir..." }, "options": [ { "text": "Es ist...", "correct": true }, { "text": "Es gibt...", "correct": false } ] },
-    { "id": "e7", "question": { "es": "'Sunnig' significa...", "en": "'Sunnig' means...", "pt": "'Sunnig' significa...", "fr": "« Sunnig » signifie...", "it": "'Sunnig' significa...", "sq": "'Sunnig' do të thotë...", "tr": "'Sunnig' anlamı..." }, "options": [ { "text": { "es": "Soleado", "en": "Sunny", "pt": "Com sol", "fr": "Ensoleillé", "it": "Soleggiato", "sq": "Me diell", "tr": "Güneşli" }, "correct": true }, { "text": { "es": "Nublado", "en": "Cloudy", "pt": "Nublado", "fr": "Nuageux", "it": "Nuvoloso", "sq": "Me re", "tr": "Bulutlu" }, "correct": false } ] },
-    { "id": "e8", "question": { "es": "'Warm' significa...", "en": "'Warm' means...", "pt": "'Warm' significa...", "fr": "« Warm » signifie...", "it": "'Warm' significa...", "sq": "'Warm' do të thotë...", "tr": "'Warm' anlamı..." }, "options": [ { "text": { "es": "Cálido", "en": "Warm", "pt": "Quente", "fr": "Chaud", "it": "Caldo", "sq": "Ngrohtë", "tr": "Sıcak" }, "correct": true }, { "text": { "es": "Frío", "en": "Cold", "pt": "Frio", "fr": "Froid", "it": "Freddo", "sq": "Ftohtë", "tr": "Soğuk" }, "correct": false } ] },
-    { "id": "e9", "question": { "es": "Traduce: 'Im Fröhlig wird's besser'", "en": "Translate: 'Im Fröhlig wird's besser'", "pt": "Traduz: 'Im Fröhlig wird's besser'", "fr": "Traduisez : « Im Fröhlig wird's besser »", "it": "Traduci: 'Im Fröhlig wird's besser'", "sq": "Përkthe: 'Im Fröhlig wird's besser'", "tr": "Çevir: 'Im Fröhlig wird's besser'" }, "options": [ { "text": { "es": "En primavera mejorará", "en": "It'll get better in spring", "pt": "Na primavera vai melhorar", "fr": "Ça ira mieux au printemps", "it": "In primavera migliorerà", "sq": "Në pranverë do të përmirësohet", "tr": "İlkbaharda düzelecek" }, "correct": true }, { "text": { "es": "En invierno empeorará", "en": "It'll get worse in winter", "pt": "No inverno vai piorar", "fr": "Ça ira plus mal en hiver", "it": "In inverno peggiorerà", "sq": "Në dimër do të përkeqësohet", "tr": "Kışın kötüleşecek" }, "correct": false } ] },
-    { "id": "e10", "question": { "es": "En los cantones de montaña como Uri, en invierno...", "en": "In mountain cantons like Uri, in winter...", "pt": "Nos cantões de montanha como Uri, no inverno...", "fr": "Dans les cantons de montagne comme Uri, en hiver...", "it": "Nei cantoni di montagna come Uri, in inverno...", "sq": "Në kantonet malore si Uri, në dimër...", "tr": "Uri gibi dağlık kantonlarda kışın..." }, "options": [ { "text": { "es": "No es raro que nieve hasta en el valle", "en": "It's not unusual for snow to reach the valley", "pt": "Não é raro nevar até no vale", "fr": "Il n'est pas rare qu'il neige jusque dans la vallée", "it": "Non è raro che nevichi fino in valle", "sq": "Nuk është e pazakontë të bjerë borë deri në luginë", "tr": "Vadiye kadar kar yağması olağandışı değildir" }, "correct": true }, { "text": { "es": "Nunca nieva", "en": "It never snows", "pt": "Nunca neva", "fr": "Il ne neige jamais", "it": "Non nevica mai", "sq": "Nuk bie kurrë borë", "tr": "Hiç kar yağmaz" }, "correct": false } ] }
+    {
+      "id": "e1",
+      "question": {
+        "es": "'Es isch sunnig' significa...",
+        "en": "'Es isch sunnig' means...",
+        "pt": "'Es isch sunnig' significa...",
+        "fr": "« Es isch sunnig » signifie...",
+        "it": "'Es isch sunnig' significa...",
+        "sq": "'Es isch sunnig' do të thotë...",
+        "tr": "'Es isch sunnig' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Está soleado",
+            "en": "It's sunny",
+            "pt": "Está sol",
+            "fr": "Il fait soleil",
+            "it": "C'è il sole",
+            "sq": "Është me diell",
+            "tr": "Hava güneşli"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Está nevando",
+            "en": "It's snowing",
+            "pt": "Está a nevar",
+            "fr": "Il neige",
+            "it": "Sta nevicando",
+            "sq": "Po bie borë",
+            "tr": "Kar yağıyor"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "question": {
+        "es": "'Dr Winter' significa...",
+        "en": "'Dr Winter' means...",
+        "pt": "'Dr Winter' significa...",
+        "fr": "« Dr Winter » signifie...",
+        "it": "'Dr Winter' significa...",
+        "sq": "'Dr Winter' do të thotë...",
+        "tr": "'Dr Winter' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El invierno",
+            "en": "Winter",
+            "pt": "O inverno",
+            "fr": "L'hiver",
+            "it": "L'inverno",
+            "sq": "Dimri",
+            "tr": "Kış"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "La primavera",
+            "en": "Spring",
+            "pt": "A primavera",
+            "fr": "Le printemps",
+            "it": "La primavera",
+            "sq": "Pranvera",
+            "tr": "İlkbahar"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "question": {
+        "es": "'Chalt' es lo opuesto de...",
+        "en": "'Chalt' is the opposite of...",
+        "pt": "'Chalt' é o oposto de...",
+        "fr": "« Chalt » est le contraire de...",
+        "it": "'Chalt' è il contrario di...",
+        "sq": "'Chalt' është e kundërta e...",
+        "tr": "'Chalt' kelimesinin zıttı..."
+      },
+      "options": [
+        {
+          "text": "Warm",
+          "correct": true
+        },
+        {
+          "text": "Rägnerisch",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "question": {
+        "es": "Para preguntar por el clima dices...",
+        "en": "To ask about the weather you say...",
+        "pt": "Para perguntar pelo tempo dizes...",
+        "fr": "Pour demander le temps qu'il fait on dit...",
+        "it": "Per chiedere del meteo dici...",
+        "sq": "Për të pyetur për motin thua...",
+        "tr": "Hava durumunu sormak için dersiniz..."
+      },
+      "options": [
+        {
+          "text": "Wie isch s'Wätter?",
+          "correct": true
+        },
+        {
+          "text": "Wie heissisch du?",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "question": {
+        "es": "'Es rägnet' significa...",
+        "en": "'Es rägnet' means...",
+        "pt": "'Es rägnet' significa...",
+        "fr": "« Es rägnet » signifie...",
+        "it": "'Es rägnet' significa...",
+        "sq": "'Es rägnet' do të thotë...",
+        "tr": "'Es rägnet' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Está lloviendo",
+            "en": "It's raining",
+            "pt": "Está a chover",
+            "fr": "Il pleut",
+            "it": "Sta piovendo",
+            "sq": "Po bie shi",
+            "tr": "Yağmur yağıyor"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Está soleado",
+            "en": "It's sunny",
+            "pt": "Está sol",
+            "fr": "Il fait soleil",
+            "it": "C'è il sole",
+            "sq": "Është me diell",
+            "tr": "Hava güneşli"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "question": {
+        "es": "La construcción 'Es isch...' es equivalente a la del Hochdeutsch...",
+        "en": "The construction 'Es isch...' is equivalent to Hochdeutsch's...",
+        "pt": "A construção 'Es isch...' é equivalente à do alemão padrão...",
+        "fr": "La construction « Es isch... » équivaut à celle de l'allemand standard...",
+        "it": "La costruzione 'Es isch...' equivale a quella del tedesco standard...",
+        "sq": "Ndërtimi 'Es isch...' është ekuivalent me gjermanishten standarde...",
+        "tr": "'Es isch...' yapısı standart Almanca'daki şuna denktir..."
+      },
+      "options": [
+        {
+          "text": "Es ist...",
+          "correct": true
+        },
+        {
+          "text": "Es gibt...",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "question": {
+        "es": "'Sunnig' significa...",
+        "en": "'Sunnig' means...",
+        "pt": "'Sunnig' significa...",
+        "fr": "« Sunnig » signifie...",
+        "it": "'Sunnig' significa...",
+        "sq": "'Sunnig' do të thotë...",
+        "tr": "'Sunnig' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Soleado",
+            "en": "Sunny",
+            "pt": "Com sol",
+            "fr": "Ensoleillé",
+            "it": "Soleggiato",
+            "sq": "Me diell",
+            "tr": "Güneşli"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Nublado",
+            "en": "Cloudy",
+            "pt": "Nublado",
+            "fr": "Nuageux",
+            "it": "Nuvoloso",
+            "sq": "Me re",
+            "tr": "Bulutlu"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "question": {
+        "es": "'Warm' significa...",
+        "en": "'Warm' means...",
+        "pt": "'Warm' significa...",
+        "fr": "« Warm » signifie...",
+        "it": "'Warm' significa...",
+        "sq": "'Warm' do të thotë...",
+        "tr": "'Warm' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Cálido",
+            "en": "Warm",
+            "pt": "Quente",
+            "fr": "Chaud",
+            "it": "Caldo",
+            "sq": "Ngrohtë",
+            "tr": "Sıcak"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Frío",
+            "en": "Cold",
+            "pt": "Frio",
+            "fr": "Froid",
+            "it": "Freddo",
+            "sq": "Ftohtë",
+            "tr": "Soğuk"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "question": {
+        "es": "Traduce: 'Im Fröhlig wird's besser'",
+        "en": "Translate: 'Im Fröhlig wird's besser'",
+        "pt": "Traduz: 'Im Fröhlig wird's besser'",
+        "fr": "Traduisez : « Im Fröhlig wird's besser »",
+        "it": "Traduci: 'Im Fröhlig wird's besser'",
+        "sq": "Përkthe: 'Im Fröhlig wird's besser'",
+        "tr": "Çevir: 'Im Fröhlig wird's besser'"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "En primavera mejorará",
+            "en": "It'll get better in spring",
+            "pt": "Na primavera vai melhorar",
+            "fr": "Ça ira mieux au printemps",
+            "it": "In primavera migliorerà",
+            "sq": "Në pranverë do të përmirësohet",
+            "tr": "İlkbaharda düzelecek"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "En invierno empeorará",
+            "en": "It'll get worse in winter",
+            "pt": "No inverno vai piorar",
+            "fr": "Ça ira plus mal en hiver",
+            "it": "In inverno peggiorerà",
+            "sq": "Në dimër do të përkeqësohet",
+            "tr": "Kışın kötüleşecek"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "question": {
+        "es": "En los cantones de montaña como Uri, en invierno...",
+        "en": "In mountain cantons like Uri, in winter...",
+        "pt": "Nos cantões de montanha como Uri, no inverno...",
+        "fr": "Dans les cantons de montagne comme Uri, en hiver...",
+        "it": "Nei cantoni di montagna come Uri, in inverno...",
+        "sq": "Në kantonet malore si Uri, në dimër...",
+        "tr": "Uri gibi dağlık kantonlarda kışın..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "No es raro que nieve hasta en el valle",
+            "en": "It's not unusual for snow to reach the valley",
+            "pt": "Não é raro nevar até no vale",
+            "fr": "Il n'est pas rare qu'il neige jusque dans la vallée",
+            "it": "Non è raro che nevichi fino in valle",
+            "sq": "Nuk është e pazakontë të bjerë borë deri në luginë",
+            "tr": "Vadiye kadar kar yağması olağandışı değildir"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Nunca nieva",
+            "en": "It never snows",
+            "pt": "Nunca neva",
+            "fr": "Il ne neige jamais",
+            "it": "Non nevica mai",
+            "sq": "Nuk bie kurrë borë",
+            "tr": "Hiç kar yağmaz"
+          },
+          "correct": false
+        }
+      ]
+    }
   ]
 }

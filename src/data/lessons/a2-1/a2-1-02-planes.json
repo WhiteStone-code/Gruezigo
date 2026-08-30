@@ -42,84 +42,964 @@
         "sq": "'Wei mer...?' është mënyra dialektore për të ftuar dikë të bëjë diçka së bashku — fjalë për fjalë 'a duam ne...?'. Është ekuivalente me gjermanishten standarde 'Wollen wir...?' por është ajo që dëgjohet në çdo bisedë joformale mes miqsh.",
         "tr": "'Wei mer...?' birlikte bir şey yapmaya davet etmenin lehçe yoludur — kelimenin tam anlamıyla 'istiyor muyuz...?'. Standart Almanca 'Wollen wir...?' ile eşdeğerdir ama arkadaşlar arasındaki her günlük sohbette gerçekten duyacağınız şey budur."
       },
-      "table": [
-        { "left": "Wei mer öppis trinke?", "right": { "es": "¿Vamos a tomar algo?", "en": "Shall we get a drink?", "pt": "Vamos beber algo?", "fr": "On va boire un verre ?", "it": "Andiamo a bere qualcosa?", "sq": "A shkojmë të pimë diçka?", "tr": "Bir şeyler içmeye gidelim mi?" } },
-        { "left": "Wei mer is Kino?", "right": { "es": "¿Vamos al cine?", "en": "Shall we go to the movies?", "pt": "Vamos ao cinema?", "fr": "On va au cinéma ?", "it": "Andiamo al cinema?", "sq": "A shkojmë në kinema?", "tr": "Sinemaya gidelim mi?" } }
-      ]
+      "table": {
+        "headers": [
+          "Frase",
+          "Schwiizerdütsch"
+        ],
+        "rows": [
+          [
+            "¿Vamos a tomar algo?",
+            "Wei mer öppis trinke?"
+          ],
+          [
+            "¿Vamos al cine?",
+            "Wei mer is Kino?"
+          ]
+        ]
+      }
     }
   ],
   "dialogueSimulations": [
     {
       "id": "sim-planes",
-      "scenario": { "es": "Proponiendo un plan para el fin de semana", "en": "Proposing a weekend plan", "pt": "A propor um plano para o fim de semana", "fr": "Proposer un plan pour le week-end", "it": "Proporre un piano per il weekend", "sq": "Duke propozuar një plan për fundjavën", "tr": "Hafta sonu için plan önermek" },
+      "scenario": {
+        "es": "Proponiendo un plan para el fin de semana",
+        "en": "Proposing a weekend plan",
+        "pt": "A propor um plano para o fim de semana",
+        "fr": "Proposer un plan pour le week-end",
+        "it": "Proporre un piano per il weekend",
+        "sq": "Duke propozuar një plan për fundjavën",
+        "tr": "Hafta sonu için plan önermek"
+      },
       "npcName": "Amic/a",
       "npcEmoji": "🧑",
       "turns": [
-        { "speaker": "npc", "text": "Häsch am Wuchenend Zit?", "base": { "es": "¿Tienes tiempo el fin de semana?", "en": "Do you have time this weekend?", "pt": "Tens tempo no fim de semana?", "fr": "Tu as du temps le week-end ?", "it": "Hai tempo nel weekend?", "sq": "A ke kohë gjatë fundjavës?", "tr": "Hafta sonu vaktin var mı?" } },
+        {
+          "speaker": "npc",
+          "text": "Häsch am Wuchenend Zit?",
+          "base": {
+            "es": "¿Tienes tiempo el fin de semana?",
+            "en": "Do you have time this weekend?",
+            "pt": "Tens tempo no fim de semana?",
+            "fr": "Tu as du temps le week-end ?",
+            "it": "Hai tempo nel weekend?",
+            "sq": "A ke kohë gjatë fundjavës?",
+            "tr": "Hafta sonu vaktin var mı?"
+          }
+        },
         {
           "speaker": "user",
           "options": [
-            { "text": "Ja klar! Wei mer öppis mache?", "base": { "es": "¡Claro! ¿Vamos a hacer algo?", "en": "Sure! Shall we do something?", "pt": "Claro! Vamos fazer algo?", "fr": "Bien sûr ! On fait quelque chose ?", "it": "Certo! Facciamo qualcosa?", "sq": "Sigurisht! A bëjmë diçka?", "tr": "Tabii ki! Bir şeyler yapalım mı?" }, "correct": true },
-            { "text": "Nei, ha kei Zit.", "base": { "es": "No, no tengo tiempo.", "en": "No, I don't have time.", "pt": "Não, não tenho tempo.", "fr": "Non, je n'ai pas le temps.", "it": "No, non ho tempo.", "sq": "Jo, nuk kam kohë.", "tr": "Hayır, vaktim yok." }, "correct": false, "feedback": { "es": "Si sí tienes tiempo, mejor aceptar la invitación con entusiasmo.", "en": "If you actually do have time, it's better to accept the invitation enthusiastically.", "pt": "Se tens mesmo tempo, é melhor aceitar o convite com entusiasmo.", "fr": "Si vous avez vraiment le temps, mieux vaut accepter l'invitation avec enthousiasme.", "it": "Se hai davvero tempo, meglio accettare l'invito con entusiasmo.", "sq": "Nëse vërtet ke kohë, më mirë prano ftesën me entuziazëm.", "tr": "Gerçekten vaktin varsa, daveti hevesle kabul etmek daha iyi." } }
+            {
+              "text": "Ja klar! Wei mer öppis mache?",
+              "base": {
+                "es": "¡Claro! ¿Vamos a hacer algo?",
+                "en": "Sure! Shall we do something?",
+                "pt": "Claro! Vamos fazer algo?",
+                "fr": "Bien sûr ! On fait quelque chose ?",
+                "it": "Certo! Facciamo qualcosa?",
+                "sq": "Sigurisht! A bëjmë diçka?",
+                "tr": "Tabii ki! Bir şeyler yapalım mı?"
+              },
+              "correct": true
+            },
+            {
+              "text": "Nei, ha kei Zit.",
+              "base": {
+                "es": "No, no tengo tiempo.",
+                "en": "No, I don't have time.",
+                "pt": "Não, não tenho tempo.",
+                "fr": "Non, je n'ai pas le temps.",
+                "it": "No, non ho tempo.",
+                "sq": "Jo, nuk kam kohë.",
+                "tr": "Hayır, vaktim yok."
+              },
+              "correct": false,
+              "feedback": {
+                "es": "Si sí tienes tiempo, mejor aceptar la invitación con entusiasmo.",
+                "en": "If you actually do have time, it's better to accept the invitation enthusiastically.",
+                "pt": "Se tens mesmo tempo, é melhor aceitar o convite com entusiasmo.",
+                "fr": "Si vous avez vraiment le temps, mieux vaut accepter l'invitation avec enthousiasme.",
+                "it": "Se hai davvero tempo, meglio accettare l'invito con entusiasmo.",
+                "sq": "Nëse vërtet ke kohë, më mirë prano ftesën me entuziazëm.",
+                "tr": "Gerçekten vaktin varsa, daveti hevesle kabul etmek daha iyi."
+              }
+            }
           ]
         },
-        { "speaker": "npc", "text": "Guet Idee! Wei mer is Kino?", "base": { "es": "¡Buena idea! ¿Vamos al cine?", "en": "Good idea! Shall we go to the movies?", "pt": "Boa ideia! Vamos ao cinema?", "fr": "Bonne idée ! On va au cinéma ?", "it": "Buona idea! Andiamo al cinema?", "sq": "Ide e mirë! A shkojmë në kinema?", "tr": "İyi fikir! Sinemaya gidelim mi?" } },
+        {
+          "speaker": "npc",
+          "text": "Guet Idee! Wei mer is Kino?",
+          "base": {
+            "es": "¡Buena idea! ¿Vamos al cine?",
+            "en": "Good idea! Shall we go to the movies?",
+            "pt": "Boa ideia! Vamos ao cinema?",
+            "fr": "Bonne idée ! On va au cinéma ?",
+            "it": "Buona idea! Andiamo al cinema?",
+            "sq": "Ide e mirë! A shkojmë në kinema?",
+            "tr": "İyi fikir! Sinemaya gidelim mi?"
+          }
+        },
         {
           "speaker": "user",
           "options": [
-            { "text": "Super, das mache mer!", "base": { "es": "¡Genial, hagamos eso!", "en": "Great, let's do that!", "pt": "Ótimo, vamos fazer isso!", "fr": "Super, on fait ça !", "it": "Fantastico, facciamolo!", "sq": "Super, ta bëjmë atë!", "tr": "Harika, hadi onu yapalım!" }, "correct": true },
-            { "text": "Vielicht nächscht Mal.", "base": { "es": "Quizás la próxima vez.", "en": "Maybe next time.", "pt": "Talvez para a próxima.", "fr": "Peut-être la prochaine fois.", "it": "Magari la prossima volta.", "sq": "Ndoshta herën tjetër.", "tr": "Belki bir dahaki sefere." }, "correct": false, "feedback": { "es": "Ya aceptaste el plan — mejor confirmar con entusiasmo en vez de dudar de nuevo.", "en": "You already accepted the plan — better to confirm enthusiastically instead of hesitating again.", "pt": "Já aceitaste o plano — é melhor confirmar com entusiasmo em vez de hesitar de novo.", "fr": "Vous avez déjà accepté le plan — mieux vaut confirmer avec enthousiasme plutôt que d'hésiter à nouveau.", "it": "Hai già accettato il piano — meglio confermare con entusiasmo invece di esitare di nuovo.", "sq": "Ti tashmë e pranove planin — më mirë konfirmo me entuziazëm në vend që të hezitosh sërish.", "tr": "Planı zaten kabul ettin — tekrar tereddüt etmek yerine hevesle onaylamak daha iyi." } }
+            {
+              "text": "Super, das mache mer!",
+              "base": {
+                "es": "¡Genial, hagamos eso!",
+                "en": "Great, let's do that!",
+                "pt": "Ótimo, vamos fazer isso!",
+                "fr": "Super, on fait ça !",
+                "it": "Fantastico, facciamolo!",
+                "sq": "Super, ta bëjmë atë!",
+                "tr": "Harika, hadi onu yapalım!"
+              },
+              "correct": true
+            },
+            {
+              "text": "Vielicht nächscht Mal.",
+              "base": {
+                "es": "Quizás la próxima vez.",
+                "en": "Maybe next time.",
+                "pt": "Talvez para a próxima.",
+                "fr": "Peut-être la prochaine fois.",
+                "it": "Magari la prossima volta.",
+                "sq": "Ndoshta herën tjetër.",
+                "tr": "Belki bir dahaki sefere."
+              },
+              "correct": false,
+              "feedback": {
+                "es": "Ya aceptaste el plan — mejor confirmar con entusiasmo en vez de dudar de nuevo.",
+                "en": "You already accepted the plan — better to confirm enthusiastically instead of hesitating again.",
+                "pt": "Já aceitaste o plano — é melhor confirmar com entusiasmo em vez de hesitar de novo.",
+                "fr": "Vous avez déjà accepté le plan — mieux vaut confirmer avec enthousiasme plutôt que d'hésiter à nouveau.",
+                "it": "Hai già accettato il piano — meglio confermare con entusiasmo invece di esitare di nuovo.",
+                "sq": "Ti tashmë e pranove planin — më mirë konfirmo me entuziazëm në vend që të hezitosh sërish.",
+                "tr": "Planı zaten kabul ettin — tekrar tereddüt etmek yerine hevesle onaylamak daha iyi."
+              }
+            }
           ]
         }
       ]
     }
   ],
   "comparisonTable": [
-    { "base": { "es": "Quedar/encontrarse", "en": "To meet up", "pt": "Encontrar-se", "fr": "Se retrouver", "it": "Incontrarsi", "sq": "Të takohesh", "tr": "Buluşmak" }, "hochdeutsch": "Sich treffen", "schwiizerduetsch": "Sich träffe" },
-    { "base": { "es": "El fin de semana", "en": "The weekend", "pt": "O fim de semana", "fr": "Le week-end", "it": "Il weekend", "sq": "Fundjava", "tr": "Hafta sonu" }, "hochdeutsch": "Das Wochenende", "schwiizerduetsch": "Ds Wuchenend" },
-    { "base": { "es": "Quizás", "en": "Maybe", "pt": "Talvez", "fr": "Peut-être", "it": "Forse", "sq": "Ndoshta", "tr": "Belki" }, "hochdeutsch": "Vielleicht", "schwiizerduetsch": "Vilicht" },
-    { "base": { "es": "¡Buena idea!", "en": "Good idea!", "pt": "Boa ideia!", "fr": "Bonne idée !", "it": "Buona idea!", "sq": "Ide e mirë!", "tr": "İyi fikir!" }, "hochdeutsch": "Gute Idee!", "schwiizerduetsch": "Gueti Idee!" },
-    { "base": { "es": "No tener tiempo", "en": "To not have time", "pt": "Não ter tempo", "fr": "Ne pas avoir le temps", "it": "Non avere tempo", "sq": "Të mos kesh kohë", "tr": "Vakti olmamak" }, "hochdeutsch": "Keine Zeit haben", "schwiizerduetsch": "Kei Zit ha" },
-    { "base": { "es": "La próxima vez", "en": "Next time", "pt": "Para a próxima", "fr": "La prochaine fois", "it": "La prossima volta", "sq": "Herën tjetër", "tr": "Bir dahaki sefere" }, "hochdeutsch": "Nächstes Mal", "schwiizerduetsch": "Nächscht Mal" }
+    {
+      "base": {
+        "es": "Quedar/encontrarse",
+        "en": "To meet up",
+        "pt": "Encontrar-se",
+        "fr": "Se retrouver",
+        "it": "Incontrarsi",
+        "sq": "Të takohesh",
+        "tr": "Buluşmak"
+      },
+      "hochdeutsch": "Sich treffen",
+      "schwiizerduetsch": "Sich träffe"
+    },
+    {
+      "base": {
+        "es": "El fin de semana",
+        "en": "The weekend",
+        "pt": "O fim de semana",
+        "fr": "Le week-end",
+        "it": "Il weekend",
+        "sq": "Fundjava",
+        "tr": "Hafta sonu"
+      },
+      "hochdeutsch": "Das Wochenende",
+      "schwiizerduetsch": "Ds Wuchenend"
+    },
+    {
+      "base": {
+        "es": "Quizás",
+        "en": "Maybe",
+        "pt": "Talvez",
+        "fr": "Peut-être",
+        "it": "Forse",
+        "sq": "Ndoshta",
+        "tr": "Belki"
+      },
+      "hochdeutsch": "Vielleicht",
+      "schwiizerduetsch": "Vilicht"
+    },
+    {
+      "base": {
+        "es": "¡Buena idea!",
+        "en": "Good idea!",
+        "pt": "Boa ideia!",
+        "fr": "Bonne idée !",
+        "it": "Buona idea!",
+        "sq": "Ide e mirë!",
+        "tr": "İyi fikir!"
+      },
+      "hochdeutsch": "Gute Idee!",
+      "schwiizerduetsch": "Gueti Idee!"
+    },
+    {
+      "base": {
+        "es": "No tener tiempo",
+        "en": "To not have time",
+        "pt": "Não ter tempo",
+        "fr": "Ne pas avoir le temps",
+        "it": "Non avere tempo",
+        "sq": "Të mos kesh kohë",
+        "tr": "Vakti olmamak"
+      },
+      "hochdeutsch": "Keine Zeit haben",
+      "schwiizerduetsch": "Kei Zit ha"
+    },
+    {
+      "base": {
+        "es": "La próxima vez",
+        "en": "Next time",
+        "pt": "Para a próxima",
+        "fr": "La prochaine fois",
+        "it": "La prossima volta",
+        "sq": "Herën tjetër",
+        "tr": "Bir dahaki sefere"
+      },
+      "hochdeutsch": "Nächstes Mal",
+      "schwiizerduetsch": "Nächscht Mal"
+    }
   ],
   "vocabulary": [
-    { "id": "v1", "hochdeutsch": "Sich treffen", "schwiizerduetsch": "Sich träffe", "audioText": "Wei mer eus träffe?", "base": { "es": "Quedar/encontrarse", "en": "To meet up", "pt": "Encontrar-se", "fr": "Se retrouver", "it": "Incontrarsi", "sq": "Të takohesh", "tr": "Buluşmak" } },
-    { "id": "v2", "hochdeutsch": "Das Wochenende", "schwiizerduetsch": "Ds Wuchenend", "audioText": "Am Wuchenend", "base": { "es": "El fin de semana", "en": "The weekend", "pt": "O fim de semana", "fr": "Le week-end", "it": "Il weekend", "sq": "Fundjava", "tr": "Hafta sonu" } },
-    { "id": "v3", "hochdeutsch": "Vielleicht", "schwiizerduetsch": "Vilicht", "audioText": "Vilicht nächscht Mal", "base": { "es": "Quizás", "en": "Maybe", "pt": "Talvez", "fr": "Peut-être", "it": "Forse", "sq": "Ndoshta", "tr": "Belki" } },
-    { "id": "v4", "hochdeutsch": "Gute Idee!", "schwiizerduetsch": "Gueti Idee!", "audioText": "Gueti Idee!", "base": { "es": "¡Buena idea!", "en": "Good idea!", "pt": "Boa ideia!", "fr": "Bonne idée !", "it": "Buona idea!", "sq": "Ide e mirë!", "tr": "İyi fikir!" } },
-    { "id": "v5", "hochdeutsch": "Keine Zeit haben", "schwiizerduetsch": "Kei Zit ha", "audioText": "Ich ha kei Zit", "base": { "es": "No tener tiempo", "en": "To not have time", "pt": "Não ter tempo", "fr": "Ne pas avoir le temps", "it": "Non avere tempo", "sq": "Të mos kesh kohë", "tr": "Vakti olmamak" } },
-    { "id": "v6", "hochdeutsch": "Nächstes Mal", "schwiizerduetsch": "Nächscht Mal", "audioText": "Nächscht Mal", "base": { "es": "La próxima vez", "en": "Next time", "pt": "Para a próxima", "fr": "La prochaine fois", "it": "La prossima volta", "sq": "Herën tjetër", "tr": "Bir dahaki sefere" } }
+    {
+      "id": "v1",
+      "hochdeutsch": "Sich treffen",
+      "schwiizerduetsch": "Sich träffe",
+      "audioText": "Wei mer eus träffe?",
+      "base": {
+        "es": "Quedar/encontrarse",
+        "en": "To meet up",
+        "pt": "Encontrar-se",
+        "fr": "Se retrouver",
+        "it": "Incontrarsi",
+        "sq": "Të takohesh",
+        "tr": "Buluşmak"
+      }
+    },
+    {
+      "id": "v2",
+      "hochdeutsch": "Das Wochenende",
+      "schwiizerduetsch": "Ds Wuchenend",
+      "audioText": "Am Wuchenend",
+      "base": {
+        "es": "El fin de semana",
+        "en": "The weekend",
+        "pt": "O fim de semana",
+        "fr": "Le week-end",
+        "it": "Il weekend",
+        "sq": "Fundjava",
+        "tr": "Hafta sonu"
+      }
+    },
+    {
+      "id": "v3",
+      "hochdeutsch": "Vielleicht",
+      "schwiizerduetsch": "Vilicht",
+      "audioText": "Vilicht nächscht Mal",
+      "base": {
+        "es": "Quizás",
+        "en": "Maybe",
+        "pt": "Talvez",
+        "fr": "Peut-être",
+        "it": "Forse",
+        "sq": "Ndoshta",
+        "tr": "Belki"
+      }
+    },
+    {
+      "id": "v4",
+      "hochdeutsch": "Gute Idee!",
+      "schwiizerduetsch": "Gueti Idee!",
+      "audioText": "Gueti Idee!",
+      "base": {
+        "es": "¡Buena idea!",
+        "en": "Good idea!",
+        "pt": "Boa ideia!",
+        "fr": "Bonne idée !",
+        "it": "Buona idea!",
+        "sq": "Ide e mirë!",
+        "tr": "İyi fikir!"
+      }
+    },
+    {
+      "id": "v5",
+      "hochdeutsch": "Keine Zeit haben",
+      "schwiizerduetsch": "Kei Zit ha",
+      "audioText": "Ich ha kei Zit",
+      "base": {
+        "es": "No tener tiempo",
+        "en": "To not have time",
+        "pt": "Não ter tempo",
+        "fr": "Ne pas avoir le temps",
+        "it": "Non avere tempo",
+        "sq": "Të mos kesh kohë",
+        "tr": "Vakti olmamak"
+      }
+    },
+    {
+      "id": "v6",
+      "hochdeutsch": "Nächstes Mal",
+      "schwiizerduetsch": "Nächscht Mal",
+      "audioText": "Nächscht Mal",
+      "base": {
+        "es": "La próxima vez",
+        "en": "Next time",
+        "pt": "Para a próxima",
+        "fr": "La prochaine fois",
+        "it": "La prossima volta",
+        "sq": "Herën tjetër",
+        "tr": "Bir dahaki sefere"
+      }
+    }
   ],
   "exercises": {
     "fillBlanks": [
-      { "id": "fb1", "before": "", "after": "mer öppis trinke?", "correctWord": "Wei", "options": ["Wei", "Ha", "Isch"], "hint": { "es": "Completa: '¿Vamos a tomar algo?'", "en": "Complete: 'Shall we get a drink?'", "pt": "Completa: 'Vamos beber algo?'", "fr": "Complétez : « On va boire un verre ? »", "it": "Completa: 'Andiamo a bere qualcosa?'", "sq": "Plotëso: 'A shkojmë të pimë diçka?'", "tr": "Tamamla: 'Bir şeyler içmeye gidelim mi?'" } },
-      { "id": "fb2", "before": "Ich ha leider kei", "after": ".", "correctWord": "Zit", "options": ["Zit", "Idee", "Wuchenend"], "hint": { "es": "Completa: 'Lamentablemente no tengo tiempo'", "en": "Complete: 'Unfortunately I don't have time'", "pt": "Completa: 'Infelizmente não tenho tempo'", "fr": "Complétez : « Malheureusement je n'ai pas le temps »", "it": "Completa: 'Purtroppo non ho tempo'", "sq": "Plotëso: 'Fatkeqësisht nuk kam kohë'", "tr": "Tamamla: 'Maalesef vaktim yok'" } }
+      {
+        "id": "fb1",
+        "before": "",
+        "after": "mer öppis trinke?",
+        "correctWord": "Wei",
+        "options": [
+          "Wei",
+          "Ha",
+          "Isch"
+        ],
+        "hint": {
+          "es": "Completa: '¿Vamos a tomar algo?'",
+          "en": "Complete: 'Shall we get a drink?'",
+          "pt": "Completa: 'Vamos beber algo?'",
+          "fr": "Complétez : « On va boire un verre ? »",
+          "it": "Completa: 'Andiamo a bere qualcosa?'",
+          "sq": "Plotëso: 'A shkojmë të pimë diçka?'",
+          "tr": "Tamamla: 'Bir şeyler içmeye gidelim mi?'"
+        }
+      },
+      {
+        "id": "fb2",
+        "before": "Ich ha leider kei",
+        "after": ".",
+        "correctWord": "Zit",
+        "options": [
+          "Zit",
+          "Idee",
+          "Wuchenend"
+        ],
+        "hint": {
+          "es": "Completa: 'Lamentablemente no tengo tiempo'",
+          "en": "Complete: 'Unfortunately I don't have time'",
+          "pt": "Completa: 'Infelizmente não tenho tempo'",
+          "fr": "Complétez : « Malheureusement je n'ai pas le temps »",
+          "it": "Completa: 'Purtroppo non ho tempo'",
+          "sq": "Plotëso: 'Fatkeqësisht nuk kam kohë'",
+          "tr": "Tamamla: 'Maalesef vaktim yok'"
+        }
+      }
     ],
     "multipleChoice": [
-      { "id": "mc1", "question": { "es": "'Wei mer...?' se usa para...", "en": "'Wei mer...?' is used to...", "pt": "'Wei mer...?' usa-se para...", "fr": "« Wei mer...? » sert à...", "it": "'Wei mer...?' si usa per...", "sq": "'Wei mer...?' përdoret për...", "tr": "'Wei mer...?' şunun için kullanılır..." }, "options": [ { "text": { "es": "Proponer hacer algo juntos", "en": "Propose doing something together", "pt": "Propor fazer algo juntos", "fr": "Proposer de faire quelque chose ensemble", "it": "Proporre di fare qualcosa insieme", "sq": "Të propozosh të bësh diçka së bashku", "tr": "Birlikte bir şey yapmayı önermek" }, "correct": true }, { "text": { "es": "Despedirse", "en": "Say goodbye", "pt": "Despedir-se", "fr": "Dire au revoir", "it": "Salutarsi", "sq": "Të përshëndetesh", "tr": "Vedalaşmak" }, "correct": false } ] },
-      { "id": "mc2", "question": { "es": "'Ds Wuchenend' significa...", "en": "'Ds Wuchenend' means...", "pt": "'Ds Wuchenend' significa...", "fr": "« Ds Wuchenend » signifie...", "it": "'Ds Wuchenend' significa...", "sq": "'Ds Wuchenend' do të thotë...", "tr": "'Ds Wuchenend' anlamı..." }, "options": [ { "text": { "es": "El fin de semana", "en": "The weekend", "pt": "O fim de semana", "fr": "Le week-end", "it": "Il weekend", "sq": "Fundjava", "tr": "Hafta sonu" }, "correct": true }, { "text": { "es": "La próxima vez", "en": "Next time", "pt": "Para a próxima", "fr": "La prochaine fois", "it": "La prossima volta", "sq": "Herën tjetër", "tr": "Bir dahaki sefere" }, "correct": false } ] },
-      { "id": "mc3", "question": { "es": "Si no puedes ir a un plan, puedes decir...", "en": "If you can't make a plan, you can say...", "pt": "Se não podes ir a um plano, podes dizer...", "fr": "Si vous ne pouvez pas venir, vous pouvez dire...", "it": "Se non puoi partecipare a un piano, puoi dire...", "sq": "Nëse nuk mund të shkosh në një plan, mund të thuash...", "tr": "Bir plana gidemiyorsan şunu diyebilirsin..." }, "options": [ { "text": "Ich ha leider kei Zit", "correct": true }, { "text": "Es isch sunnig", "correct": false } ] },
-      { "id": "mc4", "question": { "es": "'Gueti Idee!' significa...", "en": "'Gueti Idee!' means...", "pt": "'Gueti Idee!' significa...", "fr": "« Gueti Idee! » signifie...", "it": "'Gueti Idee!' significa...", "sq": "'Gueti Idee!' do të thotë...", "tr": "'Gueti Idee!' anlamı..." }, "options": [ { "text": { "es": "¡Buena idea!", "en": "Good idea!", "pt": "Boa ideia!", "fr": "Bonne idée !", "it": "Buona idea!", "sq": "Ide e mirë!", "tr": "İyi fikir!" }, "correct": true }, { "text": { "es": "¡Qué pena!", "en": "What a shame!", "pt": "Que pena!", "fr": "Quel dommage !", "it": "Che peccato!", "sq": "Sa keq!", "tr": "Ne yazık!" }, "correct": false } ] }
+      {
+        "id": "mc1",
+        "question": {
+          "es": "'Wei mer...?' se usa para...",
+          "en": "'Wei mer...?' is used to...",
+          "pt": "'Wei mer...?' usa-se para...",
+          "fr": "« Wei mer...? » sert à...",
+          "it": "'Wei mer...?' si usa per...",
+          "sq": "'Wei mer...?' përdoret për...",
+          "tr": "'Wei mer...?' şunun için kullanılır..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "Proponer hacer algo juntos",
+              "en": "Propose doing something together",
+              "pt": "Propor fazer algo juntos",
+              "fr": "Proposer de faire quelque chose ensemble",
+              "it": "Proporre di fare qualcosa insieme",
+              "sq": "Të propozosh të bësh diçka së bashku",
+              "tr": "Birlikte bir şey yapmayı önermek"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "Despedirse",
+              "en": "Say goodbye",
+              "pt": "Despedir-se",
+              "fr": "Dire au revoir",
+              "it": "Salutarsi",
+              "sq": "Të përshëndetesh",
+              "tr": "Vedalaşmak"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc2",
+        "question": {
+          "es": "'Ds Wuchenend' significa...",
+          "en": "'Ds Wuchenend' means...",
+          "pt": "'Ds Wuchenend' significa...",
+          "fr": "« Ds Wuchenend » signifie...",
+          "it": "'Ds Wuchenend' significa...",
+          "sq": "'Ds Wuchenend' do të thotë...",
+          "tr": "'Ds Wuchenend' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "El fin de semana",
+              "en": "The weekend",
+              "pt": "O fim de semana",
+              "fr": "Le week-end",
+              "it": "Il weekend",
+              "sq": "Fundjava",
+              "tr": "Hafta sonu"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "La próxima vez",
+              "en": "Next time",
+              "pt": "Para a próxima",
+              "fr": "La prochaine fois",
+              "it": "La prossima volta",
+              "sq": "Herën tjetër",
+              "tr": "Bir dahaki sefere"
+            },
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc3",
+        "question": {
+          "es": "Si no puedes ir a un plan, puedes decir...",
+          "en": "If you can't make a plan, you can say...",
+          "pt": "Se não podes ir a um plano, podes dizer...",
+          "fr": "Si vous ne pouvez pas venir, vous pouvez dire...",
+          "it": "Se non puoi partecipare a un piano, puoi dire...",
+          "sq": "Nëse nuk mund të shkosh në një plan, mund të thuash...",
+          "tr": "Bir plana gidemiyorsan şunu diyebilirsin..."
+        },
+        "options": [
+          {
+            "text": "Ich ha leider kei Zit",
+            "correct": true
+          },
+          {
+            "text": "Es isch sunnig",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "mc4",
+        "question": {
+          "es": "'Gueti Idee!' significa...",
+          "en": "'Gueti Idee!' means...",
+          "pt": "'Gueti Idee!' significa...",
+          "fr": "« Gueti Idee! » signifie...",
+          "it": "'Gueti Idee!' significa...",
+          "sq": "'Gueti Idee!' do të thotë...",
+          "tr": "'Gueti Idee!' anlamı..."
+        },
+        "options": [
+          {
+            "text": {
+              "es": "¡Buena idea!",
+              "en": "Good idea!",
+              "pt": "Boa ideia!",
+              "fr": "Bonne idée !",
+              "it": "Buona idea!",
+              "sq": "Ide e mirë!",
+              "tr": "İyi fikir!"
+            },
+            "correct": true
+          },
+          {
+            "text": {
+              "es": "¡Qué pena!",
+              "en": "What a shame!",
+              "pt": "Que pena!",
+              "fr": "Quel dommage !",
+              "it": "Che peccato!",
+              "sq": "Sa keq!",
+              "tr": "Ne yazık!"
+            },
+            "correct": false
+          }
+        ]
+      }
     ],
     "sentenceBuilder": [
-      { "id": "sb1", "prompt": { "es": "Construye: '¿Vamos al cine?'", "en": "Build: 'Shall we go to the movies?'", "pt": "Constrói: 'Vamos ao cinema?'", "fr": "Construisez : « On va au cinéma ? »", "it": "Costruisci: 'Andiamo al cinema?'", "sq": "Ndërto: 'A shkojmë në kinema?'", "tr": "Kur: 'Sinemaya gidelim mi?'" }, "words": ["Wei", "mer", "is", "Kino"], "correctOrder": [0, 1, 2, 3] },
-      { "id": "sb2", "prompt": { "es": "Construye: '¿Tienes tiempo el fin de semana?'", "en": "Build: 'Do you have time this weekend?'", "pt": "Constrói: 'Tens tempo no fim de semana?'", "fr": "Construisez : « Tu as du temps le week-end ? »", "it": "Costruisci: 'Hai tempo nel weekend?'", "sq": "Ndërto: 'A ke kohë gjatë fundjavës?'", "tr": "Kur: 'Hafta sonu vaktin var mı?'" }, "words": ["Häsch", "am", "Wuchenend", "Zit", "?"], "correctOrder": [0, 1, 2, 3, 4] }
+      {
+        "id": "sb1",
+        "prompt": {
+          "es": "Construye: '¿Vamos al cine?'",
+          "en": "Build: 'Shall we go to the movies?'",
+          "pt": "Constrói: 'Vamos ao cinema?'",
+          "fr": "Construisez : « On va au cinéma ? »",
+          "it": "Costruisci: 'Andiamo al cinema?'",
+          "sq": "Ndërto: 'A shkojmë në kinema?'",
+          "tr": "Kur: 'Sinemaya gidelim mi?'"
+        },
+        "words": [
+          "Wei",
+          "mer",
+          "is",
+          "Kino"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "id": "sb2",
+        "prompt": {
+          "es": "Construye: '¿Tienes tiempo el fin de semana?'",
+          "en": "Build: 'Do you have time this weekend?'",
+          "pt": "Constrói: 'Tens tempo no fim de semana?'",
+          "fr": "Construisez : « Tu as du temps le week-end ? »",
+          "it": "Costruisci: 'Hai tempo nel weekend?'",
+          "sq": "Ndërto: 'A ke kohë gjatë fundjavës?'",
+          "tr": "Kur: 'Hafta sonu vaktin var mı?'"
+        },
+        "words": [
+          "Häsch",
+          "am",
+          "Wuchenend",
+          "Zit",
+          "?"
+        ],
+        "correctOrder": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
     ],
     "pronunciation": [
-      { "id": "p1", "expectedText": "Wei mer öppis mache?", "lang": "de-DE", "hint": { "es": "Propón hacer algo juntos", "en": "Suggest doing something together", "pt": "Propõe fazer algo juntos", "fr": "Proposez de faire quelque chose ensemble", "it": "Proponi di fare qualcosa insieme", "sq": "Propozo të bësh diçka së bashku", "tr": "Birlikte bir şey yapmayı öner" } },
-      { "id": "p2", "expectedText": "Ich ha leider kei Zit", "lang": "de-DE", "hint": { "es": "Di que lamentablemente no tienes tiempo", "en": "Say you unfortunately don't have time", "pt": "Diz que infelizmente não tens tempo", "fr": "Dites que vous n'avez malheureusement pas le temps", "it": "Di' che purtroppo non hai tempo", "sq": "Thuaj se fatkeqësisht nuk ke kohë", "tr": "Maalesef vaktin olmadığını söyle" } }
+      {
+        "id": "p1",
+        "expectedText": "Wei mer öppis mache?",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Propón hacer algo juntos",
+          "en": "Suggest doing something together",
+          "pt": "Propõe fazer algo juntos",
+          "fr": "Proposez de faire quelque chose ensemble",
+          "it": "Proponi di fare qualcosa insieme",
+          "sq": "Propozo të bësh diçka së bashku",
+          "tr": "Birlikte bir şey yapmayı öner"
+        }
+      },
+      {
+        "id": "p2",
+        "expectedText": "Ich ha leider kei Zit",
+        "lang": "de-DE",
+        "hint": {
+          "es": "Di que lamentablemente no tienes tiempo",
+          "en": "Say you unfortunately don't have time",
+          "pt": "Diz que infelizmente não tens tempo",
+          "fr": "Dites que vous n'avez malheureusement pas le temps",
+          "it": "Di' che purtroppo non hai tempo",
+          "sq": "Thuaj se fatkeqësisht nuk ke kohë",
+          "tr": "Maalesef vaktin olmadığını söyle"
+        }
+      }
     ]
   },
   "finalExam": [
-    { "id": "e1", "question": { "es": "'Wei mer...?' significa...", "en": "'Wei mer...?' means...", "pt": "'Wei mer...?' significa...", "fr": "« Wei mer...? » signifie...", "it": "'Wei mer...?' significa...", "sq": "'Wei mer...?' do të thotë...", "tr": "'Wei mer...?' anlamı..." }, "options": [ { "text": { "es": "¿Vamos a...?", "en": "Shall we...?", "pt": "Vamos...?", "fr": "On...? ", "it": "Andiamo...?", "sq": "A shkojmë...?", "tr": "...alım mı?" }, "correct": true }, { "text": { "es": "¿Dónde está...?", "en": "Where is...?", "pt": "Onde está...?", "fr": "Où est...? ", "it": "Dov'è...?", "sq": "Ku është...?", "tr": "...nerede?" }, "correct": false } ] },
-    { "id": "e2", "question": { "es": "'Ds Wuchenend' significa...", "en": "'Ds Wuchenend' means...", "pt": "'Ds Wuchenend' significa...", "fr": "« Ds Wuchenend » signifie...", "it": "'Ds Wuchenend' significa...", "sq": "'Ds Wuchenend' do të thotë...", "tr": "'Ds Wuchenend' anlamı..." }, "options": [ { "text": { "es": "El fin de semana", "en": "The weekend", "pt": "O fim de semana", "fr": "Le week-end", "it": "Il weekend", "sq": "Fundjava", "tr": "Hafta sonu" }, "correct": true }, { "text": { "es": "El clima", "en": "The weather", "pt": "O tempo", "fr": "Le temps", "it": "Il tempo", "sq": "Moti", "tr": "Hava durumu" }, "correct": false } ] },
-    { "id": "e3", "question": { "es": "'Kei Zit ha' significa...", "en": "'Kei Zit ha' means...", "pt": "'Kei Zit ha' significa...", "fr": "« Kei Zit ha » signifie...", "it": "'Kei Zit ha' significa...", "sq": "'Kei Zit ha' do të thotë...", "tr": "'Kei Zit ha' anlamı..." }, "options": [ { "text": { "es": "No tener tiempo", "en": "To not have time", "pt": "Não ter tempo", "fr": "Ne pas avoir le temps", "it": "Non avere tempo", "sq": "Të mos kesh kohë", "tr": "Vakti olmamak" }, "correct": true }, { "text": { "es": "Tener mucho tiempo", "en": "To have plenty of time", "pt": "Ter muito tempo", "fr": "Avoir beaucoup de temps", "it": "Avere molto tempo", "sq": "Të kesh shumë kohë", "tr": "Bolca vakti olmak" }, "correct": false } ] },
-    { "id": "e4", "question": { "es": "'Vilicht nächscht Mal' significa...", "en": "'Vilicht nächscht Mal' means...", "pt": "'Vilicht nächscht Mal' significa...", "fr": "« Vilicht nächscht Mal » signifie...", "it": "'Vilicht nächscht Mal' significa...", "sq": "'Vilicht nächscht Mal' do të thotë...", "tr": "'Vilicht nächscht Mal' anlamı..." }, "options": [ { "text": { "es": "Quizás la próxima vez", "en": "Maybe next time", "pt": "Talvez para a próxima", "fr": "Peut-être la prochaine fois", "it": "Magari la prossima volta", "sq": "Ndoshta herën tjetër", "tr": "Belki bir dahaki sefere" }, "correct": true }, { "text": { "es": "Ahora mismo", "en": "Right now", "pt": "Agora mesmo", "fr": "Tout de suite", "it": "Adesso stesso", "sq": "Tani menjëherë", "tr": "Şimdi hemen" }, "correct": false } ] },
-    { "id": "e5", "question": { "es": "'Gueti Idee!' es una respuesta...", "en": "'Gueti Idee!' is a... response", "pt": "'Gueti Idee!' é uma resposta...", "fr": "« Gueti Idee! » est une réponse...", "it": "'Gueti Idee!' è una risposta...", "sq": "'Gueti Idee!' është një përgjigje...", "tr": "'Gueti Idee!' bir yanıttır..." }, "options": [ { "text": { "es": "De acuerdo/entusiasta", "en": "Agreeable/enthusiastic", "pt": "De acordo/entusiasta", "fr": "D'accord/enthousiaste", "it": "D'accordo/entusiasta", "sq": "Dakord/entuziast", "tr": "Olumlu/hevesli" }, "correct": true }, { "text": { "es": "De rechazo", "en": "Refusing", "pt": "De recusa", "fr": "De refus", "it": "Di rifiuto", "sq": "Refuzuese", "tr": "Reddedici" }, "correct": false } ] },
-    { "id": "e6", "question": { "es": "'Sich träffe' significa...", "en": "'Sich träffe' means...", "pt": "'Sich träffe' significa...", "fr": "« Sich träffe » signifie...", "it": "'Sich träffe' significa...", "sq": "'Sich träffe' do të thotë...", "tr": "'Sich träffe' anlamı..." }, "options": [ { "text": { "es": "Quedar/encontrarse", "en": "To meet up", "pt": "Encontrar-se", "fr": "Se retrouver", "it": "Incontrarsi", "sq": "Të takohesh", "tr": "Buluşmak" }, "correct": true }, { "text": { "es": "Despedirse", "en": "To say goodbye", "pt": "Despedir-se", "fr": "Dire au revoir", "it": "Salutarsi", "sq": "Të përshëndetesh", "tr": "Vedalaşmak" }, "correct": false } ] },
-    { "id": "e7", "question": { "es": "Traduce: 'Häsch am Wuchenend Zit?'", "en": "Translate: 'Häsch am Wuchenend Zit?'", "pt": "Traduz: 'Häsch am Wuchenend Zit?'", "fr": "Traduisez : « Häsch am Wuchenend Zit? »", "it": "Traduci: 'Häsch am Wuchenend Zit?'", "sq": "Përkthe: 'Häsch am Wuchenend Zit?'", "tr": "Çevir: 'Häsch am Wuchenend Zit?'" }, "options": [ { "text": { "es": "¿Tienes tiempo el fin de semana?", "en": "Do you have time this weekend?", "pt": "Tens tempo no fim de semana?", "fr": "Tu as du temps le week-end ?", "it": "Hai tempo nel weekend?", "sq": "A ke kohë gjatë fundjavës?", "tr": "Hafta sonu vaktin var mı?" }, "correct": true }, { "text": { "es": "¿Vamos al cine?", "en": "Shall we go to the movies?", "pt": "Vamos ao cinema?", "fr": "On va au cinéma ?", "it": "Andiamo al cinema?", "sq": "A shkojmë në kinema?", "tr": "Sinemaya gidelim mi?" }, "correct": false } ] },
-    { "id": "e8", "question": { "es": "En la simulación, ¿cuál es la respuesta más entusiasta a una invitación que sí puedes aceptar?", "en": "In the simulation, what's the most enthusiastic response to an invitation you can accept?", "pt": "Na simulação, qual é a resposta mais entusiasta a um convite que podes aceitar?", "fr": "Dans la simulation, quelle est la réponse la plus enthousiaste à une invitation que vous pouvez accepter ?", "it": "Nella simulazione, qual è la risposta più entusiasta a un invito che puoi accettare?", "sq": "Në simulim, cila është përgjigjja më entuziaste ndaj një ftese që mund ta pranosh?", "tr": "Simülasyonda, kabul edebileceğin bir davete en hevesli yanıt hangisi?" }, "options": [ { "text": { "es": "Super, das mache mer!", "en": "Great, let's do that!", "pt": "Ótimo, vamos fazer isso!", "fr": "Super, on fait ça !", "it": "Fantastico, facciamolo!", "sq": "Super, ta bëjmë atë!", "tr": "Harika, hadi onu yapalım!" }, "correct": true }, { "text": { "es": "Ich ha kei Zit", "en": "I don't have time", "pt": "Não tenho tempo", "fr": "Je n'ai pas le temps", "it": "Non ho tempo", "sq": "Nuk kam kohë", "tr": "Vaktim yok" }, "correct": false } ] },
-    { "id": "e9", "question": { "es": "'Öppis trinke' significa...", "en": "'Öppis trinke' means...", "pt": "'Öppis trinke' significa...", "fr": "« Öppis trinke » signifie...", "it": "'Öppis trinke' significa...", "sq": "'Öppis trinke' do të thotë...", "tr": "'Öppis trinke' anlamı..." }, "options": [ { "text": { "es": "Tomar algo", "en": "To get a drink", "pt": "Beber algo", "fr": "Boire un verre", "it": "Bere qualcosa", "sq": "Të pish diçka", "tr": "Bir şeyler içmek" }, "correct": true }, { "text": { "es": "Comer algo", "en": "To eat something", "pt": "Comer algo", "fr": "Manger quelque chose", "it": "Mangiare qualcosa", "sq": "Të hash diçka", "tr": "Bir şeyler yemek" }, "correct": false } ] },
-    { "id": "e10", "question": { "es": "'Vilicht' significa...", "en": "'Vilicht' means...", "pt": "'Vilicht' significa...", "fr": "« Vilicht » signifie...", "it": "'Vilicht' significa...", "sq": "'Vilicht' do të thotë...", "tr": "'Vilicht' anlamı..." }, "options": [ { "text": { "es": "Quizás", "en": "Maybe", "pt": "Talvez", "fr": "Peut-être", "it": "Forse", "sq": "Ndoshta", "tr": "Belki" }, "correct": true }, { "text": { "es": "Nunca", "en": "Never", "pt": "Nunca", "fr": "Jamais", "it": "Mai", "sq": "Kurrë", "tr": "Asla" }, "correct": false } ] }
+    {
+      "id": "e1",
+      "question": {
+        "es": "'Wei mer...?' significa...",
+        "en": "'Wei mer...?' means...",
+        "pt": "'Wei mer...?' significa...",
+        "fr": "« Wei mer...? » signifie...",
+        "it": "'Wei mer...?' significa...",
+        "sq": "'Wei mer...?' do të thotë...",
+        "tr": "'Wei mer...?' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "¿Vamos a...?",
+            "en": "Shall we...?",
+            "pt": "Vamos...?",
+            "fr": "On...? ",
+            "it": "Andiamo...?",
+            "sq": "A shkojmë...?",
+            "tr": "...alım mı?"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "¿Dónde está...?",
+            "en": "Where is...?",
+            "pt": "Onde está...?",
+            "fr": "Où est...? ",
+            "it": "Dov'è...?",
+            "sq": "Ku është...?",
+            "tr": "...nerede?"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "question": {
+        "es": "'Ds Wuchenend' significa...",
+        "en": "'Ds Wuchenend' means...",
+        "pt": "'Ds Wuchenend' significa...",
+        "fr": "« Ds Wuchenend » signifie...",
+        "it": "'Ds Wuchenend' significa...",
+        "sq": "'Ds Wuchenend' do të thotë...",
+        "tr": "'Ds Wuchenend' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "El fin de semana",
+            "en": "The weekend",
+            "pt": "O fim de semana",
+            "fr": "Le week-end",
+            "it": "Il weekend",
+            "sq": "Fundjava",
+            "tr": "Hafta sonu"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "El clima",
+            "en": "The weather",
+            "pt": "O tempo",
+            "fr": "Le temps",
+            "it": "Il tempo",
+            "sq": "Moti",
+            "tr": "Hava durumu"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "question": {
+        "es": "'Kei Zit ha' significa...",
+        "en": "'Kei Zit ha' means...",
+        "pt": "'Kei Zit ha' significa...",
+        "fr": "« Kei Zit ha » signifie...",
+        "it": "'Kei Zit ha' significa...",
+        "sq": "'Kei Zit ha' do të thotë...",
+        "tr": "'Kei Zit ha' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "No tener tiempo",
+            "en": "To not have time",
+            "pt": "Não ter tempo",
+            "fr": "Ne pas avoir le temps",
+            "it": "Non avere tempo",
+            "sq": "Të mos kesh kohë",
+            "tr": "Vakti olmamak"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Tener mucho tiempo",
+            "en": "To have plenty of time",
+            "pt": "Ter muito tempo",
+            "fr": "Avoir beaucoup de temps",
+            "it": "Avere molto tempo",
+            "sq": "Të kesh shumë kohë",
+            "tr": "Bolca vakti olmak"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "question": {
+        "es": "'Vilicht nächscht Mal' significa...",
+        "en": "'Vilicht nächscht Mal' means...",
+        "pt": "'Vilicht nächscht Mal' significa...",
+        "fr": "« Vilicht nächscht Mal » signifie...",
+        "it": "'Vilicht nächscht Mal' significa...",
+        "sq": "'Vilicht nächscht Mal' do të thotë...",
+        "tr": "'Vilicht nächscht Mal' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Quizás la próxima vez",
+            "en": "Maybe next time",
+            "pt": "Talvez para a próxima",
+            "fr": "Peut-être la prochaine fois",
+            "it": "Magari la prossima volta",
+            "sq": "Ndoshta herën tjetër",
+            "tr": "Belki bir dahaki sefere"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Ahora mismo",
+            "en": "Right now",
+            "pt": "Agora mesmo",
+            "fr": "Tout de suite",
+            "it": "Adesso stesso",
+            "sq": "Tani menjëherë",
+            "tr": "Şimdi hemen"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "question": {
+        "es": "'Gueti Idee!' es una respuesta...",
+        "en": "'Gueti Idee!' is a... response",
+        "pt": "'Gueti Idee!' é uma resposta...",
+        "fr": "« Gueti Idee! » est une réponse...",
+        "it": "'Gueti Idee!' è una risposta...",
+        "sq": "'Gueti Idee!' është një përgjigje...",
+        "tr": "'Gueti Idee!' bir yanıttır..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "De acuerdo/entusiasta",
+            "en": "Agreeable/enthusiastic",
+            "pt": "De acordo/entusiasta",
+            "fr": "D'accord/enthousiaste",
+            "it": "D'accordo/entusiasta",
+            "sq": "Dakord/entuziast",
+            "tr": "Olumlu/hevesli"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "De rechazo",
+            "en": "Refusing",
+            "pt": "De recusa",
+            "fr": "De refus",
+            "it": "Di rifiuto",
+            "sq": "Refuzuese",
+            "tr": "Reddedici"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "question": {
+        "es": "'Sich träffe' significa...",
+        "en": "'Sich träffe' means...",
+        "pt": "'Sich träffe' significa...",
+        "fr": "« Sich träffe » signifie...",
+        "it": "'Sich träffe' significa...",
+        "sq": "'Sich träffe' do të thotë...",
+        "tr": "'Sich träffe' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Quedar/encontrarse",
+            "en": "To meet up",
+            "pt": "Encontrar-se",
+            "fr": "Se retrouver",
+            "it": "Incontrarsi",
+            "sq": "Të takohesh",
+            "tr": "Buluşmak"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Despedirse",
+            "en": "To say goodbye",
+            "pt": "Despedir-se",
+            "fr": "Dire au revoir",
+            "it": "Salutarsi",
+            "sq": "Të përshëndetesh",
+            "tr": "Vedalaşmak"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "question": {
+        "es": "Traduce: 'Häsch am Wuchenend Zit?'",
+        "en": "Translate: 'Häsch am Wuchenend Zit?'",
+        "pt": "Traduz: 'Häsch am Wuchenend Zit?'",
+        "fr": "Traduisez : « Häsch am Wuchenend Zit? »",
+        "it": "Traduci: 'Häsch am Wuchenend Zit?'",
+        "sq": "Përkthe: 'Häsch am Wuchenend Zit?'",
+        "tr": "Çevir: 'Häsch am Wuchenend Zit?'"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "¿Tienes tiempo el fin de semana?",
+            "en": "Do you have time this weekend?",
+            "pt": "Tens tempo no fim de semana?",
+            "fr": "Tu as du temps le week-end ?",
+            "it": "Hai tempo nel weekend?",
+            "sq": "A ke kohë gjatë fundjavës?",
+            "tr": "Hafta sonu vaktin var mı?"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "¿Vamos al cine?",
+            "en": "Shall we go to the movies?",
+            "pt": "Vamos ao cinema?",
+            "fr": "On va au cinéma ?",
+            "it": "Andiamo al cinema?",
+            "sq": "A shkojmë në kinema?",
+            "tr": "Sinemaya gidelim mi?"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "question": {
+        "es": "En la simulación, ¿cuál es la respuesta más entusiasta a una invitación que sí puedes aceptar?",
+        "en": "In the simulation, what's the most enthusiastic response to an invitation you can accept?",
+        "pt": "Na simulação, qual é a resposta mais entusiasta a um convite que podes aceitar?",
+        "fr": "Dans la simulation, quelle est la réponse la plus enthousiaste à une invitation que vous pouvez accepter ?",
+        "it": "Nella simulazione, qual è la risposta più entusiasta a un invito che puoi accettare?",
+        "sq": "Në simulim, cila është përgjigjja më entuziaste ndaj një ftese që mund ta pranosh?",
+        "tr": "Simülasyonda, kabul edebileceğin bir davete en hevesli yanıt hangisi?"
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Super, das mache mer!",
+            "en": "Great, let's do that!",
+            "pt": "Ótimo, vamos fazer isso!",
+            "fr": "Super, on fait ça !",
+            "it": "Fantastico, facciamolo!",
+            "sq": "Super, ta bëjmë atë!",
+            "tr": "Harika, hadi onu yapalım!"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Ich ha kei Zit",
+            "en": "I don't have time",
+            "pt": "Não tenho tempo",
+            "fr": "Je n'ai pas le temps",
+            "it": "Non ho tempo",
+            "sq": "Nuk kam kohë",
+            "tr": "Vaktim yok"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e9",
+      "question": {
+        "es": "'Öppis trinke' significa...",
+        "en": "'Öppis trinke' means...",
+        "pt": "'Öppis trinke' significa...",
+        "fr": "« Öppis trinke » signifie...",
+        "it": "'Öppis trinke' significa...",
+        "sq": "'Öppis trinke' do të thotë...",
+        "tr": "'Öppis trinke' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Tomar algo",
+            "en": "To get a drink",
+            "pt": "Beber algo",
+            "fr": "Boire un verre",
+            "it": "Bere qualcosa",
+            "sq": "Të pish diçka",
+            "tr": "Bir şeyler içmek"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Comer algo",
+            "en": "To eat something",
+            "pt": "Comer algo",
+            "fr": "Manger quelque chose",
+            "it": "Mangiare qualcosa",
+            "sq": "Të hash diçka",
+            "tr": "Bir şeyler yemek"
+          },
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "e10",
+      "question": {
+        "es": "'Vilicht' significa...",
+        "en": "'Vilicht' means...",
+        "pt": "'Vilicht' significa...",
+        "fr": "« Vilicht » signifie...",
+        "it": "'Vilicht' significa...",
+        "sq": "'Vilicht' do të thotë...",
+        "tr": "'Vilicht' anlamı..."
+      },
+      "options": [
+        {
+          "text": {
+            "es": "Quizás",
+            "en": "Maybe",
+            "pt": "Talvez",
+            "fr": "Peut-être",
+            "it": "Forse",
+            "sq": "Ndoshta",
+            "tr": "Belki"
+          },
+          "correct": true
+        },
+        {
+          "text": {
+            "es": "Nunca",
+            "en": "Never",
+            "pt": "Nunca",
+            "fr": "Jamais",
+            "it": "Mai",
+            "sq": "Kurrë",
+            "tr": "Asla"
+          },
+          "correct": false
+        }
+      ]
+    }
   ]
 }
