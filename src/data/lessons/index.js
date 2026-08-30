@@ -18,9 +18,13 @@ import a23Seguro from './a2-3/a2-3-01-seguro.json'
 import a23Correo from './a2-3/a2-3-02-correo.json'
 import a24Excursion from './a2-4/a2-4-01-excursion.json'
 import a24Hobbies from './a2-4/a2-4-02-hobbies.json'
+import b11Trabajo from './b1-1/b1-1-01-trabajo.json'
+import b11Opinion from './b1-1/b1-1-02-opinion.json'
+import b12CitasMedicas from './b1-2/b1-2-01-citas-medicas.json'
+import b12Votacion from './b1-2/b1-2-02-votacion.json'
 
 // Registro central de lecciones. Añadir aquí cada nuevo archivo JSON de nivel
-// (b1-1-01-..., etc.) para que aparezca en el mapa de niveles.
+// (b2-1-01-..., etc.) para que aparezca en el mapa de niveles.
 export const LESSONS_A1_1 = [a1Greetings, a1Supermarket, a1Restaurant]
 export const LESSONS_A1_2 = [a12Transporte, a12EnCasa, a12LaHora]
 export const LESSONS_A1_3 = [a13Doctor, a13Feelings]
@@ -30,6 +34,8 @@ export const LESSONS_A2_1 = [a21Clima, a21Planes]
 export const LESSONS_A2_2 = [a22Tren, a22Piso]
 export const LESSONS_A2_3 = [a23Seguro, a23Correo]
 export const LESSONS_A2_4 = [a24Excursion, a24Hobbies]
+export const LESSONS_B1_1 = [b11Trabajo, b11Opinion]
+export const LESSONS_B1_2 = [b12CitasMedicas, b12Votacion]
 
 export const ALL_LESSONS = [
   ...LESSONS_A1_1,
@@ -41,6 +47,8 @@ export const ALL_LESSONS = [
   ...LESSONS_A2_2,
   ...LESSONS_A2_3,
   ...LESSONS_A2_4,
+  ...LESSONS_B1_1,
+  ...LESSONS_B1_2,
 ]
 
 export function getLessonById(id) {

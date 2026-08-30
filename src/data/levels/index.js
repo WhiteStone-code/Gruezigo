@@ -1,7 +1,8 @@
 // Mapa completo del curso, estilo "escalera de niveles" (A1 → C2). El A1
-// tiene 5 capítulos jugables (A1.1-A1.5) y el A2 tiene 4 (A2.1-A2.4); el
-// resto se muestra como hoja de ruta ("Próximamente") con temas reales para
-// que quede claro qué viene, sin inventar contenido a medias.
+// tiene 5 capítulos jugables (A1.1-A1.5), el A2 tiene 4 (A2.1-A2.4) y el B1
+// tiene 2 (B1.1-B1.2); el resto se muestra como hoja de ruta
+// ("Próximamente") con temas reales para que quede claro qué viene, sin
+// inventar contenido a medias.
 //
 // gradient: clases Tailwind para la "portada" ilustrada del nivel.
 // emoji: par de emojis usados como ilustración de portada (sin imágenes
@@ -124,17 +125,8 @@ export const LEVELS = [
       it: 'Conversazione reale', sq: 'Bisedë reale', tr: 'Gerçek sohbet',
     },
     gradient: 'from-alp-600 to-alp-900',
-    emoji: ['💼', '📖'],
-    hasContent: false,
-    topics: {
-      es: ['Hablar de tu trabajo', 'Dar tu opinión educadamente', 'Pequeñas charlas ("Smalltalk")', 'Quejarte sin ser grosero/a'],
-      en: ['Talking about your job', 'Giving your opinion politely', 'Small talk', 'Complaining without being rude'],
-      pt: ['Falar do teu trabalho', 'Dar a tua opinião educadamente', 'Conversa fiada', 'Reclamar sem ser mal-educado'],
-      fr: ['Parler de son travail', 'Donner son avis poliment', 'Faire la conversation', 'Se plaindre sans être impoli'],
-      it: ['Parlare del proprio lavoro', 'Dare la propria opinione con garbo', 'Chiacchiere informali', 'Lamentarsi senza essere scortesi'],
-      sq: ['Të flasësh për punën tënde', 'Të japësh mendimin me mirësjellje', 'Bisedë e lehtë', 'Të ankohesh pa qenë i vrazhdë'],
-      tr: ['İşinden bahsetmek', 'Fikrini nazikçe belirtmek', 'Sohbet etmek', 'Kaba olmadan şikayet etmek'],
-    },
+    emoji: ['💼', '🗣️'],
+    hasContent: true,
   },
   {
     code: 'B1.2',
@@ -146,16 +138,7 @@ export const LEVELS = [
     },
     gradient: 'from-swiss-red-dark to-alp-900',
     emoji: ['🏥', '🗳️'],
-    hasContent: false,
-    topics: {
-      es: ['Citas médicas complejas', 'Entender una votación ("Abstimmung")', 'Hablar con la escuela de tus hijos', 'Resolver un conflicto de vecinos'],
-      en: ['Complex medical appointments', 'Understanding a vote ("Abstimmung")', 'Talking to your kids\' school', 'Resolving a neighbor conflict'],
-      pt: ['Consultas médicas complexas', 'Perceber uma votação', 'Falar com a escola dos filhos', 'Resolver um conflito de vizinhos'],
-      fr: ['Rendez-vous médicaux complexes', 'Comprendre une votation', 'Parler à l\'école de ses enfants', 'Résoudre un conflit de voisinage'],
-      it: ['Appuntamenti medici complessi', 'Capire una votazione', 'Parlare con la scuola dei figli', 'Risolvere un conflitto di vicinato'],
-      sq: ['Takime mjekësore komplekse', 'Të kuptosh një votim', 'Të flasësh me shkollën e fëmijëve', 'Të zgjidhësh një konflikt fqinjësh'],
-      tr: ['Karmaşık doktor randevuları', 'Bir oylamayı anlamak', 'Çocuğunun okuluyla konuşmak', 'Komşu anlaşmazlığı çözmek'],
-    },
+    hasContent: true,
   },
   {
     code: 'B2.1',
