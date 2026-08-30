@@ -332,6 +332,128 @@ export const UI_STRINGS = {
     sq: 'Së shpejti — do të mësosh:',
     tr: 'Yakında — öğreneceklerin:',
   },
+
+  // Nuevas pestañas de Repaso: diálogos sueltos y frases de viaje
+  tabDialogues: { es: 'Diálogos', en: 'Dialogues', pt: 'Diálogos', fr: 'Dialogues', it: 'Dialoghi', sq: 'Dialogje', tr: 'Diyaloglar' },
+  tabTravel: { es: 'Viaje', en: 'Travel', pt: 'Viagem', fr: 'Voyage', it: 'Viaggio', sq: 'Udhëtim', tr: 'Seyahat' },
+
+  // Vista de progreso enriquecida (Repaso → Estadísticas)
+  progressVocabLabel: {
+    es: 'Palabras aprendidas', en: 'Words learned', pt: 'Palavras aprendidas', fr: 'Mots appris',
+    it: 'Parole imparate', sq: 'Fjalë të mësuara', tr: 'Öğrenilen kelimeler',
+  },
+  progressActiveDaysLabel: {
+    es: 'Días activos', en: 'Active days', pt: 'Dias ativos', fr: 'Jours actifs',
+    it: 'Giorni attivi', sq: 'Ditë aktive', tr: 'Aktif günler',
+  },
+  progressMasteryLabel: {
+    es: 'Dominio del nivel', en: 'Level mastery', pt: 'Domínio do nível', fr: 'Maîtrise du niveau',
+    it: 'Padronanza del livello', sq: 'Zotërimi i nivelit', tr: 'Seviye hakimiyeti',
+  },
+  progressWeekLabel: {
+    es: 'Esta semana', en: 'This week', pt: 'Esta semana', fr: 'Cette semaine',
+    it: 'Questa settimana', sq: 'Kjo javë', tr: 'Bu hafta',
+  },
+
+  // Calentamiento rápido (Dashboard, tras una ausencia)
+  warmupTitle: {
+    es: 'Calentamiento rápido', en: 'Quick warm-up', pt: 'Aquecimento rápido', fr: 'Échauffement rapide',
+    it: 'Riscaldamento rapido', sq: 'Ngrohje e shpejtë', tr: 'Hızlı ısınma',
+  },
+  warmupBody: {
+    es: 'Llevas un tiempo sin pasar por aquí. ¿{count} palabras rápidas antes de seguir?',
+    en: "It's been a little while. {count} quick words before you continue?",
+    pt: 'Já lá vai algum tempo. {count} palavras rápidas antes de continuares?',
+    fr: 'Ça fait un moment. {count} mots rapides avant de continuer ?',
+    it: 'È da un po\' che non ci vediamo. {count} parole veloci prima di continuare?',
+    sq: 'Ka kohë që s\'ke ardhur. {count} fjalë të shpejta para se të vazhdosh?',
+    tr: 'Bir süredir uğramadın. Devam etmeden önce {count} hızlı kelime?',
+  },
+  warmupStart: { es: 'Empezar', en: 'Start', pt: 'Começar', fr: 'Commencer', it: 'Inizia', sq: 'Fillo', tr: 'Başla' },
+  warmupSkip: { es: 'Ahora no', en: 'Not now', pt: 'Agora não', fr: 'Pas maintenant', it: 'Non ora', sq: 'Jo tani', tr: 'Şimdi değil' },
+  warmupDone: {
+    es: '¡Bien hecho! {correct}/{total} — ya puedes continuar.',
+    en: "Nice! {correct}/{total} — you're all set to continue.",
+    pt: 'Boa! {correct}/{total} — já podes continuar.',
+    fr: 'Bien joué ! {correct}/{total} — tu peux continuer.',
+    it: 'Ben fatto! {correct}/{total} — ora puoi continuare.',
+    sq: 'Bravo! {correct}/{total} — tani mund të vazhdosh.',
+    tr: 'Aferin! {correct}/{total} — devam edebilirsin.',
+  },
+
+  // Práctica de diálogos sueltos (Repaso)
+  dialoguePracticeSubtitle: {
+    es: 'Elige una conversación de una lección que ya completaste para repetirla, sin volver a hacer la lección entera.',
+    en: 'Pick a conversation from a lesson you already finished to run it again, without redoing the whole lesson.',
+    pt: 'Escolhe uma conversa de uma lição que já concluíste para a repetires, sem refazer a lição toda.',
+    fr: 'Choisis une conversation issue d\'une leçon déjà terminée pour la refaire, sans repasser toute la leçon.',
+    it: 'Scegli una conversazione di una lezione già completata per rifarla, senza rifare l\'intera lezione.',
+    sq: 'Zgjidh një bisedë nga një mësim që ke përfunduar tashmë për ta përsëritur, pa e bërë sërish gjithë mësimin.',
+    tr: 'Zaten tamamladığın bir dersten bir konuşma seç ve tüm dersi tekrar yapmadan yalnızca onu tekrarla.',
+  },
+  dialoguePracticeEmptyTitle: {
+    es: 'Todavía no hay diálogos para repasar',
+    en: 'No dialogues to review yet',
+    pt: 'Ainda não há diálogos para rever',
+    fr: 'Pas encore de dialogue à revoir',
+    it: 'Ancora nessun dialogo da ripassare',
+    sq: 'Ende s\'ka dialogje për të rishikuar',
+    tr: 'Henüz tekrar edilecek bir diyalog yok',
+  },
+  dialoguePracticeEmptyDescription: {
+    es: 'Completa una lección que incluya una simulación de conversación y aparecerá aquí para que la repitas cuando quieras.',
+    en: 'Finish a lesson that includes a conversation simulation and it will show up here so you can replay it any time.',
+    pt: 'Conclui uma lição que inclua uma simulação de conversa e ela aparecerá aqui para repetires quando quiseres.',
+    fr: 'Termine une leçon qui contient une simulation de conversation et elle apparaîtra ici pour la refaire quand tu veux.',
+    it: 'Completa una lezione che includa una simulazione di conversazione e comparirà qui per rifarla quando vuoi.',
+    sq: 'Përfundo një mësim që përfshin një simulim bisede dhe ai do të shfaqet këtu për ta përsëritur kur të duash.',
+    tr: 'Bir konuşma simülasyonu içeren bir dersi tamamla, o zaman burada görünecek ve istediğinde tekrar oynayabileceksin.',
+  },
+  dialoguePracticeDoneTitle: {
+    es: '¡Conversación terminada!', en: 'Conversation finished!', pt: 'Conversa terminada!', fr: 'Conversation terminée !',
+    it: 'Conversazione terminata!', sq: 'Biseda përfundoi!', tr: 'Konuşma tamamlandı!',
+  },
+  backToList: {
+    es: 'Volver a la lista', en: 'Back to the list', pt: 'Voltar à lista', fr: 'Retour à la liste',
+    it: 'Torna all\'elenco', sq: 'Kthehu te lista', tr: 'Listeye dön',
+  },
+
+  // Frases de viaje (mazo breve, independiente del temario CEFR)
+  travelDeckTitle: {
+    es: 'Frases de viaje', en: 'Travel phrases', pt: 'Frases de viagem', fr: 'Phrases de voyage',
+    it: 'Frasi di viaggio', sq: 'Fraza udhëtimi', tr: 'Seyahat cümleleri',
+  },
+  travelDeckSubtitle: {
+    es: 'Lo esencial para moverte por tu cuenta: estación, farmacia, precios y pedir ayuda.',
+    en: 'The essentials for getting around on your own: station, pharmacy, prices and asking for help.',
+    pt: 'O essencial para te desenrasares sozinho/a: estação, farmácia, preços e pedir ajuda.',
+    fr: 'L\'essentiel pour se débrouiller seul(e) : gare, pharmacie, prix et demander de l\'aide.',
+    it: 'L\'essenziale per muoverti da solo/a: stazione, farmacia, prezzi e chiedere aiuto.',
+    sq: 'Ato thelbësoret për t\'u orientuar vetëm: stacioni, farmacia, çmimet dhe të kërkuarit ndihmë.',
+    tr: 'Tek başına idare edebilmen için temel bilgiler: istasyon, eczane, fiyatlar ve yardım istemek.',
+  },
+  travelQuizTitle: {
+    es: 'Quiz de frases de viaje', en: 'Travel phrases quiz', pt: 'Quiz de frases de viagem', fr: 'Quiz des phrases de voyage',
+    it: 'Quiz delle frasi di viaggio', sq: 'Kuiz i frazave të udhëtimit', tr: 'Seyahat cümleleri testi',
+  },
+  travelQuizDoneTitle: {
+    es: '¡Quiz terminado!', en: 'Quiz done!', pt: 'Quiz terminado!', fr: 'Quiz terminé !',
+    it: 'Quiz terminato!', sq: 'Kuizi përfundoi!', tr: 'Test tamamlandı!',
+  },
+  travelBackToCards: {
+    es: 'Volver a las tarjetas', en: 'Back to the cards', pt: 'Voltar aos cartões', fr: 'Retour aux cartes',
+    it: 'Torna alle carte', sq: 'Kthehu te kartat', tr: 'Kartlara dön',
+  },
+  travelTryQuiz: {
+    es: 'Probar en quiz', en: 'Try as a quiz', pt: 'Experimentar em quiz', fr: 'Essayer en quiz',
+    it: 'Prova come quiz', sq: 'Provo si kuiz', tr: 'Test olarak dene',
+  },
+  travelFlipHint: {
+    es: 'Toca para ver la traducción', en: 'Tap to see the translation', pt: 'Toca para ver a tradução', fr: 'Touche pour voir la traduction',
+    it: 'Tocca per vedere la traduzione', sq: 'Prek për të parë përkthimin', tr: 'Çeviriyi görmek için dokun',
+  },
+  previous: { es: 'Anterior', en: 'Previous', pt: 'Anterior', fr: 'Précédent', it: 'Precedente', sq: 'I mëparshmi', tr: 'Önceki' },
+  next: { es: 'Siguiente', en: 'Next', pt: 'Seguinte', fr: 'Suivant', it: 'Successivo', sq: 'Tjetri', tr: 'Sonraki' },
 }
 
 export function t(key, lang = 'es', vars) {
