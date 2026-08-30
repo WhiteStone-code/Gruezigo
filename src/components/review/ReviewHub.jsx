@@ -1,17 +1,21 @@
 import { useState } from 'react'
-import { BookOpenText, SpellCheck, Library, Dumbbell, BarChart3 } from 'lucide-react'
+import { BookOpenText, SpellCheck, Library, Dumbbell, BarChart3, MessagesSquare, Plane } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { GrammarReview } from './GrammarReview.jsx'
 import { VerbsReview } from './VerbsReview.jsx'
 import { VocabularyBrowser } from './VocabularyBrowser.jsx'
 import { PracticeSession } from './PracticeSession.jsx'
 import { StatsReview } from './StatsReview.jsx'
+import { DialoguePracticeHub } from './DialoguePracticeHub.jsx'
+import { TravelPhrasesDeck } from './TravelPhrasesDeck.jsx'
 
 const TABS = [
   { id: 'grammar', labelKey: 'tabGrammar', icon: BookOpenText },
   { id: 'verbs', labelKey: 'tabVerbs', icon: SpellCheck },
   { id: 'vocabulary', labelKey: 'tabVocabulary', icon: Library },
   { id: 'practice', labelKey: 'tabPractice', icon: Dumbbell },
+  { id: 'dialogues', labelKey: 'tabDialogues', icon: MessagesSquare },
+  { id: 'travel', labelKey: 'tabTravel', icon: Plane },
   { id: 'stats', labelKey: 'tabStats', icon: BarChart3 },
 ]
 
@@ -21,9 +25,9 @@ const TABS = [
  * lección — nada aquí duplica datos, solo los reorganiza para consultar y
  * practicar fuera del flujo lineal de lecciones.
  */
-export function ReviewHub({ onOpenLesson }) {
+export function ReviewHub({ onOpenLesson, initialTab }) {
   const { t } = useLanguage()
-  const [tab, setTab] = useState('practice')
+  const [tab, setTab] = useState(initialTab ?? 'practice')
 
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4 pb-24">
@@ -52,6 +56,8 @@ export function ReviewHub({ onOpenLesson }) {
       {tab === 'verbs' && <VerbsReview />}
       {tab === 'vocabulary' && <VocabularyBrowser />}
       {tab === 'practice' && <PracticeSession />}
+      {tab === 'dialogues' && <DialoguePracticeHub />}
+      {tab === 'travel' && <TravelPhrasesDeck />}
       {tab === 'stats' && <StatsReview onPracticeLesson={onOpenLesson} />}
     </div>
   )
