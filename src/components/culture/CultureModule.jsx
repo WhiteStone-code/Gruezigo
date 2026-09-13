@@ -1,9 +1,11 @@
 import { useState } from 'react'
-import { Landmark, Snowflake, Compass } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Landmark, Snowflake, Compass, Play } from 'lucide-react'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { Card } from '../ui/Card.jsx'
 import { WinterSpecial } from './WinterSpecial.jsx'
 import { SurvivalGuide } from './SurvivalGuide.jsx'
+import { SwissReels } from './SwissReels.jsx'
 
 const TABS = [
   { id: 'history', labelKey: 'tabHistory', icon: Landmark },
@@ -36,10 +38,32 @@ function HistoryBasics() {
 export function CultureModule() {
   const { t } = useLanguage()
   const [tab, setTab] = useState('history')
+  const [reelsOpen, setReelsOpen] = useState(false)
 
   return (
     <div className="max-w-xl mx-auto px-4 py-6 space-y-4 pb-24">
       <h2 className="font-display font-bold text-2xl text-alp-900 dark:text-alp-50">{t('cultureTitle')}</h2>
+
+      <motion.button
+        onClick={() => setReelsOpen(true)}
+        whileHover={{ y: -2 }}
+        whileTap={{ scale: 0.98 }}
+        className="w-full nav-item"
+      >
+        <Card className="!p-0 overflow-hidden hover:shadow-card-lg transition-shadow">
+          <div className="bg-gradient-to-br from-swiss-red to-cheese-500 p-4 flex items-center gap-3 text-white">
+            <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+              <Play size={20} fill="white" />
+            </div>
+            <div className="text-left flex-1">
+              <p className="font-display font-bold">{t('reelsTitle')}</p>
+              <p className="text-sm text-white/85">{t('reelsSubtitle')}</p>
+            </div>
+          </div>
+        </Card>
+      </motion.button>
+
+      {reelsOpen && <SwissReels onClose={() => setReelsOpen(false)} />}
 
       <div className="flex gap-2">
         {TABS.map(({ id, labelKey, icon: Icon }) => (

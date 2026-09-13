@@ -29,9 +29,19 @@ export function VocabIntroCard({ words, partLabel, onContinue }) {
             transition={{ delay: idx * 0.1 }}
             className="card-accent-sky card flex items-center justify-between gap-3"
           >
-            <div>
-              <p className="font-display font-bold text-lg text-swiss-red">{word.schwiizerduetsch}</p>
-              <p className="text-xs text-alp-500">Hochdeutsch: {word.hochdeutsch}</p>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-1.5 mb-1">
+                <span className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded bg-alp-100 dark:bg-alp-700 text-alp-500 dark:text-alp-300">
+                  Hochdeutsch
+                </span>
+                <span className="text-sm text-alp-500 dark:text-alp-400 truncate">{word.hochdeutsch}</span>
+              </div>
+              <div className="flex items-center gap-1.5 mb-1.5">
+                <span className="text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded bg-swiss-red/10 text-swiss-red dark:bg-swiss-red/25 dark:text-white shrink-0">
+                  Schwiizerdütsch
+                </span>
+                <p className="font-display font-bold text-lg text-swiss-red truncate">{word.schwiizerduetsch}</p>
+              </div>
               <p className="text-sm text-alp-700 dark:text-alp-200">{word.base[interfaceLang] ?? word.base.es}</p>
             </div>
             {supportsSynthesis && (

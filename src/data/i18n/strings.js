@@ -265,6 +265,8 @@ export const UI_STRINGS = {
   tabHistory: { es: 'Historia básica', en: 'Basic history', pt: 'História básica', fr: 'Histoire de base', it: 'Storia di base', sq: 'Histori bazë', tr: 'Temel tarih' },
   tabWinter: { es: 'Invierno', en: 'Winter', pt: 'Inverno', fr: 'Hiver', it: 'Inverno', sq: 'Dimri', tr: 'Kış' },
   tabSurvival: { es: 'Supervivencia', en: 'Survival', pt: 'Sobrevivência', fr: 'Survie', it: 'Sopravvivenza', sq: 'Mbijetesa', tr: 'Hayatta kalma' },
+  reelsTitle: { es: 'Dichos con gracia', en: 'Fun sayings', pt: 'Ditados com graça', fr: 'Expressions amusantes', it: 'Modi di dire divertenti', sq: 'Thënie argëtuese', tr: 'Eğlenceli deyimler' },
+  reelsSubtitle: { es: 'Toca para ver curiosidades y frases suizas, una a una', en: 'Tap to see Swiss sayings and trivia, one by one', pt: 'Toca para ver curiosidades e frases suíças, uma a uma', fr: 'Touchez pour découvrir des expressions et anecdotes suisses, une par une', it: 'Tocca per scoprire curiosità e frasi svizzere, una alla volta', sq: 'Prek për të parë kurioziteteve dhe shprehjeve zvicerane, një nga një', tr: 'İsviçre deyimlerini ve ilginç bilgilerini tek tek görmek için dokun' },
 
   // Dashboard
   fullRoadmapTitle: { es: 'Ver el mapa completo A1 → C2', en: 'See the full A1 → C2 map', pt: 'Ver o mapa completo A1 → C2', fr: 'Voir la carte complète A1 → C2', it: 'Vedi la mappa completa A1 → C2', sq: 'Shiko hartën e plotë A1 → C2', tr: 'Tüm A1 → C2 haritasını gör' },
