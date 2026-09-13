@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext.jsx'
 import { Button } from '../ui/Button.jsx'
@@ -9,6 +9,10 @@ import { Button } from '../ui/Button.jsx'
 function resolveText(value, lang) {
   if (typeof value === 'string') return value
   return value?.[lang] ?? value?.es ?? ''
+}
+
+function shuffle(arr) {
+  return [...arr].sort(() => Math.random() - 0.5)
 }
 
 /**
@@ -23,12 +27,18 @@ export function ExerciseMultipleChoice({ questions, title, onComplete }) {
   const [correctCount, setCorrectCount] = useState(0)
 
   const current = questions[index]
+  // Las opciones se barajan al mostrar cada pregunta — en los datos de las
+  // lecciones la respuesta correcta está siempre en primer lugar, así que
+  // sin esto sería trivial acertar sin leer nada. `useMemo` con `current`
+  // como dependencia mantiene el mismo orden mientras se responde esta
+  // pregunta, y vuelve a barajar al llegar una pregunta nueva.
+  const shuffledOptions = useMemo(() => shuffle(current.options), [current])
 
   function handleSelect(optIndex) {
     if (answered) return
     setSelected(optIndex)
     setAnswered(true)
-    if (current.options[optIndex].correct) setCorrectCount((c) => c + 1)
+    if (shuffledOptions[optIndex].correct) setCorrectCount((c) => c + 1)
   }
 
   function next() {
@@ -41,7 +51,7 @@ export function ExerciseMultipleChoice({ questions, title, onComplete }) {
     setAnswered(false)
   }
 
-  const isCorrect = answered && current.options[selected]?.correct
+  const isCorrect = answered && shuffledOptions[selected]?.correct
 
   return (
     <div>
@@ -54,7 +64,7 @@ export function ExerciseMultipleChoice({ questions, title, onComplete }) {
       <p className="text-alp-700 dark:text-alp-200 mb-4">{resolveText(current.question, interfaceLang)}</p>
 
       <div className="grid gap-2 mb-4">
-        {current.options.map((opt, i) => {
+        {shuffledOptions.map((opt, i) => {
           const label = resolveText(opt.text, interfaceLang)
           let style = 'bg-white dark:bg-alp-900 border-alp-300 dark:border-alp-600 text-alp-800 dark:text-alp-100 hover:border-swiss-red/40'
           if (answered && opt.correct) style = 'bg-green-100 border-green-400 text-green-700 dark:bg-green-900/30 dark:border-green-600 dark:text-green-300'
